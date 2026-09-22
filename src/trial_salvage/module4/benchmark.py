@@ -29,7 +29,8 @@ import math
 from pathlib import Path
 
 import pandas as pd
-from scipy.stats import fisher_exact
+
+from ..module3.benchmark_eval import fisher_2x2
 
 __all__ = ["DECIDED", "evaluate", "load_benchmark", "provenance_contrast"]
 
@@ -60,10 +61,14 @@ def _two_by_two(sub: pd.DataFrame) -> dict:
         [counts["strong"]["success"], counts["strong"]["fail"]],
         [counts["weak"]["success"], counts["weak"]["fail"]],
     ]
-    odds, p = fisher_exact(table)
-    n_strong = sum(table[0])
-    n_weak = sum(table[1])
-    # A zero cell sends the odds ratio to 0 or inf; report it as null rather than
+    # module 3 ships an exact Fisher implementation specifically to keep scipy out of
+    # this project's dependencies; reuse it rather than adding one for a single call.
+    (a, b), (c, d) = table
+    p = fisher_2x2(a, b, c, d)
+    odds = (a * d) / (b * c) if b and c else math.inf if (a and d) else math.nan
+    n_strong = a + b
+    n_weak = c + d
+    # A zero cell sends the odds ratio to 0, inf or nan; report it as null rather than
     # serialising a non-finite float into JSON.
     odds_out = round(float(odds), 3) if math.isfinite(odds) else None
     return {
