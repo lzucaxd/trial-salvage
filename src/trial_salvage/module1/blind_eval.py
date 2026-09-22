@@ -26,6 +26,9 @@ Verdict (first match):
 
 Pre-stated expectation: success rate retry_supported > retry_weak >= not_supported. Falsified as a decision
 aid if the ordering does not hold, or if it holds only through the EGFR-mutant NSCLC cluster (4 pairs).
+Amendments before the outcome join (both code defects, not threshold changes): (1) co-primary endpoints are
+counted as primary (v1 excluded them, making 5 assets not_evaluable); (2) the number-in-abstract check accepts
+mid-dot decimals (Lancet "0·89") and leading-zero-less decimals (JCO ".53").
 Blinding caveat: benchmark outcomes and headline rates were already known to the author; this guards only
 against tuning the rule or the abstract set after the join.
 """
@@ -33,13 +36,13 @@ from __future__ import annotations
 
 import pandas as pd
 
-PRESPEC = ("prespecified", "pre-specified", "preplanned", "pre-planned", "co-primary", "stratif", "planned")
+PRESPEC = ("prespecified", "pre-specified", "preplanned", "pre-planned", "stratif", "planned")
 POSTHOC = ("post hoc", "post-hoc", "exploratory", "retrospective", "unplanned", "hypothesis-generating")
 
 
 def _kind(analysis_type: str) -> str:
     a = (analysis_type or "").lower()
-    if "primary" in a and "co-primary" not in a:
+    if "primary" in a:  # includes co-primary (amended pre-join: v1 wrongly excluded co-primaries)
         return "primary"
     if any(k in a for k in POSTHOC):
         return "post_hoc"
