@@ -18,6 +18,36 @@ Demo asset: **gefitinib** — ISEL (NCT00242801) failed on overall survival in u
 IPASS (NCT00322452) showed a qualitative interaction with EGFR mutation status; the drug was
 re-approved in 2015 for EGFR exon 19 del / L858R disease.
 
+## Presentation
+
+| File | What |
+|---|---|
+| `docs/index.html` | the deck. One self-contained file: figures base64-embedded, all data in a single JSON block, no network or local assets needed. Two canvas animations (the framework with its model layer, and the signalling network). |
+| `docs/limitations.html` | negative results, deliberately kept out of the deck: the falsified pre-registered blind evaluation, ESM-1v's applicability gate, module 3's signal loss under leave-one-cluster-out, and the simulation's own limits. |
+| `PRESENTATION_SCRIPT.md` | word-for-word script, four speakers, ~882 spoken words (~5:30). |
+
+To serve the deck publicly: Settings → Pages → Source `main`, folder `/docs`.
+
+Both HTML files are generated, never hand-edited:
+
+```bash
+make module1-offline && make module2-all && make module4 && make module4-cases && make compare
+python scripts/presentation/build_bundle.py       # outputs/* -> deck_data.json
+python scripts/presentation/build_deck.py         # -> docs/index.html
+python scripts/presentation/build_limitations.py  # -> docs/limitations.html
+```
+
+Every number in both documents is injected from `deck_data.json`, so re-running the pipeline and
+these three scripts keeps the deck in step with the code. `build_bundle.py` refuses to emit
+non-finite floats, which `JSON.parse` rejects and which would blank the page rather than degrade
+one chart.
+
+The model layer on the framework animation is labelled by actual status. Live: ESM-1v (5 × 650M,
+147,972 substitutions over 6 genes), PolyPhen-2, SIFT, ClinVar, gnomAD, cBioPortal,
+ClinicalTrials.gov, PubMed, STRING, Open Targets, Reactome. Drawn dashed because they produce no
+reported number yet: ESM2 (a constant in `module2/scoring.py`, never called) and AlphaGenome
+(module 3's regulatory lane is still a stub).
+
 ## Quick start
 
 ```bash
