@@ -170,9 +170,16 @@ const pct = v => v==null ? '--' : (v*100).toFixed(0)+'%';
 const fmt = (v,d=0) => v==null ? '--' : v.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
 
 const io = new IntersectionObserver(es => es.forEach(e => {
-  if(e.isIntersecting){ e.target.classList.add('in'); if(e.target.dataset.count) count(e.target); }
+  if(e.isIntersecting) e.target.classList.add('in');
 }), {threshold:.14});
+
+// data-count lives on .big, while .reveal is on its parent .stat, so a single observer
+// reading e.target.dataset.count silently never fires. Observe the counters directly.
+const countIo = new IntersectionObserver(es => es.forEach(e => {
+  if(e.isIntersecting) count(e.target);
+}), {threshold:.4});
 $$('.reveal').forEach(el => io.observe(el));
+$$('[data-count]').forEach(el => countIo.observe(el));
 const navIo = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting)
   $$('nav a').forEach(a => a.classList.toggle('on', a.getAttribute('href')==='#'+e.target.id));
 }), {threshold:.22});
@@ -180,6 +187,7 @@ $$('section[id]').forEach(s => navIo.observe(s));
 
 function count(el){
   if(el.dataset.done) return; el.dataset.done = 1;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;  // static text is already correct
   const t = parseFloat(el.dataset.count), dec = parseInt(el.dataset.dec||'0');
   const pre = el.dataset.pre||'', post = el.dataset.post||'';
   let t0 = null;
@@ -694,24 +702,25 @@ HTML = f"""<!doctype html>
 
   <div class="stats">
     <div class="stat go reveal">
-      <div class="big" data-count="{M['n_agree']}" data-post=" of {M['n_strategies']}">0</div>
+      <div class="big" data-count="{M['n_agree']}" data-post=" of {M['n_strategies']}">{M['n_agree']} of {M['n_strategies']}</div>
       <div class="lbl">ways out of the failure called correctly. Five it said were worth trying,
       the field used. One it said was unsupported, nobody tried.</div>
     </div>
     <div class="stat good reveal">
-      <div class="big" data-count="{M['recommended_n']}" data-post=" vs {M['actual_approval_trial_n']}">0</div>
+      <div class="big" data-count="{M['recommended_n']}" data-post=" vs {M['actual_approval_trial_n']}">{M['recommended_n']} vs {M['actual_approval_trial_n']}</div>
       <div class="lbl">patients our simulation says the fixed trial needs, against the
       {M['actual_approval_trial_n']} in the trial that actually won approval.</div>
     </div>
     <div class="stat warn reveal">
-      <div class="big" data-count="{M['years_to_get_there']}" data-post=" years">0</div>
+      <div class="big" data-count="{M['years_to_get_there']}" data-post=" years">{M['years_to_get_there']} years</div>
       <div class="lbl">from the unselected approval in {M['first_event_year']} to the
       marker-selected one in {M['last_event_year']}. Our pipeline runs in seconds.</div>
     </div>
     <div class="stat bad reveal">
       <div class="big" data-count="0" data-post="%">0%</div>
-      <div class="lbl">chance of success if you simply re-run the failed trial, at any size we
-      tested up to {UNS_MAX_N:,} patients.</div>
+      <div class="lbl">chance of success re-running the failed trial unchanged, at every size we
+      tested up to {UNS_MAX_N:,} patients. Selecting the right patients is the whole
+      difference.</div>
     </div>
   </div>
 </div></header>
