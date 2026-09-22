@@ -114,6 +114,69 @@ as are exponential survival, no dropout and a perfect assay. All are listed in
 `assumptions.notes` in the output. Hazard ratios are never converted into response
 probabilities, and no probability that a rescue will succeed is produced.
 
+## Worked cases with known outcomes
+
+The pipeline is demonstrated on two assets that both **failed an unselected trial,
+both showed a biomarker-positive subgroup near HR 0.4-0.5 with the negative subgroup
+above 1, and both were retried in a biomarker-enriched population.** One was
+approved; the other was stopped for futility with the drug arm numerically worse.
+
+| | gefitinib | onartuzumab |
+|---|---|---|
+| target | EGFR | MET |
+| failed trial | ISEL, n=1,692 | phase 2 OAM4558g, n=137 |
+| pre-retry subgroup signal | ISEL never-smokers OS 0.67 (0.49-0.92) | MET IHC+ OS **0.37** (no CI), PFS 0.53 (0.28-0.99) |
+| retry | IPASS, n=1,329 | METLung, n=499, MET IHC+ only |
+| retry result | EGFR mut+ PFS **0.48** (0.36-0.64) | ITT OS **1.27** (0.98-1.65) |
+| outcome | approved 2015 | futility, never approved |
+| motivating signal | prespecified / mechanistic | post-hoc subgroup |
+| biomarker class | somatic driver mutation | protein expression (MET IHC) |
+| assay cutoff chosen on outcome | no (discrete genotype) | **yes** |
+
+**The effect size did not distinguish them.** Onartuzumab's pre-retry subgroup
+hazard ratio was *better* than gefitinib's. What differed was provenance, which is
+what module 4 tiers on.
+
+`retrospective_check` quantifies the failure. If MET IHC+ OS HR 0.37 were
+the truth, METLung at n=499 would have returned a ratio in
+**[0.285, 0.467]**. It returned **1.27** —
+outside the entire simulated distribution. Verdict: `did_not_replicate`.
+
+For gefitinib the same check returns `not_an_independent_test`, and that is the
+correct answer rather than a convenient one: IPASS *measured* the EGFR effect in a
+prespecified analysis with both strata present, so agreement carries no predictive
+information. The asymmetry is the lesson — trust an effect measured with both strata
+in the trial you are reading, distrust one carried over from a small subgroup with a
+cutoff tuned on its own outcome.
+
+```bash
+make cases     # module1-offline -> module4 -> both cases -> comparison figure (no network)
+```
+
+## Is the ranking principle actually predictive?
+
+Module 4 tiers strategies by evidence provenance and explicitly not by reported
+effect size. `module4/benchmark.py` tests that claim against all
+40 curated failed-trial/retry pairs:
+
+| | prespecified / mechanistic | post-hoc subgroup | Fisher p |
+|---|---|---|---|
+| all decided pairs (n=38) | 13/22 = **59%** | 3/16 = **19%** | 0.020 |
+| EGFR cluster removed (n=34) | 10/19 = **53%** | 2/15 = **13%** | 0.030 |
+
+Module 3's genomic-regime verdict lost its outcome signal once the four EGFR-mutant
+NSCLC pairs were removed (p 0.015 -> 0.39). This contrast **strengthens**
+(OR 6.259 -> 7.222), so it is evidence about rescue attempts in general
+rather than about one biology.
+
+The biomarker-class breakdown points the same way: somatic driver mutations went
+4/4, while protein-expression markers (onartuzumab, tivantinib, vintafolide) went
+0/3.
+
+Counts are small, the rates have wide intervals, and the provenance labels were
+assigned with outcomes visible in the same CSV. All three caveats travel with the
+output in `caveats`.
+
 ## Adding a new asset
 
 1. Copy `config/assets/gefitinib.yaml`, fill in trial IDs, target, biomarker gene, PMIDs.

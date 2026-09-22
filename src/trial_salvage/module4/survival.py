@@ -45,6 +45,23 @@ class LogrankResult:
         """True when the treatment arm accrued fewer events than expected."""
         return self.observed_events_treatment < self.expected_events_treatment
 
+    @property
+    def hazard_ratio(self) -> float:
+        """One-step (Peto) hazard-ratio estimate, exp((O - E) / V).
+
+        This is the estimator implied by the log-rank statistic itself, so it is
+        consistent with the p-value reported alongside it. It is a first-order
+        approximation to the Cox partial-likelihood estimate and is closest to it
+        when the true ratio is near 1; it is used here to ask whether an observed
+        trial result falls inside the sampling distribution a prior estimate
+        implies, not to report a definitive effect size.
+        """
+        if self.variance <= 0:
+            return float("nan")
+        return math.exp(
+            (self.observed_events_treatment - self.expected_events_treatment) / self.variance
+        )
+
 
 def _norm_sf(z: float) -> float:
     """Upper-tail standard normal probability."""

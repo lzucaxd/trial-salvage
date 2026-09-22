@@ -31,9 +31,16 @@ def power_and_screening(
     gene: str = "the biomarker",
     target_power: float = 0.8,
     crossing_fraction: float | None = None,
+    biomarker_phrase: str | None = None,
+    positive_label: str | None = None,
+    surrogate_label: str | None = None,
 ) -> None:
     """Panel a: power vs responder fraction by design. Panel b: screening burden."""
     plt.rcParams.update(_RC)
+    # The marker is a genotype for some assets and a stain intensity for others, so the
+    # wording is supplied by the caller rather than assumed to be a "variant".
+    phrase = biomarker_phrase or f"a positive {gene} biomarker result"
+    pos_lab = positive_label or f"{gene}-positive"
     rows = [r if isinstance(r, dict) else r.to_dict() for r in grid]
     sizes = sorted({r["total_randomized"] for r in rows})
     fig, (axA, axB) = plt.subplots(1, 2, figsize=(11, 4.2), gridspec_kw={"width_ratios": [1.15, 1]})
@@ -57,7 +64,7 @@ def power_and_screening(
         x = [r["responder_fraction"] for r in sel]
         y = [r["simulated_power"] for r in sel]
         axA.plot(x, y, marker="s", ms=3.5, lw=1.6, color=C_ENRICH,
-                 label=f"{gene}-enriched, n={n_enr:,}")
+                 label=f"{pos_lab}-enriched, n={n_enr:,}")
 
     prox = sorted([r for r in rows if r["design"] == "clinical_surrogate"],
                   key=lambda r: r["total_randomized"])
@@ -66,7 +73,7 @@ def power_and_screening(
                  color=C_PROXY, mfc="white", mew=1.2)
     if prox:
         r = prox[-1]
-        axA.annotate("clinical proxy\n(histology + smoking)", xy=(r["responder_fraction"], r["simulated_power"]),
+        axA.annotate(surrogate_label or "clinical proxy", xy=(r["responder_fraction"], r["simulated_power"]),
                      xytext=(0.30, 0.66), fontsize=6, color=C_PROXY, ha="center",
                      arrowprops={"arrowstyle": "-", "lw": 0.6, "color": C_PROXY})
 
@@ -77,7 +84,7 @@ def power_and_screening(
         # Below the rising curves, clear of the x ticks it would otherwise collide with.
         axA.text(crossing_fraction + 0.015, 0.11, f"unselected needs\n{crossing_fraction:.0%} positive",
                  fontsize=6, color=C_META, ha="left", va="center")
-    axA.set_xlabel(f"Fraction of enrolled population carrying a sensitising {gene} variant")
+    axA.set_xlabel(f"Fraction of enrolled population with {phrase}")
     axA.set_ylabel("Simulated power (one-sided log-rank), higher = better")
     axA.set_ylim(-0.03, 1.10)
     axA.set_xlim(0, 1.02)
@@ -85,7 +92,7 @@ def power_and_screening(
     axA.legend(frameon=False, loc="center right", bbox_to_anchor=(1.0, 0.44), handlelength=1.6)
     axA.set_title(
         f"An unselected re-run of {asset_name} stays underpowered until most\n"
-        f"of the population is {gene}-positive; enrichment wins at a fraction of the size",
+        f"of the population is {pos_lab}; enrichment wins at a fraction of the size",
         loc="left")
 
     # -- panel b ---------------------------------------------------------
@@ -106,12 +113,12 @@ def power_and_screening(
                              fontsize=6, color=C_ENRICH, va="center",
                              arrowprops={"arrowstyle": "-", "lw": 0.6, "color": C_ENRICH})
         axB.set_ylim(0, float(n_req / f_dense[0]) * 1.12)
-    axB.set_xlabel(f"Prevalence of a sensitising {gene} variant in the screened population")
+    axB.set_xlabel(f"Prevalence of {phrase} in the screened population")
     axB.set_ylabel("Participants screened to randomise the trial")
     axB.set_xlim(0, max(fr) + 0.02 if fr else 1.0)
     axB.set_title(
         "Enrichment moves the cost from sample size to screening:\n"
-        "the rarer the variant, the more patients tested per one randomised",
+        "the rarer the marker, the more patients tested per one randomised",
         loc="left")
 
     for ax, letter in ((axA, "a"), (axB, "b")):

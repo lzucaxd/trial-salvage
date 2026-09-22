@@ -1,0 +1,248 @@
+{
+ "_doc": "Curated module 4 case. Every number carries the source it was read from. Module 1 cannot yet build this handoff itself: its handoff reads the biomarker-positive and -negative hazard ratios from the RESCUE trial, but METLung enrolled only MET-positive patients, so the subgroup split exists only in the earlier phase 2. See evidence_quality.",
+ "case_id": "onartuzumab-metlung",
+ "asset": {
+  "name": "onartuzumab",
+  "synonyms": [
+   "MetMAb",
+   "RO5490258"
+  ],
+  "sponsor": "Genentech/Roche",
+  "modality": "monovalent anti-MET antibody"
+ },
+ "target": {
+  "symbol": "MET",
+  "uniprot": "P08581"
+ },
+ "disease": {
+  "name": "Non-small cell lung cancer",
+  "efo": "EFO_0003060"
+ },
+ "trials": {
+  "failed": {
+   "nct": "NCT00854308",
+   "label": "OAM4558g",
+   "phase": "PHASE2",
+   "n": 137,
+   "primary_endpoint": "PFS (co-primary: ITT and MET-positive)",
+   "line_of_therapy": "2nd/3rd line, recurrent"
+  },
+  "rescue": {
+   "nct": "NCT01456325",
+   "label": "METLung",
+   "phase": "PHASE3",
+   "n": 499,
+   "primary_endpoint": "OS",
+   "line_of_therapy": "2nd/3rd line, post-platinum",
+   "enrolled_population": "MET IHC 2+/3+ selected"
+  }
+ },
+ "outcome": {
+  "class": "fail_then_retry_then_fail_again",
+  "basis": "METLung OS HR 1.27 (0.98-1.65), numerically worse on the drug arm; no approval. Median OS 6.8 vs 9.1 months.",
+  "observed_retry_hr": 1.27,
+  "observed_retry_endpoint": "OS",
+  "source": "PMID 27937096"
+ },
+ "handoff": {
+  "module4": {
+   "endpoint": "OS",
+   "hr_pos": 0.37,
+   "hr_neg": 1.78,
+   "itt_reference_hr": 1.27,
+   "failed_trial_itt_hr": 0.8,
+   "responder_fraction_sweep": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8
+   ],
+   "failed_trial_n": 137,
+   "rescue_trial_n": 499
+  }
+ },
+ "salvage_strategies": [
+  {
+   "strategy": "biomarker_enrichment_new_inclusion_criteria",
+   "used": true,
+   "evidence": "MET IHC 2+/3+ subgroup benefit in the phase 2 (OS HR 0.37, PFS HR 0.53)"
+  },
+  {
+   "strategy": "clinical_surrogate_enrichment",
+   "used": false,
+   "evidence": "METLung enrolled on the MET IHC assay directly, not a clinical proxy"
+  },
+  {
+   "strategy": "new_endpoint",
+   "used": true,
+   "evidence": "phase 2 co-primary PFS -> METLung primary OS"
+  },
+  {
+   "strategy": "new_line_of_therapy",
+   "used": false,
+   "evidence": "both 2nd/3rd line post-platinum"
+  },
+  {
+   "strategy": "narrower_indication",
+   "used": true,
+   "evidence": "NSCLC -> MET IHC-positive NSCLC"
+  },
+  {
+   "strategy": "molecule_modification",
+   "used": false,
+   "evidence": "not attempted; monovalent antibody format unchanged (module 2 question)"
+  }
+ ],
+ "failure_diagnosis": {
+  "failure_mode": "population_dilution_suspected",
+  "confidence": "moderate",
+  "evidence": [
+   {
+    "rule": "primary_endpoint_missed",
+    "fired": true,
+    "detail": "OAM4558g ITT PFS HR 1.086 (0.727-1.622), p=0.6873 (co-primary, missed)"
+   },
+   {
+    "rule": "prespecified_subgroup_benefit",
+    "fired": true,
+    "detail": "MET IHC-positive PFS HR 0.529 (0.284-0.986), p=0.0418, n=66 (co-primary, CI upper 0.986)"
+   },
+   {
+    "rule": "biomarker_heterogeneity_in_failed_trial",
+    "fired": true,
+    "detail": "MET IHC-positive PFS 0.53 vs MET IHC-negative PFS 1.82; OS 0.37 vs 1.78"
+   },
+   {
+    "rule": "qualitative_interaction_in_rescue_trial",
+    "fired": false,
+    "detail": "Not assessable: METLung excluded MET-negative patients, so no within-trial split exists"
+   },
+   {
+    "rule": "os_confounded_by_crossover",
+    "fired": false,
+    "detail": "Crossover was permitted at progression in the phase 2, not in METLung"
+   }
+  ]
+ },
+ "evidence_quality": {
+  "motivating_signal": "post_hoc_subgroup",
+  "biomarker_class": "protein_expression (MET IHC)",
+  "subgroup_n": 66,
+  "subgroup_trial_n": 137,
+  "replicated_in_an_independent_trial": false,
+  "assay_threshold_selected_on_outcome": true,
+  "assay_threshold_note": "PMID 24687921 states the IHC scoring system 'taking proportional and intensity-based thresholds into consideration was applied in an analysis of the phase II study and resulted in the best differentiation of outcomes' - i.e. the positivity cutoff was chosen on the same trial whose outcome it then predicted.",
+  "ci_reported_for_hr_pos": false,
+  "ci_note": "The MET-positive OS HR 0.37 is reported with p=0.002 but no confidence interval in the abstract.",
+  "registry_results_posted_for_retry": false,
+  "registry_note": "NCT01456325 has no posted results; METLung's HR 1.27 is available only from PMID 27937096.",
+  "hr_pos_measured_in_retry_trial": false,
+  "hr_pos_provenance_note": "hr_pos (MET IHC-positive OS HR 0.37) was measured in the earlier phase 2 OAM4558g, not in METLung. METLung enrolled MET-positive patients only, so it was a genuine prospective test of that estimate."
+ },
+ "assumption_overrides": {
+  "control_median_months": 9.1,
+  "control_median_source": "METLung placebo+erlotinib arm median OS, 9.1 months (PMID 27937096)"
+ },
+ "provenance": [
+  {
+   "value": "ITT PFS HR 1.086 (0.727-1.622), p=0.6873",
+   "source": "NCT00854308 posted results, log-rank analysis row"
+  },
+  {
+   "value": "MET IHC-positive PFS HR 0.529 (0.284-0.986), p=0.0418",
+   "source": "NCT00854308 posted results, log-rank analysis row"
+  },
+  {
+   "value": "MET IHC-negative PFS HR 1.82, p=0.05",
+   "source": "PMID 24101053 abstract (no CI reported)"
+  },
+  {
+   "value": "ITT OS HR 0.80, p=0.34",
+   "source": "PMID 24101053 abstract (no CI reported)"
+  },
+  {
+   "value": "MET IHC-positive OS HR 0.37, p=0.002",
+   "source": "PMID 24101053 abstract (no CI reported)"
+  },
+  {
+   "value": "MET IHC-negative OS HR 1.78, p=0.16",
+   "source": "PMID 24101053 abstract (no CI reported)"
+  },
+  {
+   "value": "METLung ITT OS HR 1.27 (0.98-1.65), p=0.067",
+   "source": "PMID 27937096 abstract"
+  },
+  {
+   "value": "METLung ITT PFS HR 0.99 (0.81-1.20), p=0.92",
+   "source": "PMID 27937096 abstract"
+  },
+  {
+   "value": "METLung median OS 6.8 vs 9.1 months",
+   "source": "PMID 27937096 abstract"
+  }
+ ],
+ "alternate_endpoint_pfs": {
+  "_note": "Same case on PFS, where the subgroup hazard ratios do carry confidence intervals.",
+  "endpoint": "PFS",
+  "hr_pos": 0.529,
+  "hr_neg": 1.82,
+  "itt_reference_hr": 0.99,
+  "failed_trial_itt_hr": 1.086,
+  "responder_fraction_sweep": [
+   0.1,
+   0.2,
+   0.3,
+   0.4,
+   0.5,
+   0.6,
+   0.7,
+   0.8
+  ],
+  "failed_trial_n": 137,
+  "rescue_trial_n": 499
+ },
+ "figure_wording": {
+  "biomarker_phrase": "MET protein overexpression by IHC (2+/3+)",
+  "positive_label": "MET IHC-positive",
+  "surrogate_label": "clinical proxy\n(not used by METLung)"
+ },
+ "pre_retry_evidence": [
+  {
+   "label": "phase 2 MET IHC+, OS",
+   "trial": "OAM4558g",
+   "endpoint": "OS",
+   "hr": 0.37,
+   "ci_lo": null,
+   "ci_hi": null,
+   "n": 66,
+   "source": "PMID 24101053",
+   "note": "no CI reported"
+  },
+  {
+   "label": "phase 2 MET IHC+, PFS",
+   "trial": "OAM4558g",
+   "endpoint": "PFS",
+   "hr": 0.529,
+   "ci_lo": 0.284,
+   "ci_hi": 0.986,
+   "n": 66,
+   "source": "NCT00854308 posted results",
+   "note": "co-primary; CI upper bound 0.986"
+  }
+ ],
+ "retry_result": {
+  "label": "METLung, MET IHC+ selected, OS",
+  "trial": "METLung",
+  "endpoint": "OS",
+  "hr": 1.27,
+  "ci_lo": 0.98,
+  "ci_hi": 1.65,
+  "n": 499,
+  "source": "PMID 27937096",
+  "note": "stopped for futility; drug arm numerically worse"
+ }
+}

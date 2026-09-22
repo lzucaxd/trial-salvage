@@ -26,7 +26,9 @@ from pathlib import Path
 
 from jsonschema import validate
 
+from .benchmark import evaluate as evaluate_benchmark
 from .figures import power_and_screening
+from .retrospect import retrospective_check
 from .simulate import (
     Assumptions,
     calibrate,
@@ -96,6 +98,11 @@ def _report(out: dict) -> str:
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--module1", default="outputs/module1/module1_output.json")
+    ap.add_argument("--case", default=None,
+                    help="Curated case JSON (data/cases/<asset>_module4.json). Supplies handoff.module4 "
+                         "plus the observed retry outcome, so assets module 1 cannot yet build are runnable.")
+    ap.add_argument("--benchmark", default=None,
+                    help="rescue_benchmark_v0.csv; adds the provenance-contrast validation to the output.")
     ap.add_argument("--outdir", default="outputs/module4")
     ap.add_argument("--n-simulations", type=int, default=2000)
     ap.add_argument("--control-median-months", type=float, default=None,
@@ -105,10 +112,28 @@ def main(argv=None) -> int:
     ap.add_argument("--quick", action="store_true", help="Fewer simulations and sizes, for CI and smoke tests.")
     a = ap.parse_args(argv)
 
-    m1 = json.loads(Path(a.module1).read_text())
-    h = m1["handoff"]["module4"]
+    # --case supplies the observed outcome, evidence provenance and figure wording.
+    # Its handoff.module4 is used when it carries one; otherwise module 1 supplies the
+    # handoff and the case contributes metadata only. Both flags may be given together.
+    case = json.loads(Path(a.case).read_text()) if a.case else None
+    case_handoff = ((case or {}).get("handoff") or {}).get("module4")
+    if isinstance(case_handoff, dict):
+        h = case_handoff
+        m1 = dict(case)
+        m1.setdefault("salvage_strategies", [])
+        m1.setdefault("failure_diagnosis", {"evidence": []})
+    else:
+        m1 = json.loads(Path(a.module1).read_text())
+        h = m1["handoff"]["module4"]
+        if case:
+            # Keep module 1's strategies and diagnosis; take identity from whichever has it.
+            for key in ("asset", "target", "disease"):
+                m1.setdefault(key, case.get(key))
 
     kw = {"n_simulations": 200 if a.quick else a.n_simulations}
+    if case:
+        for k, v in (case.get("assumption_overrides") or {}).items():
+            kw[k] = v
     if a.control_median_months is not None:
         kw["control_median_months"] = a.control_median_months
         kw["control_median_source"] = "supplied on the command line"
@@ -122,6 +147,17 @@ def main(argv=None) -> int:
                       include_surrogate_fraction=PROXY_FRACTION)
     cal = calibrate(h.get("failed_trial_n") or 0, h.get("failed_trial_itt_hr") or 1.0,
                     h.get("rescue_trial_n") or 0, h.get("itt_reference_hr") or 1.0, assumptions)
+    eq = (case or {}).get("evidence_quality") or {}
+    oc = (case or {}).get("outcome") or {}
+    retro = retrospective_check(
+        hr_prior=h.get("hr_pos"),
+        observed_retry_hr=oc.get("observed_retry_hr") or h.get("itt_reference_hr"),
+        n_retry=h.get("rescue_trial_n"),
+        a=assumptions,
+        independent_test=not eq.get("hr_pos_measured_in_retry_trial", True),
+        prior_source=eq.get("hr_pos_provenance_note", "") or "module 1 handoff",
+        observed_source=oc.get("source", "") or "module 1 handoff itt_reference_hr",
+    )
     min_frac = min_fraction_for_power(max(sizes), h["hr_pos"], h["hr_neg"], assumptions, TARGET_POWER)
     enriched_req = required_n_enriched(h["hr_pos"], f_ref, assumptions, TARGET_POWER)
 
@@ -149,9 +185,13 @@ def main(argv=None) -> int:
     outdir = Path(a.outdir)
     outdir.mkdir(parents=True, exist_ok=True)
     fig_path = outdir / f"fig_{(asset or 'asset').lower().replace(' ', '_')}_module4.png"
+    wording = (case or {}).get("figure_wording") or {}
     power_and_screening(design_rows, assumptions, h["hr_pos"], h["hr_neg"], enriched_req, str(fig_path),
                         asset_name=asset or "the asset", gene=gene, target_power=TARGET_POWER,
-                        crossing_fraction=min_frac.get("fraction"))
+                        crossing_fraction=min_frac.get("fraction"),
+                        biomarker_phrase=wording.get("biomarker_phrase"),
+                        positive_label=wording.get("positive_label"),
+                        surrogate_label=wording.get("surrogate_label"))
 
     out = {
         "schema_version": SCHEMA_VERSION,
@@ -164,6 +204,9 @@ def main(argv=None) -> int:
         "assumptions": {**{k: v for k, v in assumptions.__dict__.items()}, "notes": assumptions.notes()},
         "designs": design_rows,
         "calibration": cal,
+        "retrospective_check": retro,
+        "evidence_quality": eq or None,
+        "observed_outcome": oc or None,
         "requirements": {
             "target_power": TARGET_POWER,
             "min_fraction_for_target_power": min_frac,
@@ -181,6 +224,9 @@ def main(argv=None) -> int:
         ],
     }
 
+    if a.benchmark:
+        out["ranking_principle_validation"] = evaluate_benchmark(a.benchmark)
+
     schema_path = _repo_schema("module4_output.schema.json")
     if schema_path:
         validate(instance=out, schema=json.loads(schema_path.read_text()))
@@ -193,6 +239,7 @@ def main(argv=None) -> int:
         "enriched_n": enriched_req.get("n_randomized"),
         "enriched_screened": enriched_req.get("expected_screened"),
         "calibration_ordering_reproduced": cal["ordering_reproduced"],
+        "retrospective_verdict": retro["verdict"],
         "strategies": len(strategies),
         "outdir": str(outdir),
     }))

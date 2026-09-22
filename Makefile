@@ -1,4 +1,4 @@
-.PHONY: install module1 module1-offline module4 module4-quick all test lint clean
+.PHONY: install module1 module1-offline module4 module4-quick module4-cases compare all cases test lint clean
 ASSET ?= config/assets/gefitinib.yaml
 NSIM ?= 2000
 
@@ -20,8 +20,30 @@ module4-quick:
 	python -m trial_salvage.module4.run --module1 outputs/module1/module1_output.json \
 		--outdir outputs/module4 --quick
 
+# Worked cases with known outcomes. Each is fully offline: module 4 reads a curated
+# handoff, so assets module 1 cannot yet build itself are still runnable.
+module4-cases:
+	python -m trial_salvage.module4.run --case data/cases/onartuzumab_module4.json \
+		--outdir outputs/module4_onartuzumab --n-simulations $(NSIM) \
+		--benchmark data/benchmark/rescue_benchmark_v0.csv
+	python -m trial_salvage.module4.run --module1 outputs/module1/module1_output.json \
+		--case data/cases/gefitinib_module4.json \
+		--outdir outputs/module4_gefitinib --n-simulations $(NSIM) \
+		--benchmark data/benchmark/rescue_benchmark_v0.csv
+
+# The paired slide: same lever, opposite outcome, plus the benchmark validation.
+compare:
+	python -m trial_salvage.module4.compare \
+		--case data/cases/gefitinib_module4.json \
+		--case data/cases/onartuzumab_module4.json \
+		--benchmark data/benchmark/rescue_benchmark_v0.csv \
+		--outdir outputs/module4_comparison
+
 # Full chain currently implemented: 1 -> 4.
 all: module1 module4
+
+# Everything a demo needs, no network at all.
+cases: module1-offline module4 module4-cases compare
 
 test:
 	pytest -q
@@ -30,7 +52,7 @@ lint:
 	ruff check src tests
 
 clean:
-	rm -rf outputs/module1 outputs/module4
+	rm -rf outputs/module1 outputs/module4 outputs/module4_gefitinib outputs/module4_onartuzumab outputs/module4_comparison
 
 module3-egfr:
 	python -m trial_salvage.module3.run --gene EGFR --pathway R-HSA-177929 \

@@ -1,0 +1,106 @@
+{
+ "_doc": "Curated module 4 case for gefitinib. The handoff itself is produced by module 1; this file adds the observed retry outcome and the evidence-quality block used for the paired comparison.",
+ "case_id": "gefitinib-ipass",
+ "asset": {
+  "name": "gefitinib",
+  "synonyms": [
+   "iressa",
+   "ZD1839"
+  ],
+  "sponsor": "AstraZeneca",
+  "modality": "small molecule"
+ },
+ "target": {
+  "symbol": "EGFR",
+  "uniprot": "P00533"
+ },
+ "disease": {
+  "name": "Non-small cell lung cancer",
+  "efo": "EFO_0003060"
+ },
+ "trials": {
+  "failed": {
+   "nct": "NCT00242801",
+   "label": "ISEL",
+   "phase": "PHASE3",
+   "n": 1692,
+   "primary_endpoint": "OS",
+   "line_of_therapy": "2nd/3rd line, refractory"
+  },
+  "rescue": {
+   "nct": "NCT00322452",
+   "label": "IPASS",
+   "phase": "PHASE3",
+   "n": 1329,
+   "primary_endpoint": "PFS",
+   "line_of_therapy": "1st line",
+   "enrolled_population": "East Asian, adenocarcinoma, never/light smoker (clinical proxy)"
+  }
+ },
+ "outcome": {
+  "class": "fail_then_retry_then_succeed",
+  "basis": "IPASS EGFR mutation-positive PFS HR 0.48 (0.36-0.64); FDA approval 2015 for EGFR exon 19 deletion / L858R.",
+  "observed_retry_hr": 0.48,
+  "observed_retry_endpoint": "PFS",
+  "source": "PMID 19692680; FDA 2015 approval summary PMID 26980062"
+ },
+ "handoff": {
+  "module4": "produced by module 1 - see outputs/module1/module1_output.json"
+ },
+ "evidence_quality": {
+  "motivating_signal": "prespecified_or_mechanistic",
+  "biomarker_class": "somatic_driver_mutation",
+  "subgroup_n": 261,
+  "subgroup_trial_n": 1329,
+  "replicated_in_an_independent_trial": true,
+  "replication_note": "EGFR-mutation sensitivity was established mechanistically in 2004 (PMID 15118073, 15118125) before IPASS, and the IPASS biomarker analysis was prespecified. IFUM (n=106) then confirmed prospectively in mutation-positive patients only.",
+  "assay_threshold_selected_on_outcome": false,
+  "assay_threshold_note": "Mutation status is a discrete genotype (exon 19 deletion / L858R) with a companion diagnostic, not a continuous score requiring a cutoff.",
+  "ci_reported_for_hr_pos": true,
+  "ci_note": "IPASS EGFR mutation-positive PFS HR 0.48 (0.36-0.64).",
+  "registry_results_posted_for_retry": true,
+  "registry_note": "NCT00322452 posts full results including per-arm medians with CIs and adverse-event tables.",
+  "hr_pos_measured_in_retry_trial": true,
+  "hr_pos_provenance_note": "hr_pos (EGFR mutation-positive PFS HR 0.48) was measured inside IPASS itself, in a prespecified biomarker analysis with both strata and both arms present. IPASS therefore measured the effect rather than being a prospective test of a carried-over estimate - which is also why the estimate was trustworthy: it was never extrapolated from a small subgroup with a tuned cutoff."
+ },
+ "figure_wording": {
+  "biomarker_phrase": "a sensitising EGFR mutation (exon 19 del / L858R)",
+  "positive_label": "EGFR mutation-positive",
+  "surrogate_label": "clinical proxy\n(histology + smoking)"
+ },
+ "pre_retry_evidence": [
+  {
+   "label": "ISEL never-smokers, OS",
+   "trial": "ISEL",
+   "endpoint": "OS",
+   "hr": 0.67,
+   "ci_lo": 0.49,
+   "ci_hi": 0.92,
+   "n": 375,
+   "source": "PMID 16257339",
+   "note": "prespecified subgroup"
+  },
+  {
+   "label": "ISEL Asian origin, OS",
+   "trial": "ISEL",
+   "endpoint": "OS",
+   "hr": 0.66,
+   "ci_lo": 0.48,
+   "ci_hi": 0.91,
+   "n": 342,
+   "source": "PMID 16257339",
+   "note": "prespecified subgroup"
+  }
+ ],
+ "retry_result": {
+  "label": "IPASS, EGFR mut+, PFS",
+  "trial": "IPASS",
+  "endpoint": "PFS",
+  "hr": 0.48,
+  "ci_lo": 0.36,
+  "ci_hi": 0.64,
+  "n": 261,
+  "source": "PMID 19692680",
+  "note": "prespecified biomarker analysis, both strata present in-trial"
+ }
+}

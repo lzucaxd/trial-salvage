@@ -11,7 +11,14 @@ jobs:
         with: { python-version: "${{ matrix.python-version }}" }
       - run: pip install -e ".[dev]"
       - run: ruff check src tests
+      # Replay module 1 from the committed data/raw snapshot so the worked-case tests
+      # run against a real handoff rather than skipping. No network.
+      - run: make module1-offline
       - run: pytest -q
+      # Both worked cases and the paired comparison, fully offline and gated.
+      - run: make module4-quick NSIM=200
+      - run: make module4-cases NSIM=200
+      - run: make compare
   module1-smoke:
     # Runs the real pipeline against live APIs (CT.gov, PubMed). Allowed to fail on network flakiness.
     # Module 4 runs in the same job because it consumes module 1's JSON handoff.
