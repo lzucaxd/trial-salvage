@@ -129,7 +129,7 @@ Negative results: `docs/limitations.html`. Don't open it unless asked.
 
 > It ranked new endpoint first. The sponsor's live trial switched its endpoint to heart attack
 > alone, the one component that held at **0.79**. It ranked narrower
-> indication second. **Last Sunday**, Europe approved a CETP drug on exactly that.
+> indication second. **On 21 September**, Europe approved a CETP drug on exactly that.
 
 > It ranked gene-selection third, not first. That trial was run, in
 > **6,147 patients**, and missed at **0.88**. And it said don't
@@ -234,6 +234,8 @@ Negative results: `docs/limitations.html`. Don't open it unless asked.
 
 - Don't read numbers off the screen. Say what they mean.
 - Both animations run without clicks. Daniel's needs them.
-- "Last Sunday" means **21 September 2026**. Update that phrase if you present later.
+- The approval was **Monday 21 September 2026**. The script says the bare date, which stays
+  correct whenever you present; if you are presenting on 22 September you can say "yesterday"
+  instead for a little more punch.
 - Laptop dies: **6 of 6** · **4 of 4 on CETP** ·
   **100 vs 106** · **0.48 vs 2.85**.
