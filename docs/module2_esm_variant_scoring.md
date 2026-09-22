@@ -42,9 +42,15 @@ Three findings matter more than the table.
 1,233 pathogenic against 5,936 benign — PolyPhen reaches 0.616 and ESM does worse than a coin
 flip. This is not a pipeline bug: established pathogenic variants score sanely where they should
 (BRCA2 D2723H at the 1.4th percentile, BRCA1 C61G in the RING domain at 0.1). The cause is visible
-in the score distributions: BRCA2's median score is −0.53 where EGFR's kinase domain reached −17,
-so the model assigns almost no constraint anywhere in a large, poorly conserved protein. Pathogenic
-BRCA2 R2784Q lands at −0.09, indistinguishable from wild type.
+in the score distributions. Comparing like with like, the median score over the whole scan is
+**−0.53 for BRCA2 against −3.87 for EGFR**, and the fraction of substitutions below −5 is 0.9% for
+BRCA2 against 42.3% for EGFR: the model assigns almost no constraint anywhere in a large, poorly
+conserved protein. The contrast is starker at the extremes — the most constrained position-mean in
+EGFR's kinase domain reaches −17.4, where BRCA2's most constrained position anywhere reaches only
+−6.2 — but note that this is an extremum, not a median, and the two should not be quoted against
+each other. Pathogenic BRCA2 R2784Q lands at −0.09, indistinguishable from wild type.
+
+Per-gene score statistics over the full scan are in `data/module2/reliability_diagnostic.csv`.
 
 **APOE ε4 scores +7.28, the 100th percentile** — the model prefers it to the wild-type cysteine. ε4
 is the strongest common genetic risk factor in Alzheimer disease and ClinVar classifies it
