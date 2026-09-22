@@ -1,0 +1,202 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "trial-salvage module 1 output",
+ "type": "object",
+ "required": [
+  "schema_version",
+  "asset",
+  "target",
+  "disease",
+  "trials",
+  "effects",
+  "failure_diagnosis",
+  "salvage_strategies",
+  "trial_family_summary",
+  "handoff"
+ ],
+ "properties": {
+  "schema_version": {
+   "type": "string"
+  },
+  "generated_at": {
+   "type": "string"
+  },
+  "asset": {
+   "type": "object",
+   "required": [
+    "name"
+   ],
+   "properties": {
+    "name": {
+     "type": "string"
+    },
+    "chembl_id": {
+     "type": "string"
+    }
+   }
+  },
+  "target": {
+   "type": "object",
+   "required": [
+    "symbol",
+    "uniprot"
+   ]
+  },
+  "disease": {
+   "type": "object",
+   "required": [
+    "name",
+    "efo"
+   ]
+  },
+  "trials": {
+   "type": "object",
+   "required": [
+    "failed",
+    "rescue"
+   ],
+   "properties": {
+    "failed": {
+     "type": "object",
+     "required": [
+      "nct",
+      "label",
+      "primary_endpoint",
+      "status",
+      "results_posted",
+      "eligibility"
+     ]
+    },
+    "rescue": {
+     "type": "object",
+     "required": [
+      "nct",
+      "label",
+      "primary_endpoint",
+      "status",
+      "results_posted",
+      "eligibility"
+     ]
+    }
+   }
+  },
+  "effects": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "trial",
+     "population",
+     "endpoint",
+     "hr",
+     "pmid",
+     "analysis_type",
+     "hr_in_abstract"
+    ],
+    "properties": {
+     "hr": {
+      "type": "number",
+      "exclusiveMinimum": 0
+     },
+     "pmid": {
+      "type": "string"
+     },
+     "hr_in_abstract": {
+      "type": "boolean"
+     }
+    }
+   }
+  },
+  "failure_diagnosis": {
+   "type": "object",
+   "required": [
+    "failure_mode",
+    "confidence",
+    "evidence"
+   ],
+   "properties": {
+    "failure_mode": {
+     "type": "string",
+     "enum": [
+      "population_dilution_qualitative_interaction",
+      "population_dilution_suspected",
+      "efficacy_failure_no_heterogeneity_signal",
+      "not_a_primary_endpoint_failure"
+     ]
+    },
+    "confidence": {
+     "type": "string",
+     "enum": [
+      "low",
+      "moderate",
+      "high"
+     ]
+    },
+    "evidence": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "rule",
+       "fired",
+       "detail"
+      ]
+     }
+    }
+   }
+  },
+  "salvage_strategies": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "strategy",
+     "used",
+     "evidence"
+    ]
+   }
+  },
+  "trial_family_summary": {
+   "type": "object",
+   "required": [
+    "n_trials",
+    "n_in_indication",
+    "selection_by_period"
+   ]
+  },
+  "handoff": {
+   "type": "object",
+   "required": [
+    "module2",
+    "module3",
+    "module4"
+   ],
+   "properties": {
+    "module2": {
+     "type": "object",
+     "required": [
+      "uniprot",
+      "gene",
+      "sensitising_variants"
+     ]
+    },
+    "module3": {
+     "type": "object",
+     "required": [
+      "gene",
+      "disease_efo"
+     ]
+    },
+    "module4": {
+     "type": "object",
+     "required": [
+      "endpoint",
+      "hr_pos",
+      "hr_neg",
+      "responder_fraction_sweep"
+     ]
+    }
+   }
+  }
+ }
+}

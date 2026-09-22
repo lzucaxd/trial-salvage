@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trial-salvage"
+version = "0.1.0"
+description = "Decide whether a failed drug candidate can be salvaged: clinical failure analysis, protein-variant and genomic stratification, rescue-hypothesis ranking."
+requires-python = ">=3.10"
+dependencies = ["requests>=2.31", "pandas>=2.0", "matplotlib>=3.7", "pyyaml>=6.0", "jsonschema>=4.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.4"]
+
+[project.scripts]
+salvage-module1 = "trial_salvage.module1.run:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110

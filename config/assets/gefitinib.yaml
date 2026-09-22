@@ -1,0 +1,48 @@
+# One asset = one salvage case. Every module reads this file.
+asset:
+  name: gefitinib
+  synonyms: [iressa, ZD1839]
+  chembl_id: CHEMBL939
+  sponsor: AstraZeneca
+  modality: small molecule
+target:
+  symbol: EGFR
+  uniprot: P00533
+  ensembl: ENSG00000146648
+disease:
+  name: Non-small cell lung cancer
+  efo: EFO_0003060
+  histology_of_interest: adenocarcinoma
+trials:
+  failed:
+    nct: NCT00242801
+    label: ISEL
+    primary_endpoint: OS
+    line_of_therapy: 2nd/3rd line, refractory
+  rescue:
+    nct: NCT00322452
+    label: IPASS
+    primary_endpoint: PFS
+    line_of_therapy: 1st line
+trial_family_query: "gefitinib OR iressa OR ZD1839"
+literature:
+  # role -> PubMed ID. Abstracts are fetched and every curated effect estimate is
+  # checked against the abstract text of its PMID (provenance test).
+  ISEL_primary: "16257339"
+  ISEL_biomarker: "17075123"
+  IPASS_primary: "19692680"
+  IPASS_OS_biomarker: "21670455"
+  IDEAL1: "12748244"
+  INTEREST: "19027483"
+  Lynch2004_EGFR_mutations: "15118073"
+  Paez2004_EGFR_mutations: "15118125"
+  FDA_2015_approval_summary: "26980062"
+biomarker:
+  gene: EGFR
+  assay_in_rescue_trial: "ARMS PCR (EGFR mutation), FISH (copy number), IHC (protein)"
+  sensitising_variants: ["exon 19 in-frame deletions (E746_A750del most common)", "L858R"]
+  primary_resistance_variants: ["exon 20 insertions"]
+  acquired_resistance_variants: ["T790M", "C797S"]
+curated:
+  effects: data/curated/gefitinib_effects.csv
+  regulatory: data/curated/gefitinib_regulatory_timeline.csv

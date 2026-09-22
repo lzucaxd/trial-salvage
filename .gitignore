@@ -1,0 +1,10 @@
+data/raw/
+outputs/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+!outputs/.gitkeep
+!data/raw/.gitkeep
