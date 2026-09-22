@@ -31,3 +31,8 @@ lint:
 
 clean:
 	rm -rf outputs/module1 outputs/module4
+
+module3-egfr:
+	python -m trial_salvage.module3.run --gene EGFR --pathway R-HSA-177929 \
+	  --cbio-study luad_mskcc_2023_met_organotropism --entrez 1956 \
+	  --somatic L858R:7-55191822-T-G T790M:7-55181378-C-T G719S:7-55174014-G-A --outdir outputs/module3

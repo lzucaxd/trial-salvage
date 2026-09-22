@@ -1,0 +1,72 @@
+pair_id,asset,target,entrez,LOEUF,n_common_func,germline_source,study,target_lane,study_n,frac_any_mut,top_change,top_change_n,top_change_freq
+0,aducanumab,APP,,0.4127209613298042,0.0,scores_v0,,none_detected,,,,,
+3,bapineuzumab,APP,,0.4127209613298042,0.0,scores_v0,,none_detected,,,,,
+4,enzastaurin,PRKCB,5579.0,0.2536314471241561,1.0,gnomad_r4_api,dlbcl_duke_2017,none_detected,1001.0,0.0,,0.0,0.0
+5,farletuzumab,FOLR1,2348.0,0.7979620515034965,0.0,scores_v0,ov_tcga_pan_can_atlas_2018,none_detected,585.0,0.005128205128205128,H43N,1.0,0.0017094017094017094
+6,ipatasertib,AKT1,207.0,0.4791278364198628,0.0,gnomad_r4_api,prad_su2c_2019,none_detected,444.0,0.009009009009009009,E17K,3.0,0.006756756756756757
+6,ipatasertib,AKT2,208.0,0.41495091978999943,0.0,gnomad_r4_api,prad_su2c_2019,none_detected,444.0,0.0045045045045045045,V331A,1.0,0.0022522522522522522
+6,ipatasertib,AKT3,10000.0,0.3538007876951185,0.0,gnomad_r4_api,prad_su2c_2019,none_detected,444.0,0.0,,0.0,0.0
+7,lebrikizumab,IL13,,1.4160538464572168,1.0,gnomad_r4_api,,none_detected,,,,,
+8,onartuzumab,MET,4233.0,0.4586661895283841,3.0,gnomad_r4_api,nsclc_tcga_broad_2016,none_detected,1144.0,0.02972027972027972,X1010_splice,7.0,0.006118881118881119
+9,tivantinib,MET,4233.0,0.4586661895283841,3.0,gnomad_r4_api,lihc_tcga_pan_can_atlas_2018,none_detected,372.0,0.005376344086021506,S22I,1.0,0.002688172043010753
+10,tralokinumab,IL13,,1.4160538464572168,1.0,gnomad_r4_api,,none_detected,,,,,
+11,vintafolide,FOLR1,2348.0,0.7979620515034965,0.0,scores_v0,ov_tcga_pan_can_atlas_2018,none_detected,585.0,0.005128205128205128,H43N,1.0,0.0017094017094017094
+13,custirsen,CLU,1191.0,0.7531425881038972,1.0,gnomad_r4_api,prad_su2c_2019,none_detected,444.0,0.009009009009009009,Y348*,1.0,0.0022522522522522522
+14,ganetespib,HSP90AA1,3320.0,0.3640579363422011,1.0,scores_v0,nsclc_tcga_broad_2016,none_detected,1144.0,0.009615384615384616,S711*,1.0,0.0008741258741258741
+14,ganetespib,HSP90AB1,3326.0,0.376157799987966,0.0,scores_v0,nsclc_tcga_broad_2016,none_detected,1144.0,0.01486013986013986,T285S,1.0,0.0008741258741258741
+15,motesanib,FLT1,2321.0,0.3978365462596334,0.0,scores_v0,nsclc_tcga_broad_2016,none_detected,1144.0,0.050699300699300696,X517_splice,1.0,0.0008741258741258741
+15,motesanib,FLT4,2324.0,0.2492891699719424,6.0,scores_v0,nsclc_tcga_broad_2016,none_detected,1144.0,0.038461538461538464,X1229_splice,1.0,0.0008741258741258741
+15,motesanib,KDR,3791.0,0.3446456733708776,3.0,scores_v0,nsclc_tcga_broad_2016,none_detected,1144.0,0.08041958041958042,A163E,2.0,0.0017482517482517483
+15,motesanib,KIT,3815.0,0.2299249950490441,1.0,scores_v0,nsclc_tcga_broad_2016,none_detected,1144.0,0.028846153846153848,Y774C,1.0,0.0008741258741258741
+15,motesanib,PDGFRA,5156.0,0.2874198450211174,2.0,scores_v0,nsclc_tcga_broad_2016,none_detected,1144.0,0.06118881118881119,X520_splice,1.0,0.0008741258741258741
+15,motesanib,PDGFRB,5159.0,0.4520776683312391,3.0,scores_v0,nsclc_tcga_broad_2016,none_detected,1144.0,0.026223776223776224,X603_splice,1.0,0.0008741258741258741
+15,motesanib,RET,5979.0,0.2356662003104965,4.0,scores_v0,nsclc_tcga_broad_2016,none_detected,1144.0,0.03671328671328671,S462L,2.0,0.0017482517482517483
+17,omecamtiv mecarbil,MYH6,,0.6545288558678166,5.0,scores_v0,,germline_common,,,,,
+17,omecamtiv mecarbil,MYH7,,0.662470606603184,1.0,scores_v0,,none_detected,,,,,
+17,omecamtiv mecarbil,MYH7B,,0.9816488064482036,6.0,scores_v0,,germline_common,,,,,
+17,omecamtiv mecarbil,MYL2,,1.2134374035470443,0.0,scores_v0,,none_detected,,,,,
+17,omecamtiv mecarbil,MYL3,,0.8532368077663065,0.0,scores_v0,,none_detected,,,,,
+17,omecamtiv mecarbil,MYL4,,1.1236252617218214,0.0,scores_v0,,none_detected,,,,,
+17,omecamtiv mecarbil,MYL7,,1.6576516014254956,1.0,scores_v0,,none_detected,,,,,
+19,solanezumab,APP,,0.4127209613298042,0.0,scores_v0,,none_detected,,,,,
+20,tarenflurbil,APH1A,,0.8021443590772852,0.0,gnomad_r4_api,,none_detected,,,,,
+20,tarenflurbil,APH1B,,1.318454097478025,3.0,gnomad_r4_api,,germline_common,,,,,
+20,tarenflurbil,NCSTN,,0.3609941184007298,0.0,gnomad_r4_api,,none_detected,,,,,
+20,tarenflurbil,PSEN1,,0.4320166642830659,1.0,gnomad_r4_api,,none_detected,,,,,
+20,tarenflurbil,PSEN2,,0.8761910974891761,2.0,gnomad_r4_api,,none_detected,,,,,
+20,tarenflurbil,PSENEN,,0.5938528711640481,0.0,gnomad_r4_api,,none_detected,,,,,
+21,gantenerumab,APP,,0.4127209613298042,0.0,scores_v0,,none_detected,,,,,
+22,bardoxolone methyl,IKBKB,,0.47834254991785924,0.0,gnomad_r4_api,,none_detected,,,,,
+22,bardoxolone methyl,KEAP1,,0.6045371715684937,1.0,gnomad_r4_api,,none_detected,,,,,
+22,bardoxolone methyl,NFE2L2,,0.5854131036008191,0.0,gnomad_r4_api,,none_detected,,,,,
+22,bardoxolone methyl,PPARG,,0.6501887613256534,1.0,scores_v0,,none_detected,,,,,
+23,bimagrumab,ACVR2B,,0.4103000158879192,0.0,gnomad_r4_api,,none_detected,,,,,
+24,afatinib,EGFR,1956.0,0.504692914125459,1.0,scores_v0,nsclc_tcga_broad_2016,somatic,1144.0,0.10227272727272728,L858R,28.0,0.024475524475524476
+24,afatinib,ERBB2,2064.0,0.5065434293783412,3.0,gnomad_r4_api,nsclc_tcga_broad_2016,none_detected,1144.0,0.022727272727272728,Y772_A775dup,7.0,0.006118881118881119
+24,afatinib,ERBB4,2066.0,0.3438706199396836,0.0,gnomad_r4_api,nsclc_tcga_broad_2016,none_detected,1144.0,0.08653846153846154,Y1242F,2.0,0.0017482517482517483
+25,belimumab,TNFSF13B,,0.4954467255757074,0.0,scores_v0,,none_detected,,,,,
+26,dacomitinib,EGFR,1956.0,0.504692914125459,1.0,scores_v0,nsclc_tcga_broad_2016,somatic,1144.0,0.10227272727272728,L858R,28.0,0.024475524475524476
+26,dacomitinib,ERBB2,2064.0,0.5065434293783412,3.0,gnomad_r4_api,nsclc_tcga_broad_2016,none_detected,1144.0,0.022727272727272728,Y772_A775dup,7.0,0.006118881118881119
+26,dacomitinib,ERBB4,2066.0,0.3438706199396836,0.0,gnomad_r4_api,nsclc_tcga_broad_2016,none_detected,1144.0,0.08653846153846154,Y1242F,2.0,0.0017482517482517483
+27,erlotinib,EGFR,1956.0,0.504692914125459,1.0,scores_v0,nsclc_tcga_broad_2016,somatic,1144.0,0.10227272727272728,L858R,28.0,0.024475524475524476
+28,gefitinib,EGFR,1956.0,0.504692914125459,1.0,scores_v0,nsclc_tcga_broad_2016,somatic,1144.0,0.10227272727272728,L858R,28.0,0.024475524475524476
+29,mepolizumab,IL5,,1.1956311128305743,0.0,gnomad_r4_api,,none_detected,,,,,
+30,mepolizumab,IL5,,1.1956311128305743,0.0,gnomad_r4_api,,none_detected,,,,,
+31,olaparib,PARP1,142.0,0.4768056265702842,1.0,scores_v0,ov_tcga_pan_can_atlas_2018,none_detected,585.0,0.005128205128205128,T594Yfs*5,1.0,0.0017094017094017094
+31,olaparib,PARP2,10038.0,0.9139945460763864,2.0,scores_v0,ov_tcga_pan_can_atlas_2018,none_detected,585.0,0.005128205128205128,S166Ffs*17,1.0,0.0017094017094017094
+31,olaparib,PARP3,10039.0,1.0106847721222822,1.0,gnomad_r4_api,ov_tcga_pan_can_atlas_2018,none_detected,585.0,0.0,,0.0,0.0
+32,ramucirumab,KDR,3791.0,0.3446456733708776,3.0,scores_v0,lihc_tcga_pan_can_atlas_2018,none_detected,372.0,0.01881720430107527,Y1319*,1.0,0.002688172043010753
+34,sipuleucel-T,ACP3,55.0,1.0914891955468438,0.0,gnomad_r4_api,prad_su2c_2019,none_detected,444.0,0.006756756756756757,L235W,1.0,0.0022522522522522522
+35,tofersen,SOD1,,0.9077218137956596,0.0,gnomad_r4_api,,none_detected,,,,,
+36,ocrelizumab (after rituximab),MS4A1,,0.9160011480558762,0.0,scores_v0,,none_detected,,,,,
+37,necitumumab,EGFR,1956.0,0.504692914125459,1.0,scores_v0,nsclc_tcga_broad_2016,somatic,1144.0,0.10227272727272728,L858R,28.0,0.024475524475524476
+38,nintedanib,FGFR1,2260.0,0.2848001516882058,0.0,gnomad_r4_api,nsclc_tcga_broad_2016,none_detected,1144.0,0.007867132867132868,X280_splice,1.0,0.0008741258741258741
+38,nintedanib,FGFR2,2263.0,0.29084463963640067,1.0,gnomad_r4_api,nsclc_tcga_broad_2016,none_detected,1144.0,0.024475524475524476,M537I,2.0,0.0017482517482517483
+38,nintedanib,FGFR3,2261.0,0.420963812576349,0.0,gnomad_r4_api,nsclc_tcga_broad_2016,none_detected,1144.0,0.013986013986013986,S249C,5.0,0.004370629370629371
+38,nintedanib,FGFR4,2264.0,0.864035146744358,4.0,gnomad_r4_api,nsclc_tcga_broad_2016,germline_common,1144.0,0.016608391608391608,W655R,1.0,0.0008741258741258741
+38,nintedanib,FLT1,2321.0,0.3978365462596334,0.0,scores_v0,nsclc_tcga_broad_2016,none_detected,1144.0,0.050699300699300696,X517_splice,1.0,0.0008741258741258741
+38,nintedanib,FLT4,2324.0,0.2492891699719424,6.0,scores_v0,nsclc_tcga_broad_2016,none_detected,1144.0,0.038461538461538464,X1229_splice,1.0,0.0008741258741258741
+38,nintedanib,KDR,3791.0,0.3446456733708776,3.0,scores_v0,nsclc_tcga_broad_2016,none_detected,1144.0,0.08041958041958042,A163E,2.0,0.0017482517482517483
+38,nintedanib,PDGFRA,5156.0,0.2874198450211174,2.0,scores_v0,nsclc_tcga_broad_2016,none_detected,1144.0,0.06118881118881119,X520_splice,1.0,0.0008741258741258741
+38,nintedanib,PDGFRB,5159.0,0.4520776683312391,3.0,scores_v0,nsclc_tcga_broad_2016,none_detected,1144.0,0.026223776223776224,X603_splice,1.0,0.0008741258741258741
+39,vorapaxar,F2R,,1.064655827292244,0.0,gnomad_r4_api,,none_detected,,,,,

@@ -9,7 +9,7 @@ indication, or a modified molecule.
 Trial ID + drug + disease + target        (config/assets/<asset>.yaml)
     ├── 1. Clinical evidence and failure analysis       ✅ implemented   src/trial_salvage/module1
     ├── 2. Protein variants and ESM                     ⬜ stub          src/trial_salvage/module2
-    ├── 3. Genomic stratification and AlphaGenome       ⬜ stub          src/trial_salvage/module3
+    ├── 3. Genomic stratification and AlphaGenome       ✅ implemented (germline + somatic lanes; AlphaGenome not yet)   src/trial_salvage/module3
     └── 4. Rescue-hypothesis ranking + trial simulation ✅ implemented   src/trial_salvage/module4
             → ranked rescue strategies, evidence, next experiments
 ```
@@ -27,6 +27,7 @@ make module1-offline    # replay from data/raw/<asset>/ (no network)
 make module4            # simulate + rank from module 1's handoff (~10 s, no network)
 make all                # module1 -> module4
 make test               # unit tests (no network)
+make module3-egfr       # Module 3 germline + somatic lanes for EGFR (live gnomAD / Reactome / cBioPortal)
 ```
 
 Outputs land in `outputs/module1/`:
