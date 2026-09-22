@@ -37,3 +37,19 @@ gnomAD scores); 27 targets from second drugs in combination trials are not yet s
 ## API gotchas
 gnomAD: no key, ~10 req/min/IP, query cost cap 25 (≤ 20 aliased genes), no PolyPhen/SIFT on gene variants
 (use Ensembl VEP), fold AF to MAF. Open Targets: `maximumClinicalStage`; synonyms need `{ label }`.
+
+## Results v0 — failed-trial targets scored (germline lane)
+176 of the 182 first-drug targets scored (5 lack gnomAD constraint, 1 lacks variant data).
+`data/candidates/failed_trial_target_scores_v0.csv`.
+
+- **73 of 176 targets have zero common functional variants**; the median is 1. For most failed trials, common
+  germline variation in the target is not a plausible explanation, which is itself a useful negative.
+- **Top of the ranking is contaminated.** MUC5AC (87 common functional variants) and MUC16 (135) rank 1–2 because
+  mucins are huge, repetitive (VNTR) genes, and both are antibody-targeted tumour antigens where germline variation
+  is irrelevant. The burden term is not normalized for coding length — fix before trusting the top ranks.
+- Plausible germline-lane hits after the mucins are receptor genes with known common coding variation: DRD4
+  (haloperidol), ADRA1A (tamsulosin), OPRM1 (buprenorphine), MTNR1A/B (piromelatine), MAPT (3 anti-tau antibodies).
+- Most constrained, i.e. germline stratification least plausible: GRIN2B (LOEUF 0.09), GRIA3, NFKB1, JAK1, BTK.
+
+Next: normalize burden by coding length or expected variant count; score the 27 second-drug targets; run the
+somatic lane for oncology trials; test the lane verdict against the rescue benchmark's 38 decided pairs.
