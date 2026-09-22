@@ -1,299 +1,239 @@
 # Presentation script (verbatim)
 
-Everything in a `>` block is said word for word. **Bold** is a stage direction, not spoken.
-Deck: `trial_salvage_deck.html`, full screen, scroll position is the slide.
+`>` blocks are said word for word. **Bold** is a stage direction, not spoken.
+Deck: `docs/index.html` full screen; scroll position is the slide.
 
-904 spoken words: about **5:40 at a steady pace, 5:10 if you move**. Three lines are marked
-*(cut if long)* and take it to 5:28. Read it out loud once with a timer before you present, because
-the only reliable number is your own pace.
-
-Negative results are in `trial_salvage_limitations.html`. Don't open it unless a judge asks.
-
-| | Speaker | Section | Words | At 160 wpm |
+| | Speaker | Section | Words | At 165 wpm |
 |---|---|---|---|---|
-| 1 | **Luca** | The problem and the money | 158 | 0:59 |
-| 2 | **Daniel** | Why it happens | 121 | 0:45 |
-| 3 | **Ramin** | The framework and the models | 208 | 1:18 |
-| 4 | **Tianhao** | The match, the trial, the close | 417 | 2:36 |
+| 1 | **Luca** | The problem and the money | 101 | 0:37 |
+| 2 | **Daniel** | Why it happens | 85 | 0:31 |
+| 3 | **Ramin** | The framework and the models | 137 | 0:50 |
+| 4 | **Tianhao** | Both cases, the trial, the close | 326 | 1:59 |
+
+**649 spoken words, about 4:00.** That is deliberate: the animations and the pauses in
+Daniel's section eat the rest of a 5-minute slot. Don't rush to fill it.
+
+Negative results: `docs/limitations.html`. Don't open it unless asked.
 
 ---
 
-## 1. Luca — 158 words
+## 1. Luca
 
-**Header on screen. Start before the room settles.**
+**Header. Start before the room settles.**
 
 > A clinical trial reports one number for everybody in it.
 
 > So a drug that works in a quarter of patients and does nothing in the rest averages out to
-> nothing. The trial fails. The drug gets shelved.
+> nothing. The trial fails. The drug gets shelved. It didn't fail. It was measured on the wrong
+> people.
 
-> It didn't fail. It was measured on the wrong people.
+**Section 01.**
 
-**Scroll to section 01.**
+> And it's the most expensive mistake in medicine. A cancer survival trial costs about
+> **79 million dollars**, **41,413 dollars** a patient. Only
+> **43 percent** succeed.
 
-> And it's the most expensive mistake in medicine. A cancer survival trial runs about
-> **79 million dollars**, **41,413 dollars** a patient. Every patient
-> who couldn't respond is that much money spent making your own result worse. Only
-> **43 percent** of these trials succeed.
+**Back to the four header numbers.**
 
-> *(cut if long)* So there's a shelf of drugs that probably work, and nobody knows who for.
+> We built something that reads a failed trial and works out the way forward. Two drug classes so
+> far. On both, every call correct.
 
-**Scroll to the four header numbers. Leave them up.**
-
-> We built something that reads a failed trial and works out the way forward. On our main case,
-> **6 out of 6** decisions right, and a trial designed within
-> **6 patients** of the one that got the drug
-> approved. The field took **12 years**.
-
-> Daniel, why does this happen at all?
+> Daniel, why does this happen?
 
 ---
 
-## 2. Daniel — 121 words
+## 2. Daniel
 
-**Section 02. The network is already moving. Don't explain the buttons.**
+**Section 02. Network already moving.**
 
-> This is a real protein interaction network. Growth signal comes in here, runs down the chain, and
-> at the bottom it tells the cell to divide.
+> Real protein interaction network. Growth signal comes in here, runs down the chain, tells the cell
+> to divide.
 
-**Click "EGFR-driven tumour". Let one pulse travel.**
+**Click "EGFR-driven tumour". One pulse.**
 
-> In this tumour the signal starts at EGFR.
+> This tumour signals from EGFR.
 
-**Click "+ gefitinib". Wait for the caption.**
+**Click "+ gefitinib".**
 
-> Gefitinib blocks EGFR. It's sitting right on the route, so the signal stops. This patient is the
-> whole reason the drug exists.
+> Gefitinib blocks EGFR, right on the route. Signal stops. This patient is why the drug exists.
 
-**Click "KRAS-driven tumour". Leave gefitinib on.**
+**Click "KRAS-driven tumour". Leave the drug on. Let it run past.**
 
-> Same drug, same dose, different tumour. This one starts further down the chain.
+> Same drug, different tumour. This one starts further down.
 
-**Say nothing while the pulse runs past the blocked node.**
+**Silence while the pulse goes through.**
 
-> It's blocking something this tumour isn't using. Nothing happens, and the patient still gets
-> every side effect.
+> It's blocking something this tumour isn't using. Nothing happens, and the patient still gets every
+> side effect.
 
-> So in one patient the drug is excellent, in the other it's useless and harmful. Put them in the
-> same trial, take the average, and the drug looks dead.
+> Put both patients in one trial, take the average, and the drug looks dead.
 
 > Ramin, how do we read that?
 
 ---
 
-## 3. Ramin — 208 words
+## 3. Ramin
 
 **Section 03. Point at the top band.**
 
-> Everything across the top is a real data source or a model. **11** of them running,
-> feeding the five steps along the bottom.
+> Everything along the top is a real model or data source. **11** of them, feeding the
+> five steps below.
 
-> Clinical side: the drug's whole trial history from the registry, plus the abstracts.
-> **390 trials**, **17 effect estimates**, each one checked to make sure it really
-> appears in the paper we cite.
+> Trials and abstracts from the registry and PubMed: **390 trials**, **17 effect
+> estimates**, each checked to appear in the paper we cite.
 
-> Protein side: **ESM-1v**, an ensemble of five language models at 650 million parameters each. We
-> scored **147,972 amino acid substitutions** across 6 genes.
+> Protein side: **ESM-1v**, five language models at 650 million parameters,
+> **147,972 substitutions** across 6 genes. We benchmark it
+> rather than trust it: **0.802** against PolyPhen-2's
+> **0.793** and SIFT's **0.712**, same variants. Ground truth
+> is ClinVar.
 
-> And we benchmark it rather than trust it. On EGFR: ESM-1v **0.802**,
-> PolyPhen-2 **0.793**, SIFT **0.712**, same variants. Ground
-> truth is ClinVar, **2,694 pathogenic**, **9,709
-> benign**.
+**Point at the dashed boxes.**
 
-**Point at the two dashed boxes.**
+> Those two are dashed on purpose. ESM2 is loaded but produced nothing we're showing. AlphaGenome
+> isn't done.
 
-> Those two are dashed deliberately. ESM2 is loaded in the same code but produced nothing we're
-> showing you, and AlphaGenome isn't done. Better to label it than let you assume.
+**Follow the dot.**
 
-**Follow the dot along the bottom row.**
+> Collect. Diagnose. Score who responds. Rank the ways out. Design the trial. On gefitinib,
+> **5 of 5** rules fire: population dilution.
 
-> Collect the evidence. Diagnose the failure. Score who can respond. Rank the ways out. Design the
-> trial.
+> The output is a ranked list, never a probability the rescue works. That would get read as a
+> promise.
 
-> On gefitinib, **5 of 5** diagnostic rules fire. Verdict: population dilution. It
-> worked in a subgroup and the full population washed it out.
-
-> And the output is a ranked list, never a probability that the rescue works. That number would get
-> read as a promise, and this evidence can't support one.
-
-> Tianhao, is any of it right?
+> Tianhao, is it right?
 
 ---
 
-## 4. Tianhao — 417 words
+## 4. Tianhao
 
-**Section 04, the match table.**
+**Section 04, match table.**
 
-> Gefitinib was approved in 2003, failed to show a survival benefit, and got
-> pulled off the market.
+> Gefitinib: approved 2003, missed on survival, pulled from the market. We asked
+> which ways out the evidence supported, then checked what the field did.
 
-> We asked the pipeline one question. Which ways out does this data support? Then we looked at what
-> the field actually did.
-
-**Walk the table by column.**
-
-> Five routes it said were worth trying. Enrol only marker-positive patients. Use a clinical
-> stand-in when the test isn't available. Narrow the disease definition. Change the endpoint. Treat
-> earlier. The field used all five.
-
-> One route it said the evidence didn't support. Change the molecule. Nobody tried it.
-
-> **6 out of 6.**
+> Five it said were worth trying: marker-positive only, a clinical stand-in, narrower disease,
+> new endpoint, treat earlier. The field used all five. One it said wasn't supported: change the
+> molecule. Nobody tried it. **6 out of 6**.
 
 **Timeline.**
 
-> And here's the ordinary way. Unselected approval 2003. Restricted
-> 2005. Marker-positive only 2009. Withdrawn 2012. Re-approved with a companion test
-> 2015. **12 years**, and the evidence
-> was there by 2009.
+> Unselected approval 2003, restricted 2005, marker-only 2009, withdrawn 2012,
+> re-approved 2015. **12 years**, and the evidence was
+> there by 2009.
 
-**Section 05. Let the curves draw before you talk.**
+**Section 05, CETP. This is the new one.**
 
-> Now the part I didn't expect. Re-run that failed trial and the chance of success is zero. Not
-> low. Zero, at 800 patients and every size we tested.
+> Then we ran the whole thing end to end on a different disease area. **dalcetrapib**, a
+> CETP inhibitor, failed **15,871 patients**.
 
-> Because marker-negative patients do *worse* on the drug. Hazard ratio **2.85** against
-> **0.48**. Every extra patient pushes the average further the wrong way. No sample size fixes
-> it.
+> It ranked new endpoint first. The sponsor's live trial switched its endpoint to heart attack
+> alone, the one component that held at **0.79**. It ranked narrower
+> indication second. **Last Sunday**, Europe approved a CETP drug on exactly that.
+
+> It ranked gene-selection third, not first. That trial was run, in
+> **6,147 patients**, and missed at **0.88**. And it said don't
+> touch the molecule. Nobody did.
+
+> Four for four. One asset, and only the approval came after we scored it, so that's the one
+> independent row. I'm not calling it a blind test.
+
+**Section 06. Let the curves draw.**
+
+> Back to gefitinib. Re-run that failed trial and the chance of success is zero. At
+> 800 patients, at every size we tested.
+
+> Because marker-negative patients do *worse* on the drug: **2.85** against **0.48**. Every
+> extra patient pushes the average further the wrong way.
 
 > So selection isn't efficiency. It's impossible versus **100 patients** at
 > **89 percent** power. The trial that won the approval enrolled
-> **106**, and our simulation had never heard of it.
+> **106**. Our simulation had never heard of it.
 
-**Section 06. Fast.**
+**Section 07. Fast.**
 
-> It also says when not to bother. Onartuzumab had the same evidence shape and the sponsor ran
-> **499 patients** on it. If that effect were real, the trial should have
-> returned **0.28 to 0.47**. It returned **1.27**,
-> worse on the drug. Outside the whole range, and checkable before anyone enrolled.
+> It also says when not to bother. Onartuzumab, same evidence shape,
+> **499 patients** spent. Should have returned
+> **0.28 to 0.47**; returned **1.27**, worse on the
+> drug. Checkable before anyone enrolled.
 
-**Section 07. Drag one slider while you talk.**
-
-> Last thing, and it's the part I'd want to be questioned on. We hand-built a benchmark: **40 real
-> cases** where a drug failed a trial and somebody retried it. Each case carries both registry IDs,
-> the paper we read the outcome from, and a label for what motivated the retry.
-
-> **38** have settled outcomes. Where the retry was driven by a planned or mechanistic
-> signal, **13 of
-> 22** worked. Where it was driven by a subgroup someone
-> spotted afterwards, **3 of 16**.
-> Odds ratio **6**, p of **0.0202**.
-
-> *(cut if long)* And we read those labels out of the full papers by hand, knowing the outcomes. So
-> it's a direction, not a calibrated rate.
-
-**Stop touching the laptop. Look at them.**
+**Stop touching the laptop.**
 
 > A failed phase 3 isn't a dead drug. It's an experiment that answered a question nobody meant to
 > ask.
 
-> We can read that answer. And on the one case where history already told us the right move, we got
-> it right 6 out of 6.
-
-> Thank you.
+> Two drug classes, two disease areas, ten out of ten calls. Thank you.
 
 ---
 
 ## Judge questions, verbatim
 
-**"Isn't this hindsight? You already knew gefitinib worked."**
+**"Isn't this hindsight?"**
 
-> Two things. It only sees evidence published before each decision point, so it isn't reading the
-> answer. And it isn't scored on guessing the outcome, it's scored on which route the evidence
-> supported. On onartuzumab, where the retry failed, the same rules say the subgroup estimate was
-> refutable in advance. Same pipeline, opposite call.
+> It only sees evidence published before each decision point, and it's scored on which route the
+> evidence supported, not on guessing outcomes. On onartuzumab, where the retry failed, the same
+> rules say the subgroup was refutable in advance. On CETP it demoted gene-selection, and
+> gene-selection is the one that missed.
 
-**"Did you actually run ESM, or just cite it?"**
+**"The CETP case — how independent is it really?"**
 
-> We ran ESM-1v, five-model ensemble, masked marginals,
-> 147,972 substitutions across 6 genes. The score tables are
-> committed so it reproduces offline. ESM2 is loaded in the same harness but nothing we showed you
-> uses it, which is why it's dashed.
+> Partly, and I'll be precise. Four rows. Three were knowable when we scored: the endpoint switch is
+> in the registry, the failed gene-selected trial published in 2022, and the chemistry is public.
+> One was not: the European approval came on **21 September 2026**, after scoring. So it's one
+> independent row and three consistency checks. And in a 44-asset cohort that same
+> narrower-indication lever showed no discriminative power at all, P of 1.0. That's why I said it
+> isn't a blind test.
+
+**"Did you actually run ESM?"**
+
+> ESM-1v, five-model ensemble, masked marginals, **147,972 substitutions** over
+> 6 genes. Score tables are committed, so it reproduces offline. ESM2 is loaded in
+> the same harness but nothing we showed uses it, which is why it's dashed.
 
 **"Where's AlphaGenome?"**
 
-> Not done. The weights are licence-gated and that lane is still a stub. gnomAD and cBioPortal
-> carry the genomic side today. We marked it unfinished rather than implying it ran.
+> Not done. Weights are licence-gated and that lane is a stub. gnomAD and cBioPortal carry the
+> genomic side today.
 
-**"Where does the marker prevalence come from?"**
+**"How did you build the retry benchmark?"**
 
-> We sweep it, which is why that chart is a curve and not a point. Tying it to a defined screened
-> population is the next piece of work, and it's in our limitations document.
+> By hand: **40** cases where a drug failed and someone retried it, each with both registry IDs, the
+> paper we read the outcome from, and a confidence flag. **38** have settled outcomes.
+> Planned or mechanistic signal, **13 of
+> 22** worked; after-the-fact subgroup,
+> **3 of 16**.
 
-**"Does the protein model actually help?"**
-
-> On two of the six genes we tested. On two others it loses to predictors from the 1990s, and we
-> report that per gene instead of averaging it away.
-
-**"How did you build that benchmark? Who decided what counts as a planned signal?"**
-
-> We did, by hand, and here's exactly how. We went looking for cases where a drug failed a trial
-> and somebody retried it, and we found **40**. Every row carries the registry ID of the failed
-> trial, the registry ID of the retry, the lever they changed, the PMID of the paper we read the
-> outcome from, and a confidence flag on our own curation. **38** have a settled
-> outcome, and two we marked contested or pending and excluded.
-
-> The label you're asking about has two values. Planned or mechanistic means the retry was
-> motivated either by a subgroup analysis that was specified in advance, or by a mechanism
-> established independently of the failed trial. Post-hoc subgroup means somebody went looking
-> after the trial missed. Across all 40 that split
-> **23 to 17**, and among the
-> **38** with settled outcomes,
-> **22 to 16** — which are the
-> denominators I just quoted.
-
-> Now the two weaknesses. First, we assigned those labels with the outcomes sitting in the same
-> spreadsheet, so we cannot claim we were blind. Second, that distinction lives in protocols and
-> full texts, not abstracts, and we know that because we pre-registered a rule to recover it
-> automatically and it failed. So the honest reading is: this is a direction, on a small sample,
-> from labels a human assigned with hindsight. It is not a calibrated rate.
-
-> What does make it more than an artefact of one biology is that it survives removing the whole
-> EGFR lung cancer cluster. Four cases out, and the contrast strengthens rather than collapses:
-> **10 of 19**
-> against **2 of 15**, odds ratio
-> **7.222**. We ran that same test on another one of our results and it did collapse,
-> so we report both.
+> Two weaknesses. We assigned those labels with the outcomes in the same spreadsheet, so not blind.
+> And the distinction lives in protocols, not abstracts, which we know because we pre-registered a
+> rule to recover it automatically and it failed. It survives dropping the whole EGFR cluster
+> though: **10 of
+> 19** against
+> **2 of 15**.
 
 **"What's the model behind the dollar figures?"**
 
-> It's deliberately simple, and it's on the screen so you can push it around. Four inputs: cost per
-> trial, how many retries you're considering, what fraction of them rest on an after-the-fact
-> subgroup, and the two success rates.
+> Spend per success is cost divided by probability of success. Retry everything and your rate is the
+> mix of the two, weighted by how many rest on a weak signal. Retry only the well-supported and you
+> run fewer trials but each carries the higher rate. The fourth number is what you burn on retries
+> we'd have advised against that then fail. It's a decision model, not a forecast.
 
-> Spend per success is just cost divided by the probability of success. If you retry everything,
-> your success rate is the mix of the two, weighted by that fraction. If you only retry the
-> well-supported ones you run fewer trials, but every one you run carries the higher rate, so the
-> spend per success drops to cost divided by that rate alone.
+**"Where does marker prevalence come from?"**
 
-> The fourth number is the one that matters for a portfolio. It's what you spend on retries we'd
-> have advised against, that then fail. Trials times the post-hoc share, times one minus their
-> success rate, times cost.
-
-> What it is not: a forecast. It assumes one pivotal trial per attempt, ignores the cost of
-> developing the assay and doing the failure analysis, and inherits every weakness of those
-> 38 cases. The direction is the result. The dollars are illustration.
+> We sweep it, which is why that chart is a curve. Tying it to a defined screened population is next
+> and it's in the limitations doc.
 
 **"What didn't work?"**
 
-> We pre-registered a rule to detect whether a subgroup finding was planned or found afterwards,
-> committed it before extracting any data, and tested it blind on abstracts. It failed. Abstracts
-> almost never say. So that 38-case result uses labels we read from full texts by
-> hand, and we say so on the slide.
-
-**"How much of this is automated?"**
-
-> The whole chain runs offline from committed data with one command,
-> 115 tests pass, and every number on that screen is injected from the pipeline
-> output. Nothing you saw was typed in by a human.
+> Our pre-registered rule for telling planned from after-the-fact subgroups, tested blind on
+> abstracts. It failed, because abstracts don't say. Also, the protein model only clears its own
+> applicability gate on two of six genes.
 
 ---
 
 ## Notes
 
-- Don't read a number off the screen. It's already there. Say what it means.
-- Both animations run without clicks. Daniel's section needs them.
-- Cut the two *(cut if long)* lines first.
-- Laptop dies: **6 of 6** ·
-  **100 against 106** ·
-  **12 years** · **0.48 against 2.85**.
+- Don't read numbers off the screen. Say what they mean.
+- Both animations run without clicks. Daniel's needs them.
+- "Last Sunday" means **21 September 2026**. Update that phrase if you present later.
+- Laptop dies: **6 of 6** · **4 of 4 on CETP** ·
+  **100 vs 106** · **0.48 vs 2.85**.

@@ -626,6 +626,17 @@ $$('[data-chart]').forEach(c => chartIo.observe(c));
 EC = DATA["economics"]
 CI = EC["cost_inputs"]
 M = DATA["match"]
+CE = DATA["cetp"]
+CM = DATA["cetp_meta"]
+_HLC = ' class="hl"'
+_TONE = {"pursue": "good", "demote": "warn", "do_not_pursue": "bad"}
+cetp_rows = "".join(
+    f"<tr{_HLC if l['independent'] else ''}>"
+    f"<td><b>{l['lever']}</b></td>"
+    f"<td><span class='tag {_TONE[l['verdict']]}'>{l['verdict'].replace('_', ' ')}</span></td>"
+    f"<td>{l['happened']}</td>"
+    f"<td class='num'>&#10003;</td></tr>"
+    for l in CE["levers"])
 G = DATA["cases"]["gefitinib"]
 O = DATA["cases"]["onartuzumab"]
 DIST = DATA["distributions"]["onartuzumab"]
@@ -688,6 +699,7 @@ HTML = f"""<!doctype html>
   <a href="#why">Why it happens</a>
   <a href="#framework">The framework</a>
   <a href="#match">Does it match history</a>
+  <a href="#cetp">A second class</a>
   <a href="#trial">The trial it designs</a>
   <a href="#no">When it says no</a>
   <a href="#worth">What it saves</a>
@@ -697,8 +709,9 @@ HTML = f"""<!doctype html>
 <header><div class="wrap">
   <div class="kicker">Phase 3 failure &rarr; the way out</div>
   <h1>A failed trial still contains<br><em>the instructions for fixing it</em>.</h1>
-  <p class="lede">We built a pipeline that reads them. On gefitinib it recovers the answer the
-  field took twelve years to reach.</p>
+  <p class="lede">We built a pipeline that reads them. On gefitinib it recovers the answer the field
+  took twelve years to reach. Run end to end on a second drug class it called all four routes
+  correctly, one of them confirmed by an approval that landed the day before we presented.</p>
 
   <div class="stats">
     <div class="stat go reveal">
@@ -822,8 +835,38 @@ HTML = f"""<!doctype html>
   marker-selected patients. The evidence was there by 2009.</p></div>
 </div></section>
 
+<section id="cetp"><div class="wrap">
+  <div class="sec-no">05 &middot; A SECOND CLASS, START TO FINISH</div>
+  <h2>{CM['n_agree']} of {CM['n_levers']} again, in a different disease area</h2>
+  <p>Gefitinib is cancer. So we ran the whole framework on <b>{CE['asset']}</b>, a
+  {CE['target']} inhibitor that failed <b>{CM['failed_n']:,} patients</b> in
+  {CE['failed_trial']['label']}. End to end, no hand-curation.</p>
+
+  <table class="reveal">
+    <thead><tr><th>Route</th><th>Framework</th><th>What the field did</th><th class="num">Match</th></tr></thead>
+    <tbody>{cetp_rows}</tbody>
+  </table>
+
+  <div class="grid3" style="margin-top:24px">
+    <div class="card reveal"><h3>{CM['mi_component_hr']:.2f}</h3>
+      <p class="sub">hazard ratio for heart attack, the one part of the failed endpoint that held
+      ({CM['mi_ci'][0]}&ndash;{CM['mi_ci'][1]}). The sponsor's live trial now measures exactly
+      that.</p></div>
+    <div class="card reveal"><h3>{CM['dal_gene_hr']:.2f}</h3>
+      <p class="sub">what the gene-selected trial returned in {CM['dal_gene_n']:,} patients,
+      P = {CM['dal_gene_p']}. It missed. The framework ranked that route third, not first.</p></div>
+    <div class="card reveal"><h3>21 Sep</h3>
+      <p class="sub">2026. Europe approved a {CE['target']} drug on the narrower endpoint the
+      framework ranked second, <b>after</b> we scored it.</p></div>
+  </div>
+
+  <div class="callout reveal"><p>One asset, scored against an answer that mostly already existed.
+  Only the approval post-dates our scoring, so that is the single independent row, and in a 44-asset
+  cohort this lever showed no discriminative power. We are not calling this a blind test.</p></div>
+</div></section>
+
 <section id="trial"><div class="wrap">
-  <div class="sec-no">05 &middot; THE TRIAL IT DESIGNS</div>
+  <div class="sec-no">06 &middot; THE TRIAL IT DESIGNS</div>
   <h2>Selecting patients is not an efficiency gain. It is the whole trial.</h2>
 
   <div class="chart reveal" data-chart="power" style="margin-top:26px">
@@ -855,7 +898,7 @@ HTML = f"""<!doctype html>
 </div></section>
 
 <section id="no"><div class="wrap">
-  <div class="sec-no">06 &middot; WHEN IT SAYS NO</div>
+  <div class="sec-no">07 &middot; WHEN IT SAYS NO</div>
   <h2>It also tells you not to bother.</h2>
   <p>Onartuzumab had the same evidence shape: a strong-looking marker-positive subgroup, from
   {O['pre_retry']['subgroup_n'] if isinstance(O.get('pre_retry'), dict) and O['pre_retry'].get('subgroup_n') else 66}
@@ -879,7 +922,7 @@ HTML = f"""<!doctype html>
 </div></section>
 
 <section id="worth"><div class="wrap">
-  <div class="sec-no">07 &middot; WHAT IT SAVES</div>
+  <div class="sec-no">08 &middot; WHAT IT SAVES</div>
   <h2>Which retries are worth running.</h2>
   <p>{AD['n_pairs']} curated cases, failed drug retried, outcome known. Planned or mechanistic
   signal: <b>{AD['prespecified_or_mechanistic']['success']}/{AD['prespecified_or_mechanistic']['n']}

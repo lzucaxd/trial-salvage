@@ -377,6 +377,75 @@ def build() -> dict:
         "clinvar_benign": int(m2cc.n_benign.sum()),
     }
 
+    # ---- second worked case: the CETP class ------------------------------------
+    # Produced by a separate end-to-end run, not by this repo's pipeline, so the two
+    # kinds of row are flagged differently and never merged:
+    #   score_source  = that run. NOT recomputed here; this repo cannot reproduce it.
+    #   outcome_source = verified here against the registry, PubMed or the approval
+    #                    announcement. Each row carries the identifier it was checked against.
+    cetp = {
+        "asset": "dalcetrapib",
+        "target": "CETP",
+        "area": "Cardiovascular",
+        "failed_trial": {"nct": "NCT00658515", "label": "dal-OUTCOMES", "n": 15871,
+                         "primary": "Incidence of Cardiovascular Mortality and Morbidity",
+                         "verified": "ClinicalTrials.gov API v2, enrollment type ACTUAL"},
+        "score_provenance": ("Lever scores come from a separate end-to-end run of the framework. "
+                             "They are quoted, not recomputed: this repository has no scoring code "
+                             "for them."),
+        "levers": [
+            {"lever": "New endpoint", "score": 67.5, "rank": 1, "verdict": "pursue",
+             "happened": ("dal-GenE-2 (NCT05918861) is recruiting with the primary endpoint switched "
+                          "from the broad composite to myocardial infarction alone — the one component "
+                          "that survived dal-GenE at HR 0.79 (0.65-0.96)"),
+             "agrees": True, "independent": False,
+             "outcome_source": "NCT05918861 (RECRUITING, phase 3, n=2000 est.); PMID 35856777",
+             "independence_note": ("The registry record was already in hand when this lever was "
+                                   "scored, so this row corroborates but is not an independent test.")},
+            {"lever": "New / narrower indication", "score": 66.0, "rank": 2, "verdict": "pursue",
+             "happened": ("Obicetrapib approved in the EU on 21 Sep 2026 (Ubeslo, and Evlarco with "
+                          "ezetimibe) for primary hypercholesterolaemia and mixed dyslipidaemia — a "
+                          "lipid endpoint, with the cardiovascular outcomes trial PREVAIL still running"),
+             "agrees": True, "independent": True,
+             "outcome_source": ("European Commission marketing authorisation, 21 Sep 2026; "
+                                "NewAmsterdam Pharma / Menarini announcement"),
+             "independence_note": "Emerged after scoring. The one genuinely independent row."},
+            {"lever": "Genotype stratification", "score": 46.8, "rank": 3, "verdict": "demote",
+             "score_note": "37.2 once the null mechanism is scored honestly",
+             "happened": ("dal-GenE enrolled 6147 ADCY9 rs1967309 AA-genotype patients prospectively "
+                          "and missed its primary endpoint: HR 0.88 (0.75-1.03), P = 0.12"),
+             "agrees": True, "independent": False,
+             "outcome_source": "PMID 35856777, Eur Heart J 2022, doi:10.1093/eurheartj/ehac374",
+             "independence_note": "Published 2022, so known at scoring time."},
+            {"lever": "Molecular modification", "score": 10.0, "rank": 4, "verdict": "do_not_pursue",
+             "happened": ("Nobody rescued CETP by tuning dalcetrapib's chemotype. The approved drug is "
+                          "a different scaffold; in the thiol series the free thiol is obligatory and "
+                          "potency ceilings out in the micromolar range"),
+             "agrees": True, "independent": False,
+             "outcome_source": "dalcetrapib_analog_table.csv / molecular-modification assessment",
+             "independence_note": "Chemistry assessment from the same run."},
+        ],
+        "caveats": [
+            "One asset, scored retrospectively. This is a consistency check, not a blind prediction.",
+            "Weights were fixed before the case was scored, but only the obicetrapib approval "
+            "post-dates scoring; the other three rows were knowable at the time.",
+            "In a 44-asset cohort the new-indication lever showed no discriminative power (P = 1.00), "
+            "despite scoring 66/100 here.",
+            "Module 1's own pre-registered blind evaluation falsified its predicted ordering, so an "
+            "n=1 agreement is not presented as a passed blind test.",
+        ],
+    }
+    cetp_meta = {
+        "n_levers": len(cetp["levers"]),
+        "n_agree": sum(1 for l in cetp["levers"] if l["agrees"]),
+        "n_independent": sum(1 for l in cetp["levers"] if l["independent"]),
+        "failed_n": cetp["failed_trial"]["n"],
+        "approval_date": "21 September 2026",
+        "dal_gene_hr": 0.88, "dal_gene_p": 0.12,
+        "mi_component_hr": 0.79, "mi_ci": [0.65, 0.96],
+        "dal_gene_n": 6147,
+    }
+
     head = (R / ".git/HEAD").read_text().strip()
     sha = (R / ".git" / head.split(": ", 1)[1]).read_text().strip()[:7] if head.startswith("ref:") else head[:7]
 
@@ -404,6 +473,8 @@ def build() -> dict:
         "benchmark": cc["ranking_principle_validation"],
         "blind_eval": blind,
         "match": match,
+        "cetp": cetp,
+        "cetp_meta": cetp_meta,
         "models": models,
         "models_meta": models_meta,
         "timeline": reg_rows,
