@@ -1,0 +1,182 @@
+nct,drug,targets,cond,phase,n,why,llm_cat,futility,llm_conf
+NCT00418574,ABAGOVOMAB,MUC16,Ovarian Cancer,PHASE2/PHASE3,888,No benefit on primary end point (RFS); no rationale to collect survival data,efficacy,True,high
+NCT00430677,ABATACEPT,CD80;CD86,Systemic Lupus Erythematosus,PHASE2/PHASE3,423,Terminated due to failure to meet the primary efficacy endpoint in the Short-term Period,efficacy,False,high
+NCT00534313,ABATACEPT,CD80;CD86,Psoriatic Arthritis,PHASE2,191,Lack of efficacy with respect to skin-related lesions in the short-term phase,efficacy,True,high
+NCT04393038,OBEFAZIMOD,NCBP1;NCBP2,COVID-19,PHASE2/PHASE3,509,Interim analysis concludes that the study is futile,efficacy,True,high
+NCT00318474,RAMIPRIL,ACE,IgA Nephropathy,PHASE3,184,DSMB recommended stopping the trial because of lack of effect.,efficacy,True,high
+NCT01852110,DONEPEZIL,ACHE,Alzheimer's Disease,PHASE2,240,Stage 1 interim analysis of efficacy met the criteria for early trial termination (futility). The trial was terminated at Stage 1; did not proceed to Stage 2.,efficacy,True,high
+NCT00814372,PIOGLITAZONE HYDROCHLORIDE,PPARG,Type 2 Diabetes Mellitus,PHASE2,242,MBX-102 did not meet the target efficacy profile of HbA1c change.,efficacy,False,high
+NCT00612521,ADENOSINE,ADORA1;ADORA2A;ADORA2B;ADORA3,Coronary Artery Stenosis|Coronary Artery Disease,PHASE3,200,"At half the sample size, the results were negative with no benefit demonstrated with adenosine.",efficacy,True,high
+NCT02477800,ADUCANUMAB,APP,Alzheimer's Disease,PHASE3,1653,Study was discontinued based on futility analysis done and not based on safety concerns. Follow-up visits and closing out study activities are completed,efficacy,True,high
+NCT02484547,ADUCANUMAB,APP,Alzheimer's Disease,PHASE3,1643,Study was discontinued based on futility analysis done and not based on safety concerns. Follow-up visits and closing out study activities are completed,efficacy,True,high
+NCT04611152,AFLIBERCEPT,PGF;VEGFA,Diabetic Macular Edema,PHASE3,460,Study did not meet primary endpoint,efficacy,False,high
+NCT04603937,AFLIBERCEPT,PGF;VEGFA,Diabetic Macular Edema,PHASE3,459,Study did not meet primary endpoint,efficacy,False,high
+NCT04049266,AFLIBERCEPT,PGF;VEGFA,Wet Macular Degeneration,PHASE2/PHASE3,559,Primary Endpoint Not Met,efficacy,False,high
+NCT01433354,MAVOGLURANT,GRM5,Fragile X Syndrome,PHASE2/PHASE3,119,The study treatment failed to demonstrate efficacy in target population in two other clinical studies (CAFQ056B2214 and CAFQ056A2212).,efficacy,False,high
+NCT01348087,MAVOGLURANT,GRM5,Fragile X Syndrome,PHASE2,148,Study treatment AFQ056 failed to demonstrate efficacy in the adult patient with Fragile X Syndrome in 2 other clinical studies (CAFQ056B2214 and CAFQ056A2212),efficacy,False,high
+NCT01032915,SECUKINUMAB,IL17A,Non-infectious Uveitis,PHASE3,125,Results of a planned interim analysis did not show significant effects for any of the 3 AIN dose regimens versus placebo on any primary or secondary endpoint,efficacy,True,high
+NCT00434993,ALBUTEROL SULFATE,ADRB2,"Respiratory Distress Syndrome, Adult",PHASE2/PHASE3,282,Stopped for futility by DSMB,efficacy,True,high
+NCT00471237,ALENDRONIC ACID,FDPS,Osteoporosis,PHASE2,564,Terminated for futility by sponsor after a pre-planned interim review of data,efficacy,True,high
+NCT04952519,AMANTADINE,GRIN1;GRIN2A;GRIN2B;GRIN2C;GRIN2D;GRIN3A;GRIN3B,Patients With Moderate or Severe COVID-19,PHASE3,193,"The annual analysis did not show the efficacy of the investigational medicinal product in this application, therefore the study was not continued.",efficacy,True,high
+NCT00768300,AMBRISENTAN,EDNRA;EDNRB,Idiopathic Pulmonary Fibrosis,PHASE3,494,Lack of efficacy,efficacy,False,high
+NCT00460317,MOTESANIB,FLT1;FLT4;KDR;KIT;PDGFRA;PDGFRB;RET,Non-Small Cell Lung Cancer,PHASE3,1450,Amgen discontinued the development of AMG706 because 20050201 did not meet its primary objective.,efficacy,False,high
+NCT01151215,ANASTROZOLE,CYP19A1,Neoplasms|Breast Neoplasms|Breast Cancer,PHASE2,482,Futility,efficacy,True,high
+NCT00300196,ANCROD,FGA;FGB;FGG,Stroke|Cerebral Ischemia|Brain Infarction,PHASE3,311,Futility,efficacy,True,high
+NCT02450331,ATEZOLIZUMAB,CD274,"Carcinoma, Transitional Cell",PHASE3,809,Sponsor decided to terminate the study early because the study did not meet its primary endpoint and because the study had met its goals of providing safety and additiona,efficacy,True,high
+NCT04338269,ATEZOLIZUMAB,CD274,"Carcinoma, Renal Cell",PHASE3,522,As the study did not meet it's primary endpoint a decision was made to terminate the study.,efficacy,False,high
+NCT06514742,ATICAPRANT,OPRK1,"Depressive Disorder, Major|Anhedonia",PHASE3,101,Early study termination due to insufficient efficacy.,efficacy,True,high
+NCT00741715,ATORVASTATIN,HMGCR,Hypercholesterolemia,PHASE3,1736,AVE5530 in hypercholesterolemia was stopped due to insufficient efficacy,efficacy,False,high
+NCT02260648,ATORVASTATIN,HMGCR,Hypercholesterolemia,PHASE3,149,Study termination due to insufficient efficacy.,efficacy,True,high
+NCT05036135,AV-101,GRIN1;GRIN2A;GRIN2B;GRIN2C;GRIN2D;GRIN3A;GRIN3B,Pulmonary Arterial Hypertension,PHASE2/PHASE3,202,"The IMPAHCT study demonstrated that while inhaled imatinib was well tolerated, it did not prove to be efficacious at any of the doses of AV-101 evaluated in the study.",efficacy,False,high
+NCT05557942,AV-101,GRIN1;GRIN2A;GRIN2B;GRIN2C;GRIN2D;GRIN3A;GRIN3B,Pulmonary Arterial Hypertension,PHASE3,186,"Results from the parent study (IMPAHCT) demonstrated that while inhaled imatinib was well tolerated, it did not prove to be efficacious at any of the doses of AV-101 eval",efficacy,False,high
+NCT02952586,AVELUMAB,CD274,Squamous Cell Carcinoma of the Head and Neck,PHASE3,697,The trial prematurely terminated as recommended by the E-DMC because the boundary for futility has been crossed.,efficacy,True,high
+NCT01599754,AXITINIB,FLT1;FLT4;KDR,Clear Cell Renal Carcinoma,PHASE3,724,Primary endpoint did not reach statistical significance,efficacy,False,high
+NCT04313881,AZACITIDINE,DNMT1;DNMT3A,Myelodysplastic Syndromes,PHASE3,539,Study discontinued due to futility based on a planned analysis,efficacy,True,high
+NCT05079230,AZACITIDINE,DNMT1;DNMT3A,Acute Myeloid Leukemia,PHASE3,378,Study was terminated due to futility,efficacy,True,high
+NCT02147873,AZACITIDINE,DNMT1;DNMT3A,Myelodysplastic Syndrome (MDS)|Chronic Myelomonocytic Leukem,PHASE2,118,Study terminated due to lack of efficacy,efficacy,True,high
+NCT02080364,AZELIRAGON,AGER,Alzheimer's Disease,PHASE3,880,Not due to safety but due to a lack of efficacy at the 5 mg azeliragon dose.,efficacy,False,high
+NCT02916056,AZELIRAGON,AGER,Alzheimer's Disease,PHASE3,297,Not due to safety but due to a lack of efficacy at the 5 mg azeliragon dose.,efficacy,False,high
+NCT03504917,BALOVAPTAN,AVPR1A,Autism Spectrum Disorder,PHASE3,322,A futility analysis assessed that the study is highly unlikely to meet the pre-defined primary objective of the study. No new safety concerns were identified.,efficacy,True,high
+NCT00998764,BAPINEUZUMAB,APP,Alzheimer Disease,PHASE3,494,"The study was terminated on August 6, 2012, because 2 large Phase 3 studies showed no clinical benefit. This decision was not based on any new safety concerns.",efficacy,False,high
+NCT00996918,BAPINEUZUMAB,APP,Alzheimer Disease,PHASE3,198,"The study was terminated on August 6, 2012, because 2 large Phase 3 studies showed no clinical benefit. This decision was not based on any new safety concerns.",efficacy,False,high
+NCT04891133,BARICITINIB,JAK1;JAK2,COVID-19|Emerging Infectious Disease,PHASE2/PHASE3,290,"The trial was stopped prematurely due to external evidence that arose during the study period showing that the IMP, baricitinib, was not effective in the primary study po",efficacy,True,high
+NCT04729608,BATIRAXCEPT,GAS6,Platinum-resistant Ovarian Cancer,PHASE3,366,There were no significant differences in median PFS between batiraxcept + paclitaxel or paclitaxel alone arms. There was no detriment to overall survival. No new safety s,efficacy,False,high
+NCT04543409,BENRALIZUMAB,IL5RA,Eosinophilic Esophagitis,PHASE3,211,High-level results from the MESSINA Phase III trial showed that AstraZeneca's Fasenra (benralizumab) did not meet one of the two dual-primary endpoints. Given the lack of,efficacy,False,high
+NCT04791319,BERMEKIMAB,IL1A,"Dermatitis, Atopic",PHASE2,199,Premature Termination due to Interim Analysis (100 patients at Week 16) meeting futility.,efficacy,True,high
+NCT01012297,BEVACIZUMAB,VEGFA,Recurrent Uterine Corpus Sarcoma|Stage IIIA Uterine Sarcoma|,PHASE3,107,"The study was targeted to accrue 130 patients, but closed early for futility.",efficacy,True,high
+NCT00946712,BEVACIZUMAB,VEGFA,Recurrent Large Cell Lung Carcinoma|Recurrent Lung Adenocarc,PHASE3,1333,terminated at pre-planned futility analysis,efficacy,True,high
+NCT00458861,BAMINERCEPT,LTA;LTB;TNFSF14,Rheumatoid Arthritis,PHASE2,115,Interim analysis of data failed to meet primary endpoint.,efficacy,True,high
+NCT00597649,BICIFADINE,SLC6A2;SLC6A3;SLC6A4,Chronic Peripheral Neuropathy Pain in Diabetics,PHASE2,250,The 001 trial did not show benefit versus placebo,efficacy,False,high
+NCT00658645,BIFEPRUNOX,DRD2;HTR1A,Schizophrenia,PHASE3,227,Interim analysis showed inadequate efficacy of bifeprunox,efficacy,True,high
+NCT00704509,BIFEPRUNOX,DRD2;HTR1A,Schizophrenia,PHASE3,346,Interim analysis showed inadequate efficacy of bifeprunox,efficacy,True,high
+NCT03352557,GOSURANEMAB,MAPT,Alzheimer's Disease,PHASE2,654,The study (NCT03352557) was terminated based on lack of efficacy following the placebo-controlled period readout.,efficacy,False,high
+NCT05028569,BOTULINUM TOXIN TYPE A,SNAP25,Episodic Migraine,PHASE3,775,The study was terminated early due to lack of efficacy from the primary analysis results.,efficacy,True,high
+NCT01902290,BRODALUMAB,IL17RA,Asthma,PHASE2,421,Study terminated early due to lack of efficacy observed following interim analysis in Q2 2015. Study Closed once all sites were closed in eClinical,efficacy,True,high
+NCT04193878,BUDESONIDE,NR3C1,Pneumonia|Hypoxemia|Acute Respiratory Failure|COVID-19 Pneum,PHASE3,465,"Per DSMB's review of interim analysis, the study has reached the pre-specified futility criteria",efficacy,True,high
+NCT04826484,BUPIVACAINE HYDROCHLORIDE,SCN4A,Urologic Diseases|Hypospadias|Undescended Testes|Chordee|Hyd,PHASE3,104,Met futility threshold at interim analysis,efficacy,True,high
+NCT00270257,BUPRENORPHINE,OPRK1;OPRM1,HIV Infections|Opioid-Related Disorders,PHASE3,1251,DSMB halted the study due to futility as a result of lower than anticipated HIV incidence rates,efficacy,True,high
+NCT03340727,CAFFEINE CITRATE,ADORA1;ADORA2A;ADORA2B;ADORA3,Apnea of Prematurity,PHASE3,827,Futility,efficacy,True,high
+NCT00418782,CE-224535,P2RX7,Osteoarthritis,PHASE2,212,Results of interim analysis indicate lack of efficacy when compared to placebo.,efficacy,True,high
+NCT03028740,CENICRIVIROC,CCR2;CCR5,Nonalcoholic Steatohepatitis,PHASE3,1778,This study was terminated early due to lack of efficacy based on the results of the planned interim analysis of Part 1 data.,efficacy,True,high
+NCT00449150,CETRORELIX,GNRHR,Benign Prostatic Hypertrophy,PHASE3,667,Trial did not meet primary efficacy endpoint for double blind phase.,efficacy,False,high
+NCT01230827,GOLIMUMAB,TNF,Juvenile Idiopathic Arthritis,PHASE3,173,Trial has failed to meet primary - and major secondary endpoints,efficacy,False,high
+NCT04985968,COBITOLIMOD,TLR9,Ulcerative Colitis,PHASE3,171,Due to futility,efficacy,True,high
+NCT02626455,COPANLISIB,PIK3CA;PIK3CD,"Lymphoma, Non-Hodgkin",PHASE3,551,Company decided to terminate this study due to study did not meet the primary endpoint.,efficacy,False,high
+NCT00353574,DARUSENTAN,EDNRA;EDNRB,Hypertension,PHASE3,282,Study DAR-312 did not meet primary co-endpoints,efficacy,False,high
+NCT01870609,DEFACTINIB,PTK2;PTK2B,Malignant Pleural Mesothelioma,PHASE2,344,Interim analysis-DSMB stated good safety profile but lack of efficacy,efficacy,True,high
+NCT00215657,DEGARELIX,GNRHR,Prostate Cancer,PHASE2,131,The doses were not effective in maintaining testosterone suppression,efficacy,False,high
+NCT01975727,DEXAMETHASONE,NR3C1,Postoperative Nausea and Vomiting|Vomiting,PHASE2,256,Study was halted prematurely for futility after an intermediate analysis,efficacy,True,high
+NCT05387707,DIFELIKEFALIN,OPRK1,Pruritus|Atopic Dermatitis,PHASE3,287,"In Part A of the study, oral difelikefalin as adjunct to topical corticosteroids (TCS) did not demonstrate meaningful clinical benefit compared to TCS alone.",efficacy,True,high
+NCT05978063,DIFELIKEFALIN,OPRK1,Pruritus|Notalgia Paresthetica,PHASE2/PHASE3,214,"In Part A of CR845-310601, oral difelikefalin did not demonstrate a meaningful clinical benefit at any dose compared to placebo. The drug was generally well tolerated wit",efficacy,True,high
+NCT00005047,DOXORUBICIN HYDROCHLORIDE,TOP2A,Bladder Cancer,PHASE3,521,Accrual was halted on the basis of the Data and Safety Monitoring Board review of a futility analysis.,efficacy,True,high
+NCT03736967,DUPILUMAB,IL4R,Atopic Dermatitis,PHASE2,206,Lack of efficacy,efficacy,False,high
+NCT00360412,PERAMPANEL,GRIA1;GRIA2;GRIA3;GRIA4,Parkinson's Disease,PHASE3,997,Study stopped due to lack of efficacy.,efficacy,False,high
+NCT03917719,EDASALONEXENT,NFKB1;NFKB2;RELA,Duchenne Muscular Dystrophy,PHASE3,130,"The Phase 3 PolarisDMD trial did not meet the primary endpoint. As a result, activities related to the development of edasalonexent have stopped including the CAT-1004-30",efficacy,False,high
+NCT00965419,EDIVOXETINE,SLC6A2,Attention Deficit Hyperactivity Disorder,PHASE2/PHASE3,267,Terminated due to low 5 year completer number and not meeting primary objective.,efficacy,True,high
+NCT04598477,EFGARTIGIMOD ALFA,FCGRT,Pemphigus Vulgaris|Pemphigus Foliaceus,PHASE3,183,"Based on the lack of observed efficacy in the primary study ARGX-113-1904, the sponsor decided to discontinue the open-label extension study.",efficacy,False,high
+NCT02704403,ELAFIBRANOR,PPARA;PPARD,Nonalcoholic Steatohepatitis (NASH) With Fibrosis,PHASE3,2157,"Study did not meet the predefined primary surrogate efficacy endpoint, no safety issues identified",efficacy,False,high
+NCT02956486,ELENBECESTAT,BACE1,Alzheimer's Disease,PHASE3,2212,"Due to an unfavorable risk-benefit ratio including no evidence of potential efficacy, and the adverse event profile of E2609 being worse than placebo.",efficacy,False,high
+NCT00740545,ENOXAPARIN SODIUM,SERPINC1,Alive and Viable Births,PHASE3,258,Stopped for futility,efficacy,True,high
+NCT01244191,ERLOTINIB,EGFR,"Non Squamous, Non-small-cell Lung Cancer",PHASE3,1048,Sponsor decision due to the protocol-defined stopping boundary for futility was met based on the interim OS data.,efficacy,True,high
+NCT03657095,ESUBERAPROST,PTGIR,Pulmonary Arterial Hypertension,PHASE3,112,"The pivotal study, BPS-314d-MR-PAH-302 (NCT01908699), failed to demonstrate efficacy.",efficacy,False,high
+NCT04173273,ETRASIMOD,S1PR1;S1PR4;S1PR5,Crohn's Disease,PHASE2/PHASE3,379,The study was prematurely discontinued due to a lack of efficacy in sub-study 1,efficacy,True,high
+NCT01687998,EVACETRAPIB,CETP,Cardiovascular Diseases,PHASE3,12092,Study termination due to insufficient efficacy.,efficacy,False,high
+NCT01374451,EVEROLIMUS,FKBP1A,Islet Cell Tumor,PHASE2,160,The study was stopped for not meeting the primary endpoint for PFS.,efficacy,False,high
+NCT02975349,EVOBRUTINIB,BTK,Relapsing-remitting Multiple Sclerosis,PHASE2,267,Results from the EVOLUTION clinical trials showed evobrutinib did not meet its primary endpoint of annualized relapse rate for up to 156 weeks compared to oral teriflunom,efficacy,False,high
+NCT00849667,FARLETUZUMAB,FOLR1,Ovarian Cancer,PHASE3,1100,Lack of efficacy,efficacy,False,high
+NCT03107052,FREMANEZUMAB,CALCA;CALCB,Cluster Headache,PHASE3,275,The study was terminated after the episodic cluster study was terminated due to a pre specified futility analyses,efficacy,True,high
+NCT02945046,FREMANEZUMAB,CALCA;CALCB,Episodic Cluster Headache,PHASE3,169,Study was terminated as a result of a pre-specified futility analysis at the interim of 150 participants completing the efficacy analysis of the study.,efficacy,True,high
+NCT00731692,FINGOLIMOD HYDROCHLORIDE,S1PR1;S1PR2;S1PR3;S1PR4;S1PR5,Primary Progressive Multiple Sclerosis,PHASE3,970,The extension study was terminated early after the results of the core study showed the study did not meet primary endpoint; confirmed disability progression,efficacy,False,high
+NCT01709734,GALETERONE,AR;CYP17A1,Prostate Cancer,PHASE2,126,"Study was terminated prematurely in all investigational study centers upon recommendation from the study's Data Monitoring Committee (DMC).
+
+Study was stopped due to lack",efficacy,True,high
+NCT01798485,GANETESPIB,HSP90AA1;HSP90AB1,Non-Small-Cell Lung Adenocarcinoma|Non-small Cell Lung Cance,PHASE3,696,The study was stopped after the first Interim Analysis due to futility.,efficacy,True,high
+NCT03407482,FENEBRUTINIB,BTK,"Lupus Erythematosus, Systemic",PHASE2,160,The study was ended early due to the lack of efficacy seen in the parent study GA30044.,efficacy,True,high
+NCT02641392,MONGERSEN SODIUM,SMAD7,Crohn's Disease,PHASE3,310,Study terminated by Sponsor following a recommendation from external DMC based on lack of emerging benefit; there were no new emergent safety findings,efficacy,True,high
+NCT03628391,HALOPERIDOL,DRD2;DRD3;DRD4;HTR2A,Delirium|Critical Illness|Intensive Care Psychosis|Cognitive,PHASE3,142,The study was stopped because of futility of being able to reach a one-day difference between treatment groups in the primary outcome of DCFD in the intended sample size.,efficacy,True,high
+NCT04329923,HYDROXYCHLOROQUINE SULFATE,TLR7;TLR9,COVID-19,PHASE2,173,Cohort 1: slow accrual Cohort 2: Other studies showed no benefit Cohort 3: Study met pre-specificied futility analysis at planned second interim analysis,efficacy,True,high
+NCT02545283,IDASANUTLIN,MDM2;TP53,"Leukemia, Myeloid, Acute",PHASE3,447,The study was stopped for futility based on efficacy results at the interim analysis; no unexpected safety findings were observed.,efficacy,True,high
+NCT00124748,IMATINIB MESYLATE,ABL1;BCR;KIT;PDGFRB,"Leukemia, Myeloid, Chronic Phase",PHASE3,476,This study was prematurely discontinued because no improvement was observed in the 800mg dose compared to 400mg dose,efficacy,True,high
+NCT01956812,CLIVATUZUMAB TETRAXETAN,MUC5AC,Metastatic Pancreatic Cancer|Pancreatic Cancer,PHASE3,334,"The DSMB conducted an interim analysis on overall survival, which showed that the treatment arm did not demonstrate a sufficient improvement in OS vs. placebo.",efficacy,True,high
+NCT04474314,TOVINONTRINE,PDE9A,Sickle Cell Disease,PHASE2,115,"A recently conducted Interim analysis of IMR-SCD-301 demonstrated that while IMR-687 was generally well-tolerated, it failed to meet its primary efficacy endpoint. So, th",efficacy,True,high
+NCT04411082,TOVINONTRINE,PDE9A,β Thalassemia,PHASE2,122,"IMR-BTL-201demonstrated that while IMR-687 was generally well-tolerated, it failed to show any meaningful benefit in transfusion burden or improvement in most disease-rel",efficacy,False,high
+NCT01774604,INDOMETHACIN,PTGS1;PTGS2,Post-ERCP Acute Pancreatitis,PHASE3,449,Futility,efficacy,True,high
+NCT01232556,INOTUZUMAB OZOGAMICIN,CD22,"Lymphoma, Non-Hodgkin",PHASE3,338,"The study was terminated prematurely on May 16, 2013, for futility. No new or unexpected safety issues were identified.",efficacy,True,high
+NCT00047632,INTERFERON GAMMA-1B,IFNGR1;IFNGR2,Ovarian Carcinoma|Peritoneal Carcinoma,PHASE3,847,futility,efficacy,True,high
+NCT03445533,IPILIMUMAB,CTLA4,Metastatic Melanoma,PHASE3,481,Lack of Efficacy,efficacy,False,high
+NCT03584516,ITACITINIB,JAK1,Chronic Graft-versus-host Disease,PHASE2/PHASE3,155,The study was terminated due to insufficient efficacy to support moving into Part 2 of the study; there were no safety concerns that contributed to this decision.,efficacy,True,high
+NCT02980874,AFLIBERCEPT,PGF;VEGFA,Macular Edema|Retinal Vein Occlusion,PHASE3,460,"Primary, 8-week efficacy endpoint not achieved. No additional benefit for subjects receiving a corticosteroid together with an intravitreal anti-VEGF agent.",efficacy,False,high
+NCT04619420,POSDINEMAB,MAPT,Alzheimer Disease|Cognitive Dysfunction|Dementia,PHASE2,523,Posdinemab did not achieve statistical significance in slowing clinical decline,efficacy,False,high
+NCT03071692,K-877,PPARA,Type2 Diabetes|Dyslipidemia,PHASE3,10544,The study was stopped for futility based on efficacy results at the interim analysis; no unexpected safety findings were observed.,efficacy,True,high
+NCT02783573,LANABECESTAT,BACE1,Alzheimer's Disease,PHASE3,1722,"An independent assessment concluded the trial was not likely to meet the primary endpoint upon completion and therefore, trial stopped for futility.",efficacy,True,high
+NCT02245737,LANABECESTAT,BACE1,Alzheimer´s Disease,PHASE2/PHASE3,2218,"An independent assessment concluded the trial was not likely to meet the primary endpoint upon completion and therefore, trial stopped for futility",efficacy,True,high
+NCT00097344,LETROZOLE,CYP19A1,"Breast Neoplasms|Neoplasms, Hormone-Dependent",PHASE3,842,Identical study Biomed 777-CLP-029 did not meet superiority endpoint,efficacy,False,high
+NCT00267553,LETROZOLE,CYP19A1,"Breast Neoplasms|Neoplasms, Hormone-Dependent",PHASE3,200,This was a follow-on study to Biomed 777-CLP-029 which did not meet superiority endpoint,efficacy,False,high
+NCT01215942,TABALUMAB,TNFSF13B,Rheumatoid Arthritis,PHASE3,1086,Insufficient efficacy observed in study BCDM (NCT01198002) and BCDV (NCT01202773).,efficacy,True,high
+NCT01202773,TABALUMAB,TNFSF13B,Rheumatoid Arthritis,PHASE3,456,"Terminated not based on safety concerns, but due to insufficient efficacy.",efficacy,False,high
+NCT03831191,TORUDOKIMAB,IL33,Atopic Dermatitis,PHASE2,136,The study was terminated for lack of efficacy after an interim analysis was performed,efficacy,True,high
+NCT01097707,ERTEBEREL,ESR2,Benign Prostatic Hyperplasia,PHASE2,414,Terminated due to insufficient efficacy,efficacy,True,high
+NCT04271475,MACITENTAN,EDNRA;EDNRB,Chronic Thromboembolic Pulmonary Hypertension,PHASE3,127,The Sponsor decided to stop the study for futility based on a recommendation by the IDMC following a pre-planned interim analysis,efficacy,True,high
+NCT03775421,MACITENTAN,EDNRA;EDNRB,Congenital Heart Disease With Fontan Circulation,PHASE3,112,"As The RUBATO DB study (NCT03153137) did not show any benefit of treatment with macitentan in Fontan-palliated participants, the sponsor has decided to terminate the RUBA",efficacy,True,high
+NCT05582395,MAVACAMTEN,MYH6;MYH7;MYH7B;MYL2;MYL3;MYL4;MYL7,"Cardiomyopathy, Hypertrophic",PHASE3,580,Trial terminated because of lack of efficacy in the short term acute phase,efficacy,True,high
+NCT01038739,MESALAMINE,ALOX5;PPARG;PTGS1;PTGS2,Diverticulitis,PHASE3,330,Stopped due to futility.,efficacy,True,high
+NCT02587351,METOPROLOL SUCCINATE,ADRB1,"Pulmonary Disease, Chronic Obstructive",PHASE3,532,Futility,efficacy,True,high
+NCT02629848,MOTESANIB,FLT1;FLT4;KDR;KIT;PDGFRA;PDGFRB;RET,"Carcinoma, Non-Small-Cell Lung",PHASE3,401,Sponsor decision to terminate the study because the study did not meet the primary endpoint.,efficacy,False,high
+NCT00244504,MOXONIDINE,NISCH,Cardiac Disease|Vascular Surgery,PHASE3,141,Study was stopped after pre-definied interim analysis because of no effects,efficacy,True,high
+NCT01416181,NATALIZUMAB,ITGA4;ITGB1;ITGB7,Secondary Progressive Multiple Sclerosis,PHASE3,889,The ASCEND Study did not achieve statistical significance on the primary or secondary endpoints.,efficacy,False,high
+NCT01905592,NIRAPARIB,PARP1;PARP2,"Neoplasms, Breast|Carcinoma of Breast|Human Epidermal Growth",PHASE3,216,The study was terminated due to futility.,efficacy,True,high
+NCT02725372,NITRIC OXIDE,GUCY1A1;GUCY1A2;GUCY1B1,Pulmonary Arterial Hypertension,PHASE3,207,Trial stopped for futility,efficacy,True,high
+NCT06029439,NAVACAPRANT,OPRK1,Major Depressive Disorder,PHASE3,904,NMRA-335140 did not achieve the primary endpoint across three randomized controlled trials. Program discontinued due to lack of efficacy in MDD.,efficacy,False,high
+NCT01077518,OFATUMUMAB,MS4A1,"Lymphoma, Follicular",PHASE3,346,The study was terminated early as it did not meet the Primary efficacy objective after primary analysis.,efficacy,True,high
+NCT01200589,OFATUMUMAB,MS4A1,Non-Hodgkin's Lymphoma,PHASE3,438,The study stopped due to futility.,efficacy,True,high
+NCT03608033,NARSOPLIMAB,MASP2,IgA Nephropathy,PHASE3,360,IA did not meet the prespecified primary endpoint.,efficacy,True,high
+NCT04333147,OTILIMAB,CSF2,"Arthritis, Rheumatoid",PHASE3,2916,Study is early terminated due to Limited efficacy demonstrated in the contRAst program does not support a suitable benefit/risk profile for otilimab as a potential treatm,efficacy,False,high
+NCT00101361,OXANDROLONE,AR,Pressure Ulcer,PHASE3,212,futility analysis showed low probability of detecting a significant difference,efficacy,True,high
+NCT03955146,PAMREVLUMAB,CCN2,Idiopathic Pulmonary Fibrosis,PHASE3,393,Study did not meet its primary endpoint.,efficacy,False,high
+NCT04551053,PARSACLISIB,PIK3CD,Myelofibrosis|Primary Myelofibrosis|Post Essential Thrombocy,PHASE3,177,The study was terminated due to futility.,efficacy,True,high
+NCT04551066,PARSACLISIB,PIK3CD,Myelofibrosis|Primary Myelofibrosis|Post Essential Thrombocy,PHASE3,252,The study was terminated due to futility.,efficacy,True,high
+NCT05226598,PEMBROLIZUMAB,PDCD1,Metastatic Non-Small Cell Lung Cancer,PHASE3,739,"MK-7684A-007 was terminated early due to futility. A non-submission CSR, not intended to support any registration, was issued; therefore, an abbreviated CSR was generated",efficacy,True,high
+NCT02310763,DOMAGROZUMAB,MSTN,Duchenne Muscular Dystrophy,PHASE2,121,Termination Date 30AUG2018: Reason for termination: Lack of Efficacy,efficacy,False,high
+NCT05267535,PIROMELATINE,MTNR1A;MTNR1B,Alzheimer's Disease,PHASE2/PHASE3,216,Treatment with 20 mg piromelatine did not demonstrate efficacy over treatment with placebo based on analysis with the ADAS-Cog 14 subscale and with other cognitive and ne,efficacy,False,high
+NCT01794000,PRASUGREL,P2RY12,Sickle Cell Disease,PHASE3,341,The study is being terminated for lack of efficacy.,efficacy,False,high
+NCT00676650,PREDNISONE,NR3C1,Prostatic Neoplasms,PHASE3,873,Study A6181120 was prematurely discontinued due to futility on 27 September 2010. No new or unexpected safety issues were identified.,efficacy,True,high
+NCT00822900,PROGESTERONE,PGR,Traumatic Brain Injury,PHASE3,882,futility: low conditional power to demonstrate benefit of progesterone,efficacy,True,high
+NCT04759833,PRUCALOPRIDE,HTR4,Constipation,PHASE3,175,"Data Monitoring Committee (DMC) decision; terminated due to futility, with no safety concerns; FDA agreement to terminate the study.",efficacy,True,high
+NCT04369469,RAVULIZUMAB,C5,COVID-19 Severe Pneumonia|Acute Lung Injury|Acute Respirator,PHASE3,202,Met futility bar at interim analysis,efficacy,True,high
+NCT05746559,RAVULIZUMAB,C5,Chronic Kidney Disease|CKD|Cardiac Disease|Cardiopulmonary B,PHASE3,555,The ALXN1210-CSA-AKI-318 trial was discontinued on 29-Apr-2026 due to lack of efficacy in this overall study universe / patient population.,efficacy,False,high
+NCT04248465,RAVULIZUMAB,C5,Amyotrophic Lateral Sclerosis|ALS,PHASE3,382,The IDMC recommended the study be discontinued due to lack of efficacy with ravulizumab.,efficacy,True,high
+NCT04944784,RELDESEMTIV,TNNC2;TNNI2;TNNT3,Amyotrophic Lateral Sclerosis,PHASE3,489,The DMC recommended the trial be discontinued due to futility following a planned second interim analysis.,efficacy,True,high
+NCT00607971,RENZAPRIDE,HTR3A;HTR3B;HTR3C;HTR3D;HTR3E;HTR4,Constipation-Predominant Irritable Bowel Syndrome,PHASE3,939,Terminated due to insufficient efficacy over placebo in Study ATL1251/038/CL.,efficacy,False,high
+NCT05254990,REPARIXIN,CXCR1;CXCR2,Infectious Pneumonia|Severe COVID-19,PHASE3,414,The study was stopped due to futility as per protocol,efficacy,True,high
+NCT03762265,RILZABRUTINIB,BTK,Pemphigus,PHASE3,131,Sponsor decision based on lack of efficacy,efficacy,False,high
+NCT04504032,RIVAROXABAN,F10,COVID-19,PHASE2,497,"Based on Data Monitoring Committee''s recommendation on 3 February 2021, the study was stopped on 4 February 2021 due to futility.",efficacy,True,high
+NCT00979121,ROSUVASTATIN,HMGCR,Sepsis|Acute Lung Injury,PHASE3,745,stopped for futility,efficacy,True,high
+NCT02928445,INTEPIRDINE,HTR6,Dementia With Lewy Bodies,PHASE2/PHASE3,240,Intepirdine did not meet its primary efficacy endpoints in the lead-in study RVT-101-2001.,efficacy,False,high
+NCT04181762,SECUKINUMAB,IL17A,Lupus Nephritis,PHASE3,275,Study terminated by sponsor due to futility analysis,efficacy,True,high
+NCT02508649,SELEPRESSIN,AVPR1A,Septic Shock,PHASE2/PHASE3,868,Terminated due to futility,efficacy,True,high
+NCT03689244,SELEXIPAG,PTGIR,Chronic Thromboembolic Pulmonary Hypertension,PHASE3,128,"The study did not demonstrate efficacy on the primary endpoint, PVR vs. placebo at wk 20 at a planned interim analysis.",efficacy,True,high
+NCT00120289,SIMVASTATIN,HMGCR,Cardiovascular Diseases|Heart Diseases|Cerebrovascular Accid,PHASE3,3414,AIM-HIGH was stopped on the recommendation of the DSMB because of lack of efficacy of niacin in preventing primary outcome events.,efficacy,True,high
+NCT01057758,SIMVASTATIN,HMGCR,Pneumonia,PHASE3,300,stopped for futility,efficacy,True,high
+NCT01061671,SIMVASTATIN,HMGCR,"Pulmonary Disease, Chronic Obstructive",PHASE3,885,Futility,efficacy,True,high
+NCT01127633,SOLANEZUMAB,APP,Alzheimer's Disease,PHASE3,1457,Solanezumab did not meet the primary endpoint in study H8A-MC-LZAX.,efficacy,False,high
+NCT01900665,SOLANEZUMAB,APP,Alzheimer's Disease,PHASE3,2129,Solanezumab did not meet the study's primary endpoint.,efficacy,False,high
+NCT05163314,SOTICLESTAT,CYP46A1,Dravet Syndrome (DS)|Lennox Gastaut Syndrome (LGS),PHASE3,352,Due to negative results from phase 3 SKYLINE and SKYWAY studies and unrelated to patient safety it has been determined that supplementary data from TAK-935-3003 study is ,efficacy,False,high
+NCT03635073,SOTICLESTAT,CYP46A1,Epilepsy|Dravet Syndrome (DS)|Lennox-Gastaut Syndrome (LGS),PHASE2,156,Due to negative results from phase 3 SKYLINE and SKYWAY studies and unrelated to patient safety it has been determined that supplementary data from TAK-935-18-001 study i,efficacy,False,high
+NCT01436175,LISDEXAMFETAMINE DIMESYLATE,SLC18A2;SLC6A2;SLC6A3,Major Depressive Disorder,PHASE3,1570,SPD489 failed to demonstrate a benefit as adjunctive treatment to antidepressants. Termination was not related to any new safety findings.,efficacy,False,high
+NCT02691182,MOLINDONE,DRD2;HTR2A,Attention Deficit Hyperactivity Disorder (ADHD),PHASE3,491,The program was shut down due to a lack of efficacy.,efficacy,False,high
+NCT01337154,TAMIBAROTENE,RARA;RARB,Stage IIIB Non-small Cell Lung Cancer With Pleural Effusion|,PHASE2,140,Interim analysis showed that the primary endpoint would not be met.,efficacy,True,high
+NCT02518971,TAMSULOSIN,ADRA1A;ADRA1B;ADRA1D,Postoperative Urinary Retention,PHASE3,176,interim analysis revealed no significant difference between study groups \& increased sample size required to gain significance.,efficacy,True,high
+NCT02418572,TESTOSTERONE,AR,Infertility|Poor Ovarian Response,PHASE3,290,"Having reached the sample size described for the interim analysis and having seen the post-interim results, the sponsor has decided to stop the trial due to futility.",efficacy,True,high
+NCT03567291,DEUTETRABENAZINE,SLC18A2,Tourette Syndrome,PHASE3,228,The parent trials did not meet the primary endpoints of reduction in motor and phonic tics.,efficacy,False,high
+NCT03809663,TEZEPELUMAB,TSLP,Atopic Dermatitis,PHASE2,251,Tezepelumab as a monotherapy in atopic dermatitis did not reach the targeted efficacy level pre-established for this patient population.,efficacy,False,high
+NCT03712787,TILAVONEMAB,MAPT,Alzheimer's Disease,PHASE2,364,Discontinued because of lack of efficacy in the parent study (Study M15-566; NCT02880956).,efficacy,False,high
+NCT01209689,TOCILIZUMAB,IL6R,"Spondylitis, Ankylosing",PHASE3,113,Clinical development program terminated due to failure to achieve efficacy,efficacy,False,high
+NCT01227512,TOLVAPTAN,AVPR2,Hyponatremia|Dilutional Hyponatremia|Inappropriate ADH Syndr,PHASE3,124,"Recruitment challenges and results of interim futility analysis, which showed less than likely to achieve primary endpoint goal-length of hospital stay.",efficacy,True,high
+NCT00059202,URSODIOL,NR1H4,Primary Sclerosing Cholangitis,PHASE2/PHASE3,150,DSMB reviewed interim analysis and terminated the study due to futility.,efficacy,True,high
+NCT03523728,VENGLUSTAT,UGCG,"Polycystic Kidney, Autosomal Dominant",PHASE2/PHASE3,478,Interim analysis for futility of the Stage 1 of the EFC15392 study met the protocol specified stopping rule based on the primary endpoint. EFC15392 study was stopped for ,efficacy,True,high
+NCT02906020,VENGLUSTAT,UGCG,Parkinson's Disease,PHASE2,273,The topline results of the 52-week double-blind placebo-controlled period were analyzed. The study did not meet the primary or secondary endpoints. Based on these results,efficacy,False,high
+NCT00354432,VENLAFAXINE,SLC6A2;SLC6A4,Hot Flashes|Prostate Cancer,PHASE3,120,Stopped by the DSMB for lack of effect per interim stopping rule.,efficacy,True,high
+NCT00279422,VISILIZUMAB,CD3E,Ulcerative Colitis,PHASE2/PHASE3,127,"DMC recommendation, no efficacy",efficacy,True,high
+NCT00464061,VOLINANSERIN,HTR2A,Sleep Initiation and Maintenance Disorders,PHASE3,1847,Sponsor's decision due to absence of demonstration of efficacy of volinanserin in primary insomnia with predominant sleep maintenance problems,efficacy,False,high
+NCT01767857,BERMEKIMAB,IL1A,Metastatic Colorectal Cancer,PHASE3,643,The study crossed the prospective futility boundary of primary endpoint,efficacy,True,high
+NCT03517566,ADRIFORANT,HRH4,Atopic Dermatitis,PHASE2,293,Lack of efficacy,efficacy,False,high
