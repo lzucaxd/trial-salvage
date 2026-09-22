@@ -1,1 +1,1 @@
-"""Module 4 — rescue hypothesis ranking and trial simulation (stub)."""
+"""Module 4 — rescue hypothesis ranking and trial simulation."""

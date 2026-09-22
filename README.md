@@ -10,7 +10,7 @@ Trial ID + drug + disease + target        (config/assets/<asset>.yaml)
     ├── 1. Clinical evidence and failure analysis       ✅ implemented   src/trial_salvage/module1
     ├── 2. Protein variants and ESM                     ⬜ stub          src/trial_salvage/module2
     ├── 3. Genomic stratification and AlphaGenome       ✅ implemented (germline + somatic lanes; AlphaGenome not yet)   src/trial_salvage/module3
-    └── 4. Rescue-hypothesis ranking + trial simulation ⬜ stub          src/trial_salvage/module4
+    └── 4. Rescue-hypothesis ranking + trial simulation ✅ implemented   src/trial_salvage/module4
             → ranked rescue strategies, evidence, next experiments
 ```
 
@@ -24,6 +24,8 @@ re-approved in 2015 for EGFR exon 19 del / L858R disease.
 pip install -e ".[dev]"
 make module1            # live fetch from ClinicalTrials.gov v2 + PubMed (~30 s)
 make module1-offline    # replay from data/raw/<asset>/ (no network)
+make module4            # simulate + rank from module 1's handoff (~10 s, no network)
+make all                # module1 -> module4
 make test               # unit tests (no network)
 make module3-egfr       # Module 3 germline + somatic lanes for EGFR (live gnomAD / Reactome / cBioPortal)
 ```
@@ -65,6 +67,53 @@ Outputs land in `outputs/module1/`:
   0/41 trials started 2000–04 vs
   27/39 started 2017–20
 - 17/17 curated hazard ratios verified against their PubMed abstracts
+
+## Module 4 — what it does
+
+Consumes `handoff.module4` from module 1 (`endpoint`, `hr_pos`, `hr_neg`,
+`itt_reference_hr`, `failed_trial_itt_hr`, `responder_fraction_sweep`, trial sizes)
+and answers **what a redesigned trial would require**.
+
+1. **Simulate.** Exponential time-to-event trials, one-sided log-rank test.
+   Three designs: `unselected` (mixture population), `enriched` (biomarker-positive
+   only, screening burden `n / f`), `clinical_surrogate` (imperfect proxy).
+   The mixture is simulated participant by participant rather than through module 1's
+   log-linear `mixture_hr` approximation — hazard ratios are not collapsible across
+   strata, so simulating avoids assuming the pooled ratio is a weighted mean of the
+   stratum ratios.
+2. **Calibrate.** Re-simulate the failed trial and the rescue trial at their observed
+   ITT hazard ratios and actual sizes; the miss/win ordering must come out right.
+3. **Rank.** Strategies are placed in visible tiers set by the module 1 diagnosis
+   rules that fired, never by plausibility. Each entry carries the module 1 evidence
+   it rests on, a next experiment, and the observation that would undermine it.
+
+Outputs land in `outputs/module4/`:
+
+| File | What |
+|---|---|
+| `module4_output.json` | schema-validated result (`schemas/module4_output.schema.json`) |
+| `module4_report.md` | human-readable requirements, calibration and ranking |
+| `fig_<asset>_module4.png` | power vs responder fraction + screening burden |
+
+Result for gefitinib (PFS, hr_pos 0.48, hr_neg 2.85):
+
+| Question | Answer |
+|---|---|
+| Re-run unselected at n=800? | needs **65%** of the population EGFR-positive to reach 80% power |
+| Enriched trial? | **100 randomised**, about **200 screened** at 50% prevalence |
+| Failed trial (n=1,692, HR 0.89) | simulated power **0.62** |
+| Rescue trial (n=1,329, HR 0.74) | simulated power **1.00** |
+
+Below a responder fraction of about 65% an unselected re-run is not
+merely underpowered — with `hr_neg` above 1 the biomarker-negative majority is harmed,
+so the pooled effect points the wrong way and no sample size rescues it.
+
+**What is assumption and what is data.** The hazard ratios and trial sizes come from
+module 1 and are observed. The control-arm event rate is human-supplied
+(5.8 months — IPASS NCT00322452 posted control-arm (carboplatin/paclitaxel) median PFS, 5.8 months),
+as are exponential survival, no dropout and a perfect assay. All are listed in
+`assumptions.notes` in the output. Hazard ratios are never converted into response
+probabilities, and no probability that a rescue will succeed is produced.
 
 ## Adding a new asset
 
