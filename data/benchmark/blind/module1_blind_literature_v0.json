@@ -1,0 +1,1071 @@
+{
+"kept": {
+"MAGE-A3 immunotherapeutic": [
+"23715567",
+"23715562",
+"15606517",
+"19808198"
+],
+"bapineuzumab": [
+"19923550"
+],
+"enzastaurin": [],
+"farletuzumab": [
+"27001568"
+],
+"ipatasertib": [
+"34246347"
+],
+"lebrikizumab": [
+"21812663",
+"26001563"
+],
+"onartuzumab": [
+"24101053"
+],
+"tivantinib": [
+"23182627",
+"22440336"
+],
+"tralokinumab": [
+"26231288"
+],
+"vintafolide": [
+"24127448"
+],
+"ataluren": [
+"25042182"
+],
+"custirsen": [
+"28283282"
+],
+"ganetespib": [
+"25997818"
+],
+"motesanib": [
+"22753922"
+],
+"nerinetide": [
+"32087818"
+],
+"omecamtiv mecarbil": [
+"33185990",
+"34015475",
+"32985088",
+"34643642",
+"34628401"
+],
+"rigosertib": [
+"26968357",
+"24777753"
+],
+"solanezumab": [
+"24450890",
+"21784350"
+],
+"tarenflurbil": [
+"18450517",
+"17650315",
+"18090435",
+"17599166"
+],
+"gantenerumab": [
+"29221491"
+],
+"bardoxolone methyl": [
+"24206459",
+"24903467",
+"24169612",
+"23467003"
+],
+"afatinib": [
+"22452896",
+"22452895"
+],
+"belimumab": [
+"19714615",
+"19714604"
+],
+"dacomitinib": [
+"25439691",
+"22753918"
+],
+"erlotinib": [
+"16043829",
+"16043828",
+"16556072"
+],
+"gefitinib": [
+"16257339",
+"17075123",
+"17409969"
+],
+"mepolizumab": [
+"17872493",
+"19264686",
+"19264687",
+"22998420"
+],
+"olaparib": [
+"22452356",
+"24882434"
+],
+"ramucirumab": [
+"26095784"
+],
+"pirfenidone": [
+"21571362",
+"19996196",
+"10194146",
+"15665326",
+"19127470",
+"20824834"
+],
+"sipuleucel-T": [
+"16809734"
+],
+"tofersen": [
+"36129998",
+"36928619"
+],
+"ocrelizumab (after rituximab)": [
+"19847908"
+],
+"necitumumab": [
+"25701171"
+],
+"nintedanib": [
+"25534294",
+"25478720",
+"24411639"
+],
+"vorapaxar": [
+"22077816"
+],
+"aducanumab": [
+"35542991"
+]
+},
+"cutoffs": {
+"gefitinib": "2007/12",
+"afatinib": "2009/08",
+"dacomitinib": "2013/05",
+"erlotinib": "2007/02",
+"ramucirumab": "2015/07",
+"belimumab": "2007/05",
+"mepolizumab": "2012/10",
+"pirfenidone": "2011/07",
+"sipuleucel-T": "2003/07",
+"vorapaxar": "2007/09",
+"tofersen": "2023/12",
+"necitumumab": "2010/01",
+"nintedanib": "2015/06",
+"olaparib": "2013/09",
+"ocrelizumab (after rituximab)": "2011/03",
+"solanezumab": "2013/07",
+"bapineuzumab": "2007/12",
+"tarenflurbil": "2008/06",
+"gantenerumab": "2018/06",
+"aducanumab": "2021/12",
+"tivantinib": "2013/01",
+"onartuzumab": "2012/01",
+"vintafolide": "2011/04",
+"MAGE-A3 immunotherapeutic": "2019/01",
+"tralokinumab": "2014/10",
+"lebrikizumab": "2013/08",
+"nerinetide": "2020/09",
+"rigosertib": "2015/10",
+"ganetespib": "2013/07",
+"custirsen": "2012/05",
+"motesanib": "2012/07",
+"enzastaurin": "2017/09",
+"bardoxolone methyl": "2017/03",
+"ataluren": "2013/04",
+"farletuzumab": "2015/01",
+"omecamtiv mecarbil": "2022/06",
+"ipatasertib": "2022/06"
+},
+"dropped_retry_pubs": [
+"24450891",
+"27132212",
+"29793857",
+"29908991",
+"30665869",
+"39955119"
+],
+"abstracts": {
+"23715567": {
+"title": "Adjuvant MAGE-A3 immunotherapy in resected non-small-cell lung cancer: phase II randomized study results.",
+"journal": "J Clin Oncol",
+"year": "2013",
+"abstract": "The MAGE-A3 protein is expressed in approximately 35% of patients with resectable non-small-cell lung cancer (NSCLC). Several immunization approaches against the MAGE-A3 antigen have shown few, but often long-lasting, clinical responses in patients with metastatic melanoma. A double-blind, randomized, placebo-controlled phase II study was performed assessing clinical activity, immunologic response, and safety following immunization with recombinant MAGE-A3 protein combined with an immunostimulant (13 doses over 27 months) in completely resected MAGE-A3-positive stage IB to II NSCLC. The primary end point was disease-free interval (DFI). Patients were randomly assigned to either MAGE-A3 immunotherapeutic (n = 122) or placebo (n = 60). After a median postresection period of 44 months, recurrence was observed in 35% of patients in the MAGE-A3 arm and 43% in the placebo arm. No statistically significant improvement in DFI (hazard ratio [HR], 0.75, 95% CI, 0.46 to 1.23; two-sided P = .254), disease-free survival (DFS; HR, 0.76; 95% CI, 0.48 to 1.21; P = .248), or overall survival (HR, 0.81; 95% CI, 0.47 to 1.40; P = .454) was observed. Corresponding analysis after a median of 70 months of follow-up revealed a similar trend for DFI and DFS. All patients receiving the active treatment showed a humoral immune response to the MAGE-A3 antigen, although no correlation was observed with outcome. No significant toxicity was observed. In this early development study with a limited number of patients, postoperative MAGE-A3 immunization proved to be feasible with minimal toxicity. These results are being investigated further in a large phase III study.",
+"pubtypes": [
+"Clinical Trial, Phase II",
+"Journal Article",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"23715562": {
+"title": "Predictive gene signature in MAGE-A3 antigen-specific cancer immunotherapy.",
+"journal": "J Clin Oncol",
+"year": "2013",
+"abstract": "To detect a pretreatment gene expression signature (GS) predictive of response to MAGE-A3 immunotherapeutic in patients with metastatic melanoma and to investigate its applicability in a different cancer setting (adjuvant therapy of resected early-stage non-small-cell lung cancer [NSCLC]). Patients were participants in two phase II studies of the recombinant MAGE-A3 antigen combined with an immunostimulant (AS15 or AS02B). mRNA from melanoma biopsies was analyzed by microarray analysis and quantitative polymerase chain reaction. These results were used to identify and cross-validate the GS, which was then applied to the NSCLC data. In the patients with melanoma, 84 genes were identified whose expression was potentially associated with clinical benefit. This effect was strongest when the immunostimulant AS15 was included in the immunotherapy (hazard ratio [HR] for overall survival, 0.37; 95% CI, 0.13 to 1.05; P = .06) and was less strong with the other immunostimulant AS02B (HR, 0.84; 95% CI, 0.36 to 1.97; P = .70). The same GS was then used to predict the outcome for patients with resected NSCLC treated with MAGE-A3 plus AS02B; actively treated GS-positive patients showed a favorable disease-free interval compared with placebo-treated GS-positive patients (HR, 0.42; 95% CI, 0.17 to 1.03; P = .06), whereas among GS-negative patients, no such difference was found (HR, 1.17; 95% CI, 0.59 to 2.31; P = .65). The genes identified were mainly immune related, involving interferon gamma pathways and specific chemokines, suggesting that their pretreatment expression influences the tumor's immune microenvironment and the patient's clinical response. An 84-gene GS associated with clinical response for MAGE-A3 immunotherapeutic was identified in metastatic melanoma and confirmed in resected NSCLC.",
+"pubtypes": [
+"Clinical Trial, Phase II",
+"Journal Article",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"15606517": {
+"title": "Melanoma or not? Cancer testis antigens may help.",
+"journal": "Br J Dermatol",
+"year": "2004",
+"abstract": "Cancer testis antigens (CTAs) are expressed in a variety of malignant tumours. No CTA expression is found in normal adult tissues, except in male germ cells and occasionally placenta. To date, more than 20 CTAs or antigen families have been identified. Owing to their tumour-associated expression pattern, CTAs may be useful for making a distinction between benign and malignant neoplasms. The present study was done to analyse the value of CTAs for the discrimination of cutaneous melanoma and naevi. Primary melanomas (38) and 19 naevi were analysed for their expression of CTAs by immunohistochemistry using the following monoclonal antibodies (mAb) to the following antigens (mAb/antigen): MA454/MAGE-A1, 57B/MAGE-A4, ES121/NY-ESO-1. In a subset of melanomas (n = 26), the CTA panel was extended to three additional CTAs (mAb/antigen): CT7-33/MAGE-C1, M3H67/MAGE-A3 and GAGE/GAGE. All 19 naevi were negative for the mAbs MA454, M3H67, 57B, ES121, CT7-33 and GAGE. In melanoma, the immunoreactivity was as follows: MA454: 8/38 (21%), 57B 11/38 (29%), ES121 9/38 (24%). However, 19/38 (50%) were positive for at least one CTA. When 26 melanomas were tested for the expression of six different CTAs 20/26 (77%) were positive for at least one CTA. CTAs may be useful in the determination of suspected malignancy in cutaneous melanomas. The low incidence of particular CTAs can be overcome by increasing the number of CTAs analysed.",
+"pubtypes": [
+"Journal Article"
+]
+},
+"19808198": {
+"title": "MAGRIT: the largest-ever phase III lung cancer trial aims to establish a novel tumor-specific approach to therapy.",
+"journal": "Clin Lung Cancer",
+"year": "2009",
+"abstract": "This clinical trial summary provides the background and rationale for a randomized trial, MAGRIT, to investigate the efficacy of MAGE-A3 antigen-specific cancer immunotherapeutic (ASCI) agents in preventing cancer relapse, when administered after tumor resection, in patients with MAGE-A3-positive stages IB, II, and IIIA non-small-cell lung cancer. The study will also evaluate potential side effects of MAGE-A3 ASCIs. The primary endpoint is disease-free survival. The secondary endpoint is prospective validation of the gene signature predictive of benefit from MAGE-A3 ASCI therapy.",
+"pubtypes": [
+"Journal Article"
+]
+},
+"19923550": {
+"title": "A phase 2 multiple ascending dose trial of bapineuzumab in mild to moderate Alzheimer disease.",
+"journal": "Neurology",
+"year": "2009",
+"abstract": "Bapineuzumab, a humanized anti-amyloid-beta (Abeta) monoclonal antibody for the potential treatment of Alzheimer disease (AD), was evaluated in a multiple ascending dose, safety, and efficacy study in mild to moderate AD. The study enrolled 234 patients, randomly assigned to IV bapineuzumab or placebo in 4 dose cohorts (0.15, 0.5, 1.0, or 2.0 mg/kg). Patients received 6 infusions, 13 weeks apart, with final assessments at week 78. The prespecified primary efficacy analysis in the modified intent-to-treat population assumed linear decline and compared treatment differences within dose cohorts on the Alzheimer's Disease Assessment Scale-Cognitive and Disability Assessment for Dementia. Exploratory analyses combined dose cohorts and did not assume a specific pattern of decline. No significant differences were found in the primary efficacy analysis. Exploratory analyses showed potential treatment differences (p < 0.05, unadjusted for multiple comparisons) on cognitive and functional endpoints in study \"completers\" and APOE epsilon4 noncarriers. Reversible vasogenic edema, detected on brain MRI in 12/124 (9.7%) bapineuzumab-treated patients, was more frequent in higher dose groups and APOE epsilon4 carriers. Six vasogenic edema patients were asymptomatic; 6 experienced transient symptoms. Primary efficacy outcomes in this phase 2 trial were not significant. Potential treatment differences in the exploratory analyses support further investigation of bapineuzumab in phase 3 with special attention to APOE epsilon4 carrier status. Due to varying doses and a lack of statistical precision, this Class II ascending dose trial provides insufficient evidence to support or refute a benefit of bapineuzumab.",
+"pubtypes": [
+"Clinical Trial, Phase II",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, N.I.H., Extramural",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"27001568": {
+"title": "A Randomized, Double-Blind, Placebo-Controlled, Phase III Study to Assess Efficacy and Safety of Weekly Farletuzumab in Combination With Carboplatin and Taxane in Patients With Ovarian Cancer in First Platinum-Sensitive Relapse.",
+"journal": "J Clin Oncol",
+"year": "2016",
+"abstract": "Farletuzumab is a humanized monoclonal antibody that binds to folate receptor-\u03b1, which is highly expressed in ovarian carcinoma and largely absent from normal tissue. Farletuzumab was investigated in a double-blind, randomized phase III study in platinum-sensitive ovarian cancer. Eligible patients had first recurrent ovarian cancer 6-24 months following completion of platinum-taxane chemotherapy. All patients received carboplatin plus paclitaxel or docetaxel (for six cycles combined with randomly assigned test products in a 1:1:1 ratio: farletuzumab 1.25 mg/kg, farletuzumab 2.5 mg/kg, or placebo). The single-agent test product was continued weekly until disease progression. The primary end point was progression-free survival (PFS) by Response Evaluation Criteria in Solid Tumors. Additional analyses not outlined in the original protocol were prespecified in the final statistical analysis plan, including a subgroup analysis by baseline CA-125 and farletuzumab exposure levels. A total of 1,100 women were randomly assigned to treatment dose or placebo. PFS from the primary analysis was 9.0, 9.5, and 9.7 months for the placebo, farletuzumab 1.25 mg/kg, and farletuzumab 2.5 mg/kg groups, respectively. Neither farletuzumab group was statistically different from the placebo group (hazard ratio [HR], 0.99 [95% CI, 0.81 to 1.21] and 0.86 [95% CI, 0.70 to 1.06] for farletuzumab 1.25 mg/kg and 2.5 mg/kg group v placebo, respectively). In the prespecified subgroup, baseline CA-125 levels not more than three times the upper limit of normal (ULN) correlated with longer PFS (HR, 0.49; P = .0028) and overall survival (OS) (HR, 0.44; P = .0108) for farletuzumab 2.5 mg/kg versus placebo. Subgroup analysis of farletuzumab exposure above the median, regardless of dose, showed significantly better PFS versus placebo. The most common adverse events were those associated with chemotherapy. Neither farletuzumab dose met the study's primary PFS end point. Prespecified subgroup analyses demonstrated that patients with CA-125 levels not more than three times the ULN and patients with higher farletuzumab exposure showed superior PFS and OS compared with placebo.",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Journal Article",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"34246347": {
+"title": "Ipatasertib plus abiraterone and prednisolone in metastatic castration-resistant prostate cancer (IPATential150): a multicentre, randomised, double-blind, phase 3 trial.",
+"journal": "Lancet",
+"year": "2021",
+"abstract": "The PI3K/AKT and androgen-receptor pathways are dysregulated in metastatic castration-resistant prostate cancers (mCRPCs); tumours with functional PTEN-loss status have hyperactivated AKT signalling. Dual pathway inhibition with AKT inhibitor ipatasertib plus abiraterone might have greater benefit than abiraterone alone. We aimed to compare ipatasertib plus abiraterone with placebo plus abiraterone in patients with previously untreated mCRPC with or without tumour PTEN loss. We did a randomised, double-blind, phase 3 trial at 200 sites across 26 countries or regions. Patients aged 18 years or older with previously untreated asymptomatic or mildly symptomatic mCRPC who had progressive disease and Eastern Collaborative Oncology Group performance status of 0 or 1 were randomly assigned (1:1; permuted block method) to receive ipatasertib (400 mg once daily orally) plus abiraterone (1000 mg once daily orally) and prednisolone (5 mg twice a day orally) or placebo plus abiraterone and prednisolone (with the same dosing schedule). Patients received study treatment until disease progression, intolerable toxicity, withdrawal from the study, or study completion. Stratification factors were previous taxane-based therapy for hormone-sensitive prostate cancer, type of progression, presence of visceral metastasis, and tumour PTEN-loss status by immunohistochemistry. Patients, investigators, and the study sponsor were masked to the treatment allocation. The coprimary endpoints were investigator-assessed radiographical progression-free survival in the PTEN-loss-by-immunohistochemistry population and in the intention-to-treat population. This study is ongoing and is registered with ClinicalTrials.gov, NCT03072238. Between June 30, 2017, and Jan 17, 2019, 1611 patients were screened for eligibility and 1101 (68%) were enrolled; 554 (50%) were assigned to the placebo-abiraterone group and 547 (50%) to the ipatasertib-abiraterone group. At data cutoff (March 16, 2020), median follow-up duration was 19 months (range 0-33). In the 521 (47%) patients who had tumours with PTEN loss by immunohistochemistry (261 in the placebo-abiraterone group and 260 in the ipatasertib-abiraterone group), median radiographical progression-free survival was 16\u00b75 months (95% CI 13\u00b79-17\u00b70) in the placebo-abiraterone group and 18\u00b75 months (16\u00b73-22\u00b71) in the ipatasertib-abiraterone group (hazard ratio [HR] 0\u00b777 [95% CI 0\u00b761-0\u00b798]; p=0\u00b7034; significant at \u03b1=0\u00b704). In the intention-to-treat population, median progression-free survival was 16\u00b76 months (95% CI 15\u00b76-19\u00b71) in the placebo-abiraterone group and 19\u00b72 months (16\u00b75-22\u00b73) in the ipatasertib-abiraterone group (HR 0\u00b784 [95% CI 0\u00b771-0\u00b799]; p=0\u00b7043; not significant at \u03b1=0\u00b701). Grade 3 or higher adverse events occurred in 213 (39%) of 546 patients in the placebo-abiraterone group and in 386 (70%) of 551 patients in the ipatasertib-abiraterone group; adverse events leading to discontinuation of placebo or ipatasertib occurred in 28 (5%) in the placebo-abiraterone group and 116 (21%) in the ipatasertib-abiraterone group. Deaths due to adverse events deemed related to treatment occurred in two patients (<1%; acute myocardial infarction [n=1] and lower respiratory tract infection [n=1]) in the placebo-abiraterone group and in two patients (<1%; hyperglycaemia [n=1] and chemical pneumonitis [n=1]) in the ipastasertb-abiraterone group. Ipatasertib plus abiraterone significantly improved radiographical progression-free survival compared with placebo plus abiraterone among patients with mCRPC with PTEN-loss tumours, but there was no significant difference between the groups in the intention-to-treat population. Adverse events were consistent with the known safety profiles of each agent. These data suggest that combined AKT and androgen-receptor signalling pathway inhibition with ipatasertib and abiraterone is a potential treatment for men with PTEN-loss mCRPC, a population with a poor prognosis. F Hoffmann-La Roche and Genentech.",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"21812663": {
+"title": "Lebrikizumab treatment in adults with asthma.",
+"journal": "N Engl J Med",
+"year": "2011",
+"abstract": "Many patients with asthma have uncontrolled disease despite treatment with inhaled glucocorticoids. One potential cause of the variability in response to treatment is heterogeneity in the role of interleukin-13 expression in the clinical asthma phenotype. We hypothesized that anti-interleukin-13 therapy would benefit patients with asthma who had a pretreatment profile consistent with interleukin-13 activity. We conducted a randomized, double-blind, placebo-controlled study of lebrikizumab, a monoclonal antibody to interleukin-13, in 219 adults who had asthma that was inadequately controlled despite inhaled glucocorticoid therapy. The primary efficacy outcome was the relative change in prebronchodilator forced expiratory volume in 1 second (FEV(1)) from baseline to week 12. Among the secondary outcomes was the rate of asthma exacerbations through 24 weeks. Patient subgroups were prespecified according to baseline type 2 helper T-cell (Th2) status (assessed on the basis of total IgE level and blood eosinophil count) and serum periostin level. At baseline, patients had a mean FEV(1) that was 65% of the predicted value and were taking a mean dose of inhaled glucocorticoids of 580 \u03bcg per day; 80% were also taking a long-acting beta-agonist. At week 12, the mean increase in FEV(1) was 5.5 percentage points higher in the lebrikizumab group than in the placebo group (P = 0.02). Among patients in the high-periostin subgroup, the increase from baseline FEV(1) was 8.2 percentage points higher in the lebrikizumab group than in the placebo group (P = 0.03). Among patients in the low-periostin subgroup, the increase from baseline FEV(1) was 1.6 percentage points higher in the lebrikizumab group than in the placebo group (P = 0.61). Musculoskeletal side effects were more common with lebrikizumab than with placebo (13.2% vs. 5.4%, P = 0.045). Lebrikizumab treatment was associated with improved lung function. Patients with high pretreatment levels of serum periostin had greater improvement in lung function with lebrikizumab than did patients with low periostin levels. (Funded by Genentech; ClinicalTrials.gov number, NCT00930163 .).",
+"pubtypes": [
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"26001563": {
+"title": "Lebrikizumab in moderate-to-severe asthma: pooled data from two randomised placebo-controlled studies.",
+"journal": "Thorax",
+"year": "2015",
+"abstract": "In a subset of patients with asthma, standard-of-care treatment does not achieve disease control, highlighting the need for novel therapeutic approaches. Lebrikizumab is a humanised, monoclonal antibody that binds to and blocks interleukin-13 activity. LUTE and VERSE were replicate, randomised, double-blind, placebo-controlled studies, evaluating multiple doses of lebrikizumab in patients with uncontrolled asthma despite the use of medium-to-high-dose inhaled corticosteroid and a second controller. Patients received lebrikizumab 37.5, 125, 250\u2005mg or placebo subcutaneously every four\u2005weeks. The primary endpoint was the rate of asthma exacerbations during the placebo-controlled period. Analyses were performed on prespecified subgroups based on baseline serum periostin levels. Following the discovery of a host-cell impurity in the study drug material, protocols were amended to convert from phase III to phase IIb. Subsequently, dosing of study medication was discontinued early as a precautionary measure. The data collected for analysis were from a placebo-controlled period of variable duration and pooled across both studies. The median duration of treatment was approximately 24\u2005weeks. Treatment with lebrikizumab reduced the rate of asthma exacerbations, which was more pronounced in the periostin-high patients (all doses: 60% reduction) than in the periostin-low patients (all doses: 5% reduction); no dose-response was evident. Lung function also improved following lebrikizumab treatment, with greatest increase in FEV1 in periostin-high patients (all doses: 9.1% placebo-adjusted improvement) compared with periostin-low patients (all doses: 2.6% placebo-adjusted improvement). Lebrikizumab was well tolerated and no clinically important safety signals were observed. These data are consistent with, and extend, previously published results demonstrating the efficacy of lebrikizumab in improving rate of asthma exacerbations and lung function in patients with moderate-to-severe asthma who remain uncontrolled despite current standard-of-care treatment. The LUTE study was registered under NCT01545440 and the VERSE study under NCT01545453 at http://www.clinicaltrials.gov.",
+"pubtypes": [
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"24101053": {
+"title": "Randomized phase II trial of Onartuzumab in combination with erlotinib in patients with advanced non-small-cell lung cancer.",
+"journal": "J Clin Oncol",
+"year": "2013",
+"abstract": "Increased hepatocyte growth factor/MET signaling is associated with poor prognosis and acquired resistance to epidermal growth factor receptor (EGFR) -targeted drugs in patients with non-small-cell lung cancer (NSCLC). We investigated whether dual inhibition of MET/EGFR results in clinical benefit in patients with NSCLC. Patients with recurrent NSCLC were randomly assigned at a ratio of one to one to receive onartuzumab plus erlotinib or placebo plus erlotinib; crossover was allowed at progression. Tumor tissue was required to assess MET status by immunohistochemistry (IHC). Coprimary end points were progression-free survival (PFS) in the intent-to-treat (ITT) and MET-positive (MET IHC diagnostic positive) populations; additional end points included overall survival (OS), objective response rate, and safety. There was no improvement in PFS or OS in the ITT population (n = 137; PFS hazard ratio [HR], 1.09; P = .69; OS HR, 0.80; P = .34). MET-positive patients (n = 66) treated with erlotinib plus onartuzumab showed improvement in both PFS (HR, .53; P = .04) and OS (HR, .37; P = .002). Conversely, clinical outcomes were worse in MET-negative patients treated with onartuzumab plus erlotinib (n = 62; PFS HR, 1.82; P = .05; OS HR, 1.78; P = .16). MET-positive control patients had worse outcomes versus MET-negative control patients (n = 62; PFS HR, 1.71; P = .06; OS HR, 2.61; P = .004). Incidence of peripheral edema was increased in onartuzumab-treated patients. Onartuzumab plus erlotinib was associated with improved PFS and OS in the MET-positive population. These results combined with the worse outcomes observed in MET-negative patients treated with onartuzumab highlight the importance of diagnostic testing in drug development.",
+"pubtypes": [
+"Clinical Trial, Phase II",
+"Journal Article",
+"Randomized Controlled Trial",
+"Research Support, N.I.H., Extramural"
+]
+},
+"23182627": {
+"title": "Tivantinib for second-line treatment of advanced hepatocellular carcinoma: a randomised, placebo-controlled phase 2 study.",
+"journal": "Lancet Oncol",
+"year": "2013",
+"abstract": "Tivantinib (ARQ 197), a selective oral inhibitor of MET, has shown promising antitumour activity in hepatocellular carcinoma as monotherapy and in combination with sorafenib. We aimed to assess efficacy and safety of tivantinib for second-line treatment of advanced hepatocellular carcinoma. In this completed, multicentre, randomised, placebo-controlled, double-blind, phase 2 study, we enrolled patients with advanced hepatocellular carcinoma and Child-Pugh A cirrhosis who had progressed on or were unable to tolerate first-line systemic therapy. We randomly allocated patients 2:1 to receive tivantinib (360 mg twice-daily) or placebo until disease progression. The tivantinib dose was amended to 240 mg twice-daily because of high incidence of treatment-emergent grade 3 or worse neutropenia. Randomisation was done centrally by an interactive voice-response system, stratified by Eastern Cooperative Oncology Group performance status and vascular invasion. The primary endpoint was time to progression, according to independent radiological review in the intention-to-treat population. We assessed tumour samples for MET expression with immunohistochemistry (high expression was regarded as \u22652+ in \u226550% of tumour cells). This study is registered with ClinicalTrials.gov, number NCT00988741. 71 patients were randomly assigned to receive tivantinib (38 at 360 mg twice-daily and 33 at 240 mg twice-daily); 36 patients were randomly assigned to receive placebo. At the time of analysis, 46 (65%) patients in the tivantinib group and 26 (72%) of those in the placebo group had progressive disease. Time to progression was longer for patients treated with tivantinib (1\u00b76 months [95% CI 1\u00b74-2\u00b78]) than placebo (1\u00b74 months [1\u00b74-1\u00b75]; hazard ratio [HR] 0\u00b764, 90% CI 0\u00b743-0\u00b794; p=0\u00b704). For patients with MET-high tumours, median time to progression was longer with tivantinib than for those on placebo (2\u00b77 months [95% CI 1\u00b74-8\u00b75] for 22 MET-high patients on tivantinib vs 1\u00b74 months [1\u00b74-1\u00b76] for 15 MET-high patients on placebo; HR 0\u00b743, 95% CI 0\u00b719-0\u00b797; p=0\u00b703). The most common grade 3 or worse adverse events in the tivantinib group were neutropenia (ten patients [14%] vs none in the placebo group) and anaemia (eight [11%] vs none in the placebo group). Eight patients (21%) in the tivantinib 360 mg group had grade 3 or worse neutropenia compared with two (6%) patients in the 240 mg group. Four deaths related to tivantinib occurred from severe neutropenia. 24 (34%) patients in the tivantinib group and 14 (39%) patients in the placebo group had serious adverse events. Tivantinib could provide an option for second-line treatment of patients with advanced hepatocellular carcinoma and well-compensated liver cirrhosis, particularly for patients with MET-high tumours. Confirmation in a phase 3 trial is needed, with a starting dose of tivantinib 240 mg twice-daily. ArQule, Daiichi Sankyo (Daiichi Sankyo Group).",
+"pubtypes": [
+"Clinical Trial, Phase II",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"22440336": {
+"title": "Rationale and design of MARQUEE: a phase III, randomized, double-blind study of tivantinib plus erlotinib versus placebo plus erlotinib in previously treated patients with locally advanced or metastatic, nonsquamous, non-small-cell lung cancer.",
+"journal": "Clin Lung Cancer",
+"year": "2012",
+"abstract": "We present the rationale and design for MARQUEE, a phase III, randomized, double-blind, placebo-controlled study of ARQ 197 plus erlotinib versus placebo plus erlotinib in previously treated subjects with locally advanced or metastatic, nonsquamous, non-small-cell lung cancer (NSCLC). The design of MARQUEE is based on preclinical data, the current understanding of the role of cellular N-methyl-N'-nitroso-guanidine human osteosarcoma (MNNG HOS) transforming gene (MET) in NSCLC, and clinical data from a randomized phase II study. The available evidence suggests that dual inhibition of MET and the epidermal growth factor receptor (EGFR) may overcome resistance to EGFR inhibitors. In the phase II study, the combination of tivantinib plus erlotinib significantly improved progression-free survival (PFS) and overall survival (OS) compared with placebo plus erlotinib in the subset of patients with nonsquamous histology, a population enriched for MET overexpression. The primary endpoint in MARQUEE is OS. Secondary and exploratory objectives include determination of PFS, OS in molecular subgroups (defined by EGFR and KRAS mutation status, amplification or overexpression of MET, and serum hepatocyte growth factor), and safety. All patients will be tested for biomarkers, and the results will provide a wealth of information on the role of tivantinib in treating nonsquamous NSCLC.",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Comparative Study",
+"Journal Article",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"26231288": {
+"title": "Efficacy and safety of tralokinumab in patients with severe uncontrolled asthma: a randomised, double-blind, placebo-controlled, phase 2b trial.",
+"journal": "Lancet Respir Med",
+"year": "2015",
+"abstract": "Interleukin 13 is a central mediator of asthma. Tralokinumab is a human interleukin-13 neutralising monoclonal antibody. We aimed to assess the efficacy and safety of two dosing regimens of tralokinumab in patients with severe uncontrolled asthma. We did a randomised, double-blind, placebo-controlled, parallel-group, multicentre, phase 2b study at 98 sites in North America, South America, Europe, and Asia. Patients aged 18-75 years with severe asthma and two to six exacerbations in the previous year were randomly assigned (1:1), via an interactive voice-response or web-response system, to one of two dosing regimen groups (every 2 weeks, or every 2 weeks for 12 weeks then every 4 weeks) and further randomised (2:1), via computer-generated permuted-block randomisation (block size of six), to receive tralokinumab 300 mg or placebo for 1 year. All participants received high-dose fluticasone and salmeterol and continued other pre-study controller drugs. Treatment was administered by an unmasked study investigator not involved in the management of patients; all other study site personnel, patients, the study funder, and data analysts were masked to treatment allocation. The primary endpoint was the annual asthma exacerbation rate at week 52 in the intention-to-treat population. Key secondary endpoints included prebronchodilator forced expiratory volume in 1 s (FEV1), Asthma Control Questionnaire-6 (ACQ-6), and Asthma Quality of Life Questionnaire-Standardised Version (AQLQ[S]). This trial is registered with ClinicalTrials.gov, number NCT01402986. Between Oct 4, 2011, and Feb 22, 2014, we randomly assigned 452 patients to receive placebo (n=151) or tralokinumab every 2 weeks (n=150) or every 4 weeks (n=151), of whom 383 (85%) completed the treatment period up to week 52. The annual asthma exacerbation rate at week 52 was similar between patients receiving tralokinumab every 2 weeks (0.91 per patient per year [95% CI 0.76-1.08]) and every 4 weeks (0.97 [0.81-1.14]), and those receiving placebo (0.90 [0.75-1.08]). At week 52, percentage changes in annual asthma exacerbation rate were not significant with tralokinumab every 2 weeks or every 4 weeks versus placebo (6% [95% CI -31 to 33; p=0.709] and -2% [-46 to 29; p=0.904], respectively), with positive changes showing a decrease in exacerbation rate and negative changes showing an increase. Prebronchodilator FEV1 was significantly increased compared with placebo for tralokinumab every 2 weeks (change from baseline 7.3% [95% CI 2.6-12.0]; p=0.003), but not every 4 weeks (1.8% [-2.9 to 6.6]; p=0.448); however, we did not identify significant changes in the other key secondary endpoints. In a post-hoc subgroup analysis of patients not on long-term oral corticosteroids and with baseline FEV1 reversibility of 12% or greater, we noted a non-significant improvement in asthma exacerbation rate (44% [95% CI -22 to 74]; p=0.147) and significant improvements in key secondary endpoints (FEV1 12.2% [1.7-22.7]; p=0.022; ACQ-6 -0.55 [-1.07 to -0.04]; p=0.036; and AQLQ[S] 0.70 [0.12-1.28]; p=0.019) in patients given tralokinumab every 2 weeks (n=33) compared with placebo (n=48). In patients in this subgroup who also had baseline serum dipeptidyl peptidase-4 (DPP-4) higher than the population baseline median, we noted additional improvements in prebronchodilator FEV1, ACQ-6, and AQLQ(S), and, in those with periostin concentrations higher than the median, we noted improvements in asthma exacerbation rate, prebronchodilator FEV1, and ACQ-6. The incidence of treatment-emergent adverse events was similar between the tralokinumab and placebo groups. Treatment-emergent serious adverse events regarded as related to the study drug were pneumonia (one [1%] patient in the placebo group), pneumococcal pneumonia (one [1%] in the tralokinumab every 2 weeks group), angioedema (one [1%] in the placebo group), and worsening asthma (one [1%] in the tralokinumab every 2 weeks group and two [1%] in the tralokinumab every 4 weeks group). In this phase 2b study, both tralokinumab regimens had an acceptable safety and tolerability profile but did not significantly reduce asthma exacerbation rates in patients with severe uncontrolled asthma. Improvement in FEV1 with tralokinumab given every 2 weeks and results of post-hoc subgroup analyses suggested a possible treatment effect in a defined population of patients with severe uncontrolled asthma. This effect is being further investigated in ongoing phase 3 trials, along with the potential utility of DPP-4 and periostin as biomarkers of interleukin-13 pathway activation. MedImmune.",
+"pubtypes": [
+"Clinical Trial, Phase II",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"24127448": {
+"title": "PRECEDENT: a randomized phase II trial comparing vintafolide (EC145) and pegylated liposomal doxorubicin (PLD) in combination versus PLD alone in patients with platinum-resistant ovarian cancer.",
+"journal": "J Clin Oncol",
+"year": "2013",
+"abstract": "Vintafolide (EC145) is a folic acid-desacetylvinblastine conjugate that binds to the folate receptor (FR), which is expressed on the majority of epithelial ovarian cancers. This randomized phase II trial evaluated vintafolide combined with pegylated liposomal doxorubicin (PLD) compared with PLD alone. The utility of an FR-targeted imaging agent, (99m)Tc-etarfolatide (EC20), in selecting patients likely to benefit from vintafolide was also examined. Women with recurrent platinum-resistant ovarian cancer who had undergone \u2264 two prior cytotoxic regimens were randomly assigned at a 2:1 ratio to PLD (50 mg/m(2) intravenously [IV] once every 28 days) with or without vintafolide (2.5 mg IV three times per week during weeks 1 and 3). Etarfolatide scanning was optional. The primary objective was to compare progression-free survival (PFS) between the groups. The intent-to-treat population comprised 149 patients. Median PFS was 5.0 and 2.7 months for the vintafolide plus PLD and PLD-alone arms, respectively (hazard ratio [HR], 0.63; 95% CI, 0.41 to 0.96; P = .031). The greatest benefit was observed in patients with 100% of lesions positive for FR, with median PFS of 5.5 compared with 1.5 months for PLD alone (HR, 0.38; 95% CI, 0.17 to 0.85; P = .013). The group of patients with FR-positive disease (10% to 90%) experienced some PFS improvement (HR, 0.873), whereas patients with disease that did not express FR experienced no PFS benefit (HR, 1.806). Vintafolide plus PLD is the first combination to demonstrate an improvement over standard therapy in a randomized trial of patients with platinum-resistant ovarian cancer. Etarfolatide can identify patients likely to benefit from vintafolide.",
+"pubtypes": [
+"Clinical Trial, Phase II",
+"Comparative Study",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"25042182": {
+"title": "Ataluren treatment of patients with nonsense mutation dystrophinopathy.",
+"journal": "Muscle Nerve",
+"year": "2014",
+"abstract": "Dystrophinopathy is a rare, severe muscle disorder, and nonsense mutations are found in 13% of cases. Ataluren was developed to enable ribosomal readthrough of premature stop codons in nonsense mutation (nm) genetic disorders. Randomized, double-blind, placebo-controlled study; males \u2265 5 years with nm-dystrophinopathy received study drug orally 3 times daily, ataluren 10, 10, 20 mg/kg (N=57); ataluren 20, 20, 40 mg/kg (N=60); or placebo (N=57) for 48 weeks. The primary endpoint was change in 6-Minute Walk Distance (6MWD) at Week 48. Ataluren was generally well tolerated. The primary endpoint favored ataluren 10, 10, 20 mg/kg versus placebo; the week 48 6MWD \u0394=31.3 meters, post hoc P=0.056. Secondary endpoints (timed function tests) showed meaningful differences between ataluren 10, 10, 20 mg/kg, and placebo. As the first investigational new drug targeting the underlying cause of nm-dystrophinopathy, ataluren offers promise as a treatment for this orphan genetic disorder with high unmet medical need.",
+"pubtypes": [
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, N.I.H., Extramural",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"28283282": {
+"title": "Custirsen in combination with docetaxel and prednisone for patients with metastatic castration-resistant prostate cancer (SYNERGY trial): a phase 3, multicentre, open-label, randomised trial.",
+"journal": "Lancet Oncol",
+"year": "2017",
+"abstract": "Clusterin is a chaperone protein associated with treatment resistance and upregulated by apoptotic stressors such as chemotherapy. Custirsen is a second-generation antisense oligonucleotide that inhibits clusterin production. The aim of the SYNERGY trial was to investigate the effect of custirsen in combination with docetaxel and prednisone on overall survival in patients with metastatic castration-resistant prostate cancer. SYNERGY was a phase 3, multicentre, open-label, randomised trial set at 134 study centres in 12 countries. Patients were eligible for participation if they had: metastatic castration-resistant prostate cancer and had received no previous chemotherapy; prostate-specific antigen greater than 5 ng/mL; and a Karnofsky performance score of 70% or higher. Patients were randomly assigned 1:1 centrally to either the docetaxel, prednisone, and custirsen combination or docetaxel and prednisone alone. Patients were not masked to treatment allocation. Randomisation was stratified by opioid use for cancer-related pain and radiographic evidence of progression. All patients received docetaxel 75 mg/m Between Dec 10, 2010, and Nov 7, 2012, 1022 patients were enrolled to the trial, of whom 510 were assigned docetaxel, prednisone, and custirsen and 512 were allocated docetaxel and prednisone. No difference in overall survival was recorded between the two groups (median survival 23\u00b74 months [95% CI 20\u00b79-24\u00b78] with docetaxel, prednisone, and custirsen vs 22\u00b70 months [19\u00b75-24\u00b70] with docetaxel and prednisone; hazard ratio [HR] 0\u00b793, 95% CI 0\u00b779-1\u00b710; p=0\u00b7415). The most common adverse events of grade 3 or worse in the docetaxel, prednisone and custirsen group (n=501) compared with the docetaxel and prednisone alone group (n=499) were neutropenia (grade 3, 63 [13%] vs 28 [6%]; grade 4, 98 [20%] vs 77 [15%]), febrile neutropenia (grade 3, 52 [10%] vs 31 [6%]; grade 4, four [1%] vs two [<1%]), and fatigue (grade 3, 53 [11%] vs 41 [8%]; grade 4, three [1%] vs one [<1%]). One or more serious adverse events were reported for 214 (43%) of 501 patients treated with docetaxel, prednisone, and custirsen and 181 (36%) of 499 receiving docetaxel and prednisone alone. Adverse events were attributable to 23 (5%) deaths in the docetaxel, prednisone, and custirsen group and 24 (5%) deaths in the docetaxel and prednisone alone group. Addition of custirsen to first-line docetaxel and prednisone was reasonably well tolerated, but overall survival was not significantly longer for patients with metastatic castration-resistant prostate cancer treated with this combination, compared with patients treated with docetaxel and prednisone alone. OncoGenex Technologies.",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial"
+]
+},
+"25997818": {
+"title": "A randomized phase II study of ganetespib, a heat shock protein 90 inhibitor, in combination with docetaxel in second-line therapy of advanced non-small cell lung cancer (GALAXY-1).",
+"journal": "Ann Oncol",
+"year": "2015",
+"abstract": "This trial was designed to evaluate the activity and safety of ganetespib in combination with docetaxel in advanced non-small cell lung cancer (NSCLC) and to identify patient populations most likely to benefit from the combination. Patients with one prior systemic therapy for advanced disease were eligible. Docetaxel (75 mg/m(2) on day 1) was administered alone or with ganetespib (150 mg/m(2) on days 1 and 15) every 3 weeks. The primary end points were progression-free survival (PFS) in two subgroups of the adenocarcinoma population: patients with elevated lactate dehydrogenase (eLDH) and mutated KRAS (mKRAS). Of 385 patients enrolled, 381 were treated. Early in the trial, increased hemoptysis and lack of efficacy were observed in nonadenocarcinoma patients (n = 71); therefore, only patients with adenocarcinoma histology were subsequently enrolled. Neutropenia was the most common grade \u22653 adverse event: 41% in the combination arm versus 42% in docetaxel alone. There was no improvement in PFS for the combination arm in the eLDH (N = 114, adjusted hazard ratio (HR) = 0.77, P = 0.1134) or mKRAS (N = 89, adjusted HR = 1.11, P = 0.3384) subgroups. In the intent-to-treat adenocarcinoma population, there was a trend in favor of the combination, with PFS (N = 253, adjusted HR = 0.82, P = 0.0784) and overall survival (OS) (adjusted HR = 0.84, P = 0.1139). Exploratory analyses showed significant benefit of the ganetespib combination in the prespecified subgroup of adenocarcinoma patients diagnosed with advanced disease >6 months before study entry (N = 177): PFS (adjusted HR = 0.74, P = 0.0417); OS (adjusted HR = 0.69, P = 0.0191). Advanced lung adenocarcinoma patients treated with ganetespib in combination with docetaxel had an acceptable safety profile. While the study's primary end points were not met, significant prolongation of PFS and OS was observed in patients >6 months from diagnosis of advanced disease, a subgroup chosen as the target population for the phase III study.",
+"pubtypes": [
+"Clinical Trial, Phase II",
+"Journal Article",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"22753922": {
+"title": "International, randomized, placebo-controlled, double-blind phase III study of motesanib plus carboplatin/paclitaxel in patients with advanced nonsquamous non-small-cell lung cancer: MONET1.",
+"journal": "J Clin Oncol",
+"year": "2012",
+"abstract": "We evaluated whether motesanib (a selective oral inhibitor of vascular endothelial growth factor receptors 1, 2, and 3; platelet-derived growth factor receptor; and Kit) combined with carboplatin/paclitaxel improved overall survival (OS) versus chemotherapy alone in patients with nonsquamous non-small-cell lung cancer (NSCLC) and in the subset of patients with adenocarcinoma. Patients with stage IIIB/IV or recurrent nonsquamous NSCLC (no prior systemic therapy for advanced disease) were randomly assigned 1:1 to carboplatin (area under the curve, 6 mg/ml \u00b7 min) and paclitaxel (200 mg/m(2)) intravenously for up to six 3-week cycles plus either motesanib 125 mg (arm A) or placebo (arm B) once daily orally. OS was the primary end point. Secondary end points included progression-free survival (PFS), objective response rate (ORR), adverse events (AEs), and association between placental growth factor (PLGF) change and OS. A total of 1,090 patients with nonsquamous NSCLC were randomly assigned (arms A/B, n = 541 of 549); of those, 890 had adenocarcinoma (n = 448 of 442). Median OS in arms A and B was 13.0 and 11.0 months, respectively (hazard ratio [HR], 0.90; 95% CI, 0.78 to 1.04; P = .14); median OS for the adenocarcinoma subset was 13.5 and 11.0 months, respectively (HR, 0.88; 95% CI, 0.75 to 1.03; P = .11). In descriptive analyses (arms A v B), median PFS was 5.6 months versus 5.4 months (P = < .001); ORR was 40% versus 26% (P < .001). There was no association between PLGF change and OS in arm A. The incidence of grade \u2265 3 AEs (arms A and B, 73% and 59%, respectively) and grade 5 AEs (14% and 9%, respectively) was higher with motesanib treatment. Motesanib plus carboplatin/paclitaxel did not significantly improve OS over carboplatin/paclitaxel alone in patients with advanced nonsquamous NSCLC or in the adenocarcinoma subset.",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"32087818": {
+"title": "Efficacy and safety of nerinetide for the treatment of acute ischaemic stroke (ESCAPE-NA1): a multicentre, double-blind, randomised controlled trial.",
+"journal": "Lancet",
+"year": "2020",
+"abstract": "Nerinetide, an eicosapeptide that interferes with post-synaptic density protein 95, is a neuroprotectant that is effective in preclinical stroke models of ischaemia-reperfusion. In this trial, we assessed the efficacy and safety of nerinetide in human ischaemia-reperfusion that occurs with rapid endovascular thrombectomy in patients who had an acute ischaemic stroke. For this multicentre, double-blind, randomised, placebo-controlled study done in 48 acute care hospitals in eight countries, we enrolled patients with acute ischaemic stroke due to large vessel occlusion within a 12 h treatment window. Eligible patients were aged 18 years or older with a disabling ischaemic stroke at the time of randomisation, had been functioning independently in the community before the stroke, had an Alberta Stroke Program Early CT Score (ASPECTS) greater than 4, and vascular imaging showing moderate-to-good collateral filling, as determined by multiphase CT angiography. Patients were randomly assigned (1:1) to receive intravenous nerinetide in a single dose of 2\u00b76 mg/kg, up to a maximum dose of 270 mg, on the basis of estimated or actual weight (if known) or saline placebo by use of a real-time, dynamic, internet-based, stratified randomised minimisation procedure. Patients were stratified by intravenous alteplase treatment and declared endovascular device choice. All trial personnel and patients were masked to sequence and treatment allocation. All patients underwent endovascular thrombectomy and received alteplase in usual care when indicated. The primary outcome was a favourable functional outcome 90 days after randomisation, defined as a modified Rankin Scale (mRS) score of 0-2. Secondary outcomes were measures of neurological disability, functional independence in activities of daily living, excellent functional outcome (mRS 0-1), and mortality. The analysis was done in the intention-to-treat population and adjusted for age, sex, baseline National Institutes of Health Stroke Scale score, ASPECTS, occlusion location, site, alteplase use, and declared first device. The safety population included all patients who received any amount of study drug. This trial is registered with ClinicalTrials.gov, NCT02930018. Between March 1, 2017, and Aug 12, 2019, 1105 patients were randomly assigned to receive nerinetide (n=549) or placebo (n=556). 337 (61\u00b74%) of 549 patients with nerinetide and 329 (59\u00b72%) of 556 with placebo achieved an mRS score of 0-2 at 90 days (adjusted risk ratio 1\u00b704, 95% CI 0\u00b796-1\u00b714; p=0\u00b735). Secondary outcomes were similar between groups. We observed evidence of treatment effect modification resulting in inhibition of treatment effect in patients receiving alteplase. Serious adverse events occurred equally between groups. Nerinetide did not improve the proportion of patients achieving good clinical outcomes after endovascular thrombectomy compared with patients receiving placebo. Canadian Institutes for Health Research, Alberta Innovates, and NoNO.",
+"pubtypes": [
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"33185990": {
+"title": "Cardiac Myosin Activation with Omecamtiv Mecarbil in Systolic Heart Failure.",
+"journal": "N Engl J Med",
+"year": "2021",
+"abstract": "The selective cardiac myosin activator omecamtiv mecarbil has been shown to improve cardiac function in patients with heart failure with a reduced ejection fraction. Its effect on cardiovascular outcomes is unknown. We randomly assigned 8256 patients (inpatients and outpatients) with symptomatic chronic heart failure and an ejection fraction of 35% or less to receive omecamtiv mecarbil (using pharmacokinetic-guided doses of 25 mg, 37.5 mg, or 50 mg twice daily) or placebo, in addition to standard heart-failure therapy. The primary outcome was a composite of a first heart-failure event (hospitalization or urgent visit for heart failure) or death from cardiovascular causes. During a median of 21.8 months, a primary-outcome event occurred in 1523 of 4120 patients (37.0%) in the omecamtiv mecarbil group and in 1607 of 4112 patients (39.1%) in the placebo group (hazard ratio, 0.92; 95% confidence interval [CI], 0.86 to 0.99; P\u2009=\u20090.03). A total of 808 patients (19.6%) and 798 patients (19.4%), respectively, died from cardiovascular causes (hazard ratio, 1.01; 95% CI, 0.92 to 1.11). There was no significant difference between groups in the change from baseline on the Kansas City Cardiomyopathy Questionnaire total symptom score. At week 24, the change from baseline for the median N-terminal pro-B-type natriuretic peptide level was 10% lower in the omecamtiv mecarbil group than in the placebo group; the median cardiac troponin I level was 4 ng per liter higher. The frequency of cardiac ischemic and ventricular arrhythmia events was similar in the two groups. Among patients with heart failure and a reduced ejection, those who received omecamtiv mecarbil had a lower incidence of a composite of a heart-failure event or death from cardiovascular causes than those who received placebo. (Funded by Amgen and others; GALACTIC-HF ClinicalTrials.gov number, NCT02929329; EudraCT number, 2016-002299-28.).",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"34015475": {
+"title": "Effect of Ejection Fraction on Clinical Outcomes in Patients Treated With Omecamtiv Mecarbil in GALACTIC-HF.",
+"journal": "J Am Coll Cardiol",
+"year": "2021",
+"abstract": "In GALACTIC-HF (Global Approach to Lowering Adverse Cardiac outcomes Through Improving Contractility in Heart\u00a0Failure) (n\u00a0=\u00a08,256), the cardiac myosin activator, omecamtiv mecarbil, significantly reduced the primary composite endpoint (PCE) of time-to-first heart failure event or cardiovascular death in patients with heart failure and reduced ejection fraction (EF) (\u226435%). The purpose of this study was to evaluate the influence of baseline EF on the therapeutic effect of omecamtiv mecarbil. Outcomes in patients treated with omecamtiv mecarbil were compared with placebo according to EF. The risk of the PCE in the placebo group was nearly 1.8-fold greater in the lowest EF (\u226422%) compared with the highest EF (\u226533%) quartile. Amongst the pre-specified subgroups, EF was the strongest modifier of the treatment effect of omecamtiv mecarbil on the PCE (interaction as continuous variable, p\u00a0=\u00a00.004). Patients receiving omecamtiv mecarbil had a progressively greater relative and absolute treatment effect as baseline EF decreased, with a 17% relative risk reduction for the PCE in patients with baseline EF\u00a0\u226422% (n\u00a0=\u00a02,246; hazard ratio: 0.83; 95% confidence interval: 0.73 to 0.95) compared with patients with EF\u00a0\u226533% (n\u00a0=\u00a01,750; hazard ratio: 0.99; 95% confidence interval: 0.84 to 1.16; interaction as EF by quartiles, p\u00a0=\u00a00.013). The absolute reduction in the PCE increased with decreasing EF (EF\u00a0\u226422%; absolute risk reduction, 7.4 events per 100 patient-years; number needed to treat for 3 years\u00a0=\u00a011.8), compared with no reduction in the highest EF quartile. In heart failure patients with reduced EF, omecamtiv mecarbil produced greater therapeutic benefit as baseline EF decreased. These findings are consistent with the drug's mechanism of selectively improving systolic function and presents an important opportunity to improve the outcomes in a group of patients at greatest risk. (Registrational Study With Omecamtiv Mecarbil/AMG 423 to Treat Chronic Heart\u00a0Failure With Reduced Ejection Fraction [GALACTIC-HF]; NCT02929329).",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Journal Article",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"32985088": {
+"title": "Omecamtiv mecarbil in chronic heart failure with reduced ejection fraction: GALACTIC-HF baseline characteristics and comparison with contemporary clinical trials.",
+"journal": "Eur J Heart Fail",
+"year": "2020",
+"abstract": "The safety and efficacy of the novel selective cardiac myosin activator, omecamtiv mecarbil, in patients with heart failure with reduced ejection fraction (HFrEF) is being tested in the Global Approach to Lowering Adverse Cardiac outcomes Through Improving Contractility in Heart Failure (GALACTIC-HF) trial. Here we describe the baseline characteristics of participants in GALACTIC-HF and how these compare with other contemporary trials. Adults with established HFrEF, New York Heart Association (NYHA) functional class \u2265II, ejection fraction \u226435%, elevated natriuretic peptides and either current hospitalization for heart failure or history of hospitalization/emergency department visit for heart failure within a year were randomized to either placebo or omecamtiv mecarbil (pharmacokinetic-guided dosing: 25, 37.5, or 50\u2009mg bid). A total of 8256 patients [male (79%), non-white (22%), mean age 65\u2009years] were enrolled with a mean ejection fraction 27%, ischaemic aetiology in 54%, NYHA class II 53% and III/IV 47%, and median N-terminal pro-B-type natriuretic peptide 1971\u2009pg/mL. Heart failure therapies at baseline were among the most effectively employed in contemporary heart failure trials. GALACTIC-HF randomized patients representative of recent heart failure registries and trials with substantial numbers of patients also having characteristics understudied in previous trials including more from North America (n\u00a0=\u00a01386), enrolled as inpatients (n\u00a0=\u00a02084), systolic blood pressure\u2009<100\u2009mmHg (n\u00a0=\u00a01127), estimated glomerular filtration rate <30\u2009mL/min/1.73\u00a0m GALACTIC-HF enrolled a well-treated, high-risk population from both inpatient and outpatient settings, which will provide a definitive evaluation of the efficacy and safety of this novel therapy, as well as informing its potential future implementation.",
+"pubtypes": [
+"Journal Article",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"34643642": {
+"title": "Assessment of Omecamtiv Mecarbil for the Treatment of Patients With Severe Heart Failure: A Post Hoc Analysis of Data From the GALACTIC-HF Randomized Clinical Trial.",
+"journal": "JAMA Cardiol",
+"year": "2022",
+"abstract": "Heart failure with reduced ejection fraction is a progressive clinical syndrome, and many patients' condition worsen over time despite treatment. Patients with more severe disease are often intolerant of available medical therapies. To evaluate the efficacy and safety of omecamtiv mecarbil for the treatment of patients with severe heart failure (HF) enrolled in the Global Approach to Lowering Adverse Cardiac Outcomes Through Improving Contractility in Heart Failure (GALACTIC-HF) randomized clinical trial. The GALACTIC-HF study was a global double-blind, placebo-controlled phase 3 randomized clinical trial that was conducted at multiple centers between January 2017 and August 2020. A total of 8232 patients with symptomatic HF (defined as New York Heart Association symptom class II-IV) and left ventricular ejection fraction of 35% or less were randomized to receive omecamtiv mecarbil or placebo and followed up for a median of 21.8 months (range, 15.4-28.6 months). The current post hoc analysis evaluated the efficacy and safety of omecamtiv mecarbil therapy among patients classified as having severe HF compared with patients without severe HF. Severe HF was defined as the presence of all of the following criteria: New York Heart Association symptom class III to IV, left ventricular ejection fraction of 30% or less, and hospitalization for HF within the previous 6 months. Participants were randomized at a 1:1 ratio to receive either omecamtiv mecarbil or placebo. The primary end point was time to first HF event or cardiovascular (CV) death. Secondary end points included time to CV death and safety and tolerability. Among 8232 patients enrolled in the GALACTIC-HF clinical trial, 2258 patients (27.4%; mean [SD] age, 64.5 [11.6] years; 1781 men [78.9%]) met the specified criteria for severe HF. Of those, 1106 patients were randomized to the omecamtiv mecarbil group and 1152 to the placebo group. Patients with severe HF who received omecamtiv mecarbil experienced a significant treatment benefit for the primary end point (hazard ratio [HR], 0.80; 95% CI, 0.71-0.90), whereas patients without severe HF had no significant treatment benefit (HR, 0.99; 95% CI, 0.91-1.08; P\u2009=\u2009.005 for interaction). For CV death, the results were similar (HR for patients with vs without severe HF: 0.88 [95% CI, 0.75-1.03] vs 1.10 [95% CI, 0.97-1.25]; P\u2009=\u2009.03 for interaction). Omecamtiv mecarbil therapy was well tolerated in patients with severe HF, with no significant changes in blood pressure, kidney function, or potassium level compared with placebo. In this post hoc analysis of data from the GALACTIC-HF clinical trial, omecamtiv mecarbil therapy may have provided a clinically meaningful reduction in the composite end point of time to first HF event or CV death among patients with severe HF. These data support a potential role of omecamtiv mecarbil therapy among patients for whom current treatment options are limited. ClinicalTrials.gov Identifier: NCT02929329.",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"34628401": {
+"title": "[CLINICAL EFFICACY OF A REPRESENTATIVE OF A NEW CLASS OF INOTROPIC AGENTS - THE DIRECT ACTIVATOR OF MYOSIN OF CARDIOMYOCYTES OMECAMTIV MECARBIL IN HEART FAILURE WITH A REDUCED EJECTION FRACTION].",
+"journal": "Georgian Med News",
+"year": "2021",
+"abstract": "Over the past decades, there has been an active scientific search for drugs that can increase myocardial contractility and improve the course of heart failure. Omecamtiv Mecarbil, a drug from the group of cardiac myosin activators, heads the list of applicants for clinical use. The article presents the results of several randomized clinical trials which studied the efficacy and safety of Omecamtiv Mecarbil in heart failure: ATOMIC-AHF, COSMIC-HF and GALACTIC-HF. ATOMIC-AHF showed a tendency to reduce the risk of developing supraventricular and ventricular arrhythmias in heart failure. COSMIC-HF has proven the ability of Omecamtiv Mecarbil to improve the quality of life of patients with heart failure. GALACTIC-HF may be a turning point in the medical treatment of heart failure. For the first time, clinical evidence of the ability of the selective cardiac myosin activator Omecamtiv Mecarbil to improve myocardial contractile function, reduce the severity of symptoms of heart failure and reduce the risk of cardiovascular death was obtained.",
+"pubtypes": [
+"Journal Article"
+]
+},
+"26968357": {
+"title": "Rigosertib versus best supportive care for patients with high-risk myelodysplastic syndromes after failure of hypomethylating drugs (ONTIME): a randomised, controlled, phase 3 trial.",
+"journal": "Lancet Oncol",
+"year": "2016",
+"abstract": "Hypomethylating drugs are the standard treatment for patients with high-risk myelodysplastic syndromes. Survival is poor after failure of these drugs; there is no approved second-line therapy. We compared the overall survival of patients receiving rigosertib and best supportive care with that of patients receiving best supportive care only in patients with myelodysplastic syndromes with excess blasts after failure of azacitidine or decitabine treatment. We did this randomised controlled trial at 74 hospitals and university medical centres in the USA and Europe. We enrolled patients with diagnosis of refractory anaemia with excess blasts (RAEB)-1, RAEB-2, RAEB-t, or chronic myelomonocytic leukaemia based on local site assessment, and treatment failure with a hypomethylating drug in the past 2 years. Patients were randomly assigned (2:1) to receive rigosertib 1800 mg per 24 h via 72-h continuous intravenous infusion administered every other week or best supportive care with or without low-dose cytarabine. Randomisation was stratified by pretreatment bone marrow blast percentage. Neither patients nor investigators were masked to treatment assignment. The primary outcome was overall survival in the intention-to-treat population. This study is registered with ClinicalTrials.gov, NCT01241500. From Dec 13, 2010, to Aug 15, 2013, we enrolled 299 patients: 199 assigned to rigosertib, 100 assigned to best supportive care. Median follow-up was 19\u00b75 months (IQR 11\u00b79-27\u00b73). As of Feb 1, 2014, median overall survival was 8\u00b72 months (95% CI 6\u00b71-10\u00b71) in the rigosertib group and 5\u00b79 months (4\u00b71-9\u00b73) in the best supportive care group (hazard ratio 0\u00b787, 95% CI 0\u00b767-1\u00b714; p=0\u00b733). The most common grade 3 or higher adverse events were anaemia (34 [18%] of 184 patients in the rigosertib group vs seven [8%] of 91 patients in the best supportive care group), thrombocytopenia (35 [19%] vs six [7%]), neutropenia (31 [17%] vs seven [8%]), febrile neutropenia (22 [12%] vs ten [11%]), and pneumonia (22 [12%] vs ten [11%]). 41 (22%) of 184 patients in the rigosertib group and 30 (33%) of 91 patients in the best supportive care group died due to adverse events and three deaths were attributed to rigosertib treatment. Rigosertib did not significantly improve overall survival compared with best supportive care. A randomised phase 3 trial of rigosertib (NCT 02562443) is underway in specific subgroups of patients deemed to be at high risk, including patients with very high risk per the Revised International Prognostic Scoring System criteria. Onconova Therapeutics, Leukemia & Lymphoma Society.",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Journal Article",
+"Randomized Controlled Trial"
+]
+},
+"24777753": {
+"title": "Clinical activity and safety of the dual pathway inhibitor rigosertib for higher risk myelodysplastic syndromes following DNA methyltransferase inhibitor therapy.",
+"journal": "Hematol Oncol",
+"year": "2015",
+"abstract": "Rigosertib (ON 01910.Na) is an inhibitor of the phosphoinositide 3-kinase and polo-like kinase pathways that induces mitotic arrest and apoptosis in neoplastic cells, while sparing normal cells. Our purpose is to summarize the clinical activity and safety of intravenous (IV) rigosertib delivered by an external ambulatory infusion pump in patients with refractory anemia with excess blasts-1, -2, or, -t myelodysplastic syndromes (MDS) following prior treatment with DNA methyltransferase (DNMT) inhibitors. A total of 39 patients with MDS who fulfilled these criteria were enrolled in four phase 1-2 clinical trials of IV rigosertib. Thirty five (88%) had higher risk disease according to the Revised International Prognostic Scoring System. Median overall survival for this group of 39 patients was 35 weeks. Of 30 evaluable patients with follow-up bone marrow biopsies, 12 (40%) achieved complete (n = 5) or partial (n = 7) bone marrow blast responses. In addition, 15 patients achieved stabilization of bone marrow blasts. One patient with a complete bone marrow response also achieved a complete cytogenetic response. A second patient with stable bone marrow blasts achieved a partial cytogenetic response. Two of the responding patients and three patients with stable disease had hematological improvements. Rigosertib-induced bone marrow blast decreases and stability appeared to be predictive of prolonged survival. IV rigosertib had a favorable safety profile without significant myelosuppression. Most common drug-related toxicities included fatigue, diarrhea, nausea, dysuria, and hematuria. In summary, IV rigosertib is well tolerated and has clinical activity in patients with higher risk MDS following DNMT inhibitor treatment. A multinational pivotal phase 3 randomized clinical trial of rigosertib versus best supportive care for patients with MDS with excess blasts following prior treatment with DNMT inhibitors (ONTIME: ON 01910.Na Trial In Myelodysplastic SyndromE) has recently completed enrollment.",
+"pubtypes": [
+"Journal Article",
+"Meta-Analysis"
+]
+},
+"24450890": {
+"title": "Phase 3 trials of solanezumab for mild-to-moderate Alzheimer's disease.",
+"journal": "N Engl J Med",
+"year": "2014",
+"abstract": "Alzheimer's disease is characterized by amyloid-beta plaques, neurofibrillary tangles, gliosis, and neuronal loss. Solanezumab, a humanized monoclonal antibody, preferentially binds soluble forms of amyloid and in preclinical studies promoted its clearance from the brain. In two phase 3, double-blind trials (EXPEDITION 1 and EXPEDITION 2), we randomly assigned 1012 and 1040 patients, respectively, with mild-to-moderate Alzheimer's disease to receive placebo or solanezumab (administered intravenously at a dose of 400 mg) every 4 weeks for 18 months. The primary outcomes were the changes from baseline to week 80 in scores on the 11-item cognitive subscale of the Alzheimer's Disease Assessment Scale (ADAS-cog11; range, 0 to 70, with higher scores indicating greater cognitive impairment) and the Alzheimer's Disease Cooperative Study-Activities of Daily Living scale (ADCS-ADL; range, 0 to 78, with lower scores indicating worse functioning). After analysis of data from EXPEDITION 1, the primary outcome for EXPEDITION 2 was revised to the change in scores on the 14-item cognitive subscale of the Alzheimer's Disease Assessment Scale (ADAS-cog14; range, 0 to 90, with higher scores indicating greater impairment), in patients with mild Alzheimer's disease. Neither study showed significant improvement in the primary outcomes. The modeled difference between groups (solanezumab group minus placebo group) in the change from baseline was -0.8 points for the ADAS-cog11 score (95% confidence interval [CI], -2.1 to 0.5; P=0.24) and -0.4 points for the ADCS-ADL score (95% CI, -2.3 to 1.4; P=0.64) in EXPEDITION 1 and -1.3 points (95% CI, -2.5 to 0.3; P=0.06) and 1.6 points (95% CI, -0.2 to 3.3; P=0.08), respectively, in EXPEDITION 2. Between-group differences in the changes in the ADAS-cog14 score were -1.7 points in patients with mild Alzheimer's disease (95% CI, -3.5 to 0.1; P=0.06) and -1.5 in patients with moderate Alzheimer's disease (95% CI, -4.1 to 1.1; P=0.26). In the combined safety data set, the incidence of amyloid-related imaging abnormalities with edema or hemorrhage was 0.9% with solanezumab and 0.4% with placebo for edema (P=0.27) and 4.9% and 5.6%, respectively, for hemorrhage (P=0.49). Solanezumab, a humanized monoclonal antibody that binds amyloid, failed to improve cognition or functional ability. (Funded by Eli Lilly; EXPEDITION 1 and 2 ClinicalTrials.gov numbers, NCT00905372 and NCT00904683.).",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"21784350": {
+"title": "Prevalence of asymptomatic vasogenic edema in pretreatment Alzheimer's disease study cohorts from phase 3 trials of semagacestat and solanezumab.",
+"journal": "Alzheimers Dement",
+"year": "2011",
+"abstract": "Cerebral vasogenic edema (VE) has been reported to occur during antiamyloid immunotherapy. VE may be associated with central nervous system pathology with blood-brain barrier disruptions; however, less is known about the prevalence of naturally occurring VE in patients with Alzheimer's disease (AD). Fluid-attenuated inversion recovery imaging sequences were obtained from four ongoing multicenter, randomized, double-blind, placebo-controlled, phase 3 trials in patients with mild-to-moderate AD. The first set of baseline scans was from patients in volumetric magnetic resonance imaging addenda in the Interrupting Alzheimer's Dementia by EvaluatiNg Treatment of Amyloid PaThologY (IDENTITY) studies examining semagacestat, a \u03b3-secretase inhibitor (cohort 1, n = 621). The second set of baseline scans was from the EXPanding alzhEimer's Disease InvestigaTIONs (EXPEDITION) studies examining solanezumab, an anti-A\u03b2 monoclonal antibody (cohort 2, n = 2141). Readers were blinded to patient-identifying information and future treatment. A third set of baseline scans was from the first 700 patients who underwent protocol-specified magnetic resonance imaging before randomization in the EXPEDITION studies (cohort 3). The analysis used three neuroradiologists: two performed independent primary interpretations and the third was the adjudicator. Readers were blinded to patient information, treatment, protocol, and time point. Four cases of asymptomatic VE were detected at baseline/screening. Two VE cases were due to underlying extra-axial mass lesions. The third VE case was associated with numerous microhemorrhages in keeping with cerebral amyloid angiopathy-related inflammation or A\u03b2-related angiitis. The final VE case demonstrated localized sulcal fluid-attenuated inversion recovery imaging hyperintensity. No VE was detected in cohort 3 by readers blinded to patient baseline status. VE seems to be rare at baseline in patients with AD in clinical trials, 2 of 2,762 associated with AD. Additional cohorts should be evaluated to support these findings.",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"18450517": {
+"title": "Efficacy and safety of tarenflurbil in mild to moderate Alzheimer's disease: a randomised phase II trial.",
+"journal": "Lancet Neurol",
+"year": "2008",
+"abstract": "The amyloid-beta peptide Abeta(42) has been implicated in the pathogenesis of Alzheimer's disease (AD). We aimed to test the effects of tarenflurbil, a selective Abeta(42)-lowering agent (SALA), on cognition and function in patients with mild to moderate AD. 210 patients living in the community who had a mini-mental state examination (MMSE) score of 15-26 were randomly assigned to receive tarenflurbil twice per day (400 mg [n=69] or 800 mg [n=70]) or placebo (n=71) for 12 months in a phase II, multicentre, double-blind study. Primary efficacy outcomes were the AD assessment scale cognitive subscale (ADAS-cog), the Alzheimer's Disease Cooperative Study activities of daily living scale (ADCS-ADL), and the clinical dementia rating sum of boxes (CDR-sb). In a 12-month extended treatment phase, patients who had received tarenflurbil continued to receive the same dose, and patients who had received placebo were randomly assigned to tarenflurbil at 800 mg or 400 mg twice per day. Primary efficacy analyses were done by intention to treat. This trial is registered with Health Canada (084527) and the Medicines and Healthcare products Regulatory Agency in the UK (20365/0001/A 69316). A prespecified interaction analysis revealed that patients with mild AD (baseline MMSE 20-26) and moderate AD (baseline MMSE 15-19) responded differently to tarenflurbil in the ADAS-cog and the ADCS-ADL (p>or=0.10); therefore, these groups were analysed separately. Patients with mild AD in the 800 mg tarenflurbil group had lower rates of decline than did those in the placebo group in activities of daily living (ADCS-ADL difference in slope 3.98 [95% CI 0.33 to 7.62] points per year, effect size [reduction from placebo decline rate] 46.4%, Cohen's d 0.45; p=0.033) and global function (CDR-sb difference -0.80 [-1.57 to -0.03] points per year, effect size 35.7%, Cohen's d 0.42; p=0.042); slowing of cognitive decline did not differ significantly (ADAS-cog difference -1.36 [-4.07 to 1.36] points per year, effect size 33.7%, Cohen's d 0.20; p=0.327). In patients with moderate AD, 800 mg tarenflurbil twice per day had no significant effects on ADCS-ADL and ADAS-cog and had a negative effect on CDR-sb (-52%, Cohen's d -1.08; p=0.003). The most common adverse events were diarrhoea (in seven, nine, and five patients in the 800 mg, 400 mg, and placebo groups, respectively), nausea (in seven, seven, and four patients), and dizziness (in five, nine, and four patients). Patients with mild AD who were in the 800 mg tarenflurbil group for 24 months had lower rates of decline for all three primary outcomes than did patients who were in the placebo group for months 0-12 and a tarenflurbil group for months 12-24 (all p<0.001), and had better outcomes than did patients who were in the placebo group for months 0-12 and the 800 mg tarenflurbil group for months 12-24 (all p<0.05). 800 mg tarenflurbil twice per day was well tolerated for up to 24 months of treatment, with evidence of a dose-related effect on measures of daily activities and global function in patients with mild AD. Myriad Pharmaceuticals.",
+"pubtypes": [
+"Clinical Trial, Phase II",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"17650315": {
+"title": "Chronic administration of R-flurbiprofen attenuates learning impairments in transgenic amyloid precursor protein mice.",
+"journal": "BMC Neurosci",
+"year": "2007",
+"abstract": "Long-term use of non-steroidal anti-inflammatory drugs (NSAIDs) is associated with a reduced incidence of Alzheimer's disease (AD). We and others have shown that certain NSAIDs reduce secretion of Abeta42 in cell culture and animal models, and that the effect of NSAIDs on Abeta42 is independent of the inhibition of cyclooxygenase by these compounds. Since Abeta42 is hypothesized to be the initiating pathologic molecule in AD, the ability of these compounds to lower Abeta42 selectively may be associated with their protective effect. We have previously identified R-flurbiprofen (tarenflurbil) as a selective Abeta42 lowering agent with greatly reduced cyclooxygenase activity that shows promise for testing this hypothesis. In this study we report the effect of chronic R-flurbiprofen treatment on cognition and Abeta loads in Tg2576 APP mice. A four-month preventative treatment regimen with R-flurbiprofen (10 mg/kg/day) was administered to young Tg2576 mice prior to robust plaque or Abeta pathology. This treatment regimen improved spatial learning as assessed by the Morris water maze, indicated by an increased spatial bias during the third probe trial and an increased utilization of a place strategy to solve the water maze. These results are consistent with an improvement in hippocampal- and medial temporal lobe-dependent memory function. A modest, though not statistically significant, reduction in formic acid-soluble levels of Abeta was also observed. To determine if R-flurbiprofen could reverse cognitive deficits in Tg2576 mice where plaque pathology was already robust, a two-week therapeutic treatment was given to older Tg2576 mice with the same dose of R-flurbiprofen. This approach resulted in a significant decrease in Abeta plaque burden but no significant improvement in spatial learning. We have found that chronic administration of R-flurbiprofen is able to attenuate spatial learning deficits if given prior to plaque deposition in Tg2576 mice. Given its ability to selectively target Abeta42 production and improve cognitive impairments in transgenic APP mice, as well as promising data from a phase 2 human clinical trial, future studies are needed to investigate the utility of R-flurbiprofen as an AD therapeutic and its possible mechanisms of action.",
+"pubtypes": [
+"Journal Article",
+"Research Support, N.I.H., Extramural"
+]
+},
+"18090435": {
+"title": "Safety, tolerability, pharmacokinetics, and Abeta levels after short-term administration of R-flurbiprofen in healthy elderly individuals.",
+"journal": "Alzheimer Dis Assoc Disord",
+"year": "2007",
+"abstract": "To evaluate the safety and tolerability and pharmacokinetic properties of R-flurbiprofen (Tarenflurbil) in normal elderly individuals and to determine the effect of the drug on amyloid beta 42 (Abeta42) levels, we conducted a double-blind, placebo-controlled study of 48 healthy subjects aged 55 to 80. Three successive cohorts were randomized to doses of 400, 800, or 1600 mg/d, or placebo, given as 2 divided doses for 21 days. Blood and cerebrospinal fluid were collected for pharmacokinetic studies and measurement of Abeta levels at baseline and on day 21. R-flurbiprofen was well-tolerated at all 3 doses. The compound penetrated the blood-brain barrier in a dose-dependent manner. From baseline to 21 days, comparisons between study groups revealed no significant differences in changes of cerebrospinal fluid Abeta42 levels and no significant differences in changes of plasma Abeta42 levels at the time of trough drug level at 21 days of treatment. Further analysis of drug concentration-response for plasma samples showed that at the time of peak plasma concentration, higher plasma drug concentration was related to lower Abeta42 plasma levels (P=0.016). R-flurbiprofen had an excellent safety profile and showed dose-dependent central nervous system penetration. Exploratory analyses of plasma Abeta and peak drug levels suggested a short-term effect in plasma that warrants independent verification. The safety, tolerability, and pharmacokinetic profile of R-flurbiprofen in these older individuals support the ongoing studies of this compound in patients with Alzheimer disease.",
+"pubtypes": [
+"Clinical Trial, Phase I",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, N.I.H., Extramural",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"17599166": {
+"title": "Changing the course of Alzheimer's disease: anti-amyloid disease-modifying treatments on the horizon.",
+"journal": "Prim Care Companion J Clin Psychiatry",
+"year": "2007",
+"abstract": "To review the amyloid hypothesis as the predominant mechanistic theory of Alzheimer's disease and update the status of new disease-modifying, anti-amyloid treatments in clinical development. Governmental Web sites and those of professional Alzheimer's disease associations and drug manufacturers were searched for new drugs in development. An English-language search of PubMed (January 2003-January 2006) was conducted using the search terms Alzheimer's disease and amyloid hypothesis and each of the drugs and immunotherapies from the 4 identified classes of anti-amyloid, disease-modifying therapies. Studies and reports were selected on the basis of recent publication, adequate methodology, and completeness of data. Immunotherapy, \u03b3-secretase inhibitors, selective neurotoxic aggregated 42-amino acid peptide subspecies of amyloid \u03b2 (A\u03b2\u2084\u2082)-lowering agents (tarenflurbil), inhibitors of amyloid aggregation (tramiprosate), and statins show promise in clinical trials. Safety remains an important factor. Disease-modifying drugs that specifically target the amyloid cascade and do not interact with essential biological pathways are expected to possess a lower rate of unintended adverse events.Agents that selectively target A\u03b2\u2084\u2082 production (e.g., tarenflurbil), block A\u03b2 aggregation (e.g., tramiprosate), or enhance alpha-secretase activity (statins) offer hope for disease modification and prevention and do not appear to interfere with other biological pathways. Discovery of safe and effective disease-modifying therapies will usher in a new age of Alzheimer's disease treatment.",
+"pubtypes": [
+"Journal Article"
+]
+},
+"29221491": {
+"title": "A phase III randomized trial of gantenerumab in prodromal Alzheimer's disease.",
+"journal": "Alzheimers Res Ther",
+"year": "2017",
+"abstract": "Gantenerumab is a fully human monoclonal antibody that binds aggregated amyloid-\u03b2 (A\u03b2) and removes A\u03b2 plaques by Fc receptor-mediated phagocytosis. In the SCarlet RoAD trial, we assessed the efficacy and safety of gantenerumab in prodromal Alzheimer's disease (AD). In this randomized, double-blind, placebo-controlled phase III study, we investigated gantenerumab over 2\u00a0years. Patients were randomized to gantenerumab 105\u00a0mg or 225\u00a0mg or placebo every 4\u00a0weeks by subcutaneous injection. The primary endpoint was the change from baseline to week 104 in Clinical Dementia Rating Sum of Boxes (CDR-SB) score. We evaluated treatment effects on cerebrospinal fluid biomarkers (all patients) and amyloid positron emission tomography (substudy). A futility analysis was performed once 50% of patients completed 2\u00a0years of treatment. Safety was assessed in patients who received at least one dose. Of the 3089 patients screened, 797 were randomized. The study was halted early for futility; dosing was discontinued; and the study was unblinded. No differences between groups in the primary (least squares mean [95% CI] CDR-SB change from baseline 1.60 [1.28, 1.91], 1.69 [1.37, 2.01], and 1.73 [1.42, 2.04] for placebo, gantenerumab 105\u00a0mg, and gantenerumab 225\u00a0mg, respectively) or secondary clinical endpoints were observed. The incidence of generally asymptomatic amyloid-related imaging abnormalities increased in a dose- and APOE \u03b54 genotype-dependent manner. Exploratory analyses suggested a dose-dependent drug effect on clinical and biomarker endpoints. The study was stopped early for futility, but dose-dependent effects observed in exploratory analyses on select clinical and biomarker endpoints suggest that higher dosing with gantenerumab may be necessary to achieve clinical efficacy. ClinicalTrials.gov, NCT01224106 . Registered on October 14, 2010.",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial"
+]
+},
+"24206459": {
+"title": "Bardoxolone methyl in type 2 diabetes and stage 4 chronic kidney disease.",
+"journal": "N Engl J Med",
+"year": "2013",
+"abstract": "Although inhibitors of the renin-angiotensin-aldosterone system can slow the progression of diabetic kidney disease, the residual risk is high. Whether nuclear 1 factor (erythroid-derived 2)-related factor 2 activators further reduce this risk is unknown. We randomly assigned 2185 patients with type 2 diabetes mellitus and stage 4 chronic kidney disease (estimated glomerular filtration rate [GFR], 15 to <30 ml per minute per 1.73 m(2) of body-surface area) to bardoxolone methyl, at a daily dose of 20 mg, or placebo. The primary composite outcome was end-stage renal disease (ESRD) or death from cardiovascular causes. The sponsor and the steering committee terminated the trial on the recommendation of the independent data and safety monitoring committee; the median follow-up was 9 months. A total of 69 of 1088 patients (6%) randomly assigned to bardoxolone methyl and 69 of 1097 (6%) randomly assigned to placebo had a primary composite outcome (hazard ratio in the bardoxolone methyl group vs. the placebo group, 0.98; 95% confidence interval [CI], 0.70 to 1.37; P=0.92). In the bardoxolone methyl group, ESRD developed in 43 patients, and 27 patients died from cardiovascular causes; in the placebo group, ESRD developed in 51 patients, and 19 patients died from cardiovascular causes. A total of 96 patients in the bardoxolone methyl group were hospitalized for heart failure or died from heart failure, as compared with 55 in the placebo group (hazard ratio, 1.83; 95% CI, 1.32 to 2.55; P<0.001). Estimated GFR, blood pressure, and the urinary albumin-to-creatinine ratio increased significantly and body weight decreased significantly in the bardoxolone methyl group, as compared with the placebo group. Among patients with type 2 diabetes mellitus and stage 4 chronic kidney disease, bardoxolone methyl did not reduce the risk of ESRD or death from cardiovascular causes. A higher rate of cardiovascular events with bardoxolone methyl than with placebo prompted termination of the trial. (Funded by Reata Pharmaceuticals; BEACON ClinicalTrials.gov number, NCT01351675.).",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"24903467": {
+"title": "Mechanisms contributing to adverse cardiovascular events in patients with type 2 diabetes mellitus and stage 4 chronic kidney disease treated with bardoxolone methyl.",
+"journal": "Am J Nephrol",
+"year": "2014",
+"abstract": "Bardoxolone methyl, an Nrf2-activating and nuclear factor-\u03baB-inhibiting semisynthetic oleanane triterpenoid compound, was evaluated in a phase 3 trial (BEACON) in patients with type 2 diabetes mellitus (T2DM) and stage 4 chronic kidney disease (CKD). The trial was terminated because of an increase in heart failure events in the bardoxolone methyl group, many of which appeared related to fluid retention. Thus, additional analyses were conducted to explain these serious adverse events. Patients (n = 2,185) were randomized to receive once-daily bardoxolone methyl (20 mg) or placebo. Twenty-four-hour urine collections were analyzed in a subset of the BEACON population and from a separate, open-label pharmacology study in patients with stage 3b/4 CKD and T2DM administered 20 mg bardoxolone methyl once daily for 56 consecutive days. Bardoxolone-methyl-treated patients in the BEACON substudy had a clinically meaningful reduction in urine volume and sodium excretion at week 4 relative to baseline (p < 0.05), and a separate study revealed that decreased sodium excretion and urine output occurred in some patients with stage 4 CKD but not those with stage 3b CKD. The clinical phenotype of fluid overload and heart failure in BEACON was similar to that observed with endothelin receptor antagonists in advanced CKD patients, and preclinical data demonstrate that bardoxolone methyl modifies endothelin signaling. The totality of the evidence suggests that through modulation of the endothelin pathway, bardoxolone methyl may pharmacologically promote acute sodium and volume retention and increase blood pressure in patients with more advanced CKD.",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Journal Article",
+"Randomized Controlled Trial"
+]
+},
+"24169612": {
+"title": "Baseline characteristics in the Bardoxolone methyl EvAluation in patients with Chronic kidney disease and type 2 diabetes mellitus: the Occurrence of renal eveNts (BEACON) trial.",
+"journal": "Nephrol Dial Transplant",
+"year": "2013",
+"abstract": "Type 2 diabetes mellitus (T2DM) is the most important contributing cause of end-stage renal disease (ESRD) worldwide. Bardoxolone methyl, a nuclear factor-erythroid-2-related factor 2 activator, augments estimated glomerular filtration. The Bardoxolone methyl EvAluation in patients with Chronic kidney disease and type 2 diabetes mellitus: the Occurrence of renal eveNts (BEACON) trial was designed to establish whether bardoxolone methyl slows or prevents progression to ESRD. Herein, we describe baseline characteristics of the BEACON population. BEACON is a randomized double-blind placebo-controlled clinical trial in 2185 patients with T2DM and chronic kidney disease stage 4 (eGFR between 15 and 30 mL/min/1.73 m(2)) designed to test the hypothesis that bardoxolone methyl added to guideline-recommended treatment including inhibitors of the renin-angiotensin-aldosterone system slows or prevents progression to ESRD or cardiovascular death compared with placebo. Baseline characteristics (mean or percentage) of the population include age 68.5 years, female 43%, Caucasian 78%, eGFR 22.5 mL/min/1.73 m(2) and systolic/diastolic blood pressure 140/70 mmHg. The median urinary albumin:creatinine ratio was 320 mg/g and the frequency of micro- and macroalbuminuria was 30 and 51%, respectively. Anemia, abnormalities in markers of bone metabolism and elevations in cardiovascular biomarkers were frequently observed. A history of cardiovascular disease was present in 56%, neuropathy in 47% and retinopathy in 41% of patients. The BEACON trial enrolled a population heretofore unstudied in an international randomized controlled trial. Enrolled patients suffered with numerous co-morbid conditions and exhibited multiple laboratory abnormalities, highlighting the critical need for new therapies to optimize management of these conditions.",
+"pubtypes": [
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial"
+]
+},
+"23467003": {
+"title": "Rationale and trial design of Bardoxolone Methyl Evaluation in Patients with Chronic Kidney Disease and Type 2 Diabetes: the Occurrence of Renal Events (BEACON).",
+"journal": "Am J Nephrol",
+"year": "2013",
+"abstract": "Chronic kidney disease (CKD) associated with type 2 diabetes mellitus constitutes a global epidemic complicated by considerable renal and cardiovascular morbidity and mortality, despite the provision of inhibitors of the renin-angiotensin-aldosterone system (RAAS). Bardoxolone methyl, a synthetic triterpenoid that reduces oxidative stress and inflammation through Nrf2 activation and inhibition of NF-\u03baB was previously shown to increase estimated glomerular filtration rate (eGFR) in patients with CKD associated with type 2 diabetes mellitus. To date, no antioxidant or anti-inflammatory therapy has proved successful at slowing the progression of CKD. Herein, we describe the design of Bardoxolone Methyl Evaluation in Patients with Chronic Kidney Disease and Type 2 Diabetes: the Occurrence of Renal Events (BEACON) trial, a multinational, multicenter, double-blind, randomized, placebo-controlled Phase 3 trial designed to determine whether long-term administration of bardoxolone methyl (on a background of standard therapy, including RAAS inhibitors) safely reduces renal and cardiac morbidity and mortality. The primary composite endpoint is time-to-first occurrence of either end-stage renal disease or cardiovascular death. Secondary endpoints include the change in eGFR and time to occurrence of cardiovascular events. BEACON will be the first event-driven trial to evaluate the effect of an oral antioxidant and anti-inflammatory drug in advanced CKD.",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial"
+]
+},
+"22452896": {
+"title": "Afatinib versus placebo for patients with advanced, metastatic non-small-cell lung cancer after failure of erlotinib, gefitinib, or both, and one or two lines of chemotherapy (LUX-Lung 1): a phase 2b/3 randomised trial.",
+"journal": "Lancet Oncol",
+"year": "2012",
+"abstract": "Afatinib, an irreversible ErbB-family blocker, has shown preclinical activity when tested in EGFR mutant models with mutations that confer resistance to EGFR tyrosine-kinase inhibitors. We aimed to assess its efficacy in patients with advanced lung adenocarcinoma with previous treatment failure on EGFR tyrosine-kinase inhibitors. In this phase 2b/3 trial, we enrolled patients with stage IIIB or IV adenocarcinoma and an Eastern Cooperative Oncology Group performance (ECOG) performance score of 0-2 who had received one or two previous chemotherapy regimens and had disease progression after at least 12 weeks of treatment with erlotinib or gefitinib. We used a computer-generated sequence to randomly allocate patients (2:1) to either afatinib (50 mg per day) or placebo; all patients received best supportive care. Randomisation was done in blocks of three and was stratified by sex and baseline ECOG performance status (0-1 vs 2). Investigators, patients, and the trial sponsor were masked to treatment assignment. The primary endpoint was overall survival (from date of randomisation to death), analysed on an intention-to-treat basis. This study is registered with ClinicalTrials.gov, number NCT00656136. Between May 26, 2008, and Sept 21, 2009, we identified 697 patients, 585 of whom were randomly allocated to treatment (390 to afatinib, 195 to placebo). Median overall survival was 10\u00b78 months (95% CI 10\u00b70-12\u00b70) in the afatinib group and 12\u00b70 months (10\u00b72-14\u00b73) in the placebo group (hazard ratio 1\u00b708, 95% CI 0\u00b786-1\u00b735; p=0\u00b774). Median progression-free survival was longer in the afatinib group (3\u00b73 months, 95% CI 2\u00b779-4\u00b740) than it was in the placebo group (1\u00b71 months, 0\u00b795-1\u00b768; hazard ratio 0\u00b738, 95% CI 0\u00b731-0\u00b748; p<0\u00b70001). No complete responses to treatment were noted; 29 (7%) patients had a partial response in the afatinib group, as did one patient in the placebo group. Subsequent cancer treatment was given to 257 (68%) patients in the afatinib group and 153 (79%) patients in the placebo group. The most common adverse events in the afatinib group were diarrhoea (339 [87%] of 390 patients; 66 [17%] were grade 3) and rash or acne (305 [78%] patients; 56 [14%] were grade 3). These events occurred less often in the placebo group (18 [9%] of 195 patients had diarrhoea; 31 [16%] had rash or acne), all being grade 1 or 2. Drug-related serious adverse events occurred in 39 (10%) patients in the afatinib group and one (<1%) patient in the placebo group. We recorded two possibly treatment-related deaths in the afatinib group. Although we recorded no benefit in terms of overall survival with afatinib (which might have been affected by cancer treatments given after progression in both groups), our findings for progression-free survival and response to treatment suggest that afatinib could be of some benefit to patients with advanced lung adenocarcinoma who have failed at least 12 weeks of previous EGFR tyrosine-kinase inhibitor treatment. Boehringer Ingelheim Inc.",
+"pubtypes": [
+"Clinical Trial, Phase II",
+"Clinical Trial, Phase III",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"22452895": {
+"title": "Afatinib for patients with lung adenocarcinoma and epidermal growth factor receptor mutations (LUX-Lung 2): a phase 2 trial.",
+"journal": "Lancet Oncol",
+"year": "2012",
+"abstract": "Afatinib is an irreversible ErbB-family blocker with preclinical activity in non-small-cell lung cancer (NSCLC) with EGFR mutations. We aimed to assess the efficacy of afatinib in patients with lung adenocarcinoma and EGFR mutations. In this phase 2 study, we enrolled patients from 30 centres in Taiwan and the USA with lung adenocarcinoma (stage IIIb with pleural effusion or stage IV) with EGFR mutations, who had no more than one previous chemotherapy regimen for advanced disease, an Eastern Cooperative Oncology Group performance status of 0-2, and no previous treatment with EGFR tyrosine-kinase inhibitors. We tested two afatinib starting doses: 50 mg daily and subsequently 40 mg daily, introduced to establish whether tolerability could be improved with retention of anti-tumour activity. The primary endpoint was the proportion of patients with a confirmed objective response (complete response or partial response), on the basis of Response Evaluation Criteria in Solid Tumors 1.0 (independent review). This study is registered with ClinicalTrials.gov, number NCT00525148. 129 patients were treated with afatinib, 99 with a starting dose of 50 mg and 30 with a starting dose of 40 mg. 79 (61%) of 129 patients had an objective response (two complete responses, 77 partial responses). 70 (66%) of the 106 patients with the two common activating EGFR mutations (deletion 19 or L858R) had an objective response, as did nine (39%) of 23 patients with less common mutations. Similar proportions of patients had an objective response when analysed by starting dose (18 [60%] of 30 patients at 40 mg vs 61 [62%] of 99 patients at 50 mg). Of the two most common adverse events (diarrhoea and rash or acne), grade 3 events were more common in patients receiving a 50 mg starting dose (22 [22%] of 99 patients for diarrhoea and 28 [28%] of 99 patients for rash or acne) than they were in those receiving a 40 mg starting dose (two [7%] of 30 patients for both diarrhoea and rash or acne); possibly treatment-related serious adverse events were also less common in patients receiving a 40 mg starting dose (two of 30 patients vs 14 of 99 patients). We recorded one possibly drug-related death (interstitial lung disease). Afatinib shows activity in the treatment of patients with advanced lung adenocarcinoma with EGFR mutations, especially in patients with deletion 19 or L858R mutations. The efficacy of afatinib 40 mg should be compared with chemotherapy or other EGFR tyrosine-kinase inhibitors in EGFR-mutation-positive NSCLC. Boehringer Ingelheim Inc.",
+"pubtypes": [
+"Clinical Trial, Phase II",
+"Journal Article",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"19714615": {
+"title": "Novel evidence-based systemic lupus erythematosus responder index.",
+"journal": "Arthritis Rheum",
+"year": "2009",
+"abstract": "To describe a new systemic lupus erythematosus (SLE) responder index (SRI) based on a belimumab phase II SLE trial and demonstrate its potential utility in SLE clinical trials. Data from a randomized, double-blind, placebo-controlled study in 449 patients of 3 doses of belimumab (1, 4, 10 mg/kg) or placebo plus standard of care therapy (SOC) over a 56-week period were analyzed. The Safety of Estrogens in Lupus Erythematosus: National Assessment (SELENA) version of the Systemic Lupus Erythematosus Disease Activity Index (SLEDAI) and British Isles Lupus Assessment Group (BILAG) SLE disease activity instruments, the Short Form 36 health survey, and biomarker analyses were used to create a novel SRI. Response to treatment in a subset of 321 serologically active SLE patients (antinuclear antibodies >/=1:80 and/or anti-double-stranded DNA antibodies >/=30 IU/ml) at baseline was retrospectively evaluated using the SRI. SRI response is defined as 1) a >/=4-point reduction in SELENA-SLEDAI score, 2) no new BILAG A or no more than 1 new BILAG B domain score, and 3) no deterioration from baseline in the physician's global assessment by >/=0.3 points. In serologically active patients, the addition of belimumab to SOC resulted in a response in 46% of patients at week 52 compared with 29% of the placebo patients (P = 0.006). SRI responses were independent of baseline autoantibody subtype. This evidence-based evaluation of a large randomized, placebo-controlled trial in SLE resulted in the ability to define a robust responder index based on improvement in disease activity without worsening the overall condition or the development of significant disease activity in new organ systems.",
+"pubtypes": [
+"Journal Article",
+"Research Support, N.I.H., Extramural"
+]
+},
+"19714604": {
+"title": "A phase II, randomized, double-blind, placebo-controlled, dose-ranging study of belimumab in patients with active systemic lupus erythematosus.",
+"journal": "Arthritis Rheum",
+"year": "2009",
+"abstract": "To assess the safety, tolerability, biologic activity, and efficacy of belimumab in combination with standard of care therapy (SOC) in patients with active systemic lupus erythematosus (SLE). Patients with a Safety of Estrogens in Lupus Erythematosus: National Assessment (SELENA) version of the Systemic Lupus Erythematosus Disease Activity Index (SLEDAI) score >/=4 (n = 449) were randomly assigned to belimumab (1, 4, or 10 mg/kg) or placebo in a 52-week study. Coprimary end points were the percent change in the SELENA-SLEDAI score at week 24 and the time to first SLE flare. Significant differences between the treatment and placebo groups were not attained for either primary end point, and no dose response was observed. Reductions in SELENA-SLEDAI scores from baseline were 19.5% in the combined belimumab group versus 17.2% in the placebo group. The median time to first SLE flare was 67 days in the combined belimumab group versus 83 days in the placebo group. However, the median time to first SLE flare during weeks 24-52 was significantly longer with belimumab treatment (154 versus 108 days; P = 0.0361). In the subgroup (71.5%) of serologically active patients (antinuclear antibody titer >/=1:80 and/or anti-double-stranded DNA [anti-dsDNA] >/=30 IU/ml), belimumab treatment resulted in significantly better responses at week 52 than placebo for SELENA-SLEDAI score (-28.8% versus -14.2%; P = 0.0435), physician's global assessment (-32.7% versus -10.7%; P = 0.0011), and Short Form 36 physical component score (+3.0 versus +1.2 points; P = 0.0410). Treatment with belimumab resulted in a 63-71% reduction of naive, activated, and plasmacytoid CD20+ B cells, and a 29.4% reduction in anti-dsDNA titers (P = 0.0017) by week 52. The rates of adverse events and serious adverse events were similar in the belimumab and placebo groups. Belimumab was biologically active and well tolerated. The effect of belimumab on the reduction of SLE disease activity or flares was not significant. However, serologically active SLE patients responded significantly better to belimumab therapy plus SOC than to SOC alone.",
+"pubtypes": [
+"Clinical Trial, Phase II",
+"Journal Article",
+"Randomized Controlled Trial",
+"Research Support, N.I.H., Extramural"
+]
+},
+"25439691": {
+"title": "Dacomitinib versus erlotinib in patients with advanced-stage, previously treated non-small-cell lung cancer (ARCHER 1009): a randomised, double-blind, phase 3 trial.",
+"journal": "Lancet Oncol",
+"year": "2014",
+"abstract": "Dacomitinib is an irreversible pan-EGFR family tyrosine kinase inhibitor. Findings from a phase 2 study in non-small cell lung cancer showed favourable efficacy for dacomitinib compared with erlotinib. We aimed to compare dacomitinib with erlotinib in a phase 3 study. In a randomised, multicentre, double-blind phase 3 trial in 134 centres in 23 countries, we enrolled patients who had locally advanced or metastatic non-small-cell lung cancer, progression after one or two previous regimens of chemotherapy, Eastern Cooperative Oncology Group (ECOG) performance status of 0-2, and presence of measurable disease. We randomly assigned patients in a 1:1 ratio to dacomitinib (45 mg/day) or erlotinib (150 mg/day) with matching placebo. Treatment allocation was masked to the investigator, patient, and study funder. Randomisation was stratified by histology (adenocarcinoma vs non-adenocarcinoma), ethnic origin (Asian vs non-Asian and Indian sub-continent), performance status (0-1 vs 2), and smoking status (never-smoker vs ever-smoker). The coprimary endpoints were progression-free survival per independent review for all randomly assigned patients, and for all randomly assigned patients with KRAS wild-type tumours. The study has completed accrual and is registered with ClinicalTrials.gov, number NCT01360554. Between June 22, 2011, and March 12, 2013, we enrolled 878 patients and randomly assigned 439 to dacomitinib (256 KRAS wild type) and 439 (263 KRAS wild type) to erlotinib. Median progression-free survival was 2\u00b76 months (95% CI 1\u00b79-2\u00b78) in both the dacomitinib group and the erlotinib group (stratified hazard ratio [HR] 0\u00b7941, 95% CI 0\u00b7802-1\u00b7104, one-sided log-rank p=0\u00b7229). For patients with wild-type KRAS, median progression-free survival was 2\u00b76 months for dacomitinib (95% CI 1\u00b79-2\u00b79) and erlotinib (95% CI 1\u00b79-3\u00b70; stratified HR 1\u00b7022, 95% CI 0\u00b7834-1\u00b7253, one-sided p=0\u00b7587). In patients who received at least one dose of study drug, the most frequent grade 3-4 adverse events were diarrhoea (47 [11%] patients in the dacomitinib group vs ten [2%] patients in the erlotinib group), rash (29 [7%] vs 12 [3%]), and stomatitis (15 [3%] vs two [<1%]). Serious adverse events were reported in 52 (12%) patients receiving dacomitinib and 40 (9%) patients receiving erlotinib. Irreversible EGFR inhibition with dacomitinib was not superior to erlotinib in an unselected patient population with advanced non-small-cell lung cancer or in patients with KRAS wild-type tumours. Further study of irreversible EGFR inhibitors should be restricted to patients with activating EGFR mutations. Pfizer.",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Journal Article",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"22753918": {
+"title": "Randomized phase II study of dacomitinib (PF-00299804), an irreversible pan-human epidermal growth factor receptor inhibitor, versus erlotinib in patients with advanced non-small-cell lung cancer.",
+"journal": "J Clin Oncol",
+"year": "2012",
+"abstract": "This randomized, open-label trial compared dacomitinib (PF-00299804), an irreversible inhibitor of human epidermal growth factor receptors (EGFR)/HER1, HER2, and HER4, with erlotinib, a reversible EGFR inhibitor, in patients with advanced non-small-cell lung cancer (NSCLC). Patients with NSCLC, Eastern Cooperative Oncology Group performance status 0 to 2, no prior HER-directed therapy, and one/two prior chemotherapy regimens received dacomitinib 45 mg or erlotinib 150 mg once daily. One hundred eighty-eight patients were randomly assigned. Treatment arms were balanced for most clinical and molecular characteristics. Median progression-free survival (PFS; primary end point) was 2.86 months for patients treated with dacomitinib and 1.91 months for patients treated with erlotinib (hazard ratio [HR] = 0.66; 95% CI, 0.47 to 0.91; two-sided P = .012); in patients with KRAS wild-type tumors, median PFS was 3.71 months for patients treated with dacomitinib and 1.91 months for patients treated with erlotinib (HR = 0.55; 95% CI, 0.35 to 0.85; two-sided P = .006); and in patients with KRAS wild-type/EGFR wild-type tumors, median PFS was 2.21 months for patients treated with dacomitinib and 1.84 months for patients treated with erlotinib (HR = 0.61; 95% CI, 0.37 to 0.99; two-sided P = .043). Median overall survival was 9.53 months for patients treated with dacomitinib and 7.44 months for patients treated with erlotinib (HR = 0.80; 95% CI, 0.56 to 1.13; two-sided P = .205). Adverse event-related discontinuations were uncommon in both arms. Common treatment-related adverse events were dermatologic and gastrointestinal, predominantly grade 1 to 2, and more frequent with dacomitinib. Dacomitinib demonstrated significantly improved PFS versus erlotinib, with acceptable toxicity. PFS benefit was observed in most clinical and molecular subsets, notably KRAS wild-type/EGFR any status, KRAS wild-type/EGFR wild-type, and EGFR mutants.",
+"pubtypes": [
+"Clinical Trial, Phase II",
+"Comparative Study",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"16043829": {
+"title": "TRIBUTE: a phase III trial of erlotinib hydrochloride (OSI-774) combined with carboplatin and paclitaxel chemotherapy in advanced non-small-cell lung cancer.",
+"journal": "J Clin Oncol",
+"year": "2005",
+"abstract": "Erlotinib is a potent reversible HER1/epidermal growth factor receptor (EGFR) tyrosine kinase inhibitor with single-agent activity in patients with non-small-cell lung cancer (NSCLC). Erlotinib was combined with chemotherapy to determine if it could improve the outcome of patients with NSCLC. TRIBUTE randomly assigned patients with good performance status and previously untreated advanced (stage IIIB/IV) NSCLC to erlotinib 150 mg/d or placebo combined with up to six cycles of carboplatin and paclitaxel, followed by maintenance monotherapy with erlotinib. Random assignment was stratified by stage, weight loss in the previous 6 months, measurable disease, and treatment center. The primary end point was overall survival (OS). Secondary end points included time to progression (TTP), objective response (OR), and duration of response. There were 1,059 assessable patients (526 erlotinib; 533 placebo). Median survival for patients treated with erlotinib was 10.6 v 10.5 months for placebo (hazard ratio, 0.99; 95% CI, 0.86 to 1.16; P = .95). There was no difference in OR or median TTP. Patients who reported never smoking (72 erlotinib; 44 placebo) experienced improved OS in the erlotinib arm (22.5 v 10.1 months for placebo), though no other prespecified factors showed an advantage in OS with erlotinib. Erlotinib and placebo arms were equivalent in adverse events (except rash and diarrhea). Erlotinib with concurrent carboplatin and paclitaxel did not confer a survival advantage over carboplatin and paclitaxel alone in patients with previously untreated advanced NSCLC. Never smokers treated with erlotinib and chemotherapy seemed to experience an improvement in survival and will undergo further investigation in future randomized trials.",
+"pubtypes": [
+"Clinical Trial",
+"Clinical Trial, Phase III",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"16043828": {
+"title": "Mutations in the epidermal growth factor receptor and in KRAS are predictive and prognostic indicators in patients with non-small-cell lung cancer treated with chemotherapy alone and in combination with erlotinib.",
+"journal": "J Clin Oncol",
+"year": "2005",
+"abstract": "Epidermal growth factor receptor (EGFR) mutations have been associated with tumor response to treatment with single-agent EGFR inhibitors in patients with relapsed non-small-cell lung cancer (NSCLC). The implications of EGFR mutations in patients treated with EGFR inhibitors plus first-line chemotherapy are unknown. KRAS is frequently activated in NSCLC. The relationship of KRAS mutations to outcome after EGFR inhibitor treatment has not been described. Previously untreated patients with advanced NSCLC in the phase III TRIBUTE study who were randomly assigned to carboplatin and paclitaxel with erlotinib or placebo were assessed for survival, response, and time to progression (TTP). EGFR exons 18 through 21 and KRAS exon 2 were sequenced in tumors from 274 patients. Outcomes were correlated with EGFR and KRAS mutations in retrospective subset analyses. EGFR mutations were detected in 13% of tumors and were associated with longer survival, irrespective of treatment (P < .001). Among erlotinib-treated patients, EGFR mutations were associated with improved response rate (P < .05) and there was a trend toward an erlotinib benefit on TTP (P = .092), but not improved survival (P = .96). KRAS mutations (21% of tumors) were associated with significantly decreased TTP and survival in erlotinib plus chemotherapy-treated patients. EGFR mutations may be a positive prognostic factor for survival in advanced NSCLC patients treated with chemotherapy with or without erlotinib, and may predict greater likelihood of response. Patients with KRAS-mutant NSCLC showed poorer clinical outcomes when treated with erlotinib and chemotherapy. Further studies are needed to confirm the findings of this retrospective subset analysis.",
+"pubtypes": [
+"Clinical Trial",
+"Clinical Trial, Phase III",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"16556072": {
+"title": "Beyond the TRIBUTE trial: integrating HER1/EGFR tyrosine kinase inhibitors with chemotherapy in advanced NSCLC.",
+"journal": "Future Oncol",
+"year": "2006",
+"abstract": "Evaluation of: Herbst RS, Prager D, Hermann R et al.: TRIBUTE: a Phase III trial of erlotinib hydrochloride (OSI-774) combined with carboplatin and paclitaxel chemotherapy in advanced non-small cell lung cancer. J. Clin. Oncol. 23, 5892-5899 (2005). Patients diagnosed with advanced non-small cell lung cancer have limited therapeutic options. A large, randomized, controlled trial of the human epidermal growth factor receptor tyrosine-kinase inhibitor, erlotinib (Tarceva), plus standard first-line chemotherapy did not meet its primary end point of improved survival in the overall population, but did reveal a striking survival benefit in a subset of patients who had never smoked. There are a number of possible explanations for the lack of overall benefit, including the use of an unselected patient population, the need for alternatives to concurrent administration, and a postulated pathophysiological interaction between erlotinib and chemotherapy. Ongoing studies investigating alternative schedules and sequences of administration with chemotherapy will help clinicians to determine how agents such as erlotinib can best be combined with standard cytotoxic agents.",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Controlled Clinical Trial",
+"Journal Article",
+"Multicenter Study"
+]
+},
+"16257339": {
+"title": "Gefitinib plus best supportive care in previously treated patients with refractory advanced non-small-cell lung cancer: results from a randomised, placebo-controlled, multicentre study (Iressa Survival Evaluation in Lung Cancer).",
+"journal": "Lancet",
+"year": "2005 Oct 29-Nov 4",
+"abstract": "This placebo-controlled phase III study investigated the effect on survival of gefitinib as second-line or third-line treatment for patients with locally advanced or metastatic non-small-cell lung cancer. 1692 patients who were refractory to or intolerant of their latest chemotherapy regimen were randomly assigned in a ratio of two to one either gefitinib (250 mg/day) or placebo, plus best supportive care. The primary endpoint was survival in the overall population of patients and those with adenocarcinoma. The primary analysis of the population for survival was by intention to treat. This study has been submitted for registration with ClinicalTrials.gov, number 1839IL/709. 1129 patients were assigned gefitinib and 563 placebo. At median follow-up of 7.2 months, median survival did not differ significantly between the groups in the overall population (5.6 months for gefitinib and 5.1 months for placebo; hazard ratio 0.89 [95% CI 0.77-1.02], p=0.087) or among the 812 patients with adenocarcinoma (6.3 months vs 5.4 months; 0.84 [0.68-1.03], p=0.089). Preplanned subgroup analyses showed significantly longer survival in the gefitinib group than the placebo group for never-smokers (n=375; 0.67 [0.49-0.92], p=0.012; median survival 8.9 vs 6.1 months) and patients of Asian origin (n=342; 0.66 [0.48-0.91], p=0.01; median survival 9.5 vs 5.5 months). Gefitinib was well tolerated, as in previous studies. Treatment with gefitinib was not associated with significant improvement in survival in either coprimary population. There was pronounced heterogeneity in survival outcomes between groups of patients, with some evidence of benefit among never-smokers and patients of Asian origin.",
+"pubtypes": [
+"Clinical Trial",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial"
+]
+},
+"17075123": {
+"title": "Molecular predictors of outcome with gefitinib in a phase III placebo-controlled study in advanced non-small-cell lung cancer.",
+"journal": "J Clin Oncol",
+"year": "2006",
+"abstract": "The phase III Iressa Survival Evaluation in Lung Cancer (ISEL) trial compared gefitinib with placebo in 1,692 patients with refractory advanced non-small-cell lung cancer. We analyzed ISEL tumor biopsy samples to examine relationships between biomarkers and clinical outcome after gefitinib treatment in a placebo-controlled setting. Biomarkers included epidermal growth factor receptor (EGFR) gene copy number by fluorescence in situ hybridization (n = 370); EGFR (n = 379) and phosphorylated Akt (p-Akt) protein expression (n = 382) by immunohistochemistry; and mutations in EGFR (n = 215), KRAS (n = 152), and BRAF (n = 118). High EGFR gene copy number was a predictor of a gefitinib-related effect on survival (hazard ratio [HR], 0.61 for high copy number and HR, 1.16 for low copy number; comparison of high v low copy number HR, P = .045). EGFR protein expression was also related to clinical outcome (HR for positive, 0.77; HR for negative, 1.57; comparison of high v low protein expression HR, P = .049). Patients with EGFR mutations had higher response rates than patients without EGFR mutations (37.5% v 2.6%); there were insufficient data for survival analysis. No relationship was observed between p-Akt protein expression and survival outcome, and the limited amount of data collected for KRAS and BRAF mutations prevented any meaningful evaluation of clinical outcomes in relation to these mutations. EGFR gene copy number was a predictor of clinical benefit from gefitinib in ISEL. Additional studies are warranted to assess these biomarkers fully for the identification of patients most likely to benefit from gefitinib treatment.",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Controlled Clinical Trial",
+"Journal Article",
+"Research Support, N.I.H., Extramural",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"17409969": {
+"title": "Gefitinib (IRESSA) in patients of Asian origin with refractory advanced non-small cell lung cancer: subset analysis from the ISEL study.",
+"journal": "J Thorac Oncol",
+"year": "2006",
+"abstract": "The IRESSA Survival Evaluation in Lung Cancer (ISEL) phase III study compared the efficacy of gefitinib (IRESSA) versus placebo in patients with refractory advanced non-small cell lung cancer (NSCLC). Although a statistically significant difference in survival was not seen between gefitinib and placebo in the overall ISEL population, preplanned subset analyses demonstrated a significant survival benefit in patients who had never smoked and in patients of Asian origin. In ISEL, 1692 patients who were refractory to or intolerant of their latest chemotherapy were randomized to receive either gefitinib (250 mg/day) or placebo, plus best supportive care. Preplanned subgroup analyses included an assessment of patients who were of Asian origin (n = 342). Two hundred thirty-five patients of Asian origin received gefitinib, and 107 received placebo. In these patients, treatment with gefitinib significantly improved survival compared with placebo (hazard ratio [HR], 0.66; 95% confidence interval [CI], 0.48, 0.91; p = 0.010; median survival, 9.5 versus 5.5 months). Patients of Asian origin also experienced statistically significant improvements in time to treatment failure with gefitinib compared with placebo (HR, 0.69; 95% CI, 0.52, 0.91; p = 0.0084; 4.4 versus 2.2 months), and objective response rates were higher with gefitinib than with placebo (12 versus 2%). Gefitinib was generally well tolerated in patients of Asian origin, with rash and diarrhea being the most common adverse events. No unexpected adverse events were observed. Treatment with gefitinib was associated with a significant improvement in survival in a subgroup of patients of Asian origin with previously treated refractory advanced NSCLC.",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"17872493": {
+"title": "A study to evaluate safety and efficacy of mepolizumab in patients with moderate persistent asthma.",
+"journal": "Am J Respir Crit Care Med",
+"year": "2007",
+"abstract": "Accumulation of eosinophils in the bronchial mucosa of individuals with asthma is considered to be a central event in the pathogenesis of asthma. In animal models, airway eosinophil recruitment and airway hyperresponsiveness in response to allergen challenge are reduced by specific targeting of interleukin-5. A previous small dose-finding study found that mepolizumab, a humanized anti-interleukin-5 monoclonal antibody, had no effect on allergen challenge in humans. To investigate the effect of three intravenous infusions of mepolizumab, 250 or 750 mg at monthly intervals, on clinical outcome measures in 362 patients with asthma experiencing persistent symptoms despite inhaled corticosteroid therapy (400-1,000 mug of beclomethasone or equivalent). Multicenter, randomized, double-blind, placebo-controlled study. Morning peak expiratory flow, forced expiratory volume in 1 second, daily beta(2)-agonist use, symptom scores, exacerbation rates, and quality of life measures. Sputum eosinophil levels were also measured in a subgroup of 37 individuals. Mepolizumab was associated with a significant reduction in blood and sputum eosinophils in both treatment groups (blood, P < 0.001 for both doses; sputum, P = 0.006 for 250 mg and P = 0.004 for 750 mg). There were no statistically significant changes in any of the clinical end points measured. There was a nonsignificant trend for decrease in exacerbation rates in the mepolizumab 750-mg treatment group (P = 0.065). Mepolizumab treatment does not appear to add significant clinical benefit in patients with asthma with persistent symptoms despite inhaled corticosteroid therapy. Further studies are needed to investigate the effect of mepolizumab on exacerbation rates, using protocols specifically tailored to patients with asthma with persistent airway eosinophilia.",
+"pubtypes": [
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial"
+]
+},
+"19264686": {
+"title": "Mepolizumab and exacerbations of refractory eosinophilic asthma.",
+"journal": "N Engl J Med",
+"year": "2009",
+"abstract": "Exacerbations of asthma are associated with substantial morbidity and mortality and with considerable use of health care resources. Preventing exacerbations remains an important goal of therapy. There is evidence that eosinophilic inflammation of the airway is associated with the risk of exacerbations. We conducted a randomized, double-blind, placebo-controlled, parallel-group study of 61 subjects who had refractory eosinophilic asthma and a history of recurrent severe exacerbations. Subjects received infusions of either mepolizumab, an anti-interleukin-5 monoclonal antibody (29 subjects), or placebo (32) at monthly intervals for 1 year. The primary outcome measure was the number of severe exacerbations per subject during the 50-week treatment phase. Secondary outcomes included a change in asthma symptoms, scores on the Asthma Quality of Life Questionnaire (AQLQ, in which scores range from 1 to 7, with lower values indicating more severe impairment and a change of 0.5 unit considered to be clinically important), forced expiratory volume in 1 second (FEV(1)) after use of a bronchodilator, airway hyperresponsiveness, and eosinophil counts in the blood and sputum. Mepolizumab was associated with significantly fewer severe exacerbations than placebo over the course of 50 weeks (2.0 vs. 3.4 mean exacerbations per subject; relative risk, 0.57; 95% confidence interval [CI], 0.32 to 0.92; P=0.02) and with a significant improvement in the score on the AQLQ (mean increase from baseline, 0.55 vs. 0.19; mean difference between groups, 0.35; 95% CI, 0.08 to 0.62; P=0.02). Mepolizumab significantly lowered eosinophil counts in the blood (P<0.001) and sputum (P=0.002). There were no significant differences between the groups with respect to symptoms, FEV(1) after bronchodilator use, or airway hyperresponsiveness. The only serious adverse events reported were hospitalizations for acute severe asthma. Mepolizumab therapy reduces exacerbations and improves AQLQ scores in patients with refractory eosinophilic asthma. The results of our study suggest that eosinophils have a role as important effector cells in the pathogenesis of severe exacerbations of asthma in this patient population. (Current Controlled Trials number, ISRCTN75169762.)",
+"pubtypes": [
+"Journal Article",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"19264687": {
+"title": "Mepolizumab for prednisone-dependent asthma with sputum eosinophilia.",
+"journal": "N Engl J Med",
+"year": "2009",
+"abstract": "Eosinophilic inflammation, which may be a consequence of interleukin-5 action, is a characteristic feature of some forms of asthma. However, in three previous clinical trials involving patients with asthma, blockade of this cytokine did not result in a significant improvement in outcomes. We studied the prednisone-sparing effect of mepolizumab, a monoclonal antibody against interleukin-5, in a rare subgroup of patients who have sputum eosinophilia and airway symptoms despite continued treatment with prednisone. Secondary objectives were to examine its effect on the number of eosinophils in sputum and blood, symptoms, and airflow limitation. In this randomized, double-blind, parallel-group trial involving patients with persistent sputum eosinophilia and symptoms despite prednisone treatment, we assigned 9 patients to receive mepolizumab (administered in five monthly infusions of 750 mg each) and 11 patients to receive placebo. There were 12 asthma exacerbations in 10 patients who received placebo, 9 of whom had sputum eosinophilia at the time of exacerbation. In comparison, only one patient who received mepolizumab had an asthma exacerbation, and this episode was not associated with sputum eosinophilia (P=0.002). Patients who received mepolizumab were able to reduce their prednisone dose by a mean (+/-SD) of 83.8+/-33.4% of their maximum possible dose, as compared with 47.7+/-40.5% in the placebo group (P=0.04). The use of mepolizumab was associated with a significant decrease in the number of sputum and blood eosinophils. Improvements in eosinophil numbers, asthma control, and forced expiratory volume in 1 second were maintained for 8 weeks after the last infusion. There were no serious adverse events. Mepolizumab reduced the number of blood and sputum eosinophils and allowed prednisone sparing in patients who had asthma with sputum eosinophilia despite prednisone treatment. (ClinicalTrials.gov number, NCT00292877.)",
+"pubtypes": [
+"Journal Article",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"22998420": {
+"title": "Mepolizumab treatment for asthma.",
+"journal": "Expert Opin Biol Ther",
+"year": "2013",
+"abstract": "Five percent of asthmatics have severe symptoms despite high doses of inhaled (ICS) or additional oral corticosteroids (OCS): these patients have high morbidity, risk for asthma death, and account for half of asthma healthcare spending. A subgroup (20 - 40%) of these has persistent airway eosinophilia and frequent exacerbations. Mepolizumab is a humanized monoclonal antibody that blocks binding of the key cytokine implicated specifically in eosinophil maturation and survival, interleukin-5, to its receptor. Pharmacology, Phase I/IIa and Phase II/III studies of mepolizumab for asthma. Mepolizumab depleted blood and sputum eosinophils and partially reduced airway and bone marrow eosinophils. It also reduced airway remodeling. In unselected patients with moderate/severe asthma there was no clinically significant effect on lung function, but a trend to reduced exacerbation rates. When patients were selected for persistent sputum eosinophilia despite high-dose ICS/OCS, and frequent exacerbations, mepolizumab reduced exacerbations by 50%. Mepolizumab can reduce exacerbation rates in the severe asthma cohort who have eosinophilic airway inflammation despite corticosteroid treatment. This may be 30% of severe asthmatics and represents a new and important treatment option. Further studies need to confirm efficacy and indications for asthma (and other eosinophilic airway disease), and to examine clinical consequences of reducing remodeling.",
+"pubtypes": [
+"Journal Article"
+]
+},
+"22452356": {
+"title": "Olaparib maintenance therapy in platinum-sensitive relapsed ovarian cancer.",
+"journal": "N Engl J Med",
+"year": "2012",
+"abstract": "Olaparib (AZD2281) is an oral poly(adenosine diphosphate [ADP]-ribose) polymerase inhibitor that has shown antitumor activity in patients with high-grade serous ovarian cancer with or without BRCA1 or BRCA2 germline mutations. We conducted a randomized, double-blind, placebo-controlled, phase 2 study to evaluate maintenance treatment with olaparib in patients with platinum-sensitive, relapsed, high-grade serous ovarian cancer who had received two or more platinum-based regimens and had had a partial or complete response to their most recent platinum-based regimen. Patients were randomly assigned to receive olaparib, at a dose of 400 mg twice daily, or placebo. The primary end point was progression-free survival according to the Response Evaluation Criteria in Solid Tumors guidelines. Of 265 patients who underwent randomization, 136 were assigned to the olaparib group and 129 to the placebo group. Progression-free survival was significantly longer with olaparib than with placebo (median, 8.4 months vs. 4.8 months from randomization on completion of chemotherapy; hazard ratio for progression or death, 0.35; 95% confidence interval [CI], 0.25 to 0.49; P<0.001). Subgroup analyses of progression-free survival showed that, regardless of subgroup, patients in the olaparib group had a lower risk of progression. Adverse events more commonly reported in the olaparib group than in the placebo group (by more than 10% of patients) were nausea (68% vs. 35%), fatigue (49% vs. 38%), vomiting (32% vs. 14%), and anemia (17% vs. 5%); the majority of adverse events were grade 1 or 2. An interim analysis of overall survival (38% maturity, meaning that 38% of the patients had died) showed no significant difference between groups (hazard ratio with olaparib, 0.94; 95% CI, 0.63 to 1.39; P=0.75). Olaparib as maintenance treatment significantly improved progression-free survival among patients with platinum-sensitive, relapsed, high-grade serous ovarian cancer. Interim analysis showed no overall survival benefit. The toxicity profile of olaparib in this population was consistent with that in previous studies. (Funded by AstraZeneca; ClinicalTrials.gov number, NCT00753545.).",
+"pubtypes": [
+"Clinical Trial, Phase II",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"24882434": {
+"title": "Olaparib maintenance therapy in patients with platinum-sensitive relapsed serous ovarian cancer: a preplanned retrospective analysis of outcomes by BRCA status in a randomised phase 2 trial.",
+"journal": "Lancet Oncol",
+"year": "2014",
+"abstract": "Maintenance monotherapy with the PARP inhibitor olaparib significantly prolonged progression-free survival (PFS) versus placebo in patients with platinum-sensitive recurrent serous ovarian cancer. We aimed to explore the hypothesis that olaparib is most likely to benefit patients with a BRCA mutation. We present data from the second interim analysis of overall survival and a retrospective, preplanned analysis of data by BRCA mutation status from our randomised, double-blind, phase 2 study that assessed maintenance treatment with olaparib 400 mg twice daily (capsules) versus placebo in patients with platinum-sensitive recurrent serous ovarian cancer who had received two or more platinum-based regimens and who had a partial or complete response to their most recent platinum-based regimen. Randomisation was by an interactive voice response system, stratified by time to progression on penultimate platinum-based regimen, response to the most recent platinum-based regimen before randomisation, and ethnic descent. The primary endpoint was PFS, analysed for the overall population and by BRCA status. This study is registered with ClinicalTrials.gov, number NCT00753545. Between Aug 28, 2008, and Feb 9, 2010, 136 patients were assigned to olaparib and 129 to placebo. BRCA status was known for 131 (96%) patients in the olaparib group versus 123 (95%) in the placebo group, of whom 74 (56%) versus 62 (50%) had a deleterious or suspected deleterious germline or tumour BRCA mutation. Of patients with a BRCA mutation, median PFS was significantly longer in the olaparib group than in the placebo group (11\u00b72 months [95% CI 8\u00b73-not calculable] vs 4\u00b73 months [3\u00b70-5\u00b74]; HR 0\u00b718 [0\u00b710-0\u00b731]; p<0\u00b70001); similar findings were noted for patients with wild-type BRCA, although the difference between groups was lower (7\u00b74 months [5\u00b75-10\u00b73] vs 5\u00b75 months [3\u00b77-5\u00b76]; HR 0\u00b754 [0\u00b734-0\u00b785]; p=0\u00b70075). At the second interim analysis of overall survival (58% maturity), overall survival did not significantly differ between the groups (HR 0\u00b788 [95% CI 0\u00b764-1\u00b721]; p=0\u00b744); similar findings were noted for patients with mutated BRCA (HR 0\u00b773 [0\u00b745-1\u00b717]; p=0\u00b719) and wild-type BRCA (HR 0\u00b799 [0\u00b763-1\u00b755]; p=0\u00b796). The most common grade 3 or worse adverse events in the olaparib group were fatigue (in ten [7%] patients in the olaparib group vs four [3%] in the placebo group) and anaemia (seven [5%] vs one [<1%]). Serious adverse events were reported in 25 (18%) patients who received olaparib and 11 (9%) who received placebo. Tolerability was similar in patients with mutated BRCA and the overall population. These results support the hypothesis that patients with platinum-sensitive recurrent serous ovarian cancer with a BRCA mutation have the greatest likelihood of benefiting from olaparib treatment. AstraZeneca.",
+"pubtypes": [
+"Clinical Trial, Phase II",
+"Journal Article",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"26095784": {
+"title": "Ramucirumab versus placebo as second-line treatment in patients with advanced hepatocellular carcinoma following first-line therapy with sorafenib (REACH): a randomised, double-blind, multicentre, phase 3 trial.",
+"journal": "Lancet Oncol",
+"year": "2015",
+"abstract": "VEGF and VEGF receptor-2-mediated angiogenesis contribute to hepatocellular carcinoma pathogenesis. Ramucirumab is a recombinant IgG1 monoclonal antibody and VEGF receptor-2 antagonist. We aimed to assess the safety and efficacy of ramucirumab in advanced hepatocellular carcinoma following first-line therapy with sorafenib. In this randomised, placebo-controlled, double-blind, multicentre, phase 3 trial (REACH), patients were enrolled from 154 centres in 27 countries. Eligible patients were aged 18 years or older, had hepatocellular carcinoma with Barcelona Clinic Liver Cancer stage C disease or stage B disease that was refractory or not amenable to locoregional therapy, had Child-Pugh A liver disease, an Eastern Cooperative Oncology Group performance status of 0 or 1, had previously received sorafenib (stopped because of progression or intolerance), and had adequate haematological and biochemical parameters. Patients were randomly assigned (1:1) to receive intravenous ramucirumab (8 mg/kg) or placebo every 2 weeks, plus best supportive care, until disease progression, unacceptable toxicity, or death. Randomisation was stratified by geographic region and cause of liver disease with a stratified permuted block method. Patients, medical staff, investigators, and the funder were masked to treatment assignment. The primary endpoint was overall survival in the intention-to-treat population. This study is registered with ClinicalTrials.gov, number NCT01140347. Between Nov 4, 2010, and April 18, 2013, 565 patients were enrolled, of whom 283 were assigned to ramucirumab and 282 were assigned to placebo. Median overall survival for the ramucirumab group was 9\u00b72 months (95% CI 8\u00b70-10\u00b76) versus 7\u00b76 months (6\u00b70-9\u00b73) for the placebo group (HR 0\u00b787 [95% CI 0\u00b772-1\u00b705]; p=0\u00b714). Grade 3 or greater adverse events occurring in 5% or more of patients in either treatment group were ascites (13 [5%] of 277 patients treated with ramucirumab vs 11 [4%] of 276 patients treated with placebo), hypertension (34 [12%] vs ten [4%]), asthenia (14 [5%] vs five [2%]), malignant neoplasm progression (18 [6%] vs 11 [4%]), increased aspartate aminotransferase concentration (15 [5%] vs 23 [8%]), thrombocytopenia (13 [5%] vs one [<1%]), hyperbilirubinaemia (three [1%] vs 13 [5%]), and increased blood bilirubin (five [2%] vs 14 [5%]). The most frequently reported (\u22651%) treatment-emergent serious adverse event of any grade or grade 3 or more was malignant neoplasm progression. Second-line treatment with ramucirumab did not significantly improve survival over placebo in patients with advanced hepatocellular carcinoma. No new safety signals were noted in eligible patients and the safety profile is manageable. Eli Lilly and Co.",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"21571362": {
+"title": "Pirfenidone in patients with idiopathic pulmonary fibrosis (CAPACITY): two randomised trials.",
+"journal": "Lancet",
+"year": "2011",
+"abstract": "Idiopathic pulmonary fibrosis is a progressive and fatal lung disease with inevitable loss of lung function. The CAPACITY programme (studies 004 and 006) was designed to confirm the results of a phase 2 study that suggested that pirfenidone, a novel antifibrotic and anti-inflammatory drug, reduces deterioration in lung function in patients with idiopathic pulmonary fibrosis. In two concurrent trials (004 and 006), patients (aged 40-80 years) with idiopathic pulmonary fibrosis were randomly assigned to oral pirfenidone or placebo for a minimum of 72 weeks in 110 centres in Australia, Europe, and North America. In study 004, patients were assigned in a 2:1:2 ratio to pirfenidone 2403 mg/day, pirfenidone 1197 mg/day, or placebo; in study 006, patients were assigned in a 1:1 ratio to pirfenidone 2403 mg/day or placebo. The randomisation code (permuted block design) was computer generated and stratified by region. All study personnel were masked to treatment group assignment until after final database lock. Treatments were administered orally, 801 mg or 399 mg three times a day. The primary endpoint was change in percentage predicted forced vital capacity (FVC) at week 72. Analysis was by intention to treat. The studies are registered with ClinicalTrials.gov, numbers NCT00287729 and NCT00287716. In study 004, 174 of 435 patients were assigned to pirfenidone 2403 mg/day, 87 to pirfenidone 1197 mg/day, and 174 to placebo. In study 006, 171 of 344 patients were assigned to pirfenidone 2403 mg/day, and 173 to placebo. All patients in both studies were analysed. In study 004, pirfenidone reduced decline in FVC (p=0\u00b7001). Mean FVC change at week 72 was -8\u00b70% (SD 16\u00b75) in the pirfenidone 2403 mg/day group and -12\u00b74% (18\u00b75) in the placebo group (difference 4\u00b74%, 95% CI 0\u00b77 to 9\u00b71); 35 (20%) of 174 versus 60 (35%) of 174 patients, respectively, had a decline of at least 10%. A significant treatment effect was noted at all timepoints from week 24 and in an analysis over all study timepoints (p=0\u00b70007). Mean change in percentage FVC in the pirfenidone 1197 mg/day group was intermediate to that in the pirfenidone 2403 mg/day and placebo groups. In study 006, the difference between groups in FVC change at week 72 was not significant (p=0\u00b7501). Mean change in FVC at week 72 was -9\u00b70% (SD 19\u00b76) in the pirfenidone group and -9\u00b76% (19\u00b71) in the placebo group, and the difference between groups in predicted FVC change at week 72 was not significant (0\u00b76%, -3\u00b75 to 4\u00b77); however, a consistent pirfenidone effect was apparent until week 48 (p=0\u00b7005) and in an analysis of all study timepoints (p=0\u00b7007). Patients in the pirfenidone 2403 mg/day group had higher incidences of nausea (125 [36%] of 345 vs 60 [17%] of 347), dyspepsia (66 [19%] vs 26 [7%]), vomiting (47 [14%] vs 15 [4%]), anorexia (37 [11%] vs 13 [4%]), photosensitivity (42 [12%] vs 6 [2%]), rash (111 [32%] vs 40 [12%]), and dizziness (63 [18%] vs 35 [10%]) than did those in the placebo group. Fewer overall deaths (19 [6%] vs 29 [8%]) and fewer deaths related to idiopathic pulmonary fibrosis (12 [3%] vs 25 [7%]) occurred in the pirfenidone 2403 mg/day groups than in the placebo groups. The data show pirfenidone has a favourable benefit risk profile and represents an appropriate treatment option for patients with idiopathic pulmonary fibrosis. InterMune.",
+"pubtypes": [
+"Comparative Study",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"19996196": {
+"title": "Pirfenidone in idiopathic pulmonary fibrosis.",
+"journal": "Eur Respir J",
+"year": "2010",
+"abstract": "Idiopathic pulmonary fibrosis (IPF) is a progressive lung disease without proven effective therapy. A multicentre, double-blind, placebo-controlled, randomised phase III clinical trial was conducted in Japanese patients with well-defined IPF to determine the efficacy and safety of pirfenidone, a novel antifibrotic oral agent, over 52 weeks. Of 275 patients randomised (high-dose, 1,800 mg x day(-1); low-dose, 1,200 mg x day(-1); or placebo groups in the ratio 2:1:2), 267 patients were evaluated for the efficacy of pirfenidone. Prior to unblinding, the primary end-point was revised; the change in vital capacity (VC) was assessed at week 52. Secondary end-points included the progression-free survival (PFS) time. Significant differences were observed in VC decline (primary end-point) between the placebo group (-0.16 L) and the high-dose group (-0.09 L) (p = 0.0416); differences between the two groups (p = 0.0280) were also observed in the PFS (the secondary end-point). Although photosensitivity, a well-established side-effect of pirfenidone, was the major adverse event in this study, it was mild in severity in most of the patients. Pirfenidone was relatively well tolerated in patients with IPF. Treatment with pirfenidone may decrease the rate of decline in VC and may increase the PFS time over 52 weeks. Additional studies are needed to confirm these findings.",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"10194146": {
+"title": "Treatment of idiopathic pulmonary fibrosis with a new antifibrotic agent, pirfenidone: results of a prospective, open-label Phase II study.",
+"journal": "Am J Respir Crit Care Med",
+"year": "1999",
+"abstract": "Idiopathic pulmonary fibrosis (IPF) is a progressive clinical syndrome of unknown etiology and fatal outcome. Currently available therapies are ineffective and associated with significant adverse effects. Pirfenidone, a new, investigational antifibrotic agent, was evaluated for its tolerability and usefulness in terminally ill patients with advanced IPF. Consecutive patients with IPF and deterioration despite conventional therapy or who were unable to tolerate or unwilling to try conventional therapy were treated with oral pirfenidone. Treatment was administered on a compassionate basis (open-label). Fifty-four patients were followed for mortality, change in lung function, and adverse effects. Their mean age was 62, mean duration of symptoms 4.6 yr, and time since lung biopsy was 3.2 yr. Conventional therapy was discontinued in 38 of 46 patients; the other eight were able to decrease their prednisone dosage and eight had no previous conventional treatment. One- and 2-yr survival was 78% (95% CI 66%, 89%) and 63% (95% CI 50%, 76%), respectively. Patients whose lung functions had deteriorated prior to enrollment appeared to stabilize after beginning treatment. Adverse effects were relatively minor. The results of this study are encouraging. Pirfenidone is a promising new treatment for IPF that is well tolerated.",
+"pubtypes": [
+"Clinical Trial",
+"Clinical Trial, Phase II",
+"Journal Article"
+]
+},
+"15665326": {
+"title": "Double-blind, placebo-controlled trial of pirfenidone in patients with idiopathic pulmonary fibrosis.",
+"journal": "Am J Respir Crit Care Med",
+"year": "2005",
+"abstract": "Idiopathic pulmonary fibrosis (IPF) is a fatal disorder without an effective therapy to date. In a double-blind, randomized, placebo-controlled trial, 107 patients were prospectively evaluated for efficacy of a novel compound, pirfenidone. The difference in the change in the lowest oxygen saturation by pulse oximetry (SpO2) during a 6-minute exercise test, the primary endpoint, from baseline to 6 months was not significant between the two groups (p = 0.0722). In a prespecified subset of patients who maintained a SpO2 greater than 80% during a 6-minute exercise test at baseline, the lowest SpO2 improved during a 6-minute exercise test in the pirfenidone group at 6 and 9 months (p = 0.0069 and 0.0305, respectively). Positive treatment effect was demonstrated in secondary endpoints: (1) change in VC measurements at 9 months (p = 0.0366) and (2) episodes of acute exacerbation of IPF occurring exclusively in the placebo group during the 9 months (p = 0.0031). Significant adverse events were associated with pirfenidone; however, adherence to treatment regimen was similar between pirfenidone and placebo groups. In conclusion, treatment with pirfenidone improved VC and prevented acute exacerbation of IPF during the 9 months of follow-up. Future long-term studies are needed to clarify the overall safety and efficacy of pirfenidone in IPF.",
+"pubtypes": [
+"Clinical Trial",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"19127470": {
+"title": "Permutation test following covariate-adaptive randomization in randomized controlled trials.",
+"journal": "J Biopharm Stat",
+"year": "2009",
+"abstract": "In randomized controlled trials, patients are recruited and randomly allocated to treatments. Patients are never randomly sampled from large population of patients on treatments under study. Therefore, it is important to consider the design and statistical analysis based on the randomization model. In this article, we show theoretically that a permutation test based on the difference in means is identical to analysis of covariance if marginal covariate balance is completely attained. Our theoretical results and Monte Carlo simulation study suggest that the permutation test following Pocock-Simon's covariate-adaptive randomization can be a useful alternative to traditional population-based tests in a confirmatory randomized controlled trial with important prognostic factors. The proposed procedure is illustrated with modified data from the randomized placebo-controlled trial of pirfenidone.",
+"pubtypes": [
+"Journal Article"
+]
+},
+"20824834": {
+"title": "Non-steroid agents for idiopathic pulmonary fibrosis.",
+"journal": "Cochrane Database Syst Rev",
+"year": "2010",
+"abstract": "Idiopathic pulmonary fibrosis is a chronic progressive lung disease with poor outcome and no effective treatment to date. This is an update of a Cochrane Review first published in 2003. To assess the efficacy of non-steroid agents in adults with idiopathic pulmonary fibrosis. We searched the Cochrane Airways Group Register (30 March 2010), the Cochrane Central Register of Controlled Trials (CENTRAL) (The Cochrane Library, Issue 1, 2010), Ovid MEDLINE to March week 5, 2010, EMBASE to week 13, 2010 and PubMed to April 2010, with additional handsearching, including abstracts of international conferences. We also contacted pharmaceutical companies and researchers in the field. Randomised studies comparing non-steroid drugs with placebo or steroids in adults with idiopathic pulmonary fibrosis. Two authors independently assessed trial quality, extracted data and assessed risk of bias. We contacted pharmaceutical companies to obtain missing information, if any. We combined survival outcomes using Peto odds ratios or hazard ratios (HR). Fifteen trials involving 10 different drugs were included. Two trials enrolling 1156 patients compared interferon gamma-1beta with placebo: interferon gamma-1beta did not significantly improve survival (HR 0.88, 95% CI 0.47 to 1.64; P = 0.68). Four trials involving 1155 patients compared pirfenidone with placebo. Three trials, conducted in 1046 patients, provided data on progression-free survival: pirfenidone significantly reduced the risk of disease progression by 30% (HR 0.70, 95% CI 0.56 to 0.88, P = 0.002). Data on the effect of pirfenidone on pulmonary function could only be assessed for two studies analysing 314 patients. Forced vital capacity or vital capacity was significantly improved by pirfenidone (mean difference 0.08 L, 95% CI 0.03 to 0.13, P = 0.0006). Based on available data, partly still unpublished, pirfenidone appears to improve progression-free survival and, to a lesser extent, pulmonary function in patients with idiopathic pulmonary fibrosis. More data are needed on overall survival and quality of life on treatment. From the studies in this review, interferon gamma-1beta has not been shown to affect survival. Other agents evaluated in single studies either failed to provide evidence for a benefit or need to be assessed in larger randomised controlled trials.",
+"pubtypes": [
+"Journal Article",
+"Meta-Analysis",
+"Systematic Review"
+]
+},
+"16809734": {
+"title": "Placebo-controlled phase III trial of immunologic therapy with sipuleucel-T (APC8015) in patients with metastatic, asymptomatic hormone refractory prostate cancer.",
+"journal": "J Clin Oncol",
+"year": "2006",
+"abstract": "Sipuleucel-T (APC8015) is an investigational immunotherapy product designed to stimulate T-cell immunity against prostatic acid phosphatase. A phase III study was undertaken to evaluate the safety and efficacy of sipuleucel-T in a placebo-controlled study. A total of 127 patients with asymptomatic metastatic hormone refractory prostate cancer (HRPC) were randomly assigned in a 2:1 ratio to receive three infusions of sipuleucel-T (n = 82) or placebo (n = 45) every 2 weeks. On disease progression, placebo patients could receive APC8015F, a product made with frozen leukapheresis cells. Of the 127 patients, 115 patients had progressive disease at the time of data analysis, and all patients were followed for survival for 36 months. The median for time to disease progression (TTP) for sipuleucel-T was 11.7 weeks compared with 10.0 weeks for placebo (P = .052, log-rank; hazard ratio [HR], 1.45; 95%CI, 0.99 to 2.11). Median survival was 25.9 months for sipuleucel-T and 21.4 months for placebo (P = .01, log-rank; HR, 1.70; 95%CI, 1.13 to 2.56). Treatment remained a strong independent predictor of overall survival after adjusting for prognostic factors using a Cox multivariable regression model (P = .002, Wald test; HR, 2.12; 95%CI, 1.31 to 3.44). The median ratio of T-cell stimulation at 8 weeks to pretreatment was eight-fold higher in sipuleucel-T-treated patients (16.9 v 1.99; P < .001). Sipuleucel-T therapy was well tolerated. While the improvement in the primary end point TTP did not achieve statistical significance, this study suggests that sipuleucel-T may provide a survival advantage to asymptomatic HRPC patients. Supportive studies are underway.",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"36129998": {
+"title": "Trial of Antisense Oligonucleotide Tofersen for ",
+"journal": "N Engl J Med",
+"year": "2022",
+"abstract": "The intrathecally administered antisense oligonucleotide tofersen reduces synthesis of the superoxide dismutase 1 (SOD1) protein and is being studied in patients with amyotrophic lateral sclerosis (ALS) associated with mutations in  In this phase 3 trial, we randomly assigned adults with  A total of 72 participants received tofersen (39 predicted to have faster progression), and 36 received placebo (21 predicted to have faster progression). Tofersen led to greater reductions in concentrations of SOD1 in CSF and of neurofilament light chains in plasma than placebo. In the faster-progression subgroup (primary analysis), the change to week 28 in the ALSFRS-R score was -6.98 with tofersen and -8.14 with placebo (difference, 1.2 points; 95% confidence interval [CI], -3.2 to 5.5; P\u2009=\u20090.97). Results for secondary clinical end points did not differ significantly between the two groups. A total of 95 participants (88%) entered the open-label extension. At 52 weeks, the change in the ALSFRS-R score was -6.0 in the early-start cohort and -9.5 in the delayed-start cohort (difference, 3.5 points; 95% CI, 0.4 to 6.7); non-multiplicity-adjusted differences favoring early-start tofersen were seen for other end points. Lumbar puncture-related adverse events were common. Neurologic serious adverse events occurred in 7% of tofersen recipients. In persons with ",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Comparative Study",
+"Journal Article",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"36928619": {
+"title": "Neurofilament light-chain response during therapy with antisense oligonucleotide tofersen in SOD1-related ALS: Treatment experience in clinical practice.",
+"journal": "Muscle Nerve",
+"year": "2023",
+"abstract": "In amyotrophic lateral sclerosis (ALS) caused by superoxide dismutase 1 (SOD1) gene mutations (SOD1-ALS), the antisense oligonucleotide tofersen had been investigated in a phase III study (VALOR) and subsequently introduced in an expanded access program. In this study we assess neurofilament light chain (NfL) before and during tofersen treatment. In six SOD1-ALS patients treated with tofersen at three specialized ALS centers in Germany, NfL in cerebrospinal fluid (CSF-NfL) and/or serum (sNfL) were investigated using the ALS Functional Rating Scale Revised (ALSFRS-R) and ALS progression rate (ALS-PR), defined by monthly decline of ALSFRS-R. Three of the six SOD1-ALS patients reported a negative family history. Three patients harbored a homozygous c.272A > C, p.(Asp91Ala) mutation. These and two other patients showed slower progressing ALS (defined by ALS-PR <0.9), whereas one patient demonstrated rapidly progressing ALS (ALS-PR\u2009=\u20092.66). Mean treatment duration was 6.5 (range 5 to 8) months. In all patients, NfL decreased (mean CSF-NfL: -66%, range -52% to -86%; mean sNfL: -62%, range -36% to -84%). sNfL after 5\u2009months of tofersen treatment was significantly reduced compared with the nearest pretreatment measurement (P\u2009=\u2009.017). ALS-PR decreased in two patients, whereas no changes in ALSFRS-R were observed in four participants who had very low ALS-PR or ALSFRS-R values before treatment. In this case series, the significant NfL decline after tofersen treatment confirmed its value as response biomarker in an expanded clinical spectrum of SOD1-ALS. Given the previously reported strong correlation between sNfL and ALS progression, the NfL treatment response supports the notion of tofersen having disease-modifying activity.",
+"pubtypes": [
+"Journal Article",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"19847908": {
+"title": "Rituximab in patients with primary progressive multiple sclerosis: results of a randomized double-blind placebo-controlled multicenter trial.",
+"journal": "Ann Neurol",
+"year": "2009",
+"abstract": "Rituximab, a monoclonal antibody selectively depleting CD20+ B cells, has demonstrated efficacy in reducing disease activity in relapsing-remitting multiple sclerosis (MS). We evaluated rituximab in adults with primary progressive MS (PPMS) through 96 weeks and safety through 122 weeks. Using 2:1 randomization, 439 PPMS patients received two 1,000 mg intravenous rituximab or placebo infusions every 24 weeks, through 96 weeks (4 courses). The primary endpoint was time to confirmed disease progression (CDP), a prespecified increase in Expanded Disability Status Scale sustained for 12 weeks. Secondary endpoints were change from baseline to week 96 in T2 lesion volume and total brain volume on magnetic resonance imaging scans. Differences in time to CDP between rituximab and placebo did not reach significance (96-week rates: 38.5% placebo, 30.2% rituximab; p = 0.14). From baseline to week 96, rituximab patients had less (p < 0.001) increase in T2 lesion volume; brain volume change was similar (p = 0.62) to placebo. Subgroup analysis showed time to CDP was delayed in rituximab-treated patients aged <51 years (hazard ratio [HR] = 0.52; p = 0.010), those with gadolinium-enhancing lesions (HR = 0.41; p = 0.007), and those aged <51 years with gadolinium-enhancing lesions (HR = 0.33; p = 0.009) compared with placebo. Adverse events were comparable between groups; 16.1% of rituximab and 13.6% of placebo patients reported serious events. Serious infections occurred in 4.5% of rituximab and <1.0% of placebo patients. Infusion-related events, predominantly mild to moderate, were more common with rituximab during the first course, and decreased to rates comparable to placebo on successive courses. Although time to CDP between groups was not significant, overall subgroup analyses suggest selective B-cell depletion may affect disease progression in younger patients, particularly those with inflammatory lesions.",
+"pubtypes": [
+"Clinical Trial, Phase II",
+"Clinical Trial, Phase III",
+"Comparative Study",
+"Controlled Clinical Trial",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"25701171": {
+"title": "Necitumumab plus pemetrexed and cisplatin as first-line therapy in patients with stage IV non-squamous non-small-cell lung cancer (INSPIRE): an open-label, randomised, controlled phase 3 study.",
+"journal": "Lancet Oncol",
+"year": "2015",
+"abstract": "Necitumumab is a second-generation recombinant human immunoglobulin G1 EGFR monoclonal antibody that competitively inhibits ligand binding. We aimed to compare necitumumab plus pemetrexed and cisplatin with pemetrexed and cisplatin alone in patients with previously untreated, stage IV, non-squamous non-small-cell lung cancer (NSCLC). We did this randomised, open-label, controlled phase 3 study at 103 sites in 20 countries. Patients aged 18 years or older, with an Eastern Cooperative Oncology Group (ECOG) performance status of 0-2 and adequate organ function, were randomly assigned 1:1 to treatment with a block randomisation scheme (block size of four) via a telephone-based interactive voice-response system or interactive web-response system. Patients received either cisplatin 75 mg/m(2) and pemetrexed 500 mg/m(2) on day 1 of a 3-week cycle for a maximum of six cycles alone, or with necitumumab 800 mg on days 1 and 8. Necitumumab was continued after the end of chemotherapy until disease progression or unacceptable toxic effects. Randomisation was stratified by smoking history, ECOG performance status, disease histology, and geographical region. Patients and study investigators were not masked to group assignment. The primary endpoint was overall survival. Efficacy analyses were by intention to treat. This trial is registered with ClinicalTrials.gov, number NCT00982111. Between Nov 11, 2009, and Feb 2, 2011, we randomly assigned 633 patients to receive either necitumumab plus pemetrexed and cisplatin (n=315) or pemetrexed and cisplatin alone (n=318). Enrolment was stopped on Feb 2, 2011, after a recommendation from the independent data monitoring committee. There was no significant difference in overall survival between treatment groups, with a median overall survival of 11\u00b73 months (95% CI 9\u00b75-13\u00b74) in the necitumumab plus pemetrexed and cisplatin group versus 11\u00b75 months (10\u00b71-13\u00b71) in the pemetrexed and cisplatin group (hazard ratio 1\u00b701 [95% CI 0\u00b784-1\u00b721]; p=0\u00b796). The incidence of grade 3 or worse adverse events, including deaths, was higher in the necitumumab plus pemetrexed and cisplatin group than in the pemetrexed and cisplatin group; in particular, deaths regarded as related to study drug were reported in 15 (5%) of 304 patients in the necitumumab group versus nine (3%) of 312 patients in the pemetrexed and cisplatin group. Serious adverse events were likewise more frequent in the necitumumab plus pemetrexed and cisplatin group than in the pemetrexed and cisplatin group (155 [51%] of 304 vs 127 [41%] of 312 patients). Patients in the necitumumab plus pemetrexed and cisplatin group had more grade 3-4 rash (45 [15%] of 304 vs one [<1%] of 312 patients in the pemetrexed and cisplatin alone group), hypomagnesaemia (23 [8%] vs seven [2%] patients), and grade 3 or higher venous thromboembolic events (23 [8%] vs 11 [4%] patients) than did those in the pemetrexed and cisplatin alone group. Our findings show no evidence to suggest that the addition of necitumumab to pemetrexed and cisplatin increases survival of previously untreated patients with stage IV non-squamous NSCLC. Unless future studies identify potentially useful predictive biomarkers, necitumumab is unlikely to provide benefit in this patient population when combined with pemetrexed and cisplatin. Eli Lilly and Company.",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Comparative Study",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"25534294": {
+"title": "Analysis of patient-reported outcomes from the LUME-Lung 1 trial: a randomised, double-blind, placebo-controlled, Phase III study of second-line nintedanib in patients with advanced non-small cell lung cancer.",
+"journal": "Eur J Cancer",
+"year": "2015",
+"abstract": "The LUME-Lung 1 trial (NCT00805194; Study 1199.13) demonstrated a significant overall survival (OS) advantage for nintedanib plus docetaxel compared with placebo plus docetaxel as second-line therapy for patients with advanced non-small cell lung cancer (NSCLC) and adenocarcinoma histology. Patient-reported outcomes (PROs) for symptoms and health-related quality of life (QoL) are reported here. PROs were assessed at screening, on Day 1 of each 21-day treatment cycle, at the end of active treatment, and at the first follow-up visit. PRO instruments were the European Organisation for Research and Treatment of Cancer Quality of Life Questionnaire C30 and Lung Cancer-13 supplement, and the EuroQol disease-generic questionnaire (EQ-5D and EQ-VAS). Analyses of PRO items for lung cancer-specific symptoms of cough, dyspnoea and pain were prespecified. Rates of questionnaire completion were high. There was no significant difference in time to deterioration of global health status/QoL, or symptoms of cough, dyspnoea or pain, between the treatment groups for both the overall study population and the adenocarcinoma population. Time to deterioration of some gastrointestinal events was shorter with nintedanib versus placebo. Longitudinal analysis for the adenocarcinoma population showed comparable changes between the groups in symptom scores over time, with numerical differences in favour of nintedanib for cough and pain scales, and significant reductions in some pain items with nintedanib versus placebo. There was no statistically significant difference in EQ-5D or EQ-VAS between the groups. The significant OS benefit observed with the addition of nintedanib to docetaxel therapy was achieved with no detrimental effect on patient self-reported QoL.",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"25478720": {
+"title": "Nintedanib plus docetaxel as second-line therapy in patients with non-small-cell lung cancer: a network meta-analysis.",
+"journal": "Future Oncol",
+"year": "2015",
+"abstract": "Nintedanib plus docetaxel has proven an overall survival benefit over docetaxel monotherapy in second-line treatment of non-small-cell lung cancer of adenocarcinoma histology in the LUME-Lung 1 pivotal trial. No published trials have previously compared nintedanib plus docetaxel with agents \u2013 other than docetaxel \u2013 that are approved second-line treatments for non-small-cell lung cancer. The relative efficacy of nintedanib plus docetaxel versus second-line agents was evaluated by conducting a network meta-analysis of progression-free survival and overall survival. Nine suitable studies were identified. The estimated probability of nintedanib plus docetaxel being the best treatment with regard to overall survival was 70% (versus 16% for pemetrexed, 10% for docetaxel and 3% for erlotinib). Results for progression-free survival were similar. In patients with advanced non-small-cell lung cancer of adenocarcinoma histology, results suggest that nintedanib plus docetaxel offers clinical benefit compared with docetaxel alone, when used as second-line treatment, and suggests that this combination may also add clinical benefit compared with erlotinib in this patient group.",
+"pubtypes": [
+"Journal Article",
+"Research Support, Non-U.S. Gov't",
+"Network Meta-Analysis"
+]
+},
+"24411639": {
+"title": "Docetaxel plus nintedanib versus docetaxel plus placebo in patients with previously treated non-small-cell lung cancer (LUME-Lung 1): a phase 3, double-blind, randomised controlled trial.",
+"journal": "Lancet Oncol",
+"year": "2014",
+"abstract": "The phase 3 LUME-Lung 1 study assessed the efficacy and safety of docetaxel plus nintedanib as second-line therapy for non-small-cell lung cancer (NSCLC). Patients from 211 centres in 27 countries with stage IIIB/IV recurrent NSCLC progressing after first-line chemotherapy, stratified by ECOG performance status, previous bevacizumab treatment, histology, and presence of brain metastases, were allocated (by computer-generated sequence through an interactive third-party system, in 1:1 ratio), to receive docetaxel 75 mg/m(2) by intravenous infusion on day 1 plus either nintedanib 200 mg orally twice daily or matching placebo on days 2-21, every 3 weeks until unacceptable adverse events or disease progression. Investigators and patients were masked to assignment. The primary endpoint was progression-free survival (PFS) by independent central review, analysed by intention to treat after 714 events in all patients. The key secondary endpoint was overall survival, analysed by intention to treat after 1121 events had occurred, in a prespecified stepwise order: first in patients with adenocarcinoma who progressed within 9 months after start of first-line therapy, then in all patients with adenocarcinoma, then in all patients. This trial is registered with ClinicalTrials.gov, number NCT00805194. Between Dec 23, 2008, and Feb 9, 2011, 655 patients were randomly assigned to receive docetaxel plus nintedanib and 659 to receive docetaxel plus placebo. The primary analysis was done after a median follow-up of 7\u00b71 months (IQR 3\u00b78-11\u00b70). PFS was significantly improved in the docetaxel plus nintedanib group compared with the docetaxel plus placebo group (median 3\u00b74 months [95% CI 2\u00b79-3\u00b79] vs 2\u00b77 months [2\u00b76-2\u00b78]; hazard ratio [HR] 0\u00b779 [95% CI 0\u00b768-0\u00b792], p=0\u00b70019). After a median follow-up of 31\u00b77 months (IQR 27\u00b78-36\u00b71), overall survival was significantly improved for patients with adenocarcinoma histology who progressed within 9 months after start of first-line treatment in the docetaxel plus nintedanib group (206 patients) compared with those in the docetaxel plus placebo group (199 patients; median 10\u00b79 months [95% CI 8\u00b75-12\u00b76] vs 7\u00b79 months [6\u00b77-9\u00b71]; HR 0\u00b775 [95% CI 0\u00b760-0\u00b792], p=0\u00b70073). Similar results were noted for all patients with adenocarcinoma histology (322 patients in the docetaxel plus nintedanib group and 336 in the docetaxel plus placebo group; median overall survival 12\u00b76 months [95% CI 10\u00b76-15\u00b71] vs 10\u00b73 months [95% CI 8\u00b76-12\u00b72]; HR 0\u00b783 [95% CI 0\u00b770-0\u00b799], p=0\u00b70359), but not in the total study population (median 10\u00b71 months [95% CI 8\u00b78-11\u00b72] vs 9\u00b71 months [8\u00b74-10\u00b74]; HR 0\u00b794, 95% CI 0\u00b783-1\u00b705, p=0\u00b72720). Grade 3 or worse adverse events that were more common in the docetaxel plus nintedanib group than in the docetaxel plus placebo group were diarrhoea (43 [6\u00b76%] of 652 vs 17 [2\u00b76%] of 655), reversible increases in alanine aminotransferase (51 [7\u00b78%] vs six [0\u00b79%]), and reversible increases in aspartate aminotransferase (22 [3\u00b74%] vs three [0\u00b75%]). 35 patients in the docetaxel plus nintedanib group and 25 in the docetaxel plus placebo group died of adverse events possibly unrelated to disease progression; the most common of these events were sepsis (five with docetaxel plus nintedanib vs one with docetaxel plus placebo), pneumonia (two vs seven), respiratory failure (four vs none), and pulmonary embolism (none vs three). Nintedanib in combination with docetaxel is an effective second-line option for patients with advanced NSCLC previously treated with one line of platinum-based therapy, especially for patients with adenocarcinoma. Boehringer Ingelheim.",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Comparative Study",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"22077816": {
+"title": "Thrombin-receptor antagonist vorapaxar in acute coronary syndromes.",
+"journal": "N Engl J Med",
+"year": "2012",
+"abstract": "Vorapaxar is a new oral protease-activated-receptor 1 (PAR-1) antagonist that inhibits thrombin-induced platelet activation. In this multinational, double-blind, randomized trial, we compared vorapaxar with placebo in 12,944 patients who had acute coronary syndromes without ST-segment elevation. The primary end point was a composite of death from cardiovascular causes, myocardial infarction, stroke, recurrent ischemia with rehospitalization, or urgent coronary revascularization. Follow-up in the trial was terminated early after a safety review. After a median follow-up of 502 days (interquartile range, 349 to 667), the primary end point occurred in 1031 of 6473 patients receiving vorapaxar versus 1102 of 6471 patients receiving placebo (Kaplan-Meier 2-year rate, 18.5% vs. 19.9%; hazard ratio, 0.92; 95% confidence interval [CI], 0.85 to 1.01; P=0.07). A composite of death from cardiovascular causes, myocardial infarction, or stroke occurred in 822 patients in the vorapaxar group versus 910 in the placebo group (14.7% and 16.4%, respectively; hazard ratio, 0.89; 95% CI, 0.81 to 0.98; P=0.02). Rates of moderate and severe bleeding were 7.2% in the vorapaxar group and 5.2% in the placebo group (hazard ratio, 1.35; 95% CI, 1.16 to 1.58; P<0.001). Intracranial hemorrhage rates were 1.1% and 0.2%, respectively (hazard ratio, 3.39; 95% CI, 1.78 to 6.45; P<0.001). Rates of nonhemorrhagic adverse events were similar in the two groups. In patients with acute coronary syndromes, the addition of vorapaxar to standard therapy did not significantly reduce the primary composite end point but significantly increased the risk of major bleeding, including intracranial hemorrhage. (Funded by Merck; TRACER ClinicalTrials.gov number, NCT00527943.).",
+"pubtypes": [
+"Comparative Study",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+},
+"35542991": {
+"title": "Two Randomized Phase 3 Studies of Aducanumab in Early Alzheimer's Disease.",
+"journal": "J Prev Alzheimers Dis",
+"year": "2022",
+"abstract": "Alzheimer's disease is a progressive, irreversible, and fatal disease for which accumulation of amyloid beta is thought to play a key role in pathogenesis. Aducanumab is a human monoclonal antibody directed against aggregated soluble and insoluble forms of amyloid beta. We evaluated the efficacy and safety of aducanumab in early Alzheimer's disease. EMERGE and ENGAGE were two randomized, double-blind, placebo-controlled, global, phase 3 studies of aducanumab in patients with early Alzheimer's disease. These studies involved 348 sites in 20 countries. Participants included 1638 (EMERGE) and 1647 (ENGAGE) patients (aged 50-85 years, confirmed amyloid pathology) who met clinical criteria for mild cognitive impairment due to Alzheimer's disease or mild Alzheimer's disease dementia, of which 1812 (55.2%) completed the study. Participants were randomly assigned 1:1:1 to receive aducanumab low dose (3 or 6 mg/kg target dose), high dose (10 mg/kg target dose), or placebo via IV infusion once every 4 weeks over 76 weeks. The primary outcome measure was change from baseline to week 78 on the Clinical Dementia Rating Sum of Boxes (CDR-SB), an integrated scale that assesses both function and cognition. Other measures included safety assessments; secondary and tertiary clinical outcomes that assessed cognition, function, and behavior; and biomarker endpoints. EMERGE and ENGAGE were halted based on futility analysis of data pooled from the first approximately 50% of enrolled patients; subsequent efficacy analyses included data from a larger data set collected up to futility declaration and followed prespecified statistical analyses. The primary endpoint was met in EMERGE (difference of -0.39 for high-dose aducanumab vs placebo [95% CI, -0.69 to -0.09; P=.012; 22% decrease]) but not in ENGAGE (difference of 0.03, [95% CI, -0.26 to 0.33; P=.833; 2% increase]). Results of biomarker substudies confirmed target engagement and dose-dependent reduction in markers of Alzheimer's disease pathophysiology. The most common adverse event was amyloid-related imaging abnormalities-edema. Data from EMERGE demonstrated a statistically significant change across all four primary and secondary clinical endpoints. ENGAGE did not meet its primary or secondary endpoints. A dose- and time-dependent reduction in pathophysiological markers of Alzheimer's disease was observed in both trials.",
+"pubtypes": [
+"Clinical Trial, Phase III",
+"Journal Article",
+"Multicenter Study",
+"Randomized Controlled Trial",
+"Research Support, Non-U.S. Gov't"
+]
+}
+}
+}

@@ -1,0 +1,37 @@
+verdict,primary_missed,prespec_benefit,bio_heterogeneity,post_hoc_only,n_rows,n_favourable_sig,asset,outcome,lever_family,motivating_signal,biomarker_group,same_driver_cluster,curation_confidence
+not_supported,True,False,False,False,4,0.0,MAGE-A3 immunotherapeutic,fail,biomarker_enrichment,prespecified_or_mechanistic,gene_expression_signature,,high
+not_supported,True,False,False,False,2,0.0,bapineuzumab,fail,biomarker_enrichment,post_hoc_subgroup,germline_common_variant,,high
+retry_supported,True,True,False,False,4,2.0,farletuzumab,fail,biomarker_enrichment,post_hoc_subgroup,circulating_biomarker,,moderate
+primary_not_missed,False,False,False,False,2,0.0,ipatasertib,fail,biomarker_enrichment,prespecified_or_mechanistic,somatic_alteration,,high
+not_evaluable,,,,,0,,lebrikizumab,fail,biomarker_enrichment,post_hoc_subgroup,circulating_biomarker,,high
+primary_not_missed,False,False,False,True,8,1.0,onartuzumab,fail,biomarker_enrichment,post_hoc_subgroup,protein_expression,,high
+not_evaluable,,,,,0,,tivantinib,fail,biomarker_enrichment,post_hoc_subgroup,protein_expression,,high
+retry_weak,True,False,False,True,8,4.0,tralokinumab,fail,biomarker_enrichment,post_hoc_subgroup,circulating_biomarker,,high
+primary_not_missed,False,False,False,True,4,1.0,vintafolide,fail,biomarker_enrichment,post_hoc_subgroup,protein_expression,,moderate
+not_supported,True,False,False,False,2,0.0,ataluren,fail,clinical_enrichment,prespecified_or_mechanistic,germline_monogenic,,high
+not_supported,True,False,False,False,1,0.0,custirsen,fail,clinical_enrichment,prespecified_or_mechanistic,clinical,,high
+retry_supported,True,True,False,False,6,2.0,ganetespib,fail,clinical_enrichment,post_hoc_subgroup,clinical,,high
+not_supported,True,False,False,False,2,0.0,motesanib,fail,clinical_enrichment,post_hoc_subgroup,clinical,,moderate
+not_supported,True,False,False,False,1,0.0,nerinetide,fail,clinical_enrichment,prespecified_or_mechanistic,clinical,,high
+primary_not_missed,False,True,True,False,13,2.0,omecamtiv mecarbil,fail,clinical_enrichment,prespecified_or_mechanistic,clinical,,high
+not_supported,True,False,False,False,1,0.0,rigosertib,fail,clinical_enrichment,post_hoc_subgroup,clinical,,high
+not_supported,True,False,False,False,2,0.0,solanezumab,fail,clinical_enrichment,post_hoc_subgroup,clinical,,high
+not_evaluable,,False,False,False,4,,tarenflurbil,fail,clinical_enrichment,prespecified_or_mechanistic,clinical,,moderate
+not_supported,True,False,False,False,2,0.0,gantenerumab,fail,dose_regimen,post_hoc_subgroup,none,,high
+not_supported,True,False,False,False,2,0.0,bardoxolone methyl,fail,narrower_indication,prespecified_or_mechanistic,clinical,,high
+retry_weak,True,False,False,True,2,1.0,afatinib,success,biomarker_enrichment,prespecified_or_mechanistic,somatic_driver_mutation,EGFR-mut NSCLC,high
+retry_weak,True,False,False,True,3,1.0,belimumab,success,biomarker_enrichment,post_hoc_subgroup,circulating_biomarker,,high
+primary_not_missed,False,False,False,True,6,2.0,dacomitinib,success,biomarker_enrichment,prespecified_or_mechanistic,somatic_driver_mutation,EGFR-mut NSCLC,high
+not_supported,True,False,False,False,2,0.0,erlotinib,success,biomarker_enrichment,post_hoc_subgroup,somatic_driver_mutation,EGFR-mut NSCLC,high
+retry_supported,True,True,False,False,11,4.0,gefitinib,success,biomarker_enrichment,prespecified_or_mechanistic,somatic_driver_mutation,EGFR-mut NSCLC,high
+primary_not_missed,False,False,False,True,2,1.0,mepolizumab,success,biomarker_enrichment,prespecified_or_mechanistic,circulating_biomarker,,high
+primary_not_missed,False,True,True,False,7,2.0,olaparib,success,biomarker_enrichment,prespecified_or_mechanistic,germline_monogenic,,high
+not_supported,True,False,False,False,1,0.0,ramucirumab,success,biomarker_enrichment,prespecified_or_mechanistic,circulating_biomarker,,high
+not_supported,True,False,False,False,2,0.0,pirfenidone,success,clinical_enrichment,prespecified_or_mechanistic,clinical,,high
+retry_weak,True,False,False,True,4,3.0,sipuleucel-T,success,endpoint_change,prespecified_or_mechanistic,none,,high
+retry_weak,True,False,False,True,2,1.0,tofersen,success,endpoint_change,prespecified_or_mechanistic,germline_monogenic,,high
+retry_weak,True,False,False,True,4,3.0,ocrelizumab (after rituximab),success,molecule_modification,post_hoc_subgroup,clinical,,high
+not_supported,True,False,False,False,1,0.0,necitumumab,success,narrower_indication,prespecified_or_mechanistic,clinical,,high
+primary_not_missed,False,True,False,False,5,2.0,nintedanib,success,narrower_indication,prespecified_or_mechanistic,clinical,,moderate
+retry_weak,True,False,False,True,4,1.0,vorapaxar,success,narrower_indication,prespecified_or_mechanistic,clinical,,high
+primary_not_missed,False,False,False,False,2,0.0,aducanumab,contested,dose_regimen,post_hoc_subgroup,none,,high

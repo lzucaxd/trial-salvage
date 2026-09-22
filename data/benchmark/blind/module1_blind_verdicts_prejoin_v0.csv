@@ -1,0 +1,37 @@
+verdict,primary_missed,prespec_benefit,bio_heterogeneity,post_hoc_only,n_rows,n_favourable_sig,asset
+not_supported,True,False,False,False,4,0.0,MAGE-A3 immunotherapeutic
+not_supported,True,False,False,False,2,0.0,bapineuzumab
+retry_supported,True,True,False,False,4,2.0,farletuzumab
+primary_not_missed,False,False,False,False,2,0.0,ipatasertib
+not_evaluable,,,,,0,,lebrikizumab
+primary_not_missed,False,False,False,True,8,1.0,onartuzumab
+not_evaluable,,,,,0,,tivantinib
+retry_weak,True,False,False,True,8,4.0,tralokinumab
+primary_not_missed,False,False,False,True,4,1.0,vintafolide
+not_supported,True,False,False,False,2,0.0,ataluren
+not_supported,True,False,False,False,1,0.0,custirsen
+retry_supported,True,True,False,False,6,2.0,ganetespib
+not_supported,True,False,False,False,2,0.0,motesanib
+not_supported,True,False,False,False,1,0.0,nerinetide
+primary_not_missed,False,True,True,False,13,2.0,omecamtiv mecarbil
+not_supported,True,False,False,False,1,0.0,rigosertib
+not_supported,True,False,False,False,2,0.0,solanezumab
+not_evaluable,,False,False,False,4,,tarenflurbil
+not_supported,True,False,False,False,2,0.0,gantenerumab
+not_supported,True,False,False,False,2,0.0,bardoxolone methyl
+retry_weak,True,False,False,True,2,1.0,afatinib
+retry_weak,True,False,False,True,3,1.0,belimumab
+primary_not_missed,False,False,False,True,6,2.0,dacomitinib
+not_supported,True,False,False,False,2,0.0,erlotinib
+retry_supported,True,True,False,False,11,4.0,gefitinib
+primary_not_missed,False,False,False,True,2,1.0,mepolizumab
+primary_not_missed,False,True,True,False,7,2.0,olaparib
+not_supported,True,False,False,False,1,0.0,ramucirumab
+not_supported,True,False,False,False,2,0.0,pirfenidone
+retry_weak,True,False,False,True,4,3.0,sipuleucel-T
+retry_weak,True,False,False,True,2,1.0,tofersen
+retry_weak,True,False,False,True,4,3.0,ocrelizumab (after rituximab)
+not_supported,True,False,False,False,1,0.0,necitumumab
+primary_not_missed,False,True,False,False,5,2.0,nintedanib
+retry_weak,True,False,False,True,4,1.0,vorapaxar
+primary_not_missed,False,False,False,False,2,0.0,aducanumab
