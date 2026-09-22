@@ -162,9 +162,13 @@ def verdict(validation: dict) -> dict:
     if overall <= AUROC_FLOOR:
         return {"verdict": "do_not_rank", "reason": (
             f"ESM-1v AUROC {overall:.3f} is at or below {AUROC_FLOOR} against retrieved ClinVar labels.")}
-    compare = (f" and beats the best classical predictor ({best:.3f}) on the matched subset"
-               if best is not None else "; no PolyPhen/SIFT coverage exists for this gene to compare against")
+    # Quote the matched-subset figure in the comparison clause: the overall AUROC is computed on a
+    # larger variant set than PolyPhen/SIFT cover, so pairing it with a matched classical value in
+    # one sentence invites reading the two as like-for-like when they are not.
+    compare = (f", and {esm:.3f} vs {best:.3f} for the best classical predictor on the matched subset"
+               if best is not None and esm is not None
+               else "; no PolyPhen/SIFT coverage exists for this gene to compare against")
     return {"verdict": "rank_residues_only", "reason": (
-        f"ESM-1v AUROC {overall:.3f}{compare}. Usable as a residue-level triage signal only: the "
+        f"ESM-1v AUROC {overall:.3f} overall{compare}. Usable as a residue-level triage signal only: the "
         f"substitution-specific residual carried no reliable signal in any case tested, so rank "
         f"residues for follow-up, not substitutions at a residue.")}
