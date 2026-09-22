@@ -1,0 +1,20 @@
+asset,match,benchmark_nct,cand_nct,cand_drug,cand_cond
+aducanumab,failed_nct,NCT02477800,NCT02477800,ADUCANUMAB,Alzheimer's Disease
+aducanumab,retry_nct,NCT02484547,NCT02484547,ADUCANUMAB,Alzheimer's Disease
+aducanumab,asset_name,,NCT02477800,ADUCANUMAB,Alzheimer's Disease
+aducanumab,asset_name,,NCT02484547,ADUCANUMAB,Alzheimer's Disease
+bapineuzumab,asset_name,,NCT00998764,BAPINEUZUMAB,Alzheimer Disease
+bapineuzumab,asset_name,,NCT00996918,BAPINEUZUMAB,Alzheimer Disease
+farletuzumab,failed_nct,NCT00849667,NCT00849667,FARLETUZUMAB,Ovarian Cancer
+farletuzumab,asset_name,,NCT00849667,FARLETUZUMAB,Ovarian Cancer
+tivantinib,failed_nct,NCT01244191,NCT01244191,ERLOTINIB,"Non Squamous, Non-small-cell Lung Cancer"
+ganetespib,retry_nct,NCT01798485,NCT01798485,GANETESPIB,Non-Small-Cell Lung Adenocarcinoma|Non-small Cell Lung Cance
+ganetespib,asset_name,,NCT01798485,GANETESPIB,Non-Small-Cell Lung Adenocarcinoma|Non-small Cell Lung Cance
+motesanib,failed_nct,NCT00460317,NCT00460317,MOTESANIB,Non-Small Cell Lung Cancer
+motesanib,retry_nct,NCT02629848,NCT02629848,MOTESANIB,"Carcinoma, Non-Small-Cell Lung"
+motesanib,asset_name,,NCT00460317,MOTESANIB,Non-Small Cell Lung Cancer
+motesanib,asset_name,,NCT02629848,MOTESANIB,"Carcinoma, Non-Small-Cell Lung"
+solanezumab,retry_nct,NCT01900665,NCT01900665,SOLANEZUMAB,Alzheimer's Disease
+solanezumab,asset_name,,NCT01127633,SOLANEZUMAB,Alzheimer's Disease
+solanezumab,asset_name,,NCT01900665,SOLANEZUMAB,Alzheimer's Disease
+erlotinib,asset_name,,NCT01244191,ERLOTINIB,"Non Squamous, Non-small-cell Lung Cancer"
