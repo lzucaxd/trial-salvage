@@ -1,0 +1,7 @@
+selection_gene,case_id,drug,drug_target,relationship,benchmark_outcome,mechanism,seq_len,n_tiles,n_substitutions,n_pathogenic,n_benign,esm_auroc,esm_matched,best_classical,constraint_spread_sd,analog_branch,verdict
+EGFR,CASE-EGFR-GEF-NSCLC-001,gefitinib,EGFR,same_protein_drug_target,success,somatic gain-of-function (kinase activation),1210,1,19418,108,519,0.808,0.802,0.793,4.149,applicable,rank_residues_only
+APOE,CASE-APOE-BAP-AD-003,bapineuzumab,APP,stratification_marker_only,fail,"common risk allele (ancestral state, apolipoprotein isoform)",317,1,6023,44,15,0.736,,,1.754,not_applicable,rank_residues_only
+BRCA1,CASE-BRCA1-OLA-OV-004,olaparib,PARP1,synthetic_lethality,success,germline loss-of-function (HR deficiency),1863,3,35397,1153,3217,0.614,0.607,0.651,1.483,applicable,do_not_rank
+BRCA2,CASE-BRCA2-OLA-OV-005,olaparib,PARP1,synthetic_lethality,success,germline loss-of-function (HR deficiency),3418,5,64942,1233,5936,0.461,0.446,0.616,0.905,applicable,do_not_rank
+SOD1,CASE-SOD1-TOF-ALS-002,tofersen,SOD1,same_gene_antisense,success,germline gain-of-function (misfolding/aggregation),154,1,2926,156,2,,,,3.703,not_applicable,not_validated
+PARP1,CASE-PARP1-OLA-OV-006,olaparib,PARP1,same_protein_drug_target,success,drug target; no pathogenic germline variants annotated,1014,1,19266,0,20,,,,3.388,applicable,not_validated

@@ -1,0 +1,41 @@
+# One asset = one salvage case. Every module reads this file.
+# Synthetic lethality: the selection gene is NOT the drug target.
+asset:
+  name: olaparib
+  synonyms: [lynparza, AZD2281, KU-0059436]
+  chembl_id: CHEMBL521686
+  sponsor: AstraZeneca
+  modality: small molecule
+target:                      # the DRUG target
+  symbol: PARP1
+  uniprot: P09874
+  ensembl: ENSG00000143799
+selection_gene:              # where the coding variants that define the population live
+  symbol: BRCA2
+  uniprot: P51587
+  relationship: synthetic_lethality
+  note: >
+    Germline loss-of-function in BRCA1/BRCA2 makes cells dependent on PARP1, so the selected
+    population is defined by variants in a different gene from the drug target. BRCA1 (P38398)
+    is the sibling case; both are scored. BRCA2 is 3418 aa and needs 5 overlapping ESM windows.
+disease:
+  name: Ovarian cancer
+  efo: EFO_0001075
+trials:
+  failed:
+    nct: NCT00753545
+    label: Study 19
+    primary_endpoint: PFS
+    line_of_therapy: maintenance, relapsed platinum-sensitive
+  rescue:
+    nct: NCT01874353
+    label: SOLO2
+    primary_endpoint: PFS
+    line_of_therapy: maintenance, germline BRCA-mutated
+trial_family_query: "olaparib OR lynparza OR AZD2281"
+literature:
+  SOLO2_primary: "28754483"
+biomarker:
+  gene: BRCA1/BRCA2
+  assay_in_rescue_trial: "germline BRCA1/2 mutation testing"
+  selection_basis: germline_monogenic
