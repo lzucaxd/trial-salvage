@@ -35,10 +35,17 @@ from pathlib import Path
 import pandas as pd
 
 from trial_salvage import biodata, gnomad
-from trial_salvage.module3.germline import stratification_scores, summarize_variants
+from trial_salvage.module3.germline import (
+    flag_low_exp_lof,
+    stratification_scores,
+    stratification_scores_v1,
+    summarize_variants,
+)
 
 
 def germline_lane(genes: list[str], pause: float = 7.0) -> pd.DataFrame:
+    """Constraint + common functional variants per gene, scored with v1 (length-normalised burden, oe_syn gate,
+    low_exp_lof reliability flag) and sorted by rank_v1. v0 columns (burden_v0, score_v0, rank_v0) kept alongside."""
     cons = {r["symbol"]: r for r in gnomad.gene_constraint(genes)}
     rows = []
     for s in genes:
@@ -48,8 +55,12 @@ def germline_lane(genes: list[str], pause: float = 7.0) -> pd.DataFrame:
             continue
         rows.append({**c, **summarize_variants(s, gnomad.gene_variants(s))})
         time.sleep(pause)
-    df = pd.DataFrame(stratification_scores(rows))
-    return df.sort_values("score", ascending=False, na_position="last")
+    v0 = pd.DataFrame(stratification_scores(rows)).rename(columns={"burden": "burden_v0", "score": "score_v0"})
+    v0["rank_v0"] = v0.score_v0.rank(ascending=False, method="first", na_option="bottom").astype(int)
+    v0 = v0.drop(columns=["tolerance"])  # identical to the v1 tolerance term, recomputed below
+    records = v0.astype(object).where(v0.notna(), None).to_dict("records")
+    df = pd.DataFrame(stratification_scores_v1(flag_low_exp_lof(records)))
+    return df.sort_values("rank_v1").reset_index(drop=True)
 
 
 def somatic_lane(study: str, entrez: int, specs: list[str]) -> list[dict]:
@@ -99,6 +110,8 @@ def main(argv=None) -> int:
         "germline": {"n_scored": len(scored),
                      "total_common_functional_variants": int(scored.n_common_func.sum()),
                      "genes_without_common_functional": int((scored.n_common_func == 0).sum()),
+                     "n_low_exp_lof": int(scored.low_exp_lof.map(lambda x: x is True).sum()),
+                     "top_v1": scored.dropna(subset=["score_v1"]).symbol.head(10).tolist(),
                      "target": scored[scored.symbol == gene].to_dict("records")},
         "somatic": somatic,
         "lane_verdict": _verdict(scored, gene, somatic),

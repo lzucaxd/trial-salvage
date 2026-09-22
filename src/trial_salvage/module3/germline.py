@@ -24,6 +24,10 @@ plus a sequence-quality gate: genes whose observed synonymous count exceeds expe
 > SYN_EXCESS_OE) are flagged ``qc_syn_excess`` and ranked after every unflagged gene. Synonymous sites are close to
 neutral, so an excess there points to calling artefacts (tandem repeats, paralogous mapping), not biology.
 Normalisation alone removes MUC16 from the top 10; MUC5AC is removed only by the gate (oe_syn 1.60).
+
+Constraint-reliability flag (``flag_low_exp_lof``): LOEUF is an upper confidence bound on obs/exp LoF, so it is
+uninformative when few LoF variants are expected (SSTR5: LOEUF 14.1 on exp_lof 0.34). Genes with
+exp_lof < LOW_EXP_LOF are flagged ``low_exp_lof``; they keep their score but rank after every unflagged gene.
 """
 from __future__ import annotations
 
@@ -128,8 +132,29 @@ def stratification_scores_v1(rows: list[dict], syn_excess: float = SYN_EXCESS_OE
     return out
 
 
+LOW_EXP_LOF = 10.0  # expected LoF variants below which LOEUF is too noisy to trust (gnomAD guidance)
+
+
+def flag_low_exp_lof(rows: list[dict], threshold: float = LOW_EXP_LOF) -> list[dict]:
+    """Add ``low_exp_lof`` = exp_lof < threshold (None when exp_lof is missing). Apply before stratification_scores_v1,
+    which ranks flagged genes after all unflagged ones without changing their score."""
+    out = []
+    for r in rows:
+        e = _num(r.get("exp_lof"))
+        out.append({**r, "low_exp_lof": None if e is None else e < threshold})
+    return out
+
+
 def _rank_key(r: dict) -> tuple:
-    """Scored + QC-pass first, then scored + flagged, then unscored; score descending, symbol breaks ties."""
+    """Scored + QC-pass first, then qc_syn_excess, then low_exp_lof (any), then unscored; score descending, symbol
+    breaks ties. Rows without a ``low_exp_lof`` key are treated as unflagged."""
     s = r.get("score_v1")
-    tier = 2 if s is None else (1 if r.get("qc_syn_excess") else 0)
+    if s is None:
+        tier = 3
+    elif r.get("low_exp_lof"):
+        tier = 2
+    elif r.get("qc_syn_excess"):
+        tier = 1
+    else:
+        tier = 0
     return tier, -(s or 0.0), str(r.get("symbol"))

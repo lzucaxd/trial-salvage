@@ -3,7 +3,7 @@ import pytest
 
 from trial_salvage import gnomad
 from trial_salvage.module3 import score_targets
-from trial_salvage.module3.germline import stratification_scores, stratification_scores_v1
+from trial_salvage.module3.germline import flag_low_exp_lof, stratification_scores, stratification_scores_v1
 
 
 def g(symbol, loeuf, k, exp_syn, obs_syn=None, exp_mis=None):
@@ -98,3 +98,28 @@ def test_cli_rejects_missing_required_column(tmp_path):
     pd.DataFrame([{"symbol": "A", "LOEUF": 1.0, "n_common_func": 2}]).to_csv(src, index=False)
     with pytest.raises(SystemExit):
         score_targets.main(["--in", str(src), "--out", str(tmp_path / "o.csv")])
+
+
+def test_low_exp_lof_flag_demotes_but_keeps_score():
+    rows = [{**g("sstr5_like", 14.1, 4, 50), "exp_lof": 0.34}, {**g("ok", 1.0, 2, 200), "exp_lof": 40.0},
+            {**g("synx", 1.2, 80, 1000, obs_syn=1600), "exp_lof": 60.0}, {**g("noexp", 1.0, 1, 200)},
+            {"symbol": "unscored", "LOEUF": None, "n_common_func": 2, "exp_syn": 100}]
+    flagged = by_symbol(flag_low_exp_lof(rows))
+    assert flagged["sstr5_like"]["low_exp_lof"] is True and flagged["ok"]["low_exp_lof"] is False
+    assert flagged["noexp"]["low_exp_lof"] is None and "low_exp_lof" not in rows[0]
+    v1 = by_symbol(stratification_scores_v1(flag_low_exp_lof(rows)))
+    assert v1["sstr5_like"]["score_v1"] > v1["ok"]["score_v1"]
+    order = [r["symbol"] for r in sorted(v1.values(), key=lambda r: r["rank_v1"])]
+    assert order == ["ok", "noexp", "synx", "sstr5_like", "unscored"]
+    assert by_symbol(flag_low_exp_lof(rows, threshold=0.1))["sstr5_like"]["low_exp_lof"] is False
+
+
+def test_cli_applies_low_exp_lof_flag(tmp_path):
+    raw = pd.DataFrame([{**g("tiny", 2.0, 3, 50), "exp_lof": 2.0}, {**g("big", 1.0, 2, 200), "exp_lof": 30.0}])
+    src, dst = tmp_path / "raw.csv", tmp_path / "scored.csv"
+    raw.to_csv(src, index=False)
+    assert score_targets.main(["--in", str(src), "--out", str(dst)]) == 0
+    out = pd.read_csv(dst)
+    assert out.symbol.tolist() == ["big", "tiny"] and out.low_exp_lof.tolist() == [False, True]
+    assert score_targets.main(["--in", str(src), "--out", str(dst), "--low-exp-lof", "0"]) == 0
+    assert pd.read_csv(dst).symbol.tolist() == ["tiny", "big"]
