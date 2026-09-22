@@ -22,7 +22,10 @@ uncertainty estimate.
 
 AUROC for ClinVar pathogenic/likely-pathogenic vs benign/likely-benign, retrieved independently
 from the EBI Proteins API. The matched-subset columns are the like-for-like comparison on variants
-all three predictors cover, and they are what the verdict uses.
+all three predictors cover, and they are what the verdict uses. They are **not** the same as the
+overall AUROC, which is computed on every variant ESM scores: for EGFR the matched subset is 0.802
+on 93 pathogenic / 505 benign while the overall figure is 0.808 on 108 / 519. Quote the matched
+column when comparing predictors and the overall figure only on its own.
 
 | Selection gene | Drug | Mechanism | ESM (matched) | PolyPhen | SIFT | Verdict |
 |---|---|---|---|---|---|---|
