@@ -206,7 +206,7 @@ def overlap(bench: pd.DataFrame, cands: pd.DataFrame) -> pd.DataFrame:
         qn = biodata._norm(asset_query(b.asset))
         if qn in names:
             for _, c in cands[cands.drug == names[qn]].iterrows():
-                rows.append({"asset": b.asset, "match": "asset_name", "benchmark_nct": b.failed_nct,
+                rows.append({"asset": b.asset, "match": "asset_name", "benchmark_nct": "",
                              "cand_nct": c.nct, "cand_drug": c.drug, "cand_cond": c.cond})
     return pd.DataFrame(rows, columns=["asset", "match", "benchmark_nct", "cand_nct", "cand_drug", "cand_cond"])
 
@@ -266,6 +266,32 @@ def fisher_2x2(a: int, b: int, c: int, d: int) -> float:
     obs = p(a)
     lo, hi = max(0, k - n2), min(k, n1)
     return min(1.0, sum(p(x) for x in range(lo, hi + 1) if p(x) <= obs * (1 + 1e-9)))
+
+
+def evaluation(pairs: pd.DataFrame) -> dict:
+    """Tables (a) lane x outcome, (b) lane x biomarker_group, (c) (a) without the EGFR-mutant NSCLC cluster.
+
+    Descriptive; Fisher p compares somatic vs any other evaluable lane for success.
+    """
+    dec = pairs[pairs.outcome.isin(DECIDED)]
+    ev = dec[dec.lane_verdict != "not_evaluable"]
+    no_egfr = ev[ev.same_driver_cluster.isna() | (ev.same_driver_cluster == "")]
+    out = {"n_pairs": len(pairs), "n_decided": len(dec), "n_evaluable": len(ev),
+           "excluded_undecided": pairs[~pairs.outcome.isin(DECIDED)][["asset", "outcome", "lane_verdict"]],
+           "not_evaluable": dec[dec.lane_verdict == "not_evaluable"][["asset", "mapping", "outcome"]],
+           "a": crosstab(ev, "lane_verdict", "outcome"), "b": crosstab(ev, "biomarker_group", "lane_verdict"),
+           "b_match": crosstab(ev, "regime_match", "outcome"), "c": crosstab(no_egfr, "lane_verdict", "outcome"),
+           "n_c": len(no_egfr)}
+    for key, d in (("p_a", ev), ("p_c", no_egfr)):
+        som = d.lane_verdict == "somatic"
+        suc = d.outcome == "success"
+        out[key] = fisher_2x2(int((som & suc).sum()), int((som & ~suc).sum()),
+                              int((~som & suc).sum()), int((~som & ~suc).sum()))
+    genomic = ev.biomarker_group.map(GROUP_TO_LANE) == "somatic"
+    som = ev.lane_verdict == "somatic"
+    out["p_b"] = fisher_2x2(int((som & genomic).sum()), int((som & ~genomic).sum()),
+                            int((~som & genomic).sum()), int((~som & ~genomic).sum()))
+    return out
 
 
 def _nan(x) -> bool:
@@ -358,8 +384,9 @@ def main(argv=None) -> int:
         return 0
     pairs = build_pairs(bench, maps, targets)
     pairs.to_csv(a.out, index=False)
-    dec = pairs[pairs.outcome.isin(DECIDED)]
-    print(crosstab(dec, "lane_verdict", "outcome").to_string())
+    ev = evaluation(pairs)
+    for k, v in ev.items():
+        print(f"== {k}\n{v.to_string() if isinstance(v, pd.DataFrame) else v}")
     return 0
 
 

@@ -113,3 +113,18 @@ def test_build_pairs_offline():
     p = be.build_pairs(bench, maps, targets)
     assert list(p.lane_verdict) == ["somatic", "not_evaluable"]
     assert p.regime_match.iloc[0] == "match" and p.somatic_top_change.iloc[0] == "L858R"
+
+
+def test_evaluation_tables_and_egfr_sensitivity():
+    rows = [("somatic", "success", "somatic_driver_mutation", "EGFR-mut NSCLC")] * 3 + [
+        ("somatic", "success", "clinical", None), ("none_detected", "fail", "clinical", None),
+        ("none_detected", "success", "clinical", None), ("not_evaluable", "fail", "clinical", None),
+        ("none_detected", "pending", "none", None)]
+    pairs = pd.DataFrame(rows, columns=["lane_verdict", "outcome", "biomarker_group", "same_driver_cluster"])
+    pairs["asset"], pairs["mapping"] = [f"d{i}" for i in range(len(pairs))], "mapped"
+    pairs["regime_match"] = [be.regime_match(r.lane_verdict, r.biomarker_group) for r in pairs.itertuples()]
+    ev = be.evaluation(pairs)
+    assert (ev["n_pairs"], ev["n_decided"], ev["n_evaluable"], ev["n_c"]) == (8, 7, 6, 3)
+    assert ev["a"].loc["somatic", "success"] == 4 and ev["a"].loc["n", "n"] == 6
+    assert ev["c"].loc["somatic", "success"] == 1
+    assert list(ev["excluded_undecided"].outcome) == ["pending"]

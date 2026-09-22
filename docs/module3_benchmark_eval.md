@@ -29,3 +29,22 @@ Pre-stated expectations and what would falsify the approach:
 
 Caveat on blinding: outcomes sit in the same CSV and headline rates were known from the benchmark README, so this
 guards only against tuning thresholds or study choices after the join, not against prior knowledge.
+
+## Results (joined after the rule commit) — `data/benchmark/module3_benchmark_eval_v0.csv`
+Overlap with our 179 efficacy failures: 6/40 pairs by NCT — failed_nct 4 (aducanumab, farletuzumab, motesanib,
+tivantinib [listed as partner ERLOTINIB]), retry_nct 4 (aducanumab, ganetespib, motesanib, solanezumab); 7/38 assets
+by name. 37/38 assets pass the Open Targets name guard; not evaluable: 6/38 decided pairs (MAGE-A3 ×2 no hit;
+nerinetide, rigosertib, pirfenidone no targets; ataluren 78). Excluded: aducanumab (contested), bimagrumab
+(pending), both `none_detected`. Germline: 24 genes from scores_v0, 28 from gnomAD v4 (`*_targets_v0.csv`).
+
+| fail / success | somatic | germline_common | none_detected |
+|---|---|---|---|
+| (a) all evaluable, n = 32 | 0 / 5 | 2 / 1 | 15 / 9 |
+| (c) EGFR cluster removed, n = 28 | 0 / 1 (necitumumab) | 2 / 1 | 15 / 9 |
+
+Somatic vs rest, Fisher: p = 0.015 (a) → 0.39 (c). Every somatic call is EGFR L858R (2.4 % of 1,144 pan-lung).
+(b) n = 32: 4/5 somatic-selected retries called `somatic` (EGFR ×4; miss: ipatasertib, stratifier PTEN, AKT1 E17K
+0.68 %) vs 1/27 other retries (necitumumab, histology-selected), p = 0.0007. Common-variant retries 0/2 detected
+(APOE, DGM1 SNP — not the targets APP, PRKCB); `germline_common` fired 3×, all on clinical retries (omecamtiv,
+tarenflurbil, nintedanib). Descriptive, tiny n: outside EGFR the verdict has no outcome signal — (a) falsified by
+(c); (b) holds on one gene. Stratifiers are mostly not the target (PTEN, APOE, BRCA1/2, DMD): add disease-gene lanes.
