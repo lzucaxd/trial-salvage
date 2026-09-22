@@ -1,0 +1,7 @@
+gene,mechanism,median_score,p01,frac_below_minus5,position_mean_sd,iqr,n_path,n_benign,esm_auroc
+EGFR,somatic gain-of-function,-3.87,-16.72,0.423,4.149,6.95,108,519,0.808
+SOD1,germline gain-of-function,-7.42,-15.06,0.669,3.703,7.08,156,2,
+PARP1,drug target; no pathogenic germline variants annotated,-5.91,-15.39,0.578,3.388,5.95,0,20,
+APOE,common risk allele,-2.84,-10.34,0.233,1.754,3.66,44,15,0.736
+BRCA1,germline loss-of-function,-0.62,-8.51,0.036,1.483,1.54,1153,3217,0.614
+BRCA2,germline loss-of-function,-0.53,-4.91,0.009,0.905,1.39,1233,5936,0.461

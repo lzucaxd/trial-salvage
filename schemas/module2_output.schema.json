@@ -1,0 +1,176 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "module2_output",
+  "description": "Protein-variant plausibility from an ESM-1v masked-marginal ensemble, validated against independently retrieved ClinVar labels. Contains no probability that a rescue will succeed and no claim that a variant confers drug sensitivity or resistance: ESM scores evolutionary plausibility only. Every case carries applicability.verdict, decided by measured performance, which a consumer must read before the scores.",
+  "type": "object",
+  "required": ["schema_version", "module", "case_id", "target_id", "selection_gene_id",
+               "selection_target_relationship", "applicability", "model_version", "validation",
+               "limitations"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "module": {"type": "string"},
+    "generated_at": {"type": "string"},
+    "case_id": {"type": "string"},
+    "drug_id": {"type": ["string", "null"]},
+
+    "target_id": {"type": "string",
+      "description": "The DRUG target. Unchanged in meaning from schema 1.0 so module 4's chemistry handoff is unaffected."},
+    "selection_gene_id": {"type": "string",
+      "description": "The gene whose coding variants are scored. Equals target_id for a same-protein case; differs for synthetic lethality (olaparib: variants in BRCA1/BRCA2, drug target PARP1)."},
+    "selection_target_relationship": {
+      "enum": ["same_protein_drug_target", "synthetic_lethality", "same_gene_antisense",
+               "stratification_marker_only", "pathway_member"],
+      "description": "How the selection gene relates to the drug target. Determines whether the variant and analog branches describe the same protein."},
+    "indication": {"type": ["string", "null"]},
+
+    "applicability": {
+      "type": "object",
+      "description": "The gate. Read this before the scores.",
+      "required": ["variant_branch", "analog_branch", "verdict", "verdict_reason", "verdict_rule"],
+      "properties": {
+        "variant_branch": {"enum": ["applicable", "not_applicable", "out_of_scope"]},
+        "analog_branch": {"enum": ["applicable", "not_applicable"]},
+        "analog_branch_reason": {"type": ["string", "null"]},
+        "verdict": {
+          "enum": ["rank_residues_only", "do_not_rank", "not_validated"],
+          "description": "rank_residues_only: usable as residue-level triage. do_not_rank: a classical predictor matched or beat ESM on the same variants, or AUROC <= 0.60. not_validated: too few benign-classified variants exist to measure discrimination."},
+        "verdict_reason": {"type": "string"},
+        "verdict_rule": {"type": "string"},
+        "scope_exclusions": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+      }
+    },
+
+    "reference_sequence": {
+      "type": "object",
+      "required": ["uniprot"],
+      "properties": {
+        "uniprot": {"type": "string"},
+        "isoform": {"type": "string"},
+        "length": {"type": "integer", "minimum": 1},
+        "sequence_version": {"type": ["integer", "string"]},
+        "crc64": {"type": "string"},
+        "sha256": {"type": "string"},
+        "numbering": {"type": "string"},
+        "numbering_note": {"type": "string",
+          "description": "Literature nomenclature does not agree with UniProt precursor numbering for every gene: SOD1 is +1, APOE is +18, BRCA1/BRCA2/EGFR are identity."},
+        "literature_offset": {"type": "integer"},
+        "numbering_checks": {"type": "array", "items": {
+          "type": "object", "required": ["literature_label", "uniprot_position", "residue"],
+          "properties": {"literature_label": {"type": "string"},
+                         "uniprot_position": {"type": "integer"},
+                         "residue": {"type": "string"}, "verified": {"type": "boolean"}}}},
+        "tiles": {"type": "array", "description": "Inclusive 1-based windows covering the protein.",
+                  "items": {"type": "array", "items": {"type": "integer"}, "minItems": 2, "maxItems": 2}},
+        "source": {"type": "string"}
+      }
+    },
+
+    "model_version": {
+      "type": "object",
+      "required": ["protocol", "primary_score"],
+      "properties": {
+        "protocol": {"type": "string"},
+        "primary_score": {"type": "string"},
+        "models": {"type": "array", "items": {"type": "string"}},
+        "compute": {"type": "string"},
+        "tiling": {"type": ["object", "null"],
+          "description": "Present when the protein exceeds the model's positional limit. overlap QC re-scores overlap positions in a second tile to measure the tiling artifact."}
+      }
+    },
+
+    "validation": {
+      "type": "object",
+      "required": ["task", "n_substitutions_scored", "esm1v", "matched_subset",
+                   "positional_decomposition"],
+      "properties": {
+        "task": {"type": "string"},
+        "n_substitutions_scored": {"type": "integer", "minimum": 1},
+        "n_pathogenic": {"type": "integer", "minimum": 0},
+        "n_benign": {"type": "integer", "minimum": 0},
+        "n_vus": {"type": "integer", "minimum": 0},
+        "esm1v": {"$ref": "#/definitions/aurocResult"},
+        "matched_subset": {
+          "type": "object",
+          "description": "PolyPhen and SIFT do not cover every variant ESM scores. This like-for-like row decides the verdict and is the one to quote.",
+          "required": ["esm1v", "polyphen", "sift"],
+          "properties": {"esm1v": {"$ref": "#/definitions/aurocResult"},
+                         "polyphen": {"$ref": "#/definitions/aurocResult"},
+                         "sift": {"$ref": "#/definitions/aurocResult"},
+                         "note": {"type": "string"}}
+        },
+        "positional_decomposition": {
+          "type": "object",
+          "description": "Splits the score into per-position residue constraint and the substitution-specific residual. The residual was at or below chance in every case tested.",
+          "required": ["position_mean", "residual"],
+          "properties": {"position_mean": {"$ref": "#/definitions/aurocResult"},
+                         "residual": {"$ref": "#/definitions/aurocResult"},
+                         "note": {"type": "string"}}
+        },
+        "reliability_diagnostic": {
+          "type": "object",
+          "description": "ESM's own score spread. Recorded as suggestive and explicitly NOT used as a decision rule (n = 4, exact permutation p = 0.083, and contradicted by SOD1).",
+          "properties": {"position_constraint_spread_sd": {"type": "number"},
+                         "median_score": {"type": "number"},
+                         "fraction_below_minus5": {"type": "number", "minimum": 0, "maximum": 1},
+                         "note": {"type": "string"}}
+        },
+        "evidence_type": {"type": "string"},
+        "source": {"type": "string"}
+      }
+    },
+
+    "disease_mechanism": {
+      "type": "object",
+      "description": "Why the verdict can be do_not_rank even when the model is confident: ESM cannot see gain-of-function or misfolding mechanisms.",
+      "properties": {"mechanism": {"type": "string"}, "relevance": {"type": "string"},
+                     "evidence_type": {"type": "string"}, "source": {"type": "string"}}
+    },
+
+    "saturation_scan": {
+      "type": "object",
+      "required": ["positions_scanned", "substitutions_scored"],
+      "properties": {
+        "positions_scanned": {"type": "integer", "minimum": 1},
+        "substitutions_scored": {"type": "integer", "minimum": 1},
+        "most_constrained_positions": {"type": "array", "items": {"type": "object"}},
+        "most_tolerant_positions": {"type": "array", "items": {"type": "object"}}
+      }
+    },
+
+    "variants": {
+      "type": "array",
+      "description": "Optional per-variant detail. variant_id is GENE:p.<wt><pos><mut> in UniProt numbering.",
+      "items": {"type": "object", "required": ["variant_id"],
+                "properties": {"variant_id": {"type": "string"},
+                               "position_uniprot": {"type": "integer"},
+                               "esm1v_ensemble": {"type": "number"},
+                               "clinvar_class": {"enum": ["pathogenic", "benign", "drug_response", "vus", "unannotated"]}}}
+    },
+
+    "analogs": {"type": ["object", "null"]},
+
+    "handoff": {
+      "type": "object",
+      "properties": {"to": {"type": "string"}, "read_verdict_first": {"type": "string"},
+                     "score_units_warning": {"type": "string"},
+                     "join_keys": {"type": "array", "items": {"type": "string"}}}
+    },
+
+    "limitations": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+  },
+
+  "definitions": {
+    "aurocResult": {
+      "type": "object",
+      "description": "AUROC oriented so that a predictor ranking pathogenic variants as less plausible scores above 0.5. null when a class has fewer than 5 members.",
+      "required": ["auroc", "n_positive", "n_negative"],
+      "properties": {
+        "auroc": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "p_value": {"type": ["number", "null"]},
+        "n_positive": {"type": "integer", "minimum": 0},
+        "n_negative": {"type": "integer", "minimum": 0},
+        "note": {"type": ["string", "null"]}
+      }
+    }
+  }
+}

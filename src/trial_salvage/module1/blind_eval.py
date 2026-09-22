@@ -89,4 +89,4 @@ def evaluate_pair(effects: pd.DataFrame) -> dict:
         v = "primary_not_missed"
     return {"verdict": v, "primary_missed": primary_missed, "prespec_benefit": prespec_benefit,
             "bio_heterogeneity": bio_het, "post_hoc_only": post_hoc_only, "n_rows": len(e),
-            "n_favourable_sig": int(len(fav_sig))}
+            "n_favourable_sig": len(fav_sig)}

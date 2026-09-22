@@ -1,0 +1,44 @@
+# One asset = one salvage case. Every module reads this file.
+# Stratification marker only: the selected variant is in APOE, which is neither the drug target
+# nor in the target's pathway in any actionable sense.
+asset:
+  name: bapineuzumab
+  synonyms: [AAB-001]
+  chembl_id: null
+  sponsor: Pfizer / Janssen
+  modality: monoclonal antibody
+target:
+  symbol: APP
+  uniprot: P05067
+  ensembl: ENSG00000142192
+  note: the antibody binds the amyloid-beta N-terminus, a cleavage product of APP
+selection_gene:
+  symbol: APOE
+  uniprot: P02649
+  relationship: stratification_marker_only
+  note: >
+    Trials were split by APOE epsilon-4 carrier status. Epsilon-4 is the missense C112R in mature
+    numbering, which is position 130 in UniProt P02649 precursor numbering (+18 signal peptide).
+    It is the ancestral mammalian residue, so ESM scores it as MORE plausible than wild type --
+    a documented failure mode of using sequence plausibility to judge a stratification marker.
+disease:
+  name: Alzheimer disease
+  efo: MONDO_0004975
+trials:
+  failed:
+    nct: NCT00112073
+    label: Phase 2 study 201
+    primary_endpoint: ADAS-Cog / NTB
+    line_of_therapy: mild-to-moderate Alzheimer disease
+  rescue:
+    nct: NCT00574132
+    label: Phase 3 study 302 (APOE e4 non-carriers)
+    primary_endpoint: ADAS-Cog / DAD
+    line_of_therapy: mild-to-moderate, e4 non-carriers
+trial_family_query: "bapineuzumab OR AAB-001"
+literature:
+  Phase3_primary: "24450891"
+biomarker:
+  gene: APOE
+  assay_in_rescue_trial: "APOE genotyping (e4 carrier vs non-carrier)"
+  selection_basis: germline_common_variant

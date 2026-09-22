@@ -1,0 +1,41 @@
+# One asset = one salvage case. Every module reads this file.
+# Antisense oligonucleotide: no small-molecule structure, so module 2's analog branch is inapplicable.
+asset:
+  name: tofersen
+  synonyms: [qalsody, BIIB067]
+  chembl_id: CHEMBL3833346
+  sponsor: Biogen
+  modality: antisense oligonucleotide
+target:
+  symbol: SOD1
+  uniprot: P00441
+  ensembl: ENSG00000142168
+selection_gene:
+  symbol: SOD1
+  uniprot: P00441
+  relationship: same_gene_antisense
+  note: >
+    The drug lowers SOD1 transcript, so the selection gene and the target gene coincide, but the
+    disease mechanism is misfolding/aggregation gain-of-function rather than loss of function.
+    SOD1 is 154 aa and fits one ESM window with no truncation.
+disease:
+  name: Amyotrophic lateral sclerosis, SOD1-associated
+  efo: EFO_0000253
+trials:
+  failed:
+    nct: NCT02623699
+    label: VALOR
+    primary_endpoint: ALSFRS-R change
+    line_of_therapy: SOD1-ALS
+  rescue:
+    nct: NCT03070119
+    label: VALOR + open-label extension
+    primary_endpoint: ALSFRS-R change (endpoint/population change)
+    line_of_therapy: SOD1-ALS, earlier and faster-progressing
+trial_family_query: "tofersen OR BIIB067 OR qalsody"
+literature:
+  VALOR_primary: "36129998"
+biomarker:
+  gene: SOD1
+  assay_in_rescue_trial: "SOD1 genotyping; plasma neurofilament light as a fluid biomarker"
+  selection_basis: germline_monogenic
