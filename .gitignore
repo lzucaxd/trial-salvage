@@ -1,4 +1,4 @@
-data/raw/
+data/raw/*
 outputs/
 __pycache__/
 *.pyc
@@ -8,3 +8,4 @@ __pycache__/
 .venv/
 !outputs/.gitkeep
 !data/raw/.gitkeep
+!data/raw/gefitinib/
