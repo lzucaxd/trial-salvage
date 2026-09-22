@@ -1,5 +1,13 @@
 # trial-salvage
 
+### ▶ [**Open the presentation**](https://lzucaxd.github.io/trial-salvage/ "live deck") &nbsp;·&nbsp; 📄 [**Speaker script**](PRESENTATION_SCRIPT.md) &nbsp;·&nbsp; ⚠ [**Limitations**](https://lzucaxd.github.io/trial-salvage/limitations.html)
+
+> The deck is a single self-contained HTML file: [`docs/index.html`](docs/index.html).
+> GitHub shows HTML as source, so use the link above, or download the file and open it in any
+> browser. If the link 404s, Pages has not been switched on yet: **Settings → Pages → Source
+> `main`, folder `/docs`**.
+
+
 **Can a failed drug candidate be rescued — and how?**
 A four-module pipeline that takes a failed trial and asks whether the drug should be abandoned or
 re-tried with new inclusion criteria (population stratification), a new endpoint, a narrower
@@ -20,13 +28,11 @@ re-approved in 2015 for EGFR exon 19 del / L858R disease.
 
 ## Presentation
 
-| File | What |
-|---|---|
-| `docs/index.html` | the deck. One self-contained file: figures base64-embedded, all data in a single JSON block, no network or local assets needed. Two canvas animations (the framework with its model layer, and the signalling network). |
-| `docs/limitations.html` | negative results, deliberately kept out of the deck: the falsified pre-registered blind evaluation, ESM-1v's applicability gate, module 3's signal loss under leave-one-cluster-out, and the simulation's own limits. |
-| `PRESENTATION_SCRIPT.md` | word-for-word script, four speakers, ~882 spoken words (~5:30). |
-
-To serve the deck publicly: Settings → Pages → Source `main`, folder `/docs`.
+| | File | What |
+|---|---|---|
+| ▶ | [`docs/index.html`](docs/index.html) &rarr; [**view live**](https://lzucaxd.github.io/trial-salvage/) | The deck. One self-contained file: figures base64-embedded, all data in a single JSON block, no network or local assets. Two canvas animations — the framework with its model layer, and the signalling network. |
+| 📄 | [`PRESENTATION_SCRIPT.md`](PRESENTATION_SCRIPT.md) | Word-for-word script, four speakers, ~882 spoken words (~5:30). Spoken lines are quoted; stage directions are bold. |
+| ⚠ | [`docs/limitations.html`](docs/limitations.html) &rarr; [**view live**](https://lzucaxd.github.io/trial-salvage/limitations.html) | Negative results, deliberately kept out of the deck: the falsified pre-registered blind evaluation, ESM-1v's applicability gate, module 3's signal loss under leave-one-cluster-out, and the simulation's own limits. |
 
 Both HTML files are generated, never hand-edited:
 
@@ -38,15 +44,15 @@ python scripts/presentation/build_limitations.py  # -> docs/limitations.html
 ```
 
 Every number in both documents is injected from `deck_data.json`, so re-running the pipeline and
-these three scripts keeps the deck in step with the code. `build_bundle.py` refuses to emit
-non-finite floats, which `JSON.parse` rejects and which would blank the page rather than degrade
-one chart.
+these three scripts keeps them in step with the code. `build_bundle.py` refuses to emit non-finite
+floats, which `JSON.parse` rejects and which would blank the page rather than degrade one chart.
 
-The model layer on the framework animation is labelled by actual status. Live: ESM-1v (5 × 650M,
-147,972 substitutions over 6 genes), PolyPhen-2, SIFT, ClinVar, gnomAD, cBioPortal,
-ClinicalTrials.gov, PubMed, STRING, Open Targets, Reactome. Drawn dashed because they produce no
-reported number yet: ESM2 (a constant in `module2/scoring.py`, never called) and AlphaGenome
-(module 3's regulatory lane is still a stub).
+The model layer on the framework animation is labelled by actual status:
+
+| Status | Sources |
+|---|---|
+| **Live** (produced a reported number) | ESM-1v (5 × 650M, 147,972 substitutions over 6 genes), PolyPhen-2, SIFT, ClinVar (2,694 pathogenic / 9,709 benign), gnomAD, cBioPortal, ClinicalTrials.gov, PubMed, STRING, Open Targets, Reactome |
+| **Dashed** (wired up, no reported number) | ESM2 — a constant in `module2/scoring.py` that is never called. AlphaGenome — module 3's regulatory lane is still a stub. |
 
 ## Quick start
 
