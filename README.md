@@ -78,9 +78,14 @@ The headline is a negative result worth acting on: across six selection genes th
 usable residue-level triage signal on two and no better than PolyPhen/SIFT on the rest. EGFR — the
 gene the module was first built against — is the exception, not the rule.
 
-| Selection gene | Drug | ESM (matched) | Best classical | Verdict |
+| Selection gene | Drug | ESM (matched subset) | Best classical (same variants) | Verdict |
 |---|---|---|---|---|
 | EGFR  | gefitinib    | **0.802** | 0.793 | `rank_residues_only` |
+
+ESM's *overall* EGFR AUROC is 0.808 on 108 pathogenic / 519 benign; the 0.802 above is the
+matched subset (93 / 505) that PolyPhen and SIFT also cover, which is the only like-for-like
+comparison and the one the verdict rule uses.
+
 | APOE  | bapineuzumab | 0.736 (no PolyPhen/SIFT coverage) | — | `rank_residues_only` |
 | BRCA1 | olaparib     | 0.607 | **SIFT 0.651** | `do_not_rank` |
 | BRCA2 | olaparib     | 0.446 | **PolyPhen 0.616** | `do_not_rank` |

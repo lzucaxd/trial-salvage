@@ -147,6 +147,19 @@ def test_constraint_spread_uses_the_full_protein_not_the_annotated_subset():
     assert "scanned positions" in full["basis"]
 
 
+def test_verdict_string_does_not_conflate_overall_and_matched_auroc():
+    """EGFR overall is 0.808 on 108/519; the matched subset is 0.802 on 93/505. A verdict that
+    quotes one and compares it to the other reads as like-for-like when it is not."""
+    scores = pd.read_csv(DATA / "egfr_annotated_scores.csv.gz")
+    validation = evaluate.validate(scores)
+    overall = validation["esm1v"]["auroc"]
+    matched = validation["matched_subset"]["esm1v"]["auroc"]
+    assert round(overall, 3) != round(matched, 3), "test is vacuous if the two agree"
+    reason = evaluate.verdict(validation)["reason"]
+    assert f"{overall:.3f} overall" in reason
+    assert f"{matched:.3f} vs" in reason
+
+
 def test_every_verdict_is_a_declared_enum_value():
     for gene in GENES:
         scores = pd.read_csv(DATA / f"{gene}_annotated_scores.csv.gz")
