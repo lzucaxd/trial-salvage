@@ -12,6 +12,18 @@ The separation is driven by LOEUF, not by raw variant counts -- check LOEUF alon
 Caveat from the rescue benchmark (data/benchmark): retries that stratified on *common* germline variants were 0/2,
 while somatic drivers were 4/4 and germline monogenic 2/3. A high score here marks common-variant tractability,
 which the benchmark does not yet support as a rescue lever. Report it alongside the somatic lane, not instead of it.
+
+v1 (``stratification_scores_v1``, see docs/module3_normalization.md): the v0 burden grows with gene size, so the
+largest genes on the failed-trial list (MUC16, MUC5AC) topped it. v1 keeps the tolerance term and replaces burden by
+a size/mutability-normalised rate
+  rate   = n_common_func / exp_syn     -- common functional variants per expected synonymous variant (gnomAD
+                                          mutation model: sequence length x mutability, blind to selection)
+  burden = rate / max(rate over the set)   -- the max only rescales; ranks do not depend on the set
+  score  = tolerance x burden
+plus a sequence-quality gate: genes whose observed synonymous count exceeds expectation (oe_syn = obs_syn / exp_syn
+> SYN_EXCESS_OE) are flagged ``qc_syn_excess`` and ranked after every unflagged gene. Synonymous sites are close to
+neutral, so an excess there points to calling artefacts (tandem repeats, paralogous mapping), not biology.
+Normalisation alone removes MUC16 from the top 10; MUC5AC is removed only by the gate (oe_syn 1.60).
 """
 from __future__ import annotations
 
@@ -71,3 +83,53 @@ def stratification_scores(rows: list[dict]) -> list[dict]:
             r["score"] = round(r["tolerance"] * r["burden"], 3)
         out.append(r)
     return out
+
+
+SYN_EXCESS_OE = 1.35  # highest CPIC pharmacogene on the panel is CYP2C9 at 1.29 -- keep that margin in mind
+
+
+def _num(x) -> float | None:
+    """float or None; NaN / empty / non-numeric become None."""
+    try:
+        f = float(x)
+    except (TypeError, ValueError):
+        return None
+    return None if math.isnan(f) else f
+
+
+def stratification_scores_v1(rows: list[dict], syn_excess: float = SYN_EXCESS_OE) -> list[dict]:
+    """Length-normalised germline score. Needs LOEUF, n_common_func, exp_syn; uses exp_mis and obs_syn if present.
+
+    Adds: rate_syn (n_common_func / exp_syn), rate_mis (n_common_func / exp_mis, informational), oe_syn,
+    qc_syn_excess (True / False, None when obs_syn is missing), tolerance, burden_v1, score_v1 and rank_v1.
+    Rows lacking LOEUF, n_common_func or a positive exp_syn get None scores and are ranked last.
+    """
+    out = []
+    for r in rows:
+        r = dict(r)
+        loeuf, k = _num(r.get("LOEUF")), _num(r.get("n_common_func"))
+        es, em, os_ = _num(r.get("exp_syn")), _num(r.get("exp_mis")), _num(r.get("obs_syn"))
+        r["rate_syn"] = k / es if k is not None and es else None
+        r["rate_mis"] = k / em if k is not None and em else None
+        r["oe_syn"] = os_ / es if os_ is not None and es else None
+        r["qc_syn_excess"] = None if r["oe_syn"] is None else r["oe_syn"] > syn_excess
+        r["tolerance"] = None if loeuf is None else min(max(loeuf, 0.0), 2.0) / 2.0
+        out.append(r)
+    rates = [r["rate_syn"] for r in out if r["rate_syn"] is not None and r["tolerance"] is not None]
+    top = max(rates) if rates and max(rates) > 0 else None
+    for r in out:
+        if r["rate_syn"] is None or r["tolerance"] is None:
+            r["burden_v1"] = r["score_v1"] = None
+        else:
+            r["burden_v1"] = r["rate_syn"] / top if top else 0.0
+            r["score_v1"] = round(r["tolerance"] * r["burden_v1"], 4)
+    for i, r in enumerate(sorted(out, key=_rank_key), start=1):
+        r["rank_v1"] = i
+    return out
+
+
+def _rank_key(r: dict) -> tuple:
+    """Scored + QC-pass first, then scored + flagged, then unscored; score descending, symbol breaks ties."""
+    s = r.get("score_v1")
+    tier = 2 if s is None else (1 if r.get("qc_syn_excess") else 0)
+    return tier, -(s or 0.0), str(r.get("symbol"))
