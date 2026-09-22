@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trial Salvage: limitations and negative results</title>
+<style>
+:root{--bg:#0f1117;--panel:#181b25;--line:#2a2f3d;--ink:#eef0f6;--dim:#a8aec2;
+  --faint:#6d7488;--bad:#ff6b7a;--warn:#ffc043;--good:#5fb3ff;
+  --mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16.5px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:60px 28px 100px}
+h1{font-size:34px;letter-spacing:-.025em;margin:0 0 10px;line-height:1.1}
+.sub{color:var(--faint);font-size:15px;margin:0 0 8px}
+h2{font-size:22px;margin:52px 0 6px;letter-spacing:-.015em;padding-top:22px;
+  border-top:1px solid var(--line)}
+h3{font-size:16.5px;margin:26px 0 6px;color:var(--ink)}
+p,li{color:var(--dim);max-width:70ch}
+li{margin:7px 0}
+code{font-family:var(--mono);font-size:13.5px;color:var(--good)}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14.5px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+th{color:var(--faint);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+td.num,th.num{text-align:right;font-family:var(--mono)}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:18px 22px;margin:20px 0}
+.box.bad{border-left:3px solid var(--bad)}
+.box.warn{border-left:3px solid var(--warn)}
+.box p{margin:0;color:var(--ink)}
+.tag{display:inline-block;font-family:var(--mono);font-size:11px;padding:3px 8px;
+  border-radius:999px;border:1px solid var(--line);color:var(--dim)}
+.tag.bad{color:var(--bad);border-color:#6d2a33}
+.tag.warn{color:var(--warn);border-color:#6d5520}
+.tag.good{color:var(--good);border-color:#2a5580}
+.lead{font-size:18px;color:var(--ink);max-width:62ch}
+footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);
+  color:var(--faint);font-size:13.5px}
+</style></head><body><div class="wrap">
+
+<h1>Limitations and negative results</h1>
+<p class="sub">Companion to the presentation. <code>github.com/lzucaxd/trial-salvage</code> @
+<code>925eb64</code> &middot; generated 2026-09-22 19:53 UTC</p>
+
+<p class="lead">Three of the four parts of this pipeline report a limit on their own usefulness.
+This document collects those limits, the results that came out negative, and the things we did not
+finish. Numbers here come from the same pipeline outputs as the deck.</p>
+
+<h2>1. The provenance rule does not survive automation</h2>
+<p>The deck reports that retries built on a planned or mechanistic signal succeeded
+59% of the time against
+19% for retries built on an after-the-fact
+subgroup (38 cases, Fisher p = 0.0202, odds ratio 6.259).
+That contrast strengthens when the four EGFR-mutant lung cancer cases are removed
+(odds ratio 7.222, p = 0.0297), so it is not carried by one biology.</p>
+
+<p><strong>But those provenance labels were hand-coded from full texts and trial protocols.</strong>
+We pre-registered a rule to recover them automatically, committed it before extracting any
+evidence, ran it over 72 abstracts published before each retry opened, and only
+then joined the outcomes.</p>
+
+<table><thead><tr><th>Pre-registered verdict, abstracts only</th><th class="num">retries</th>
+  <th class="num">worked</th><th class="num">failed</th><th class="num">rate</th></tr></thead>
+<tbody><tr><td><code>retry supported</code></td><td class='num'>3</td><td class='num'>1</td><td class='num'>2</td><td class='num'>33%</td></tr><tr><td><code>retry weak</code></td><td class='num'>7</td><td class='num'>6</td><td class='num'>1</td><td class='num'>86%</td></tr><tr><td><code>not supported</code></td><td class='num'>14</td><td class='num'>4</td><td class='num'>10</td><td class='num'>29%</td></tr><tr><td><code>primary not missed</code></td><td class='num'>8</td><td class='num'>4</td><td class='num'>4</td><td class='num'>50%</td></tr><tr><td><code>not evaluable</code></td><td class='num'>3</td><td class='num'>0</td><td class='num'>3</td><td class='num'>0%</td></tr></tbody></table>
+
+<div class="box bad"><p>The pre-registered ordering is falsified. We predicted
+<code>retry_supported &gt; retry_weak &ge; not_supported</code> and the top two tiers came out
+inverted. Read from abstracts alone, the rule does not separate retries that worked from retries
+that failed.</p></div>
+
+<p>The cause is not subtle: abstracts almost never state whether a subgroup analysis was planned in
+advance. Most favourable findings come back as an unspecified subgroup, which the rule bins with
+"after the fact". The distinction that carries the result lives in protocols and full texts, which
+we do not parse.</p>
+
+<h3>What did survive</h3>
+<ul>
+  <li><strong>The abandon call.</strong> Assets with no favourable heterogeneity signal anywhere in
+  the failed trial: 10 of 14 retries
+  failed. Advising against the spend is the claim this pipeline supports best.</li>
+  <li><strong>A coarser signal.</strong> Any favourable subgroup or secondary finding against none:
+  7/10 versus
+  4/14, Fisher
+  p = 0.095. Right direction, too small to lean on.</li>
+</ul>
+<p>Full analysis and cause breakdown: <code>docs/module1_blind_eval.md</code>. Status: v0; re-run planned after adding failure_type and full-text extraction.</p>
+
+<h2>2. The protein model is unusable on most of the genes we tried</h2>
+<p>We tested whether a protein language model can rank variants well enough to support patient
+selection, against classical predictors, on six selection genes. It is cleared for residue-level
+use on two of the six.</p>
+
+<table><thead><tr><th>Gene</th><th>Drug</th><th class="num">model AUROC</th>
+  <th class="num">best classical</th><th>verdict</th></tr></thead>
+<tbody><tr><td><code>EGFR</code></td><td>gefitinib</td><td class='num'>0.802</td><td class='num'>0.793</td><td><span class='tag good'>rank residues only</span></td></tr><tr><td><code>APOE</code></td><td>bapineuzumab</td><td class='num'>--</td><td class='num'>--</td><td><span class='tag good'>rank residues only</span></td></tr><tr><td><code>BRCA1</code></td><td>olaparib</td><td class='num'>0.607</td><td class='num'>0.651</td><td><span class='tag bad'>do not rank</span></td></tr><tr><td><code>BRCA2</code></td><td>olaparib</td><td class='num'>0.446</td><td class='num'>0.616</td><td><span class='tag bad'>do not rank</span></td></tr><tr><td><code>SOD1</code></td><td>tofersen</td><td class='num'>--</td><td class='num'>--</td><td><span class='tag warn'>not validated</span></td></tr><tr><td><code>PARP1</code></td><td>olaparib</td><td class='num'>--</td><td class='num'>--</td><td><span class='tag warn'>not validated</span></td></tr></tbody></table>
+
+<div class="box warn"><p>Only three genes had enough labelled variants for a head-to-head
+comparison. On the gene the method was first built against it wins by 0.009 AUROC
+(0.802 against 0.793). On the other two it loses to predictors from the 1990s, by 0.044 and 0.170.
+We report the applicability gate per gene rather than an average across them.</p></div>
+
+<h2>3. The genomic stratification result does not generalise</h2>
+<p>Module 3's verdict separated outcomes at p = 0.015 across the benchmark. Removing the four
+EGFR-mutant lung cancer cases took that to p = 0.39. One biology was carrying it. We ran the same
+leave-the-cluster-out test on every result in the pipeline after finding this.</p>
+
+<h2>4. Limits on the trial simulation</h2>
+<ul>
+  <li><strong>Marker prevalence is swept, not measured.</strong> The designed sample size depends on
+  what share of screened patients carry the marker. We show a range because no module yet hands us
+  a prevalence tied to a defined screened population.</li>
+  <li><strong>The assay is assumed perfect and nobody drops out.</strong> Real screening has false
+  negatives and real trials lose patients, so the screening burden we report is a floor.</li>
+  <li><strong>Hazard ratios are taken as given.</strong> We never convert them into response
+  probabilities, and we never derive them from protein or genome model scores.</li>
+  <li><strong>No probability of rescue is produced anywhere.</strong> Strategies are placed in
+  visible tiers. The evidence cannot support a number, and a number would be read as a forecast.</li>
+</ul>
+
+<h2>5. The gefitinib result is not an independent test</h2>
+<p>Our replication check compares a trial's observed result against what a prior estimate implies.
+For gefitinib it returns <code>not_an_independent_test</code>, and that is the correct
+answer rather than a failure: the estimate we would check against was measured inside the very
+trial we would be checking, with both marker groups present. The check refuses circular cases
+instead of scoring them as agreement.</p>
+<p>The onartuzumab case is a real test, because its prior estimate came from an earlier trial:
+verdict <code>did_not_replicate</code>.</p>
+
+<h2>6. Benchmark caveats</h2>
+<ul>
+  <li>38 decided cases is small. The success rates have wide intervals.</li>
+  <li>Provenance labels were assigned with the outcomes visible in the same file.</li>
+  <li>Nine cases were not primary-endpoint failures at all, but regulatory decisions or a survival
+  miss after a positive primary. The benchmark needs a <code>failure_type</code> column before the
+  provenance test can be re-run cleanly.</li>
+  <li>No prospective validation. Every case here has a known outcome.</li>
+</ul>
+
+<h2>7. Not finished</h2>
+<ul>
+  <li>Prevalence handoff from the genomic module to the trial design, with an agreed definition of
+  the screened population.</li>
+  <li><code>failure_type</code> on the benchmark, then re-run the blind evaluation.</li>
+  <li>Full-text extraction, which is where the provenance information actually lives.</li>
+</ul>
+
+<div class="box"><p>We would rather show a pipeline that reports where it stops working than one
+that returns a confident score for everything.</p></div>
+
+<footer>
+<p>115 tests pass; lint clean; the whole chain runs offline from committed
+data. Trial data from ClinicalTrials.gov API v2 and PubMed E-utilities.</p>
+</footer>
+</div></body></html>

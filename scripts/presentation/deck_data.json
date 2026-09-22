@@ -1,0 +1,3603 @@
+{
+ "meta": {
+  "repo": "github.com/lzucaxd/trial-salvage",
+  "head": "925eb64",
+  "generated": "2026-09-22 19:53 UTC",
+  "tests": 115,
+  "tracked_files": 115
+ },
+ "headline": {
+  "unselected_cost_musd": 33.1,
+  "enriched_n": 100,
+  "enriched_cost_musd": 4.14,
+  "enriched_power": 0.89,
+  "min_fraction_unselected": 0.648,
+  "provenance_or": 6.259,
+  "provenance_p": 0.0202,
+  "cost_per_success_weak": 101.1,
+  "cost_per_success_strong": 32.1,
+  "avoided_musd": 69.0
+ },
+ "economics": {
+  "portfolio": [
+   {
+    "strategy": "retry blind (benchmark base rate)",
+    "p_success": 0.4211,
+    "trials_per_success": 2.38,
+    "cost_per_success_musd": 45.1,
+    "cost_lo_musd": 28.5,
+    "cost_hi_musd": 78.4
+   },
+   {
+    "strategy": "retry only prespecified/mechanistic",
+    "p_success": 0.591,
+    "trials_per_success": 1.69,
+    "cost_per_success_musd": 32.1,
+    "cost_lo_musd": 20.3,
+    "cost_hi_musd": 55.8
+   },
+   {
+    "strategy": "retry only post-hoc-subgroup-driven",
+    "p_success": 0.188,
+    "trials_per_success": 5.32,
+    "cost_per_success_musd": 101.1,
+    "cost_lo_musd": 63.8,
+    "cost_hi_musd": 175.5
+   },
+   {
+    "strategy": "industry phase 3 oncology baseline",
+    "p_success": 0.4345,
+    "trials_per_success": 2.3,
+    "cost_per_success_musd": 43.7,
+    "cost_lo_musd": 27.6,
+    "cost_hi_musd": 75.9
+   }
+  ],
+  "sources": {
+   "pivotal_trial_median_musd": "Moore TJ et al., BMJ Open 2020;10:e038863 (PMID 32532786, doi:10.1136/bmjopen-2020-038863) - IQVIA cost model over 225 pivotal trials for 101 FDA-approved new molecular entities, 2015-2017: median USD 19M (IQR 12-33M) per trial",
+   "onc_pivotal_median_musd": "Clin Trials 2020 (PMID 32114790) - pivotal trials for FDA-approved cancer drugs, 2015-2017: median USD 31.7M (IQR 17.0-60.0M); by primary endpoint, objective response 17.7M (IQR 11.9-27.1), progression-free survival 42.3M (IQR 34.6-101.2), overall survival 79.4M (IQR 56.9-97.0); single-arm 17.7M, placebo-controlled 56.7M, active-control 67.6M",
+   "per_drug_median_musd": "same source, median per approved drug across all its pivotal trials: USD 48M (IQR 20-102M)",
+   "per_patient_usd": "same source, median estimated cost per enrolled patient: USD 41,413 (IQR 29,894-75,047)",
+   "phase3_onc_success": "Yamamoto K, Iwase A, Maeda H, Clin Transl Sci 2026 (PMID 42257532, doi:10.1111/cts.70635) - 824 phase III oncology drug trials registered 2007-2023 with posted primary-endpoint results: 358 successful / 466 not, = 43.5% (rate computed from the reported counts)"
+  },
+  "cost_inputs": {
+   "pivotal_trial_median_musd": 19.0,
+   "pivotal_trial_iqr_musd": [
+    12.0,
+    33.0
+   ],
+   "per_drug_median_musd": 48.0,
+   "per_patient_usd": 41413,
+   "onc_pivotal_median_musd": 31.7,
+   "onc_pivotal_iqr_musd": [
+    17.0,
+    60.0
+   ],
+   "onc_by_endpoint_musd": {
+    "ORR": 17.7,
+    "PFS": 42.3,
+    "OS": 79.4
+   },
+   "onc_by_endpoint_iqr_musd": {
+    "ORR": [
+     11.9,
+     27.1
+    ],
+    "PFS": [
+     34.6,
+     101.2
+    ],
+    "OS": [
+     56.9,
+     97.0
+    ]
+   },
+   "onc_single_arm_musd": 17.7,
+   "onc_placebo_controlled_musd": 56.7,
+   "onc_active_control_musd": 67.6,
+   "phase3_onc_success": 0.4345
+  },
+  "design": {
+   "per_patient_usd": 41413,
+   "enriched": {
+    "n_randomized": 100,
+    "n_screened": 200,
+    "power": 0.89,
+    "randomisation_cost_musd": 4.14
+   },
+   "unselected_realistic": [
+    {
+     "responder_fraction": 0.2,
+     "total_randomized": 200,
+     "simulated_power": 0.0,
+     "cost_musd": 8.3
+    },
+    {
+     "responder_fraction": 0.3,
+     "total_randomized": 200,
+     "simulated_power": 0.0,
+     "cost_musd": 8.3
+    },
+    {
+     "responder_fraction": 0.5,
+     "total_randomized": 200,
+     "simulated_power": 0.0273333333,
+     "cost_musd": 8.3
+    },
+    {
+     "responder_fraction": 0.2,
+     "total_randomized": 400,
+     "simulated_power": 0.0,
+     "cost_musd": 16.6
+    },
+    {
+     "responder_fraction": 0.3,
+     "total_randomized": 400,
+     "simulated_power": 0.0,
+     "cost_musd": 16.6
+    },
+    {
+     "responder_fraction": 0.5,
+     "total_randomized": 400,
+     "simulated_power": 0.0246666667,
+     "cost_musd": 16.6
+    },
+    {
+     "responder_fraction": 0.2,
+     "total_randomized": 800,
+     "simulated_power": 0.0,
+     "cost_musd": 33.1
+    },
+    {
+     "responder_fraction": 0.3,
+     "total_randomized": 800,
+     "simulated_power": 0.0,
+     "cost_musd": 33.1
+    },
+    {
+     "responder_fraction": 0.5,
+     "total_randomized": 800,
+     "simulated_power": 0.0373333333,
+     "cost_musd": 33.1
+    }
+   ],
+   "min_fraction_for_unselected_80pct": 0.648,
+   "historical_trial_n": {
+    "ISEL (failed, unselected)": 1692,
+    "IPASS (rescue, clinical proxy)": 1329,
+    "OAM4558g (onartuzumab ph2)": 137,
+    "METLung (onartuzumab retry)": 499
+   },
+   "historical_trial_costs_musd": {
+    "ISEL (failed, unselected)": 70.1,
+    "IPASS (rescue, clinical proxy)": 55.0,
+    "OAM4558g (onartuzumab ph2)": 5.7,
+    "METLung (onartuzumab retry)": 20.7
+   },
+   "historical": {
+    "ISEL (failed, unselected)": {
+     "n": 1692,
+     "endpoint": "OS",
+     "pivotal": true,
+     "per_patient_musd": 70.1,
+     "endpoint_matched_musd": 79.4
+    },
+    "IPASS (rescue, clinical proxy)": {
+     "n": 1329,
+     "endpoint": "PFS",
+     "pivotal": true,
+     "per_patient_musd": 55.0,
+     "endpoint_matched_musd": 42.3
+    },
+    "OAM4558g (onartuzumab ph2)": {
+     "n": 137,
+     "endpoint": null,
+     "pivotal": false,
+     "per_patient_musd": 5.7,
+     "endpoint_matched_musd": null
+    },
+    "METLung (onartuzumab retry)": {
+     "n": 499,
+     "endpoint": "OS",
+     "pivotal": true,
+     "per_patient_musd": 20.7,
+     "endpoint_matched_musd": 79.4
+    }
+   },
+   "ifum_validation": {
+    "module4_recommended_n": 100,
+    "ifum_actual_n": 106,
+    "ifum_event": "Approval for first-line metastatic NSCLC with EGFR exon 19 deletion or L858R, with therascreen EGFR RGQ PCR companion diagnostic; based on IFUM (n=106, ORR 50%) supported by IPASS retrospective subset"
+   },
+   "hr_pos": 0.48,
+   "hr_neg": 2.85,
+   "gefitinib_retrospective": {
+    "hr_prior": 0.48,
+    "prior_source": "hr_pos (EGFR mutation-positive PFS HR 0.48) was measured inside IPASS itself, in a prespecified biomarker analysis with both strata and both arms present. IPASS therefore measured the effect rather than being a prospective test of a carried-over estimate - which is also why the estimate was trustworthy: it was never extrapolated from a small subgroup with a tuned cutoff.",
+    "observed_retry_hr": 0.48,
+    "observed_source": "PMID 19692680; FDA 2015 approval summary PMID 26980062",
+    "n_retry": 1329,
+    "independent_test": false,
+    "verdict": "not_an_independent_test",
+    "note": "The prior estimate was measured in the same trial that produced the observed result, so agreement between them carries no predictive information. A prospective test requires the estimate to predate the trial that checks it."
+   },
+   "onartuzumab_retrospective": {
+    "hr_prior": 0.37,
+    "prior_source": "hr_pos (MET IHC-positive OS HR 0.37) was measured in the earlier phase 2 OAM4558g, not in METLung. METLung enrolled MET-positive patients only, so it was a genuine prospective test of that estimate.",
+    "observed_retry_hr": 1.27,
+    "observed_source": "PMID 27937096",
+    "n_retry": 499,
+    "independent_test": true,
+    "implied_distribution": {
+     "hr_2.5_pct": 0.285,
+     "hr_median": 0.369,
+     "hr_97.5_pct": 0.467,
+     "n_simulations": 1500
+    },
+    "observed_percentile_of_implied": 1.0,
+    "verdict": "did_not_replicate",
+    "note": "The retry's observed ratio 1.27 lies above the central 95% interval [0.28, 0.47] implied by a true ratio of 0.37 at n=499. The prior subgroup estimate did not survive its prospective test, so any power computed from it was answering the wrong question."
+   }
+  }
+ },
+ "ppi": {
+  "edges": [
+   {
+    "preferredName_A": "MAPK1",
+    "preferredName_B": "EGFR",
+    "score": 0.612,
+    "escore": 0.042,
+    "dscore": 0.0,
+    "tscore": 0.609
+   },
+   {
+    "preferredName_A": "MAPK1",
+    "preferredName_B": "PTEN",
+    "score": 0.677,
+    "escore": 0.216,
+    "dscore": 0.0,
+    "tscore": 0.597
+   },
+   {
+    "preferredName_A": "MAPK1",
+    "preferredName_B": "SOS1",
+    "score": 0.772,
+    "escore": 0.067,
+    "dscore": 0.4,
+    "tscore": 0.543
+   },
+   {
+    "preferredName_A": "MAPK1",
+    "preferredName_B": "PIK3CA",
+    "score": 0.822,
+    "escore": 0.0,
+    "dscore": 0.0,
+    "tscore": 0.809
+   },
+   {
+    "preferredName_A": "MAPK1",
+    "preferredName_B": "GRB2",
+    "score": 0.92,
+    "escore": 0.0,
+    "dscore": 0.4,
+    "tscore": 0.866
+   },
+   {
+    "preferredName_A": "MAPK1",
+    "preferredName_B": "BRAF",
+    "score": 0.949,
+    "escore": 0.647,
+    "dscore": 0.7,
+    "tscore": 0.539
+   },
+   {
+    "preferredName_A": "MAPK1",
+    "preferredName_B": "SHC1",
+    "score": 0.962,
+    "escore": 0.684,
+    "dscore": 0.4,
+    "tscore": 0.817
+   },
+   {
+    "preferredName_A": "MAPK1",
+    "preferredName_B": "AKT1",
+    "score": 0.988,
+    "escore": 0.11,
+    "dscore": 0.9,
+    "tscore": 0.872
+   },
+   {
+    "preferredName_A": "MAPK1",
+    "preferredName_B": "KRAS",
+    "score": 0.988,
+    "escore": 0.495,
+    "dscore": 0.9,
+    "tscore": 0.771
+   },
+   {
+    "preferredName_A": "MAPK1",
+    "preferredName_B": "STAT3",
+    "score": 0.996,
+    "escore": 0.926,
+    "dscore": 0.0,
+    "tscore": 0.95
+   },
+   {
+    "preferredName_A": "HGF",
+    "preferredName_B": "PTEN",
+    "score": 0.552,
+    "escore": 0.0,
+    "dscore": 0.0,
+    "tscore": 0.542
+   },
+   {
+    "preferredName_A": "HGF",
+    "preferredName_B": "SOS1",
+    "score": 0.562,
+    "escore": 0.0,
+    "dscore": 0.4,
+    "tscore": 0.301
+   },
+   {
+    "preferredName_A": "HGF",
+    "preferredName_B": "BRAF",
+    "score": 0.572,
+    "escore": 0.096,
+    "dscore": 0.0,
+    "tscore": 0.546
+   },
+   {
+    "preferredName_A": "HGF",
+    "preferredName_B": "PIK3CA",
+    "score": 0.623,
+    "escore": 0.0,
+    "dscore": 0.4,
+    "tscore": 0.398
+   },
+   {
+    "preferredName_A": "HGF",
+    "preferredName_B": "CBL",
+    "score": 0.671,
+    "escore": 0.0,
+    "dscore": 0.5,
+    "tscore": 0.37
+   },
+   {
+    "preferredName_A": "HGF",
+    "preferredName_B": "SHC1",
+    "score": 0.782,
+    "escore": 0.0,
+    "dscore": 0.4,
+    "tscore": 0.651
+   },
+   {
+    "preferredName_A": "HGF",
+    "preferredName_B": "STAT3",
+    "score": 0.829,
+    "escore": 0.0,
+    "dscore": 0.5,
+    "tscore": 0.673
+   },
+   {
+    "preferredName_A": "HGF",
+    "preferredName_B": "GRB2",
+    "score": 0.838,
+    "escore": 0.053,
+    "dscore": 0.4,
+    "tscore": 0.735
+   },
+   {
+    "preferredName_A": "HGF",
+    "preferredName_B": "KRAS",
+    "score": 0.852,
+    "escore": 0.145,
+    "dscore": 0.5,
+    "tscore": 0.683
+   },
+   {
+    "preferredName_A": "HGF",
+    "preferredName_B": "AKT1",
+    "score": 0.882,
+    "escore": 0.096,
+    "dscore": 0.5,
+    "tscore": 0.761
+   },
+   {
+    "preferredName_A": "HGF",
+    "preferredName_B": "ERBB2",
+    "score": 0.918,
+    "escore": 0.193,
+    "dscore": 0.65,
+    "tscore": 0.736
+   },
+   {
+    "preferredName_A": "HGF",
+    "preferredName_B": "EGFR",
+    "score": 0.98,
+    "escore": 0.0,
+    "dscore": 0.65,
+    "tscore": 0.947
+   },
+   {
+    "preferredName_A": "HGF",
+    "preferredName_B": "MET",
+    "score": 0.999,
+    "escore": 0.989,
+    "dscore": 0.9,
+    "tscore": 0.999
+   },
+   {
+    "preferredName_A": "KRAS",
+    "preferredName_B": "SHC1",
+    "score": 0.758,
+    "escore": 0.225,
+    "dscore": 0.5,
+    "tscore": 0.414
+   },
+   {
+    "preferredName_A": "KRAS",
+    "preferredName_B": "STAT3",
+    "score": 0.817,
+    "escore": 0.063,
+    "dscore": 0.0,
+    "tscore": 0.81
+   },
+   {
+    "preferredName_A": "KRAS",
+    "preferredName_B": "AKT1",
+    "score": 0.904,
+    "escore": 0.11,
+    "dscore": 0.0,
+    "tscore": 0.893
+   },
+   {
+    "preferredName_A": "KRAS",
+    "preferredName_B": "GRB2",
+    "score": 0.931,
+    "escore": 0.45,
+    "dscore": 0.5,
+    "tscore": 0.758
+   },
+   {
+    "preferredName_A": "KRAS",
+    "preferredName_B": "PTEN",
+    "score": 0.936,
+    "escore": 0.099,
+    "dscore": 0.0,
+    "tscore": 0.93
+   },
+   {
+    "preferredName_A": "KRAS",
+    "preferredName_B": "ERBB2",
+    "score": 0.966,
+    "escore": 0.199,
+    "dscore": 0.5,
+    "tscore": 0.923
+   },
+   {
+    "preferredName_A": "KRAS",
+    "preferredName_B": "MET",
+    "score": 0.979,
+    "escore": 0.337,
+    "dscore": 0.9,
+    "tscore": 0.703
+   },
+   {
+    "preferredName_A": "KRAS",
+    "preferredName_B": "EGFR",
+    "score": 0.997,
+    "escore": 0.662,
+    "dscore": 0.9,
+    "tscore": 0.918
+   },
+   {
+    "preferredName_A": "KRAS",
+    "preferredName_B": "PIK3CA",
+    "score": 0.998,
+    "escore": 0.627,
+    "dscore": 0.9,
+    "tscore": 0.951
+   },
+   {
+    "preferredName_A": "KRAS",
+    "preferredName_B": "BRAF",
+    "score": 0.999,
+    "escore": 0.87,
+    "dscore": 0.9,
+    "tscore": 0.973
+   },
+   {
+    "preferredName_A": "KRAS",
+    "preferredName_B": "SOS1",
+    "score": 0.999,
+    "escore": 0.95,
+    "dscore": 0.9,
+    "tscore": 0.966
+   },
+   {
+    "preferredName_A": "PIK3CA",
+    "preferredName_B": "SHC1",
+    "score": 0.637,
+    "escore": 0.0,
+    "dscore": 0.4,
+    "tscore": 0.42
+   },
+   {
+    "preferredName_A": "PIK3CA",
+    "preferredName_B": "STAT3",
+    "score": 0.859,
+    "escore": 0.0,
+    "dscore": 0.5,
+    "tscore": 0.727
+   },
+   {
+    "preferredName_A": "PIK3CA",
+    "preferredName_B": "CBL",
+    "score": 0.887,
+    "escore": 0.629,
+    "dscore": 0.65,
+    "tscore": 0.186
+   },
+   {
+    "preferredName_A": "PIK3CA",
+    "preferredName_B": "GRB2",
+    "score": 0.924,
+    "escore": 0.676,
+    "dscore": 0.4,
+    "tscore": 0.642
+   },
+   {
+    "preferredName_A": "PIK3CA",
+    "preferredName_B": "SOS1",
+    "score": 0.926,
+    "escore": 0.0,
+    "dscore": 0.5,
+    "tscore": 0.636
+   },
+   {
+    "preferredName_A": "PIK3CA",
+    "preferredName_B": "BRAF",
+    "score": 0.947,
+    "escore": 0.19,
+    "dscore": 0.0,
+    "tscore": 0.931
+   },
+   {
+    "preferredName_A": "PIK3CA",
+    "preferredName_B": "MET",
+    "score": 0.961,
+    "escore": 0.069,
+    "dscore": 0.9,
+    "tscore": 0.617
+   },
+   {
+    "preferredName_A": "PIK3CA",
+    "preferredName_B": "ERBB2",
+    "score": 0.992,
+    "escore": 0.115,
+    "dscore": 0.9,
+    "tscore": 0.927
+   },
+   {
+    "preferredName_A": "PIK3CA",
+    "preferredName_B": "PTEN",
+    "score": 0.995,
+    "escore": 0.134,
+    "dscore": 0.9,
+    "tscore": 0.949
+   },
+   {
+    "preferredName_A": "PIK3CA",
+    "preferredName_B": "AKT1",
+    "score": 0.998,
+    "escore": 0.738,
+    "dscore": 0.9,
+    "tscore": 0.951
+   },
+   {
+    "preferredName_A": "PIK3CA",
+    "preferredName_B": "EGFR",
+    "score": 0.999,
+    "escore": 0.79,
+    "dscore": 0.9,
+    "tscore": 0.976
+   },
+   {
+    "preferredName_A": "CBL",
+    "preferredName_B": "PTEN",
+    "score": 0.687,
+    "escore": 0.51,
+    "dscore": 0.0,
+    "tscore": 0.38
+   },
+   {
+    "preferredName_A": "CBL",
+    "preferredName_B": "AKT1",
+    "score": 0.775,
+    "escore": 0.13,
+    "dscore": 0.0,
+    "tscore": 0.75
+   },
+   {
+    "preferredName_A": "CBL",
+    "preferredName_B": "SOS1",
+    "score": 0.827,
+    "escore": 0.297,
+    "dscore": 0.5,
+    "tscore": 0.49
+   },
+   {
+    "preferredName_A": "CBL",
+    "preferredName_B": "STAT3",
+    "score": 0.88,
+    "escore": 0.421,
+    "dscore": 0.5,
+    "tscore": 0.608
+   },
+   {
+    "preferredName_A": "CBL",
+    "preferredName_B": "ERBB2",
+    "score": 0.944,
+    "escore": 0.8,
+    "dscore": 0.0,
+    "tscore": 0.734
+   },
+   {
+    "preferredName_A": "CBL",
+    "preferredName_B": "SHC1",
+    "score": 0.996,
+    "escore": 0.877,
+    "dscore": 0.5,
+    "tscore": 0.94
+   },
+   {
+    "preferredName_A": "CBL",
+    "preferredName_B": "MET",
+    "score": 0.999,
+    "escore": 0.941,
+    "dscore": 0.9,
+    "tscore": 0.873
+   },
+   {
+    "preferredName_A": "CBL",
+    "preferredName_B": "GRB2",
+    "score": 0.999,
+    "escore": 0.996,
+    "dscore": 0.9,
+    "tscore": 0.996
+   },
+   {
+    "preferredName_A": "CBL",
+    "preferredName_B": "EGFR",
+    "score": 0.999,
+    "escore": 0.996,
+    "dscore": 0.9,
+    "tscore": 0.994
+   },
+   {
+    "preferredName_A": "STAT3",
+    "preferredName_B": "BRAF",
+    "score": 0.773,
+    "escore": 0.096,
+    "dscore": 0.0,
+    "tscore": 0.755
+   },
+   {
+    "preferredName_A": "STAT3",
+    "preferredName_B": "PTEN",
+    "score": 0.794,
+    "escore": 0.0,
+    "dscore": 0.0,
+    "tscore": 0.784
+   },
+   {
+    "preferredName_A": "STAT3",
+    "preferredName_B": "GRB2",
+    "score": 0.892,
+    "escore": 0.292,
+    "dscore": 0.5,
+    "tscore": 0.685
+   },
+   {
+    "preferredName_A": "STAT3",
+    "preferredName_B": "SHC1",
+    "score": 0.893,
+    "escore": 0.0,
+    "dscore": 0.5,
+    "tscore": 0.783
+   },
+   {
+    "preferredName_A": "STAT3",
+    "preferredName_B": "ERBB2",
+    "score": 0.948,
+    "escore": 0.717,
+    "dscore": 0.0,
+    "tscore": 0.823
+   },
+   {
+    "preferredName_A": "STAT3",
+    "preferredName_B": "AKT1",
+    "score": 0.966,
+    "escore": 0.096,
+    "dscore": 0.5,
+    "tscore": 0.925
+   },
+   {
+    "preferredName_A": "STAT3",
+    "preferredName_B": "MET",
+    "score": 0.981,
+    "escore": 0.332,
+    "dscore": 0.5,
+    "tscore": 0.948
+   },
+   {
+    "preferredName_A": "STAT3",
+    "preferredName_B": "EGFR",
+    "score": 0.998,
+    "escore": 0.925,
+    "dscore": 0.0,
+    "tscore": 0.985
+   },
+   {
+    "preferredName_A": "ERBB2",
+    "preferredName_B": "BRAF",
+    "score": 0.482,
+    "escore": 0.102,
+    "dscore": 0.0,
+    "tscore": 0.447
+   },
+   {
+    "preferredName_A": "ERBB2",
+    "preferredName_B": "AKT1",
+    "score": 0.552,
+    "escore": 0.222,
+    "dscore": 0.0,
+    "tscore": 0.436
+   },
+   {
+    "preferredName_A": "ERBB2",
+    "preferredName_B": "SOS1",
+    "score": 0.804,
+    "escore": 0.115,
+    "dscore": 0.4,
+    "tscore": 0.661
+   },
+   {
+    "preferredName_A": "ERBB2",
+    "preferredName_B": "MET",
+    "score": 0.847,
+    "escore": 0.617,
+    "dscore": 0.0,
+    "tscore": 0.604
+   },
+   {
+    "preferredName_A": "ERBB2",
+    "preferredName_B": "PTEN",
+    "score": 0.868,
+    "escore": 0.07,
+    "dscore": 0.0,
+    "tscore": 0.864
+   },
+   {
+    "preferredName_A": "ERBB2",
+    "preferredName_B": "EGFR",
+    "score": 0.999,
+    "escore": 0.998,
+    "dscore": 0.9,
+    "tscore": 0.983
+   },
+   {
+    "preferredName_A": "ERBB2",
+    "preferredName_B": "GRB2",
+    "score": 0.999,
+    "escore": 0.934,
+    "dscore": 0.9,
+    "tscore": 0.993
+   },
+   {
+    "preferredName_A": "ERBB2",
+    "preferredName_B": "SHC1",
+    "score": 0.999,
+    "escore": 0.921,
+    "dscore": 0.9,
+    "tscore": 0.991
+   },
+   {
+    "preferredName_A": "EGFR",
+    "preferredName_B": "BRAF",
+    "score": 0.601,
+    "escore": 0.255,
+    "dscore": 0.0,
+    "tscore": 0.486
+   },
+   {
+    "preferredName_A": "EGFR",
+    "preferredName_B": "AKT1",
+    "score": 0.792,
+    "escore": 0.64,
+    "dscore": 0.0,
+    "tscore": 0.445
+   },
+   {
+    "preferredName_A": "EGFR",
+    "preferredName_B": "PTEN",
+    "score": 0.969,
+    "escore": 0.608,
+    "dscore": 0.0,
+    "tscore": 0.925
+   },
+   {
+    "preferredName_A": "EGFR",
+    "preferredName_B": "MET",
+    "score": 0.996,
+    "escore": 0.806,
+    "dscore": 0.0,
+    "tscore": 0.978
+   },
+   {
+    "preferredName_A": "EGFR",
+    "preferredName_B": "SHC1",
+    "score": 0.999,
+    "escore": 0.995,
+    "dscore": 0.9,
+    "tscore": 0.994
+   },
+   {
+    "preferredName_A": "EGFR",
+    "preferredName_B": "SOS1",
+    "score": 0.999,
+    "escore": 0.994,
+    "dscore": 0.9,
+    "tscore": 0.942
+   },
+   {
+    "preferredName_A": "EGFR",
+    "preferredName_B": "GRB2",
+    "score": 0.999,
+    "escore": 0.996,
+    "dscore": 0.9,
+    "tscore": 0.996
+   },
+   {
+    "preferredName_A": "MET",
+    "preferredName_B": "AKT1",
+    "score": 0.408,
+    "escore": 0.071,
+    "dscore": 0.0,
+    "tscore": 0.389
+   },
+   {
+    "preferredName_A": "MET",
+    "preferredName_B": "PTEN",
+    "score": 0.755,
+    "escore": 0.277,
+    "dscore": 0.0,
+    "tscore": 0.665
+   },
+   {
+    "preferredName_A": "MET",
+    "preferredName_B": "SOS1",
+    "score": 0.882,
+    "escore": 0.334,
+    "dscore": 0.4,
+    "tscore": 0.728
+   },
+   {
+    "preferredName_A": "MET",
+    "preferredName_B": "SHC1",
+    "score": 0.992,
+    "escore": 0.386,
+    "dscore": 0.9,
+    "tscore": 0.883
+   },
+   {
+    "preferredName_A": "MET",
+    "preferredName_B": "GRB2",
+    "score": 0.999,
+    "escore": 0.831,
+    "dscore": 0.9,
+    "tscore": 0.98
+   },
+   {
+    "preferredName_A": "PTEN",
+    "preferredName_B": "SOS1",
+    "score": 0.502,
+    "escore": 0.094,
+    "dscore": 0.0,
+    "tscore": 0.464
+   },
+   {
+    "preferredName_A": "PTEN",
+    "preferredName_B": "SHC1",
+    "score": 0.569,
+    "escore": 0.0,
+    "dscore": 0.0,
+    "tscore": 0.569
+   },
+   {
+    "preferredName_A": "PTEN",
+    "preferredName_B": "GRB2",
+    "score": 0.665,
+    "escore": 0.292,
+    "dscore": 0.0,
+    "tscore": 0.543
+   },
+   {
+    "preferredName_A": "PTEN",
+    "preferredName_B": "BRAF",
+    "score": 0.943,
+    "escore": 0.206,
+    "dscore": 0.0,
+    "tscore": 0.927
+   },
+   {
+    "preferredName_A": "PTEN",
+    "preferredName_B": "AKT1",
+    "score": 0.988,
+    "escore": 0.648,
+    "dscore": 0.0,
+    "tscore": 0.967
+   },
+   {
+    "preferredName_A": "GRB2",
+    "preferredName_B": "BRAF",
+    "score": 0.617,
+    "escore": 0.1,
+    "dscore": 0.0,
+    "tscore": 0.592
+   },
+   {
+    "preferredName_A": "GRB2",
+    "preferredName_B": "AKT1",
+    "score": 0.907,
+    "escore": 0.1,
+    "dscore": 0.0,
+    "tscore": 0.9
+   },
+   {
+    "preferredName_A": "GRB2",
+    "preferredName_B": "SOS1",
+    "score": 0.999,
+    "escore": 0.998,
+    "dscore": 0.9,
+    "tscore": 0.999
+   },
+   {
+    "preferredName_A": "GRB2",
+    "preferredName_B": "SHC1",
+    "score": 0.999,
+    "escore": 0.999,
+    "dscore": 0.9,
+    "tscore": 0.999
+   },
+   {
+    "preferredName_A": "SOS1",
+    "preferredName_B": "AKT1",
+    "score": 0.765,
+    "escore": 0.084,
+    "dscore": 0.0,
+    "tscore": 0.744
+   },
+   {
+    "preferredName_A": "SOS1",
+    "preferredName_B": "BRAF",
+    "score": 0.9,
+    "escore": 0.084,
+    "dscore": 0.0,
+    "tscore": 0.881
+   },
+   {
+    "preferredName_A": "SOS1",
+    "preferredName_B": "SHC1",
+    "score": 0.999,
+    "escore": 0.895,
+    "dscore": 0.9,
+    "tscore": 0.996
+   },
+   {
+    "preferredName_A": "SHC1",
+    "preferredName_B": "BRAF",
+    "score": 0.645,
+    "escore": 0.073,
+    "dscore": 0.0,
+    "tscore": 0.633
+   },
+   {
+    "preferredName_A": "SHC1",
+    "preferredName_B": "AKT1",
+    "score": 0.771,
+    "escore": 0.073,
+    "dscore": 0.0,
+    "tscore": 0.758
+   },
+   {
+    "preferredName_A": "BRAF",
+    "preferredName_B": "AKT1",
+    "score": 0.783,
+    "escore": 0.631,
+    "dscore": 0.0,
+    "tscore": 0.376
+   }
+  ],
+  "annotations": {
+   "EGFR": "Epidermal growth factor receptor; Receptor tyrosine kinase binding ligands of the EGF family and activating several signaling cascades to convert extr",
+   "MET": "Hepatocyte growth factor receptor; Receptor tyrosine kinase that transduces signals from the extracellular matrix into the cytoplasm by binding to hep",
+   "ERBB2": "Receptor tyrosine-protein kinase erbB-2; Protein tyrosine kinase that is part of several cell surface receptor complexes, but that apparently needs a ",
+   "KRAS": "GTPase KRas, N-terminally processed; Ras proteins bind GDP/GTP and possess intrinsic GTPase activity. Plays an important role in the regulation of cel",
+   "BRAF": "Serine/threonine-protein kinase B-raf; Protein kinase involved in the transduction of mitogenic signals from the cell membrane to the nucleus (Probabl",
+   "PIK3CA": "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform; Phosphoinositide-3-kinase (PI3K) that phosphorylates PtdIns (Phosphati",
+   "AKT1": "RAC-alpha serine/threonine-protein kinase; AKT1 is one of 3 closely related serine/threonine-protein kinases (AKT1, AKT2 and AKT3) called the AKT kina",
+   "MAPK1": "Mitogen-activated protein kinase 1; Serine/threonine kinase which acts as an essential component of the MAP kinase signal transduction pathway. MAPK1/",
+   "HGF": "Hepatocyte growth factor alpha chain; Potent mitogen for mature parenchymal hepatocyte cells, seems to be a hepatotrophic factor, and acts as a growth",
+   "GRB2": "Growth factor receptor-bound protein 2; Adapter protein that provides a critical link between cell surface growth factor receptors and the Ras signali",
+   "SOS1": "Son of sevenless homolog 1; Promotes the exchange of Ras-bound GDP by GTP. Probably by promoting Ras activation, regulates phosphorylation of MAP kina",
+   "PTEN": "Phosphatase and tensin homolog; Tumor suppressor. Acts as a dual-specificity protein phosphatase, dephosphorylating tyrosine-, serine- and threonine- ",
+   "STAT3": "Signal transducer and activator of transcription 3; Signal transducer and transcription activator that mediates cellular responses to interleukins, KI",
+   "SHC1": "SHC-transforming protein 1; Signaling adapter that couples activated growth factor receptors to signaling pathways. Participates in a signaling cascad",
+   "CBL": "E3 ubiquitin-protein ligase CBL; Adapter protein that functions as a negative regulator of many signaling pathways that are triggered by activation of"
+  },
+  "source": "STRING v12 REST API, Homo sapiens (taxon 9606), combined score",
+  "genes_queried": [
+   "EGFR",
+   "MET",
+   "ERBB2",
+   "KRAS",
+   "BRAF",
+   "PIK3CA",
+   "AKT1",
+   "MAPK1",
+   "HGF",
+   "GRB2",
+   "SOS1",
+   "PTEN",
+   "STAT3",
+   "SHC1",
+   "CBL"
+  ]
+ },
+ "cases": {
+  "gefitinib": {
+   "grid": [
+    {
+     "design": "unselected",
+     "n": 200,
+     "f": 0.1,
+     "power": 0.0,
+     "screened": 200
+    },
+    {
+     "design": "enriched",
+     "n": 200,
+     "f": 0.1,
+     "power": 0.9887,
+     "screened": 2000
+    },
+    {
+     "design": "unselected",
+     "n": 200,
+     "f": 0.2,
+     "power": 0.0,
+     "screened": 200
+    },
+    {
+     "design": "enriched",
+     "n": 200,
+     "f": 0.2,
+     "power": 0.992,
+     "screened": 1000
+    },
+    {
+     "design": "unselected",
+     "n": 200,
+     "f": 0.3,
+     "power": 0.0,
+     "screened": 200
+    },
+    {
+     "design": "enriched",
+     "n": 200,
+     "f": 0.3,
+     "power": 0.9927,
+     "screened": 667
+    },
+    {
+     "design": "unselected",
+     "n": 200,
+     "f": 0.4,
+     "power": 0.004,
+     "screened": 200
+    },
+    {
+     "design": "enriched",
+     "n": 200,
+     "f": 0.4,
+     "power": 0.9953,
+     "screened": 500
+    },
+    {
+     "design": "unselected",
+     "n": 200,
+     "f": 0.5,
+     "power": 0.0273,
+     "screened": 200
+    },
+    {
+     "design": "enriched",
+     "n": 200,
+     "f": 0.5,
+     "power": 0.9953,
+     "screened": 400
+    },
+    {
+     "design": "unselected",
+     "n": 200,
+     "f": 0.6,
+     "power": 0.1667,
+     "screened": 200
+    },
+    {
+     "design": "enriched",
+     "n": 200,
+     "f": 0.6,
+     "power": 0.994,
+     "screened": 333
+    },
+    {
+     "design": "unselected",
+     "n": 200,
+     "f": 0.7,
+     "power": 0.454,
+     "screened": 200
+    },
+    {
+     "design": "enriched",
+     "n": 200,
+     "f": 0.7,
+     "power": 0.9927,
+     "screened": 286
+    },
+    {
+     "design": "unselected",
+     "n": 200,
+     "f": 0.8,
+     "power": 0.7847,
+     "screened": 200
+    },
+    {
+     "design": "enriched",
+     "n": 200,
+     "f": 0.8,
+     "power": 0.9953,
+     "screened": 250
+    },
+    {
+     "design": "clinical_surrogate",
+     "n": 200,
+     "f": 0.6,
+     "power": 0.1613,
+     "screened": 200
+    },
+    {
+     "design": "unselected",
+     "n": 400,
+     "f": 0.1,
+     "power": 0.0,
+     "screened": 400
+    },
+    {
+     "design": "enriched",
+     "n": 400,
+     "f": 0.1,
+     "power": 1.0,
+     "screened": 4000
+    },
+    {
+     "design": "unselected",
+     "n": 400,
+     "f": 0.2,
+     "power": 0.0,
+     "screened": 400
+    },
+    {
+     "design": "enriched",
+     "n": 400,
+     "f": 0.2,
+     "power": 1.0,
+     "screened": 2000
+    },
+    {
+     "design": "unselected",
+     "n": 400,
+     "f": 0.3,
+     "power": 0.0,
+     "screened": 400
+    },
+    {
+     "design": "enriched",
+     "n": 400,
+     "f": 0.3,
+     "power": 1.0,
+     "screened": 1333
+    },
+    {
+     "design": "unselected",
+     "n": 400,
+     "f": 0.4,
+     "power": 0.0,
+     "screened": 400
+    },
+    {
+     "design": "enriched",
+     "n": 400,
+     "f": 0.4,
+     "power": 1.0,
+     "screened": 1000
+    },
+    {
+     "design": "unselected",
+     "n": 400,
+     "f": 0.5,
+     "power": 0.0247,
+     "screened": 400
+    },
+    {
+     "design": "enriched",
+     "n": 400,
+     "f": 0.5,
+     "power": 1.0,
+     "screened": 800
+    },
+    {
+     "design": "unselected",
+     "n": 400,
+     "f": 0.6,
+     "power": 0.294,
+     "screened": 400
+    },
+    {
+     "design": "enriched",
+     "n": 400,
+     "f": 0.6,
+     "power": 1.0,
+     "screened": 667
+    },
+    {
+     "design": "unselected",
+     "n": 400,
+     "f": 0.7,
+     "power": 0.774,
+     "screened": 400
+    },
+    {
+     "design": "enriched",
+     "n": 400,
+     "f": 0.7,
+     "power": 1.0,
+     "screened": 571
+    },
+    {
+     "design": "unselected",
+     "n": 400,
+     "f": 0.8,
+     "power": 0.9753,
+     "screened": 400
+    },
+    {
+     "design": "enriched",
+     "n": 400,
+     "f": 0.8,
+     "power": 1.0,
+     "screened": 500
+    },
+    {
+     "design": "clinical_surrogate",
+     "n": 400,
+     "f": 0.6,
+     "power": 0.264,
+     "screened": 400
+    },
+    {
+     "design": "unselected",
+     "n": 800,
+     "f": 0.1,
+     "power": 0.0,
+     "screened": 800
+    },
+    {
+     "design": "enriched",
+     "n": 800,
+     "f": 0.1,
+     "power": 1.0,
+     "screened": 8000
+    },
+    {
+     "design": "unselected",
+     "n": 800,
+     "f": 0.2,
+     "power": 0.0,
+     "screened": 800
+    },
+    {
+     "design": "enriched",
+     "n": 800,
+     "f": 0.2,
+     "power": 1.0,
+     "screened": 4000
+    },
+    {
+     "design": "unselected",
+     "n": 800,
+     "f": 0.3,
+     "power": 0.0,
+     "screened": 800
+    },
+    {
+     "design": "enriched",
+     "n": 800,
+     "f": 0.3,
+     "power": 1.0,
+     "screened": 2667
+    },
+    {
+     "design": "unselected",
+     "n": 800,
+     "f": 0.4,
+     "power": 0.0,
+     "screened": 800
+    },
+    {
+     "design": "enriched",
+     "n": 800,
+     "f": 0.4,
+     "power": 1.0,
+     "screened": 2000
+    },
+    {
+     "design": "unselected",
+     "n": 800,
+     "f": 0.5,
+     "power": 0.0373,
+     "screened": 800
+    },
+    {
+     "design": "enriched",
+     "n": 800,
+     "f": 0.5,
+     "power": 1.0,
+     "screened": 1600
+    },
+    {
+     "design": "unselected",
+     "n": 800,
+     "f": 0.6,
+     "power": 0.514,
+     "screened": 800
+    },
+    {
+     "design": "enriched",
+     "n": 800,
+     "f": 0.6,
+     "power": 1.0,
+     "screened": 1333
+    },
+    {
+     "design": "unselected",
+     "n": 800,
+     "f": 0.7,
+     "power": 0.9653,
+     "screened": 800
+    },
+    {
+     "design": "enriched",
+     "n": 800,
+     "f": 0.7,
+     "power": 1.0,
+     "screened": 1143
+    },
+    {
+     "design": "unselected",
+     "n": 800,
+     "f": 0.8,
+     "power": 0.9993,
+     "screened": 800
+    },
+    {
+     "design": "enriched",
+     "n": 800,
+     "f": 0.8,
+     "power": 1.0,
+     "screened": 1000
+    },
+    {
+     "design": "clinical_surrogate",
+     "n": 800,
+     "f": 0.6,
+     "power": 0.516,
+     "screened": 800
+    }
+   ],
+   "inputs": {
+    "endpoint": "PFS",
+    "hr_pos": 0.48,
+    "hr_neg": 2.85,
+    "itt_reference_hr": 0.74,
+    "failed_trial_itt_hr": 0.89,
+    "responder_fraction_sweep": [
+     0.1,
+     0.2,
+     0.3,
+     0.4,
+     0.5,
+     0.6,
+     0.7,
+     0.8
+    ],
+    "failed_trial_n": 1692,
+    "rescue_trial_n": 1329
+   },
+   "requirements": {
+    "target_power": 0.8,
+    "min_fraction_for_target_power": {
+     "n_total": 800,
+     "target_power": 0.8,
+     "fraction": 0.648,
+     "note": ""
+    },
+    "enriched_design": {
+     "n_randomized": 100,
+     "expected_screened": 200,
+     "simulated_power": 0.89,
+     "target_power": 0.8,
+     "responder_fraction": 0.5
+    }
+   },
+   "retrospective": {
+    "hr_prior": 0.48,
+    "prior_source": "hr_pos (EGFR mutation-positive PFS HR 0.48) was measured inside IPASS itself, in a prespecified biomarker analysis with both strata and both arms present. IPASS therefore measured the effect rather than being a prospective test of a carried-over estimate - which is also why the estimate was trustworthy: it was never extrapolated from a small subgroup with a tuned cutoff.",
+    "observed_retry_hr": 0.48,
+    "observed_source": "PMID 19692680; FDA 2015 approval summary PMID 26980062",
+    "n_retry": 1329,
+    "independent_test": false,
+    "verdict": "not_an_independent_test",
+    "note": "The prior estimate was measured in the same trial that produced the observed result, so agreement between them carries no predictive information. A prospective test requires the estimate to predate the trial that checks it."
+   },
+   "calibration": {
+    "failed_trial": {
+     "n": 1692,
+     "observed_itt_hr": 0.89,
+     "simulated_power": 0.6053333333333333,
+     "monte_carlo_se": 0.012620218933359514
+    },
+    "rescue_trial": {
+     "n": 1329,
+     "observed_itt_hr": 0.74,
+     "simulated_power": 0.998,
+     "monte_carlo_se": 0.0011535452599125307
+    },
+    "ordering_reproduced": true,
+    "caveat": "Directional check only. The failed trial reported overall survival in a refractory population; the control event rate assumed here comes from first-line PFS, so absolute power is not comparable between the two rows."
+   },
+   "strategies": [
+    {
+     "strategy": "biomarker_enrichment_new_inclusion_criteria",
+     "tier": "tier_1_clinical_evidence_in_this_asset",
+     "rank": 1,
+     "used_historically": true,
+     "next_experiment": "Run the assay prospectively on archived tumour tissue from the failed trial and re-estimate the subgroup hazard ratios in the pre-registered positive and negative strata before committing to a new trial.",
+     "would_be_undermined_by": "Assay-negative patients benefiting at a similar rate, or the positive-stratum effect shrinking when measured prospectively rather than post hoc."
+    },
+    {
+     "strategy": "clinical_surrogate_enrichment",
+     "tier": "tier_1_clinical_evidence_in_this_asset",
+     "rank": 2,
+     "used_historically": true,
+     "next_experiment": "Quantify how well the clinical proxy predicts assay positivity in a cohort with both recorded; the proxy is only worth using where assay access is the binding constraint.",
+     "would_be_undermined_by": "The proxy turning out to be weakly associated with assay positivity, which would re-dilute the enrolled population."
+    },
+    {
+     "strategy": "narrower_indication",
+     "tier": "tier_1_clinical_evidence_in_this_asset",
+     "rank": 3,
+     "used_historically": true,
+     "next_experiment": "Confirm the restricted population has sufficient incidence to enrol the required sample size at the planned number of sites.",
+     "would_be_undermined_by": "Insufficient eligible incidence to enrol the trial."
+    },
+    {
+     "strategy": "new_endpoint",
+     "tier": "tier_1_clinical_evidence_in_this_asset",
+     "rank": 4,
+     "used_historically": true,
+     "next_experiment": "Pre-specify the progression-based endpoint with blinded independent central review, and pre-specify how crossover will be handled in the survival analysis.",
+     "would_be_undermined_by": "The new endpoint not being accepted as registrationally adequate, or disagreeing in direction with overall survival."
+    },
+    {
+     "strategy": "new_line_of_therapy",
+     "tier": "tier_1_clinical_evidence_in_this_asset",
+     "rank": 5,
+     "used_historically": true,
+     "next_experiment": "Check whether the earlier-line population has a different comparator standard of care, which changes the control-arm event rate the design assumes.",
+     "would_be_undermined_by": "A more effective comparator in the earlier line erasing the margin."
+    },
+    {
+     "strategy": "molecule_modification",
+     "tier": "tier_4_not_supported_by_available_evidence",
+     "rank": 6,
+     "used_historically": false,
+     "next_experiment": "Hand the target and variant list to module 2; a molecule change needs structural or binding evidence that this module does not have.",
+     "would_be_undermined_by": "Module 2 finding the resistance mechanism is not binding-site mediated."
+    }
+   ],
+   "evidence_quality": {
+    "motivating_signal": "prespecified_or_mechanistic",
+    "biomarker_class": "somatic_driver_mutation",
+    "subgroup_n": 261,
+    "subgroup_trial_n": 1329,
+    "replicated_in_an_independent_trial": true,
+    "replication_note": "EGFR-mutation sensitivity was established mechanistically in 2004 (PMID 15118073, 15118125) before IPASS, and the IPASS biomarker analysis was prespecified. IFUM (n=106) then confirmed prospectively in mutation-positive patients only.",
+    "assay_threshold_selected_on_outcome": false,
+    "assay_threshold_note": "Mutation status is a discrete genotype (exon 19 deletion / L858R) with a companion diagnostic, not a continuous score requiring a cutoff.",
+    "ci_reported_for_hr_pos": true,
+    "ci_note": "IPASS EGFR mutation-positive PFS HR 0.48 (0.36-0.64).",
+    "registry_results_posted_for_retry": true,
+    "registry_note": "NCT00322452 posts full results including per-arm medians with CIs and adverse-event tables.",
+    "hr_pos_measured_in_retry_trial": true,
+    "hr_pos_provenance_note": "hr_pos (EGFR mutation-positive PFS HR 0.48) was measured inside IPASS itself, in a prespecified biomarker analysis with both strata and both arms present. IPASS therefore measured the effect rather than being a prospective test of a carried-over estimate - which is also why the estimate was trustworthy: it was never extrapolated from a small subgroup with a tuned cutoff."
+   },
+   "outcome": {
+    "class": "fail_then_retry_then_succeed",
+    "basis": "IPASS EGFR mutation-positive PFS HR 0.48 (0.36-0.64); FDA approval 2015 for EGFR exon 19 deletion / L858R.",
+    "observed_retry_hr": 0.48,
+    "observed_retry_endpoint": "PFS",
+    "source": "PMID 19692680; FDA 2015 approval summary PMID 26980062"
+   },
+   "pre_retry": [
+    {
+     "label": "ISEL never-smokers, OS",
+     "trial": "ISEL",
+     "endpoint": "OS",
+     "hr": 0.67,
+     "ci_lo": 0.49,
+     "ci_hi": 0.92,
+     "n": 375,
+     "source": "PMID 16257339",
+     "note": "prespecified subgroup"
+    },
+    {
+     "label": "ISEL Asian origin, OS",
+     "trial": "ISEL",
+     "endpoint": "OS",
+     "hr": 0.66,
+     "ci_lo": 0.48,
+     "ci_hi": 0.91,
+     "n": 342,
+     "source": "PMID 16257339",
+     "note": "prespecified subgroup"
+    }
+   ],
+   "retry_result": {
+    "label": "IPASS, EGFR mut+, PFS",
+    "trial": "IPASS",
+    "endpoint": "PFS",
+    "hr": 0.48,
+    "ci_lo": 0.36,
+    "ci_hi": 0.64,
+    "n": 261,
+    "source": "PMID 19692680",
+    "note": "prespecified biomarker analysis, both strata present in-trial"
+   },
+   "trials": {
+    "failed": {
+     "nct": "NCT00242801",
+     "label": "ISEL",
+     "phase": "PHASE3",
+     "n": 1692,
+     "primary_endpoint": "OS",
+     "line_of_therapy": "2nd/3rd line, refractory"
+    },
+    "rescue": {
+     "nct": "NCT00322452",
+     "label": "IPASS",
+     "phase": "PHASE3",
+     "n": 1329,
+     "primary_endpoint": "PFS",
+     "line_of_therapy": "1st line",
+     "enrolled_population": "East Asian, adenocarcinoma, never/light smoker (clinical proxy)"
+    }
+   },
+   "wording": {
+    "biomarker_phrase": "a sensitising EGFR mutation (exon 19 del / L858R)",
+    "positive_label": "EGFR mutation-positive",
+    "surrogate_label": "clinical proxy\n(histology + smoking)"
+   }
+  },
+  "onartuzumab": {
+   "grid": [
+    {
+     "design": "unselected",
+     "n": 200,
+     "f": 0.1,
+     "power": 0.0,
+     "screened": 200
+    },
+    {
+     "design": "enriched",
+     "n": 200,
+     "f": 0.1,
+     "power": 1.0,
+     "screened": 2000
+    },
+    {
+     "design": "unselected",
+     "n": 200,
+     "f": 0.2,
+     "power": 0.0007,
+     "screened": 200
+    },
+    {
+     "design": "enriched",
+     "n": 200,
+     "f": 0.2,
+     "power": 0.9993,
+     "screened": 1000
+    },
+    {
+     "design": "unselected",
+     "n": 200,
+     "f": 0.3,
+     "power": 0.002,
+     "screened": 200
+    },
+    {
+     "design": "enriched",
+     "n": 200,
+     "f": 0.3,
+     "power": 1.0,
+     "screened": 667
+    },
+    {
+     "design": "unselected",
+     "n": 200,
+     "f": 0.4,
+     "power": 0.046,
+     "screened": 200
+    },
+    {
+     "design": "enriched",
+     "n": 200,
+     "f": 0.4,
+     "power": 0.9993,
+     "screened": 500
+    },
+    {
+     "design": "unselected",
+     "n": 200,
+     "f": 0.5,
+     "power": 0.1813,
+     "screened": 200
+    },
+    {
+     "design": "enriched",
+     "n": 200,
+     "f": 0.5,
+     "power": 1.0,
+     "screened": 400
+    },
+    {
+     "design": "unselected",
+     "n": 200,
+     "f": 0.6,
+     "power": 0.4867,
+     "screened": 200
+    },
+    {
+     "design": "enriched",
+     "n": 200,
+     "f": 0.6,
+     "power": 1.0,
+     "screened": 333
+    },
+    {
+     "design": "unselected",
+     "n": 200,
+     "f": 0.7,
+     "power": 0.76,
+     "screened": 200
+    },
+    {
+     "design": "enriched",
+     "n": 200,
+     "f": 0.7,
+     "power": 0.9987,
+     "screened": 286
+    },
+    {
+     "design": "unselected",
+     "n": 200,
+     "f": 0.8,
+     "power": 0.946,
+     "screened": 200
+    },
+    {
+     "design": "enriched",
+     "n": 200,
+     "f": 0.8,
+     "power": 0.998,
+     "screened": 250
+    },
+    {
+     "design": "clinical_surrogate",
+     "n": 200,
+     "f": 0.6,
+     "power": 0.4667,
+     "screened": 200
+    },
+    {
+     "design": "unselected",
+     "n": 400,
+     "f": 0.1,
+     "power": 0.0,
+     "screened": 400
+    },
+    {
+     "design": "enriched",
+     "n": 400,
+     "f": 0.1,
+     "power": 1.0,
+     "screened": 4000
+    },
+    {
+     "design": "unselected",
+     "n": 400,
+     "f": 0.2,
+     "power": 0.0,
+     "screened": 400
+    },
+    {
+     "design": "enriched",
+     "n": 400,
+     "f": 0.2,
+     "power": 1.0,
+     "screened": 2000
+    },
+    {
+     "design": "unselected",
+     "n": 400,
+     "f": 0.3,
+     "power": 0.002,
+     "screened": 400
+    },
+    {
+     "design": "enriched",
+     "n": 400,
+     "f": 0.3,
+     "power": 1.0,
+     "screened": 1333
+    },
+    {
+     "design": "unselected",
+     "n": 400,
+     "f": 0.4,
+     "power": 0.048,
+     "screened": 400
+    },
+    {
+     "design": "enriched",
+     "n": 400,
+     "f": 0.4,
+     "power": 1.0,
+     "screened": 1000
+    },
+    {
+     "design": "unselected",
+     "n": 400,
+     "f": 0.5,
+     "power": 0.328,
+     "screened": 400
+    },
+    {
+     "design": "enriched",
+     "n": 400,
+     "f": 0.5,
+     "power": 1.0,
+     "screened": 800
+    },
+    {
+     "design": "unselected",
+     "n": 400,
+     "f": 0.6,
+     "power": 0.7633,
+     "screened": 400
+    },
+    {
+     "design": "enriched",
+     "n": 400,
+     "f": 0.6,
+     "power": 1.0,
+     "screened": 667
+    },
+    {
+     "design": "unselected",
+     "n": 400,
+     "f": 0.7,
+     "power": 0.978,
+     "screened": 400
+    },
+    {
+     "design": "enriched",
+     "n": 400,
+     "f": 0.7,
+     "power": 1.0,
+     "screened": 571
+    },
+    {
+     "design": "unselected",
+     "n": 400,
+     "f": 0.8,
+     "power": 0.9993,
+     "screened": 400
+    },
+    {
+     "design": "enriched",
+     "n": 400,
+     "f": 0.8,
+     "power": 1.0,
+     "screened": 500
+    },
+    {
+     "design": "clinical_surrogate",
+     "n": 400,
+     "f": 0.6,
+     "power": 0.7627,
+     "screened": 400
+    },
+    {
+     "design": "unselected",
+     "n": 800,
+     "f": 0.1,
+     "power": 0.0,
+     "screened": 800
+    },
+    {
+     "design": "enriched",
+     "n": 800,
+     "f": 0.1,
+     "power": 1.0,
+     "screened": 8000
+    },
+    {
+     "design": "unselected",
+     "n": 800,
+     "f": 0.2,
+     "power": 0.0,
+     "screened": 800
+    },
+    {
+     "design": "enriched",
+     "n": 800,
+     "f": 0.2,
+     "power": 1.0,
+     "screened": 4000
+    },
+    {
+     "design": "unselected",
+     "n": 800,
+     "f": 0.3,
+     "power": 0.0,
+     "screened": 800
+    },
+    {
+     "design": "enriched",
+     "n": 800,
+     "f": 0.3,
+     "power": 1.0,
+     "screened": 2667
+    },
+    {
+     "design": "unselected",
+     "n": 800,
+     "f": 0.4,
+     "power": 0.07,
+     "screened": 800
+    },
+    {
+     "design": "enriched",
+     "n": 800,
+     "f": 0.4,
+     "power": 1.0,
+     "screened": 2000
+    },
+    {
+     "design": "unselected",
+     "n": 800,
+     "f": 0.5,
+     "power": 0.586,
+     "screened": 800
+    },
+    {
+     "design": "enriched",
+     "n": 800,
+     "f": 0.5,
+     "power": 1.0,
+     "screened": 1600
+    },
+    {
+     "design": "unselected",
+     "n": 800,
+     "f": 0.6,
+     "power": 0.9633,
+     "screened": 800
+    },
+    {
+     "design": "enriched",
+     "n": 800,
+     "f": 0.6,
+     "power": 1.0,
+     "screened": 1333
+    },
+    {
+     "design": "unselected",
+     "n": 800,
+     "f": 0.7,
+     "power": 1.0,
+     "screened": 800
+    },
+    {
+     "design": "enriched",
+     "n": 800,
+     "f": 0.7,
+     "power": 1.0,
+     "screened": 1143
+    },
+    {
+     "design": "unselected",
+     "n": 800,
+     "f": 0.8,
+     "power": 1.0,
+     "screened": 800
+    },
+    {
+     "design": "enriched",
+     "n": 800,
+     "f": 0.8,
+     "power": 1.0,
+     "screened": 1000
+    },
+    {
+     "design": "clinical_surrogate",
+     "n": 800,
+     "f": 0.6,
+     "power": 0.968,
+     "screened": 800
+    }
+   ],
+   "inputs": {
+    "endpoint": "OS",
+    "hr_pos": 0.37,
+    "hr_neg": 1.78,
+    "itt_reference_hr": 1.27,
+    "failed_trial_itt_hr": 0.8,
+    "responder_fraction_sweep": [
+     0.1,
+     0.2,
+     0.3,
+     0.4,
+     0.5,
+     0.6,
+     0.7,
+     0.8
+    ],
+    "failed_trial_n": 137,
+    "rescue_trial_n": 499
+   },
+   "requirements": {
+    "target_power": 0.8,
+    "min_fraction_for_target_power": {
+     "n_total": 800,
+     "target_power": 0.8,
+     "fraction": 0.539,
+     "note": ""
+    },
+    "enriched_design": {
+     "n_randomized": 60,
+     "expected_screened": 120,
+     "simulated_power": 0.81,
+     "target_power": 0.8,
+     "responder_fraction": 0.5
+    }
+   },
+   "retrospective": {
+    "hr_prior": 0.37,
+    "prior_source": "hr_pos (MET IHC-positive OS HR 0.37) was measured in the earlier phase 2 OAM4558g, not in METLung. METLung enrolled MET-positive patients only, so it was a genuine prospective test of that estimate.",
+    "observed_retry_hr": 1.27,
+    "observed_source": "PMID 27937096",
+    "n_retry": 499,
+    "independent_test": true,
+    "implied_distribution": {
+     "hr_2.5_pct": 0.285,
+     "hr_median": 0.369,
+     "hr_97.5_pct": 0.467,
+     "n_simulations": 1500
+    },
+    "observed_percentile_of_implied": 1.0,
+    "verdict": "did_not_replicate",
+    "note": "The retry's observed ratio 1.27 lies above the central 95% interval [0.28, 0.47] implied by a true ratio of 0.37 at n=499. The prior subgroup estimate did not survive its prospective test, so any power computed from it was answering the wrong question."
+   },
+   "calibration": {
+    "failed_trial": {
+     "n": 137,
+     "observed_itt_hr": 0.8,
+     "simulated_power": 0.18866666666666668,
+     "monte_carlo_se": 0.010101866347547056
+    },
+    "rescue_trial": {
+     "n": 499,
+     "observed_itt_hr": 1.27,
+     "simulated_power": 0.0,
+     "monte_carlo_se": 0.0
+    },
+    "ordering_reproduced": false,
+    "caveat": "Directional check only. The failed trial reported overall survival in a refractory population; the control event rate assumed here comes from first-line PFS, so absolute power is not comparable between the two rows."
+   },
+   "strategies": [
+    {
+     "strategy": "biomarker_enrichment_new_inclusion_criteria",
+     "tier": "tier_1_clinical_evidence_in_this_asset",
+     "rank": 1,
+     "used_historically": true,
+     "next_experiment": "Run the assay prospectively on archived tumour tissue from the failed trial and re-estimate the subgroup hazard ratios in the pre-registered positive and negative strata before committing to a new trial.",
+     "would_be_undermined_by": "Assay-negative patients benefiting at a similar rate, or the positive-stratum effect shrinking when measured prospectively rather than post hoc."
+    },
+    {
+     "strategy": "clinical_surrogate_enrichment",
+     "tier": "tier_2_clinical_evidence_indirect",
+     "rank": 2,
+     "used_historically": false,
+     "next_experiment": "Quantify how well the clinical proxy predicts assay positivity in a cohort with both recorded; the proxy is only worth using where assay access is the binding constraint.",
+     "would_be_undermined_by": "The proxy turning out to be weakly associated with assay positivity, which would re-dilute the enrolled population."
+    },
+    {
+     "strategy": "new_line_of_therapy",
+     "tier": "tier_2_clinical_evidence_indirect",
+     "rank": 3,
+     "used_historically": false,
+     "next_experiment": "Check whether the earlier-line population has a different comparator standard of care, which changes the control-arm event rate the design assumes.",
+     "would_be_undermined_by": "A more effective comparator in the earlier line erasing the margin."
+    },
+    {
+     "strategy": "narrower_indication",
+     "tier": "tier_2_clinical_evidence_indirect",
+     "rank": 4,
+     "used_historically": true,
+     "next_experiment": "Confirm the restricted population has sufficient incidence to enrol the required sample size at the planned number of sites.",
+     "would_be_undermined_by": "Insufficient eligible incidence to enrol the trial."
+    },
+    {
+     "strategy": "new_endpoint",
+     "tier": "tier_2_clinical_evidence_indirect",
+     "rank": 5,
+     "used_historically": true,
+     "next_experiment": "Pre-specify the progression-based endpoint with blinded independent central review, and pre-specify how crossover will be handled in the survival analysis.",
+     "would_be_undermined_by": "The new endpoint not being accepted as registrationally adequate, or disagreeing in direction with overall survival."
+    },
+    {
+     "strategy": "molecule_modification",
+     "tier": "tier_4_not_supported_by_available_evidence",
+     "rank": 6,
+     "used_historically": false,
+     "next_experiment": "Hand the target and variant list to module 2; a molecule change needs structural or binding evidence that this module does not have.",
+     "would_be_undermined_by": "Module 2 finding the resistance mechanism is not binding-site mediated."
+    }
+   ],
+   "evidence_quality": {
+    "motivating_signal": "post_hoc_subgroup",
+    "biomarker_class": "protein_expression (MET IHC)",
+    "subgroup_n": 66,
+    "subgroup_trial_n": 137,
+    "replicated_in_an_independent_trial": false,
+    "assay_threshold_selected_on_outcome": true,
+    "assay_threshold_note": "PMID 24687921 states the IHC scoring system 'taking proportional and intensity-based thresholds into consideration was applied in an analysis of the phase II study and resulted in the best differentiation of outcomes' - i.e. the positivity cutoff was chosen on the same trial whose outcome it then predicted.",
+    "ci_reported_for_hr_pos": false,
+    "ci_note": "The MET-positive OS HR 0.37 is reported with p=0.002 but no confidence interval in the abstract.",
+    "registry_results_posted_for_retry": false,
+    "registry_note": "NCT01456325 has no posted results; METLung's HR 1.27 is available only from PMID 27937096.",
+    "hr_pos_measured_in_retry_trial": false,
+    "hr_pos_provenance_note": "hr_pos (MET IHC-positive OS HR 0.37) was measured in the earlier phase 2 OAM4558g, not in METLung. METLung enrolled MET-positive patients only, so it was a genuine prospective test of that estimate."
+   },
+   "outcome": {
+    "class": "fail_then_retry_then_fail_again",
+    "basis": "METLung OS HR 1.27 (0.98-1.65), numerically worse on the drug arm; no approval. Median OS 6.8 vs 9.1 months.",
+    "observed_retry_hr": 1.27,
+    "observed_retry_endpoint": "OS",
+    "source": "PMID 27937096"
+   },
+   "pre_retry": [
+    {
+     "label": "phase 2 MET IHC+, OS",
+     "trial": "OAM4558g",
+     "endpoint": "OS",
+     "hr": 0.37,
+     "ci_lo": null,
+     "ci_hi": null,
+     "n": 66,
+     "source": "PMID 24101053",
+     "note": "no CI reported"
+    },
+    {
+     "label": "phase 2 MET IHC+, PFS",
+     "trial": "OAM4558g",
+     "endpoint": "PFS",
+     "hr": 0.529,
+     "ci_lo": 0.284,
+     "ci_hi": 0.986,
+     "n": 66,
+     "source": "NCT00854308 posted results",
+     "note": "co-primary; CI upper bound 0.986"
+    }
+   ],
+   "retry_result": {
+    "label": "METLung, MET IHC+ selected, OS",
+    "trial": "METLung",
+    "endpoint": "OS",
+    "hr": 1.27,
+    "ci_lo": 0.98,
+    "ci_hi": 1.65,
+    "n": 499,
+    "source": "PMID 27937096",
+    "note": "stopped for futility; drug arm numerically worse"
+   },
+   "trials": {
+    "failed": {
+     "nct": "NCT00854308",
+     "label": "OAM4558g",
+     "phase": "PHASE2",
+     "n": 137,
+     "primary_endpoint": "PFS (co-primary: ITT and MET-positive)",
+     "line_of_therapy": "2nd/3rd line, recurrent"
+    },
+    "rescue": {
+     "nct": "NCT01456325",
+     "label": "METLung",
+     "phase": "PHASE3",
+     "n": 499,
+     "primary_endpoint": "OS",
+     "line_of_therapy": "2nd/3rd line, post-platinum",
+     "enrolled_population": "MET IHC 2+/3+ selected"
+    }
+   },
+   "wording": {
+    "biomarker_phrase": "MET protein overexpression by IHC (2+/3+)",
+    "positive_label": "MET IHC-positive",
+    "surrogate_label": "clinical proxy\n(not used by METLung)"
+   }
+  }
+ },
+ "comparison_table": [
+  {
+   "asset": "gefitinib",
+   "target": "EGFR",
+   "outcome_class": "retried, succeeded",
+   "lever": "biomarker enrichment",
+   "best_pre_retry_hr": 0.66,
+   "pre_retry_ci": "0.48-0.91",
+   "pre_retry_n": 342,
+   "retry_observed_hr": 0.48,
+   "retry_ci": "0.36-0.64",
+   "retry_n": 261,
+   "motivating_signal": "prespecified_or_mechanistic",
+   "biomarker_class": "somatic_driver_mutation",
+   "replicated_independently": true,
+   "cutoff_chosen_on_outcome": false,
+   "ci_reported_for_best_hr": true,
+   "retry_registry_results_posted": true
+  },
+  {
+   "asset": "onartuzumab",
+   "target": "MET",
+   "outcome_class": "retried, failed again",
+   "lever": "biomarker enrichment",
+   "best_pre_retry_hr": 0.37,
+   "pre_retry_ci": null,
+   "pre_retry_n": 66,
+   "retry_observed_hr": 1.27,
+   "retry_ci": "0.98-1.65",
+   "retry_n": 499,
+   "motivating_signal": "post_hoc_subgroup",
+   "biomarker_class": "protein_expression (MET IHC)",
+   "replicated_independently": false,
+   "cutoff_chosen_on_outcome": true,
+   "ci_reported_for_best_hr": false,
+   "retry_registry_results_posted": false
+  }
+ ],
+ "benchmark": {
+  "benchmark": "data/benchmark/rescue_benchmark_v0.csv",
+  "n_rows": 40,
+  "claim_under_test": "Module 4 tiers strategies by evidence provenance rather than by reported effect size. If that principle carries information, retries motivated by prespecified or mechanistic evidence should succeed more often than retries motivated by a post-hoc subgroup.",
+  "provenance_contrast": {
+   "all_decided": {
+    "n_pairs": 38,
+    "prespecified_or_mechanistic": {
+     "success": 13,
+     "fail": 9,
+     "n": 22,
+     "success_rate": 0.591
+    },
+    "post_hoc_subgroup": {
+     "success": 3,
+     "fail": 13,
+     "n": 16,
+     "success_rate": 0.188
+    },
+    "odds_ratio": 6.259,
+    "fisher_p": 0.0202
+   },
+   "cluster_removed": {
+    "n_pairs": 34,
+    "prespecified_or_mechanistic": {
+     "success": 10,
+     "fail": 9,
+     "n": 19,
+     "success_rate": 0.526
+    },
+    "post_hoc_subgroup": {
+     "success": 2,
+     "fail": 13,
+     "n": 15,
+     "success_rate": 0.133
+    },
+    "odds_ratio": 7.222,
+    "fisher_p": 0.0297
+   },
+   "clusters_removed": [
+    "EGFR-mut NSCLC"
+   ],
+   "excluded_outcomes": {
+    "contested": 1,
+    "pending": 1
+   },
+   "survives_cluster_removal": true,
+   "interpretation": "The provenance contrast holds with the one large driver cluster removed, so it is evidence about rescue attempts generally rather than about EGFR."
+  },
+  "by_biomarker_group": [
+   {
+    "class": "clinical",
+    "n": 14,
+    "success": 5,
+    "fail": 9
+   },
+   {
+    "class": "circulating_biomarker",
+    "n": 7,
+    "success": 4,
+    "fail": 3
+   },
+   {
+    "class": "somatic_driver_mutation",
+    "n": 4,
+    "success": 4,
+    "fail": 0
+   },
+   {
+    "class": "germline_monogenic",
+    "n": 3,
+    "success": 2,
+    "fail": 1
+   },
+   {
+    "class": "none",
+    "n": 2,
+    "success": 1,
+    "fail": 1
+   },
+   {
+    "class": "gene_expression_signature",
+    "n": 2,
+    "success": 0,
+    "fail": 2
+   },
+   {
+    "class": "germline_common_variant",
+    "n": 2,
+    "success": 0,
+    "fail": 2
+   },
+   {
+    "class": "protein_expression",
+    "n": 3,
+    "success": 0,
+    "fail": 3
+   },
+   {
+    "class": "somatic_alteration",
+    "n": 1,
+    "success": 0,
+    "fail": 1
+   }
+  ],
+  "caveats": [
+   "Counts are small; the contrast is descriptive and the confidence intervals on these rates are wide.",
+   "Outcome adjudication and provenance labelling are curated by hand in the benchmark CSV, and the labels were assigned with the outcomes visible in the same file.",
+   "A pair is counted only when its outcome is decided; contested and pending pairs are listed and excluded."
+  ]
+ },
+ "blind_eval": {
+  "n_decided": 35,
+  "n_success": 15,
+  "n_fail": 20,
+  "verdict_table": [
+   {
+    "verdict": "not_evaluable",
+    "success": 0,
+    "fail": 3,
+    "n": 3,
+    "rate": 0.0
+   },
+   {
+    "verdict": "not_supported",
+    "success": 4,
+    "fail": 10,
+    "n": 14,
+    "rate": 0.286
+   },
+   {
+    "verdict": "primary_not_missed",
+    "success": 4,
+    "fail": 4,
+    "n": 8,
+    "rate": 0.5
+   },
+   {
+    "verdict": "retry_supported",
+    "success": 1,
+    "fail": 2,
+    "n": 3,
+    "rate": 0.333
+   },
+   {
+    "verdict": "retry_weak",
+    "success": 6,
+    "fail": 1,
+    "n": 7,
+    "rate": 0.857
+   }
+  ],
+  "prereg_ordering_falsified": true,
+  "any_vs_none": {
+   "any_success": 7,
+   "any_n": 10,
+   "none_success": 4,
+   "none_n": 14,
+   "none_fail": 10,
+   "fisher_p": 0.095
+  },
+  "effects_verified": "111/111 numeric estimates verified literally present in their abstracts",
+  "n_abstracts": 72,
+  "n_assets": 36,
+  "doc": "docs/module1_blind_eval.md",
+  "status": "v0; re-run planned after adding failure_type and full-text extraction"
+ },
+ "match": {
+  "rows": [
+   {
+    "strategy": "biomarker_enrichment_new_inclusion_criteria",
+    "rank": 1,
+    "tier": "tier_1_clinical_evidence_in_this_asset",
+    "framework_says": "worth trying",
+    "supported": true,
+    "used_historically": true,
+    "agrees": true,
+    "evidence": "EGFR mutation subgroup split in IPASS",
+    "next_experiment": "Run the assay prospectively on archived tumour tissue from the failed trial and re-estimate the subgroup hazard ratios in the pre-registered positive and negative strata before committing to a new trial."
+   },
+   {
+    "strategy": "clinical_surrogate_enrichment",
+    "rank": 2,
+    "tier": "tier_1_clinical_evidence_in_this_asset",
+    "framework_says": "worth trying",
+    "supported": true,
+    "used_historically": true,
+    "agrees": true,
+    "evidence": "IPASS enrolled on histology/smoking/geography before a validated assay",
+    "next_experiment": "Quantify how well the clinical proxy predicts assay positivity in a cohort with both recorded; the proxy is only worth using where assay access is the binding constraint."
+   },
+   {
+    "strategy": "narrower_indication",
+    "rank": 3,
+    "tier": "tier_1_clinical_evidence_in_this_asset",
+    "framework_says": "worth trying",
+    "supported": true,
+    "used_historically": true,
+    "agrees": true,
+    "evidence": "Non-small cell lung cancer -> EGFR-mutant adenocarcinoma",
+    "next_experiment": "Confirm the restricted population has sufficient incidence to enrol the required sample size at the planned number of sites."
+   },
+   {
+    "strategy": "new_endpoint",
+    "rank": 4,
+    "tier": "tier_1_clinical_evidence_in_this_asset",
+    "framework_says": "worth trying",
+    "supported": true,
+    "used_historically": true,
+    "agrees": true,
+    "evidence": "OS -> PFS; OS confounded by crossover",
+    "next_experiment": "Pre-specify the progression-based endpoint with blinded independent central review, and pre-specify how crossover will be handled in the survival analysis."
+   },
+   {
+    "strategy": "new_line_of_therapy",
+    "rank": 5,
+    "tier": "tier_1_clinical_evidence_in_this_asset",
+    "framework_says": "worth trying",
+    "supported": true,
+    "used_historically": true,
+    "agrees": true,
+    "evidence": "2nd/3rd line, refractory -> 1st line",
+    "next_experiment": "Check whether the earlier-line population has a different comparator standard of care, which changes the control-arm event rate the design assumes."
+   },
+   {
+    "strategy": "molecule_modification",
+    "rank": 6,
+    "tier": "tier_4_not_supported_by_available_evidence",
+    "framework_says": "not supported by the evidence",
+    "supported": false,
+    "used_historically": false,
+    "agrees": true,
+    "evidence": "not for this asset; class evolved (module 2 question)",
+    "next_experiment": "Hand the target and variant list to module 2; a molecule change needs structural or binding evidence that this module does not have."
+   }
+  ],
+  "n_strategies": 6,
+  "n_supported": 5,
+  "n_supported_and_used": 5,
+  "n_unsupported": 1,
+  "n_unsupported_and_unused": 1,
+  "n_agree": 6,
+  "recommended_n": 100,
+  "actual_approval_trial_n": 106,
+  "years_to_get_there": 12,
+  "first_event_year": 2003,
+  "last_event_year": 2015
+ },
+ "models": {
+  "protein": [
+   {
+    "name": "ESM-1v",
+    "icon": "protein",
+    "status": "live",
+    "detail": "5-model ensemble, 650M params each, masked marginals",
+    "ref": "facebook/esm1v_t33_650M_UR90S_1-5 (Meier et al. 2021)",
+    "stat": "147,972 substitutions scored",
+    "stat2": "AUROC 0.802 on EGFR",
+    "genes": 6,
+    "tiles": 12,
+    "longest_protein": 3418,
+    "short": "ESM-1v",
+    "s1": "147,972 variants",
+    "s2": "5 x 650M params"
+   },
+   {
+    "name": "PolyPhen-2",
+    "icon": "gear",
+    "status": "live",
+    "detail": "classical comparator",
+    "ref": "precomputed scores",
+    "stat": "AUROC 0.793",
+    "stat2": "same matched subset",
+    "short": "PolyPhen-2",
+    "s1": "AUROC 0.793",
+    "s2": "classical"
+   },
+   {
+    "name": "SIFT",
+    "icon": "gear",
+    "status": "live",
+    "detail": "classical comparator",
+    "ref": "precomputed scores",
+    "stat": "AUROC 0.712",
+    "stat2": "same matched subset",
+    "short": "SIFT",
+    "s1": "AUROC 0.712",
+    "s2": "classical"
+   },
+   {
+    "name": "ESM2",
+    "icon": "protein",
+    "status": "in_harness",
+    "detail": "650M, same masked-marginal harness",
+    "ref": "facebook/esm2_t33_650M_UR50D",
+    "stat": "wired, not scored",
+    "stat2": "no reported result uses it",
+    "short": "ESM2",
+    "s1": "in harness",
+    "s2": "650M, not scored"
+   }
+  ],
+  "genome": [
+   {
+    "name": "ClinVar",
+    "icon": "tag",
+    "status": "live",
+    "detail": "pathogenic / benign labels",
+    "ref": "variant classifications",
+    "stat": "2,694 pathogenic",
+    "stat2": "9,709 benign",
+    "short": "ClinVar",
+    "s1": "2,694 pathogenic",
+    "s2": "9,709 benign"
+   },
+   {
+    "name": "gnomAD",
+    "icon": "bars",
+    "status": "live",
+    "detail": "gene constraint and allele frequencies",
+    "ref": "population genomes",
+    "stat": "germline frequency",
+    "stat2": "vs somatic frequency",
+    "short": "gnomAD",
+    "s1": "allele freq",
+    "s2": "gene constraint"
+   },
+   {
+    "name": "cBioPortal",
+    "icon": "bars",
+    "status": "live",
+    "detail": "somatic tumour variant frequency",
+    "ref": "study-level frequency",
+    "stat": "somatic lane",
+    "stat2": "tumour vs population",
+    "short": "cBioPortal",
+    "s1": "somatic freq",
+    "s2": "tumour studies"
+   },
+   {
+    "name": "AlphaGenome",
+    "icon": "dna",
+    "status": "planned",
+    "detail": "regulatory-variant effect prediction",
+    "ref": "google/alphagenome-all-folds (licence-gated)",
+    "stat": "not implemented",
+    "stat2": "module 3 stub",
+    "short": "AlphaGenome",
+    "s1": "planned",
+    "s2": "regulatory effect"
+   }
+  ],
+  "clinical": [
+   {
+    "name": "ClinicalTrials.gov",
+    "icon": "clipboard",
+    "status": "live",
+    "detail": "trial registry, API v2",
+    "ref": "trial family and posted results",
+    "stat": "390 trials retrieved",
+    "stat2": "59 phase 3 in indication",
+    "short": "CT.gov",
+    "s1": "390 trials",
+    "s2": "59 phase 3"
+   },
+   {
+    "name": "PubMed",
+    "icon": "journal",
+    "status": "live",
+    "detail": "abstracts, E-utilities",
+    "ref": "effect estimates with provenance",
+    "stat": "17 effect estimates",
+    "stat2": "each verified in its own abstract",
+    "short": "PubMed",
+    "s1": "17 estimates",
+    "s2": "all verified"
+   }
+  ],
+  "network": [
+   {
+    "name": "STRING",
+    "icon": "network",
+    "status": "live",
+    "detail": "protein interaction network",
+    "ref": "v12, Homo sapiens",
+    "stat": "97 interactions",
+    "stat2": "15 proteins",
+    "short": "STRING",
+    "s1": "97 edges",
+    "s2": "15 proteins"
+   },
+   {
+    "name": "Open Targets",
+    "icon": "network",
+    "status": "live",
+    "detail": "target-disease associations",
+    "ref": "pathway membership",
+    "stat": "pathway genes",
+    "stat2": "germline lane",
+    "short": "Open Targets",
+    "s1": "pathway genes",
+    "s2": "germline lane"
+   },
+   {
+    "name": "Reactome",
+    "icon": "network",
+    "status": "live",
+    "detail": "pathway definitions",
+    "ref": "target neighbourhood",
+    "stat": "pathway expansion",
+    "stat2": "germline lane",
+    "short": "Reactome",
+    "s1": "pathways",
+    "s2": "germline lane"
+   }
+  ]
+ },
+ "models_meta": {
+  "n_live": 11,
+  "n_total": 13,
+  "esm_substitutions": 147972,
+  "esm_genes": 6,
+  "esm_auroc_egfr": 0.802,
+  "polyphen_auroc": 0.793,
+  "sift_auroc": 0.712,
+  "clinvar_pathogenic": 2694,
+  "clinvar_benign": 9709
+ },
+ "timeline": [
+  {
+   "date": "2003-05-05",
+   "agency": "FDA",
+   "event": "Accelerated approval (subpart H), monotherapy after platinum and docetaxel failure, unselected NSCLC; based on IDEAL response rates"
+  },
+  {
+   "date": "2005-06-17",
+   "agency": "FDA",
+   "event": "Label restricted to patients currently or previously benefiting; Iressa Access Program; after ISEL showed no OS benefit"
+  },
+  {
+   "date": "2009-06-24",
+   "agency": "EMA",
+   "event": "Marketing authorisation restricted to EGFR-mutation-positive locally advanced/metastatic NSCLC"
+  },
+  {
+   "date": "2012-04-25",
+   "agency": "FDA",
+   "event": "Sponsor voluntarily withdrew the NDA"
+  },
+  {
+   "date": "2015-07-13",
+   "agency": "FDA",
+   "event": "Approval for first-line metastatic NSCLC with EGFR exon 19 deletion or L858R, with therascreen EGFR RGQ PCR companion diagnostic; based on IFUM (n=106, ORR 50%) supported by IPASS retrospective subset"
+  }
+ ],
+ "distributions": {
+  "onartuzumab": {
+   "prior": 0.37,
+   "n_retry": 499,
+   "observed": 1.27,
+   "hist": [
+    0,
+    0,
+    6,
+    77,
+    355,
+    910,
+    1127,
+    861,
+    421,
+    173,
+    57,
+    12,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "edges": [
+    0.15,
+    0.183,
+    0.2159,
+    0.2489,
+    0.2818,
+    0.3148,
+    0.3477,
+    0.3807,
+    0.4136,
+    0.4466,
+    0.4795,
+    0.5125,
+    0.5455,
+    0.5784,
+    0.6114,
+    0.6443,
+    0.6773,
+    0.7102,
+    0.7432,
+    0.7761,
+    0.8091,
+    0.842,
+    0.875,
+    0.908,
+    0.9409,
+    0.9739,
+    1.0068,
+    1.0398,
+    1.0727,
+    1.1057,
+    1.1386,
+    1.1716,
+    1.2045,
+    1.2375,
+    1.2705,
+    1.3034,
+    1.3364,
+    1.3693,
+    1.4023,
+    1.4352,
+    1.4682,
+    1.5011,
+    1.5341,
+    1.567,
+    1.6
+   ],
+   "p2_5": 0.2846,
+   "p50": 0.3666,
+   "p97_5": 0.469,
+   "frac_below_observed": 1.0,
+   "n_draws": 4000,
+   "control_median_source": "METLung placebo-arm median OS 9.1 months (PMID 27937096)"
+  },
+  "gefitinib": {
+   "prior": 0.48,
+   "n_retry": 1329,
+   "observed": 0.74,
+   "hist": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    5,
+    124,
+    808,
+    1493,
+    1145,
+    368,
+    54,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "edges": [
+    0.15,
+    0.183,
+    0.2159,
+    0.2489,
+    0.2818,
+    0.3148,
+    0.3477,
+    0.3807,
+    0.4136,
+    0.4466,
+    0.4795,
+    0.5125,
+    0.5455,
+    0.5784,
+    0.6114,
+    0.6443,
+    0.6773,
+    0.7102,
+    0.7432,
+    0.7761,
+    0.8091,
+    0.842,
+    0.875,
+    0.908,
+    0.9409,
+    0.9739,
+    1.0068,
+    1.0398,
+    1.0727,
+    1.1057,
+    1.1386,
+    1.1716,
+    1.2045,
+    1.2375,
+    1.2705,
+    1.3034,
+    1.3364,
+    1.3693,
+    1.4023,
+    1.4352,
+    1.4682,
+    1.5011,
+    1.5341,
+    1.567,
+    1.6
+   ],
+   "p2_5": 0.4103,
+   "p50": 0.4705,
+   "p97_5": 0.5362,
+   "frac_below_observed": 1.0,
+   "n_draws": 4000,
+   "control_median_source": "IPASS posted control-arm median PFS 5.8 months"
+  }
+ },
+ "module1": {
+  "diagnosis": {
+   "failure_mode": "population_dilution_qualitative_interaction",
+   "confidence": "high",
+   "evidence": [
+    {
+     "rule": "primary_endpoint_missed",
+     "fired": true,
+     "detail": "Overall (refractory NSCLC, unselected): HR 0.89 (0.77-1.02), p=0.087; Adenocarcinoma: HR 0.84 (0.68-1.03), p=0.089"
+    },
+    {
+     "rule": "prespecified_subgroup_benefit",
+     "fired": true,
+     "detail": "Never-smokers: HR 0.67 (0.49-0.92), n=375; Asian origin: HR 0.66 (0.48-0.91), n=342"
+    },
+    {
+     "rule": "biomarker_heterogeneity_in_failed_trial",
+     "fired": true,
+     "detail": "EGFR FISH high copy number: HR 0.61; EGFR FISH low copy number: HR 1.16; EGFR IHC positive: HR 0.77; EGFR IHC negative: HR 1.57"
+    },
+    {
+     "rule": "qualitative_interaction_in_rescue_trial",
+     "fired": true,
+     "detail": "EGFR+ HR 0.48, EGFR- HR 2.85"
+    },
+    {
+     "rule": "os_confounded_by_crossover",
+     "fired": true,
+     "detail": "confounded by crossover"
+    }
+   ],
+   "mixture_model": {
+    "hr_pos": 0.48,
+    "hr_neg": 2.85,
+    "endpoint": "PFS",
+    "mixture_hr_by_fraction": {
+     "0.1": 2.385,
+     "0.2": 1.996,
+     "0.3": 1.67,
+     "0.4": 1.398,
+     "0.5": 1.17,
+     "0.6": 0.979,
+     "0.7": 0.819,
+     "0.8": 0.685,
+     "0.9": 0.574
+    },
+    "fraction_for_hr_0.80": 0.713226847540728,
+    "fraction_for_hr_1.00": 0.5879559592294403,
+    "caveat": "log-linear mixture approximation; see effects.mixture_hr docstring"
+   }
+  },
+  "family": {
+   "n_trials": 390,
+   "n_in_indication": 232,
+   "n_phase3_in_indication": 59,
+   "n_with_results": 49,
+   "n_biomarker_required": 81,
+   "selection_by_period": [
+    {
+     "period": "2000-04",
+     "trials": 41,
+     "required": 0
+    },
+    {
+     "period": "2005-08",
+     "trials": 32,
+     "required": 3
+    },
+    {
+     "period": "2009-12",
+     "trials": 54,
+     "required": 23
+    },
+    {
+     "period": "2013-16",
+     "trials": 58,
+     "required": 26
+    },
+    {
+     "period": "2017-20",
+     "trials": 39,
+     "required": 27
+    },
+    {
+     "period": "2021+",
+     "trials": 5,
+     "required": 2
+    }
+   ]
+  },
+  "regulatory": [
+   {
+    "date": "2003-05-05",
+    "agency": "FDA",
+    "event": "Accelerated approval (subpart H), monotherapy after platinum and docetaxel failure, unselected NSCLC; based on IDEAL response rates",
+    "source": "26980062"
+   },
+   {
+    "date": "2005-06-17",
+    "agency": "FDA",
+    "event": "Label restricted to patients currently or previously benefiting; Iressa Access Program; after ISEL showed no OS benefit",
+    "source": "26980062"
+   },
+   {
+    "date": "2009-06-24",
+    "agency": "EMA",
+    "event": "Marketing authorisation restricted to EGFR-mutation-positive locally advanced/metastatic NSCLC",
+    "source": "FDA NDA 206995 clinical pharmacology review"
+   },
+   {
+    "date": "2012-04-25",
+    "agency": "FDA",
+    "event": "Sponsor voluntarily withdrew the NDA",
+    "source": "26980062"
+   },
+   {
+    "date": "2015-07-13",
+    "agency": "FDA",
+    "event": "Approval for first-line metastatic NSCLC with EGFR exon 19 deletion or L858R, with therascreen EGFR RGQ PCR companion diagnostic; based on IFUM (n=106, ORR 50%) supported by IPASS retrospective subset",
+    "source": "26980062"
+   }
+  ],
+  "effects": [
+   {
+    "trial": "ISEL",
+    "population": "Overall (refractory NSCLC, unselected)",
+    "endpoint": "OS",
+    "hr": 0.89,
+    "ci_lo": 0.77,
+    "ci_hi": 1.02,
+    "p": "0.087",
+    "n": "1692",
+    "pmid": "16257339",
+    "nct": "NCT00242801",
+    "analysis_type": "prespecified primary",
+    "note": "co-primary",
+    "significant": false,
+    "direction": "favours_drug",
+    "hr_in_abstract": true
+   },
+   {
+    "trial": "ISEL",
+    "population": "Adenocarcinoma",
+    "endpoint": "OS",
+    "hr": 0.84,
+    "ci_lo": 0.68,
+    "ci_hi": 1.03,
+    "p": "0.089",
+    "n": "812",
+    "pmid": "16257339",
+    "nct": "NCT00242801",
+    "analysis_type": "prespecified primary",
+    "note": "co-primary",
+    "significant": false,
+    "direction": "favours_drug",
+    "hr_in_abstract": true
+   },
+   {
+    "trial": "ISEL",
+    "population": "Never-smokers",
+    "endpoint": "OS",
+    "hr": 0.67,
+    "ci_lo": 0.49,
+    "ci_hi": 0.92,
+    "p": "0.012",
+    "n": "375",
+    "pmid": "16257339",
+    "nct": "NCT00242801",
+    "analysis_type": "prespecified subgroup",
+    "note": null,
+    "significant": true,
+    "direction": "favours_drug",
+    "hr_in_abstract": true
+   },
+   {
+    "trial": "ISEL",
+    "population": "Asian origin",
+    "endpoint": "OS",
+    "hr": 0.66,
+    "ci_lo": 0.48,
+    "ci_hi": 0.91,
+    "p": "0.010",
+    "n": "342",
+    "pmid": "16257339",
+    "nct": "NCT00242801",
+    "analysis_type": "prespecified subgroup",
+    "note": null,
+    "significant": true,
+    "direction": "favours_drug",
+    "hr_in_abstract": true
+   },
+   {
+    "trial": "ISEL",
+    "population": "EGFR FISH high copy number",
+    "endpoint": "OS",
+    "hr": 0.61,
+    "ci_lo": null,
+    "ci_hi": null,
+    "p": "interaction p=0.045",
+    "n": "370",
+    "pmid": "17075123",
+    "nct": "NCT00242801",
+    "analysis_type": "retrospective biomarker",
+    "note": "CI not reported in abstract",
+    "significant": false,
+    "direction": "favours_drug",
+    "hr_in_abstract": true
+   },
+   {
+    "trial": "ISEL",
+    "population": "EGFR FISH low copy number",
+    "endpoint": "OS",
+    "hr": 1.16,
+    "ci_lo": null,
+    "ci_hi": null,
+    "p": null,
+    "n": "370",
+    "pmid": "17075123",
+    "nct": "NCT00242801",
+    "analysis_type": "retrospective biomarker",
+    "note": null,
+    "significant": false,
+    "direction": "favours_comparator",
+    "hr_in_abstract": true
+   },
+   {
+    "trial": "ISEL",
+    "population": "EGFR IHC positive",
+    "endpoint": "OS",
+    "hr": 0.77,
+    "ci_lo": null,
+    "ci_hi": null,
+    "p": "interaction p=0.049",
+    "n": "379",
+    "pmid": "17075123",
+    "nct": "NCT00242801",
+    "analysis_type": "retrospective biomarker",
+    "note": null,
+    "significant": false,
+    "direction": "favours_drug",
+    "hr_in_abstract": true
+   },
+   {
+    "trial": "ISEL",
+    "population": "EGFR IHC negative",
+    "endpoint": "OS",
+    "hr": 1.57,
+    "ci_lo": null,
+    "ci_hi": null,
+    "p": null,
+    "n": "379",
+    "pmid": "17075123",
+    "nct": "NCT00242801",
+    "analysis_type": "retrospective biomarker",
+    "note": null,
+    "significant": false,
+    "direction": "favours_comparator",
+    "hr_in_abstract": true
+   },
+   {
+    "trial": "IPASS",
+    "population": "ITT (East Asia, adenocarcinoma, never/light smoker)",
+    "endpoint": "PFS",
+    "hr": 0.74,
+    "ci_lo": 0.65,
+    "ci_hi": 0.85,
+    "p": "<0.001",
+    "n": "1217",
+    "pmid": "19692680",
+    "nct": "NCT00322452",
+    "analysis_type": "prespecified primary",
+    "note": null,
+    "significant": true,
+    "direction": "favours_drug",
+    "hr_in_abstract": true
+   },
+   {
+    "trial": "IPASS",
+    "population": "EGFR mutation-positive",
+    "endpoint": "PFS",
+    "hr": 0.48,
+    "ci_lo": 0.36,
+    "ci_hi": 0.64,
+    "p": "<0.001",
+    "n": "261",
+    "pmid": "19692680",
+    "nct": "NCT00322452",
+    "analysis_type": "preplanned biomarker subgroup",
+    "note": null,
+    "significant": true,
+    "direction": "favours_drug",
+    "hr_in_abstract": true
+   },
+   {
+    "trial": "IPASS",
+    "population": "EGFR mutation-negative",
+    "endpoint": "PFS",
+    "hr": 2.85,
+    "ci_lo": 2.05,
+    "ci_hi": 3.98,
+    "p": "<0.001",
+    "n": "176",
+    "pmid": "19692680",
+    "nct": "NCT00322452",
+    "analysis_type": "preplanned biomarker subgroup",
+    "note": "qualitative interaction: harm vs chemotherapy",
+    "significant": true,
+    "direction": "favours_comparator",
+    "hr_in_abstract": true
+   },
+   {
+    "trial": "IPASS",
+    "population": "FISH high + EGFR mutation",
+    "endpoint": "PFS",
+    "hr": 0.48,
+    "ci_lo": 0.34,
+    "ci_hi": 0.67,
+    "p": null,
+    "n": null,
+    "pmid": "21670455",
+    "nct": "NCT00322452",
+    "analysis_type": "post hoc",
+    "note": null,
+    "significant": true,
+    "direction": "favours_drug",
+    "hr_in_abstract": true
+   },
+   {
+    "trial": "IPASS",
+    "population": "FISH high, no EGFR mutation",
+    "endpoint": "PFS",
+    "hr": 3.85,
+    "ci_lo": 2.09,
+    "ci_hi": 7.09,
+    "p": null,
+    "n": null,
+    "pmid": "21670455",
+    "nct": "NCT00322452",
+    "analysis_type": "post hoc",
+    "note": null,
+    "significant": true,
+    "direction": "favours_comparator",
+    "hr_in_abstract": true
+   },
+   {
+    "trial": "IPASS",
+    "population": "ITT",
+    "endpoint": "OS",
+    "hr": 0.9,
+    "ci_lo": 0.79,
+    "ci_hi": 1.02,
+    "p": "0.109",
+    "n": "1217",
+    "pmid": "21670455",
+    "nct": "NCT00322452",
+    "analysis_type": "final OS",
+    "note": "78% maturity; 64.3% of mut+ chemo patients crossed over to an EGFR TKI",
+    "significant": false,
+    "direction": "favours_drug",
+    "hr_in_abstract": true
+   },
+   {
+    "trial": "IPASS",
+    "population": "EGFR mutation-positive",
+    "endpoint": "OS",
+    "hr": 1.0,
+    "ci_lo": 0.76,
+    "ci_hi": 1.33,
+    "p": "0.990",
+    "n": null,
+    "pmid": "21670455",
+    "nct": "NCT00322452",
+    "analysis_type": "final OS subgroup",
+    "note": "confounded by crossover",
+    "significant": false,
+    "direction": "favours_comparator",
+    "hr_in_abstract": true
+   },
+   {
+    "trial": "IPASS",
+    "population": "EGFR mutation-negative",
+    "endpoint": "OS",
+    "hr": 1.18,
+    "ci_lo": 0.86,
+    "ci_hi": 1.63,
+    "p": "0.309",
+    "n": null,
+    "pmid": "21670455",
+    "nct": "NCT00322452",
+    "analysis_type": "final OS subgroup",
+    "note": null,
+    "significant": false,
+    "direction": "favours_comparator",
+    "hr_in_abstract": true
+   },
+   {
+    "trial": "IPASS (FDA re-analysis)",
+    "population": "EGFR-positive, BICR-evaluable retrospective subset",
+    "endpoint": "PFS",
+    "hr": 0.54,
+    "ci_lo": 0.38,
+    "ci_hi": 0.79,
+    "p": null,
+    "n": "186",
+    "pmid": "26980062",
+    "nct": "NCT00322452",
+    "analysis_type": "regulatory retrospective subset",
+    "note": "supported 2015 approval alongside IFUM",
+    "significant": true,
+    "direction": "favours_drug",
+    "hr_in_abstract": true
+   }
+  ],
+  "trials": {
+   "failed": {
+    "nct": "NCT00242801",
+    "title": "Iressa vs Best Supportive Care - 2nd/3rd Line Survival Study",
+    "official_title": "A Double Blind,Placebo Controlled,Parallel Group,Multicentre,Randomised,Phase Iii Survival Study Comparing ZD1839 (IRESSA\u2122)(250mg Tablet) Plus Best Supportive Care Versus Placebo Plus Best Supportive Care In Patients With Advanced NSCLC Who Have Received One Or Two Prior Chemotherapy Regimens And Are Refractory Or Intolerant To Their Most Recent Regimen",
+    "status": "COMPLETED",
+    "why_stopped": null,
+    "start": "2003-07",
+    "completion": "2005-04",
+    "results_first_posted": null,
+    "phase": "PHASE3",
+    "allocation": "RANDOMIZED",
+    "masking": "DOUBLE",
+    "enrollment": 1692,
+    "enrollment_type": null,
+    "conditions": "NSCLC",
+    "interventions": "Gefitinib",
+    "sponsor": "AstraZeneca",
+    "sponsor_class": "INDUSTRY",
+    "primary_outcomes": "The primary objective of this study is to compare overall survival for ZD1839 plus best supportive care versus placebo plus best supportive care",
+    "eligibility": "Inclusion Criteria:\n\n* \u00b7 Life expectancy of at least 8 weeks.\n\n  * Histologically or cytologically confirmed non-small cell bronchogenic carcinoma: adenocarcinoma (including bronchoalveolar), squamous cell carcinoma, large cell carcinoma or mixed (adenocarcinoma and squamous) or undifferentiated carcinoma\n  * Not suitable for chemotherapy\n  * WHO Performance status 0,1, 2 or 3\n\nExclusion Criteria:\n\n* Newly diagnosed CNS mets\n* Less than 1 week since completion of prior radiotherapy or persistence of any radiotherapy related toxicity\n* ALT/AST greater than 5 x upper limit of normal\n* ANC less than 1.0 x 109/L or platelets less than 100 x 109/L",
+    "countries": "Argentina|Australia|Brazil|Bulgaria|Canada|Chile|Estonia|Germany|Greece|Hungary|India|Ireland|Latvia|Lithuania|Malaysia|Mexico|Netherlands|Norway|Peru|Philippines|Poland|Romania|Russia|Singapore|Slovakia|Sweden|Taiwan|Thailand|Turkey (T\u00fcrkiye)|Ukraine|United Kingdom|Venezuela",
+    "n_pmids": 0,
+    "pmids": "",
+    "has_results": false,
+    "label": "ISEL",
+    "primary_endpoint": "OS",
+    "line_of_therapy": "2nd/3rd line, refractory",
+    "results_posted": false,
+    "n_posted_primary_rows": 0,
+    "posting_note": "No results posted on ClinicalTrials.gov; outcome data exist only in the literature."
+   },
+   "rescue": {
+    "nct": "NCT00322452",
+    "title": "First Line IRESSA\u2122 Versus Carboplatin/Paclitaxel in Asia",
+    "official_title": "Open Label, Randomised, Parallel Group, Multicentre, Ph III Study To Assess Efficacy, Safety & Tolerability Of Gefitinib (IRESSA\u2122) Versus Carboplatin/Paclitaxel DC As 1st-Line Treatment In Selected Patients With Stage IIIB / IV NSCLC In Asia",
+    "status": "COMPLETED",
+    "why_stopped": null,
+    "start": "2006-03",
+    "completion": "2010-06",
+    "results_first_posted": "2010-05-17",
+    "phase": "PHASE3",
+    "allocation": "RANDOMIZED",
+    "masking": "NONE",
+    "enrollment": 1329,
+    "enrollment_type": "ACTUAL",
+    "conditions": "Non-Small Cell Lung Cancer",
+    "interventions": "Gefitinib|Carboplatin|Paclitaxel",
+    "sponsor": "AstraZeneca",
+    "sponsor_class": "INDUSTRY",
+    "primary_outcomes": "Median Progression Free Survival (PFS) in Months",
+    "eligibility": "Inclusion Criteria:\n\n* Locally advanced Stage IIIB not amenable to local therapy or Stage IV (metastatic) NSCLC with adenocarcinoma histology.\n* Never smokers or light ex-smokers.(ceased smoking at least 15 years before Day 1 of study treatment and 10 pack-years or fewer)\n\nExclusion Criteria:\n\n* Had prior chemotherapy, biological (including targeted therapies such as EGFR and vascular epidermal growth factor (VEGF) inhibitors) or immunological therapy.\n* Pre-existing idiopathic pulmonary fibrosis evidence by CT scan at baseline.",
+    "countries": "China|Hong Kong|Indonesia|Japan|Malaysia|Philippines|Singapore|Taiwan|Thailand",
+    "n_pmids": 6,
+    "pmids": "31920008|28212993|24361280|23540718|22897752|19692680",
+    "has_results": true,
+    "label": "IPASS",
+    "primary_endpoint": "PFS",
+    "line_of_therapy": "1st line",
+    "results_posted": true,
+    "n_posted_primary_rows": 2,
+    "posting_note": "Results posted, but no hazard ratio analysis in the posting; subgroup effect sizes exist only in the literature."
+   }
+  },
+  "handoff": {
+   "endpoint": "PFS",
+   "hr_pos": 0.48,
+   "hr_neg": 2.85,
+   "itt_reference_hr": 0.74,
+   "failed_trial_itt_hr": 0.89,
+   "responder_fraction_sweep": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8
+   ],
+   "failed_trial_n": 1692,
+   "rescue_trial_n": 1329
+  }
+ },
+ "module2": {
+  "cross_case": [
+   {
+    "selection_gene": "EGFR",
+    "case_id": "CASE-EGFR-GEF-NSCLC-001",
+    "drug": "gefitinib",
+    "drug_target": "EGFR",
+    "relationship": "same_protein_drug_target",
+    "benchmark_outcome": "success",
+    "mechanism": "somatic gain-of-function (kinase activation)",
+    "seq_len": 1210,
+    "n_tiles": 1,
+    "n_substitutions": 19418,
+    "n_pathogenic": 108,
+    "n_benign": 519,
+    "esm_auroc": 0.808,
+    "esm_matched": 0.802,
+    "best_classical": 0.793,
+    "constraint_spread_sd": 4.149,
+    "analog_branch": "applicable",
+    "verdict": "rank_residues_only"
+   },
+   {
+    "selection_gene": "APOE",
+    "case_id": "CASE-APOE-BAP-AD-003",
+    "drug": "bapineuzumab",
+    "drug_target": "APP",
+    "relationship": "stratification_marker_only",
+    "benchmark_outcome": "fail",
+    "mechanism": "common risk allele (ancestral state, apolipoprotein isoform)",
+    "seq_len": 317,
+    "n_tiles": 1,
+    "n_substitutions": 6023,
+    "n_pathogenic": 44,
+    "n_benign": 15,
+    "esm_auroc": 0.736,
+    "esm_matched": null,
+    "best_classical": null,
+    "constraint_spread_sd": 1.754,
+    "analog_branch": "not_applicable",
+    "verdict": "rank_residues_only"
+   },
+   {
+    "selection_gene": "BRCA1",
+    "case_id": "CASE-BRCA1-OLA-OV-004",
+    "drug": "olaparib",
+    "drug_target": "PARP1",
+    "relationship": "synthetic_lethality",
+    "benchmark_outcome": "success",
+    "mechanism": "germline loss-of-function (HR deficiency)",
+    "seq_len": 1863,
+    "n_tiles": 3,
+    "n_substitutions": 35397,
+    "n_pathogenic": 1153,
+    "n_benign": 3217,
+    "esm_auroc": 0.614,
+    "esm_matched": 0.607,
+    "best_classical": 0.651,
+    "constraint_spread_sd": 1.483,
+    "analog_branch": "applicable",
+    "verdict": "do_not_rank"
+   },
+   {
+    "selection_gene": "BRCA2",
+    "case_id": "CASE-BRCA2-OLA-OV-005",
+    "drug": "olaparib",
+    "drug_target": "PARP1",
+    "relationship": "synthetic_lethality",
+    "benchmark_outcome": "success",
+    "mechanism": "germline loss-of-function (HR deficiency)",
+    "seq_len": 3418,
+    "n_tiles": 5,
+    "n_substitutions": 64942,
+    "n_pathogenic": 1233,
+    "n_benign": 5936,
+    "esm_auroc": 0.461,
+    "esm_matched": 0.446,
+    "best_classical": 0.616,
+    "constraint_spread_sd": 0.905,
+    "analog_branch": "applicable",
+    "verdict": "do_not_rank"
+   },
+   {
+    "selection_gene": "SOD1",
+    "case_id": "CASE-SOD1-TOF-ALS-002",
+    "drug": "tofersen",
+    "drug_target": "SOD1",
+    "relationship": "same_gene_antisense",
+    "benchmark_outcome": "success",
+    "mechanism": "germline gain-of-function (misfolding/aggregation)",
+    "seq_len": 154,
+    "n_tiles": 1,
+    "n_substitutions": 2926,
+    "n_pathogenic": 156,
+    "n_benign": 2,
+    "esm_auroc": null,
+    "esm_matched": null,
+    "best_classical": null,
+    "constraint_spread_sd": 3.703,
+    "analog_branch": "not_applicable",
+    "verdict": "not_validated"
+   },
+   {
+    "selection_gene": "PARP1",
+    "case_id": "CASE-PARP1-OLA-OV-006",
+    "drug": "olaparib",
+    "drug_target": "PARP1",
+    "relationship": "same_protein_drug_target",
+    "benchmark_outcome": "success",
+    "mechanism": "drug target; no pathogenic germline variants annotated",
+    "seq_len": 1014,
+    "n_tiles": 1,
+    "n_substitutions": 19266,
+    "n_pathogenic": 0,
+    "n_benign": 20,
+    "esm_auroc": null,
+    "esm_matched": null,
+    "best_classical": null,
+    "constraint_spread_sd": 3.388,
+    "analog_branch": "applicable",
+    "verdict": "not_validated"
+   }
+  ],
+  "reliability": [
+   {
+    "gene": "EGFR",
+    "mechanism": "somatic gain-of-function",
+    "median_score": -3.87,
+    "p01": -16.72,
+    "frac_below_minus5": 0.423,
+    "position_mean_sd": 4.149,
+    "iqr": 6.95,
+    "n_path": 108,
+    "n_benign": 519,
+    "esm_auroc": 0.808
+   },
+   {
+    "gene": "SOD1",
+    "mechanism": "germline gain-of-function",
+    "median_score": -7.42,
+    "p01": -15.06,
+    "frac_below_minus5": 0.669,
+    "position_mean_sd": 3.703,
+    "iqr": 7.08,
+    "n_path": 156,
+    "n_benign": 2,
+    "esm_auroc": null
+   },
+   {
+    "gene": "PARP1",
+    "mechanism": "drug target; no pathogenic germline variants annotated",
+    "median_score": -5.91,
+    "p01": -15.39,
+    "frac_below_minus5": 0.578,
+    "position_mean_sd": 3.388,
+    "iqr": 5.95,
+    "n_path": 0,
+    "n_benign": 20,
+    "esm_auroc": null
+   },
+   {
+    "gene": "APOE",
+    "mechanism": "common risk allele",
+    "median_score": -2.84,
+    "p01": -10.34,
+    "frac_below_minus5": 0.233,
+    "position_mean_sd": 1.754,
+    "iqr": 3.66,
+    "n_path": 44,
+    "n_benign": 15,
+    "esm_auroc": 0.736
+   },
+   {
+    "gene": "BRCA1",
+    "mechanism": "germline loss-of-function",
+    "median_score": -0.62,
+    "p01": -8.51,
+    "frac_below_minus5": 0.036,
+    "position_mean_sd": 1.483,
+    "iqr": 1.54,
+    "n_path": 1153,
+    "n_benign": 3217,
+    "esm_auroc": 0.614
+   },
+   {
+    "gene": "BRCA2",
+    "mechanism": "germline loss-of-function",
+    "median_score": -0.53,
+    "p01": -4.91,
+    "frac_below_minus5": 0.009,
+    "position_mean_sd": 0.905,
+    "iqr": 1.39,
+    "n_path": 1233,
+    "n_benign": 5936,
+    "esm_auroc": 0.461
+   }
+  ]
+ },
+ "module3": {
+  "somatic_vs_germline": [
+   {
+    "variant": "L858R",
+    "somatic": 0.1089332831,
+    "germ_af": 0.0,
+    "germ_ac": 0,
+    "gnomad": "absent",
+    "plot_germ": 6.195e-07,
+    "ratio": 175829.0
+   },
+   {
+    "variant": "T790M",
+    "somatic": 0.0343007916,
+    "germ_af": 9.9126e-06,
+    "germ_ac": 16,
+    "gnomad": "detected",
+    "plot_germ": 9.9126e-06,
+    "ratio": 3460.0
+   },
+   {
+    "variant": "G719S",
+    "somatic": 0.0045231813,
+    "germ_af": 0.0,
+    "germ_ac": 0,
+    "gnomad": "absent",
+    "plot_germ": 6.195e-07,
+    "ratio": 7301.0
+   }
+  ]
+ }
+}

@@ -1,0 +1,815 @@
+{
+ "edges": [
+  {
+   "preferredName_A": "MAPK1",
+   "preferredName_B": "EGFR",
+   "score": 0.612,
+   "escore": 0.042,
+   "dscore": 0.0,
+   "tscore": 0.609
+  },
+  {
+   "preferredName_A": "MAPK1",
+   "preferredName_B": "PTEN",
+   "score": 0.677,
+   "escore": 0.216,
+   "dscore": 0.0,
+   "tscore": 0.597
+  },
+  {
+   "preferredName_A": "MAPK1",
+   "preferredName_B": "SOS1",
+   "score": 0.772,
+   "escore": 0.067,
+   "dscore": 0.4,
+   "tscore": 0.543
+  },
+  {
+   "preferredName_A": "MAPK1",
+   "preferredName_B": "PIK3CA",
+   "score": 0.822,
+   "escore": 0.0,
+   "dscore": 0.0,
+   "tscore": 0.809
+  },
+  {
+   "preferredName_A": "MAPK1",
+   "preferredName_B": "GRB2",
+   "score": 0.92,
+   "escore": 0.0,
+   "dscore": 0.4,
+   "tscore": 0.866
+  },
+  {
+   "preferredName_A": "MAPK1",
+   "preferredName_B": "BRAF",
+   "score": 0.949,
+   "escore": 0.647,
+   "dscore": 0.7,
+   "tscore": 0.539
+  },
+  {
+   "preferredName_A": "MAPK1",
+   "preferredName_B": "SHC1",
+   "score": 0.962,
+   "escore": 0.684,
+   "dscore": 0.4,
+   "tscore": 0.817
+  },
+  {
+   "preferredName_A": "MAPK1",
+   "preferredName_B": "AKT1",
+   "score": 0.988,
+   "escore": 0.11,
+   "dscore": 0.9,
+   "tscore": 0.872
+  },
+  {
+   "preferredName_A": "MAPK1",
+   "preferredName_B": "KRAS",
+   "score": 0.988,
+   "escore": 0.495,
+   "dscore": 0.9,
+   "tscore": 0.771
+  },
+  {
+   "preferredName_A": "MAPK1",
+   "preferredName_B": "STAT3",
+   "score": 0.996,
+   "escore": 0.926,
+   "dscore": 0.0,
+   "tscore": 0.95
+  },
+  {
+   "preferredName_A": "HGF",
+   "preferredName_B": "PTEN",
+   "score": 0.552,
+   "escore": 0.0,
+   "dscore": 0.0,
+   "tscore": 0.542
+  },
+  {
+   "preferredName_A": "HGF",
+   "preferredName_B": "SOS1",
+   "score": 0.562,
+   "escore": 0.0,
+   "dscore": 0.4,
+   "tscore": 0.301
+  },
+  {
+   "preferredName_A": "HGF",
+   "preferredName_B": "BRAF",
+   "score": 0.572,
+   "escore": 0.096,
+   "dscore": 0.0,
+   "tscore": 0.546
+  },
+  {
+   "preferredName_A": "HGF",
+   "preferredName_B": "PIK3CA",
+   "score": 0.623,
+   "escore": 0.0,
+   "dscore": 0.4,
+   "tscore": 0.398
+  },
+  {
+   "preferredName_A": "HGF",
+   "preferredName_B": "CBL",
+   "score": 0.671,
+   "escore": 0.0,
+   "dscore": 0.5,
+   "tscore": 0.37
+  },
+  {
+   "preferredName_A": "HGF",
+   "preferredName_B": "SHC1",
+   "score": 0.782,
+   "escore": 0.0,
+   "dscore": 0.4,
+   "tscore": 0.651
+  },
+  {
+   "preferredName_A": "HGF",
+   "preferredName_B": "STAT3",
+   "score": 0.829,
+   "escore": 0.0,
+   "dscore": 0.5,
+   "tscore": 0.673
+  },
+  {
+   "preferredName_A": "HGF",
+   "preferredName_B": "GRB2",
+   "score": 0.838,
+   "escore": 0.053,
+   "dscore": 0.4,
+   "tscore": 0.735
+  },
+  {
+   "preferredName_A": "HGF",
+   "preferredName_B": "KRAS",
+   "score": 0.852,
+   "escore": 0.145,
+   "dscore": 0.5,
+   "tscore": 0.683
+  },
+  {
+   "preferredName_A": "HGF",
+   "preferredName_B": "AKT1",
+   "score": 0.882,
+   "escore": 0.096,
+   "dscore": 0.5,
+   "tscore": 0.761
+  },
+  {
+   "preferredName_A": "HGF",
+   "preferredName_B": "ERBB2",
+   "score": 0.918,
+   "escore": 0.193,
+   "dscore": 0.65,
+   "tscore": 0.736
+  },
+  {
+   "preferredName_A": "HGF",
+   "preferredName_B": "EGFR",
+   "score": 0.98,
+   "escore": 0.0,
+   "dscore": 0.65,
+   "tscore": 0.947
+  },
+  {
+   "preferredName_A": "HGF",
+   "preferredName_B": "MET",
+   "score": 0.999,
+   "escore": 0.989,
+   "dscore": 0.9,
+   "tscore": 0.999
+  },
+  {
+   "preferredName_A": "KRAS",
+   "preferredName_B": "SHC1",
+   "score": 0.758,
+   "escore": 0.225,
+   "dscore": 0.5,
+   "tscore": 0.414
+  },
+  {
+   "preferredName_A": "KRAS",
+   "preferredName_B": "STAT3",
+   "score": 0.817,
+   "escore": 0.063,
+   "dscore": 0.0,
+   "tscore": 0.81
+  },
+  {
+   "preferredName_A": "KRAS",
+   "preferredName_B": "AKT1",
+   "score": 0.904,
+   "escore": 0.11,
+   "dscore": 0.0,
+   "tscore": 0.893
+  },
+  {
+   "preferredName_A": "KRAS",
+   "preferredName_B": "GRB2",
+   "score": 0.931,
+   "escore": 0.45,
+   "dscore": 0.5,
+   "tscore": 0.758
+  },
+  {
+   "preferredName_A": "KRAS",
+   "preferredName_B": "PTEN",
+   "score": 0.936,
+   "escore": 0.099,
+   "dscore": 0.0,
+   "tscore": 0.93
+  },
+  {
+   "preferredName_A": "KRAS",
+   "preferredName_B": "ERBB2",
+   "score": 0.966,
+   "escore": 0.199,
+   "dscore": 0.5,
+   "tscore": 0.923
+  },
+  {
+   "preferredName_A": "KRAS",
+   "preferredName_B": "MET",
+   "score": 0.979,
+   "escore": 0.337,
+   "dscore": 0.9,
+   "tscore": 0.703
+  },
+  {
+   "preferredName_A": "KRAS",
+   "preferredName_B": "EGFR",
+   "score": 0.997,
+   "escore": 0.662,
+   "dscore": 0.9,
+   "tscore": 0.918
+  },
+  {
+   "preferredName_A": "KRAS",
+   "preferredName_B": "PIK3CA",
+   "score": 0.998,
+   "escore": 0.627,
+   "dscore": 0.9,
+   "tscore": 0.951
+  },
+  {
+   "preferredName_A": "KRAS",
+   "preferredName_B": "BRAF",
+   "score": 0.999,
+   "escore": 0.87,
+   "dscore": 0.9,
+   "tscore": 0.973
+  },
+  {
+   "preferredName_A": "KRAS",
+   "preferredName_B": "SOS1",
+   "score": 0.999,
+   "escore": 0.95,
+   "dscore": 0.9,
+   "tscore": 0.966
+  },
+  {
+   "preferredName_A": "PIK3CA",
+   "preferredName_B": "SHC1",
+   "score": 0.637,
+   "escore": 0.0,
+   "dscore": 0.4,
+   "tscore": 0.42
+  },
+  {
+   "preferredName_A": "PIK3CA",
+   "preferredName_B": "STAT3",
+   "score": 0.859,
+   "escore": 0.0,
+   "dscore": 0.5,
+   "tscore": 0.727
+  },
+  {
+   "preferredName_A": "PIK3CA",
+   "preferredName_B": "CBL",
+   "score": 0.887,
+   "escore": 0.629,
+   "dscore": 0.65,
+   "tscore": 0.186
+  },
+  {
+   "preferredName_A": "PIK3CA",
+   "preferredName_B": "GRB2",
+   "score": 0.924,
+   "escore": 0.676,
+   "dscore": 0.4,
+   "tscore": 0.642
+  },
+  {
+   "preferredName_A": "PIK3CA",
+   "preferredName_B": "SOS1",
+   "score": 0.926,
+   "escore": 0.0,
+   "dscore": 0.5,
+   "tscore": 0.636
+  },
+  {
+   "preferredName_A": "PIK3CA",
+   "preferredName_B": "BRAF",
+   "score": 0.947,
+   "escore": 0.19,
+   "dscore": 0.0,
+   "tscore": 0.931
+  },
+  {
+   "preferredName_A": "PIK3CA",
+   "preferredName_B": "MET",
+   "score": 0.961,
+   "escore": 0.069,
+   "dscore": 0.9,
+   "tscore": 0.617
+  },
+  {
+   "preferredName_A": "PIK3CA",
+   "preferredName_B": "ERBB2",
+   "score": 0.992,
+   "escore": 0.115,
+   "dscore": 0.9,
+   "tscore": 0.927
+  },
+  {
+   "preferredName_A": "PIK3CA",
+   "preferredName_B": "PTEN",
+   "score": 0.995,
+   "escore": 0.134,
+   "dscore": 0.9,
+   "tscore": 0.949
+  },
+  {
+   "preferredName_A": "PIK3CA",
+   "preferredName_B": "AKT1",
+   "score": 0.998,
+   "escore": 0.738,
+   "dscore": 0.9,
+   "tscore": 0.951
+  },
+  {
+   "preferredName_A": "PIK3CA",
+   "preferredName_B": "EGFR",
+   "score": 0.999,
+   "escore": 0.79,
+   "dscore": 0.9,
+   "tscore": 0.976
+  },
+  {
+   "preferredName_A": "CBL",
+   "preferredName_B": "PTEN",
+   "score": 0.687,
+   "escore": 0.51,
+   "dscore": 0.0,
+   "tscore": 0.38
+  },
+  {
+   "preferredName_A": "CBL",
+   "preferredName_B": "AKT1",
+   "score": 0.775,
+   "escore": 0.13,
+   "dscore": 0.0,
+   "tscore": 0.75
+  },
+  {
+   "preferredName_A": "CBL",
+   "preferredName_B": "SOS1",
+   "score": 0.827,
+   "escore": 0.297,
+   "dscore": 0.5,
+   "tscore": 0.49
+  },
+  {
+   "preferredName_A": "CBL",
+   "preferredName_B": "STAT3",
+   "score": 0.88,
+   "escore": 0.421,
+   "dscore": 0.5,
+   "tscore": 0.608
+  },
+  {
+   "preferredName_A": "CBL",
+   "preferredName_B": "ERBB2",
+   "score": 0.944,
+   "escore": 0.8,
+   "dscore": 0.0,
+   "tscore": 0.734
+  },
+  {
+   "preferredName_A": "CBL",
+   "preferredName_B": "SHC1",
+   "score": 0.996,
+   "escore": 0.877,
+   "dscore": 0.5,
+   "tscore": 0.94
+  },
+  {
+   "preferredName_A": "CBL",
+   "preferredName_B": "MET",
+   "score": 0.999,
+   "escore": 0.941,
+   "dscore": 0.9,
+   "tscore": 0.873
+  },
+  {
+   "preferredName_A": "CBL",
+   "preferredName_B": "GRB2",
+   "score": 0.999,
+   "escore": 0.996,
+   "dscore": 0.9,
+   "tscore": 0.996
+  },
+  {
+   "preferredName_A": "CBL",
+   "preferredName_B": "EGFR",
+   "score": 0.999,
+   "escore": 0.996,
+   "dscore": 0.9,
+   "tscore": 0.994
+  },
+  {
+   "preferredName_A": "STAT3",
+   "preferredName_B": "BRAF",
+   "score": 0.773,
+   "escore": 0.096,
+   "dscore": 0.0,
+   "tscore": 0.755
+  },
+  {
+   "preferredName_A": "STAT3",
+   "preferredName_B": "PTEN",
+   "score": 0.794,
+   "escore": 0.0,
+   "dscore": 0.0,
+   "tscore": 0.784
+  },
+  {
+   "preferredName_A": "STAT3",
+   "preferredName_B": "GRB2",
+   "score": 0.892,
+   "escore": 0.292,
+   "dscore": 0.5,
+   "tscore": 0.685
+  },
+  {
+   "preferredName_A": "STAT3",
+   "preferredName_B": "SHC1",
+   "score": 0.893,
+   "escore": 0.0,
+   "dscore": 0.5,
+   "tscore": 0.783
+  },
+  {
+   "preferredName_A": "STAT3",
+   "preferredName_B": "ERBB2",
+   "score": 0.948,
+   "escore": 0.717,
+   "dscore": 0.0,
+   "tscore": 0.823
+  },
+  {
+   "preferredName_A": "STAT3",
+   "preferredName_B": "AKT1",
+   "score": 0.966,
+   "escore": 0.096,
+   "dscore": 0.5,
+   "tscore": 0.925
+  },
+  {
+   "preferredName_A": "STAT3",
+   "preferredName_B": "MET",
+   "score": 0.981,
+   "escore": 0.332,
+   "dscore": 0.5,
+   "tscore": 0.948
+  },
+  {
+   "preferredName_A": "STAT3",
+   "preferredName_B": "EGFR",
+   "score": 0.998,
+   "escore": 0.925,
+   "dscore": 0.0,
+   "tscore": 0.985
+  },
+  {
+   "preferredName_A": "ERBB2",
+   "preferredName_B": "BRAF",
+   "score": 0.482,
+   "escore": 0.102,
+   "dscore": 0.0,
+   "tscore": 0.447
+  },
+  {
+   "preferredName_A": "ERBB2",
+   "preferredName_B": "AKT1",
+   "score": 0.552,
+   "escore": 0.222,
+   "dscore": 0.0,
+   "tscore": 0.436
+  },
+  {
+   "preferredName_A": "ERBB2",
+   "preferredName_B": "SOS1",
+   "score": 0.804,
+   "escore": 0.115,
+   "dscore": 0.4,
+   "tscore": 0.661
+  },
+  {
+   "preferredName_A": "ERBB2",
+   "preferredName_B": "MET",
+   "score": 0.847,
+   "escore": 0.617,
+   "dscore": 0.0,
+   "tscore": 0.604
+  },
+  {
+   "preferredName_A": "ERBB2",
+   "preferredName_B": "PTEN",
+   "score": 0.868,
+   "escore": 0.07,
+   "dscore": 0.0,
+   "tscore": 0.864
+  },
+  {
+   "preferredName_A": "ERBB2",
+   "preferredName_B": "EGFR",
+   "score": 0.999,
+   "escore": 0.998,
+   "dscore": 0.9,
+   "tscore": 0.983
+  },
+  {
+   "preferredName_A": "ERBB2",
+   "preferredName_B": "GRB2",
+   "score": 0.999,
+   "escore": 0.934,
+   "dscore": 0.9,
+   "tscore": 0.993
+  },
+  {
+   "preferredName_A": "ERBB2",
+   "preferredName_B": "SHC1",
+   "score": 0.999,
+   "escore": 0.921,
+   "dscore": 0.9,
+   "tscore": 0.991
+  },
+  {
+   "preferredName_A": "EGFR",
+   "preferredName_B": "BRAF",
+   "score": 0.601,
+   "escore": 0.255,
+   "dscore": 0.0,
+   "tscore": 0.486
+  },
+  {
+   "preferredName_A": "EGFR",
+   "preferredName_B": "AKT1",
+   "score": 0.792,
+   "escore": 0.64,
+   "dscore": 0.0,
+   "tscore": 0.445
+  },
+  {
+   "preferredName_A": "EGFR",
+   "preferredName_B": "PTEN",
+   "score": 0.969,
+   "escore": 0.608,
+   "dscore": 0.0,
+   "tscore": 0.925
+  },
+  {
+   "preferredName_A": "EGFR",
+   "preferredName_B": "MET",
+   "score": 0.996,
+   "escore": 0.806,
+   "dscore": 0.0,
+   "tscore": 0.978
+  },
+  {
+   "preferredName_A": "EGFR",
+   "preferredName_B": "SHC1",
+   "score": 0.999,
+   "escore": 0.995,
+   "dscore": 0.9,
+   "tscore": 0.994
+  },
+  {
+   "preferredName_A": "EGFR",
+   "preferredName_B": "SOS1",
+   "score": 0.999,
+   "escore": 0.994,
+   "dscore": 0.9,
+   "tscore": 0.942
+  },
+  {
+   "preferredName_A": "EGFR",
+   "preferredName_B": "GRB2",
+   "score": 0.999,
+   "escore": 0.996,
+   "dscore": 0.9,
+   "tscore": 0.996
+  },
+  {
+   "preferredName_A": "MET",
+   "preferredName_B": "AKT1",
+   "score": 0.408,
+   "escore": 0.071,
+   "dscore": 0.0,
+   "tscore": 0.389
+  },
+  {
+   "preferredName_A": "MET",
+   "preferredName_B": "PTEN",
+   "score": 0.755,
+   "escore": 0.277,
+   "dscore": 0.0,
+   "tscore": 0.665
+  },
+  {
+   "preferredName_A": "MET",
+   "preferredName_B": "SOS1",
+   "score": 0.882,
+   "escore": 0.334,
+   "dscore": 0.4,
+   "tscore": 0.728
+  },
+  {
+   "preferredName_A": "MET",
+   "preferredName_B": "SHC1",
+   "score": 0.992,
+   "escore": 0.386,
+   "dscore": 0.9,
+   "tscore": 0.883
+  },
+  {
+   "preferredName_A": "MET",
+   "preferredName_B": "GRB2",
+   "score": 0.999,
+   "escore": 0.831,
+   "dscore": 0.9,
+   "tscore": 0.98
+  },
+  {
+   "preferredName_A": "PTEN",
+   "preferredName_B": "SOS1",
+   "score": 0.502,
+   "escore": 0.094,
+   "dscore": 0.0,
+   "tscore": 0.464
+  },
+  {
+   "preferredName_A": "PTEN",
+   "preferredName_B": "SHC1",
+   "score": 0.569,
+   "escore": 0.0,
+   "dscore": 0.0,
+   "tscore": 0.569
+  },
+  {
+   "preferredName_A": "PTEN",
+   "preferredName_B": "GRB2",
+   "score": 0.665,
+   "escore": 0.292,
+   "dscore": 0.0,
+   "tscore": 0.543
+  },
+  {
+   "preferredName_A": "PTEN",
+   "preferredName_B": "BRAF",
+   "score": 0.943,
+   "escore": 0.206,
+   "dscore": 0.0,
+   "tscore": 0.927
+  },
+  {
+   "preferredName_A": "PTEN",
+   "preferredName_B": "AKT1",
+   "score": 0.988,
+   "escore": 0.648,
+   "dscore": 0.0,
+   "tscore": 0.967
+  },
+  {
+   "preferredName_A": "GRB2",
+   "preferredName_B": "BRAF",
+   "score": 0.617,
+   "escore": 0.1,
+   "dscore": 0.0,
+   "tscore": 0.592
+  },
+  {
+   "preferredName_A": "GRB2",
+   "preferredName_B": "AKT1",
+   "score": 0.907,
+   "escore": 0.1,
+   "dscore": 0.0,
+   "tscore": 0.9
+  },
+  {
+   "preferredName_A": "GRB2",
+   "preferredName_B": "SOS1",
+   "score": 0.999,
+   "escore": 0.998,
+   "dscore": 0.9,
+   "tscore": 0.999
+  },
+  {
+   "preferredName_A": "GRB2",
+   "preferredName_B": "SHC1",
+   "score": 0.999,
+   "escore": 0.999,
+   "dscore": 0.9,
+   "tscore": 0.999
+  },
+  {
+   "preferredName_A": "SOS1",
+   "preferredName_B": "AKT1",
+   "score": 0.765,
+   "escore": 0.084,
+   "dscore": 0.0,
+   "tscore": 0.744
+  },
+  {
+   "preferredName_A": "SOS1",
+   "preferredName_B": "BRAF",
+   "score": 0.9,
+   "escore": 0.084,
+   "dscore": 0.0,
+   "tscore": 0.881
+  },
+  {
+   "preferredName_A": "SOS1",
+   "preferredName_B": "SHC1",
+   "score": 0.999,
+   "escore": 0.895,
+   "dscore": 0.9,
+   "tscore": 0.996
+  },
+  {
+   "preferredName_A": "SHC1",
+   "preferredName_B": "BRAF",
+   "score": 0.645,
+   "escore": 0.073,
+   "dscore": 0.0,
+   "tscore": 0.633
+  },
+  {
+   "preferredName_A": "SHC1",
+   "preferredName_B": "AKT1",
+   "score": 0.771,
+   "escore": 0.073,
+   "dscore": 0.0,
+   "tscore": 0.758
+  },
+  {
+   "preferredName_A": "BRAF",
+   "preferredName_B": "AKT1",
+   "score": 0.783,
+   "escore": 0.631,
+   "dscore": 0.0,
+   "tscore": 0.376
+  }
+ ],
+ "annotations": {
+  "EGFR": "Epidermal growth factor receptor; Receptor tyrosine kinase binding ligands of the EGF family and activating several signaling cascades to convert extr",
+  "MET": "Hepatocyte growth factor receptor; Receptor tyrosine kinase that transduces signals from the extracellular matrix into the cytoplasm by binding to hep",
+  "ERBB2": "Receptor tyrosine-protein kinase erbB-2; Protein tyrosine kinase that is part of several cell surface receptor complexes, but that apparently needs a ",
+  "KRAS": "GTPase KRas, N-terminally processed; Ras proteins bind GDP/GTP and possess intrinsic GTPase activity. Plays an important role in the regulation of cel",
+  "BRAF": "Serine/threonine-protein kinase B-raf; Protein kinase involved in the transduction of mitogenic signals from the cell membrane to the nucleus (Probabl",
+  "PIK3CA": "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform; Phosphoinositide-3-kinase (PI3K) that phosphorylates PtdIns (Phosphati",
+  "AKT1": "RAC-alpha serine/threonine-protein kinase; AKT1 is one of 3 closely related serine/threonine-protein kinases (AKT1, AKT2 and AKT3) called the AKT kina",
+  "MAPK1": "Mitogen-activated protein kinase 1; Serine/threonine kinase which acts as an essential component of the MAP kinase signal transduction pathway. MAPK1/",
+  "HGF": "Hepatocyte growth factor alpha chain; Potent mitogen for mature parenchymal hepatocyte cells, seems to be a hepatotrophic factor, and acts as a growth",
+  "GRB2": "Growth factor receptor-bound protein 2; Adapter protein that provides a critical link between cell surface growth factor receptors and the Ras signali",
+  "SOS1": "Son of sevenless homolog 1; Promotes the exchange of Ras-bound GDP by GTP. Probably by promoting Ras activation, regulates phosphorylation of MAP kina",
+  "PTEN": "Phosphatase and tensin homolog; Tumor suppressor. Acts as a dual-specificity protein phosphatase, dephosphorylating tyrosine-, serine- and threonine- ",
+  "STAT3": "Signal transducer and activator of transcription 3; Signal transducer and transcription activator that mediates cellular responses to interleukins, KI",
+  "SHC1": "SHC-transforming protein 1; Signaling adapter that couples activated growth factor receptors to signaling pathways. Participates in a signaling cascad",
+  "CBL": "E3 ubiquitin-protein ligase CBL; Adapter protein that functions as a negative regulator of many signaling pathways that are triggered by activation of"
+ },
+ "source": "STRING v12 REST API, Homo sapiens (taxon 9606), combined score",
+ "genes_queried": [
+  "EGFR",
+  "MET",
+  "ERBB2",
+  "KRAS",
+  "BRAF",
+  "PIK3CA",
+  "AKT1",
+  "MAPK1",
+  "HGF",
+  "GRB2",
+  "SOS1",
+  "PTEN",
+  "STAT3",
+  "SHC1",
+  "CBL"
+ ]
+}
